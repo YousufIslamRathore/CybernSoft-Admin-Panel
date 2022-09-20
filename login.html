@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <section class="loginWholePage">
+      <div class="logoSection">
+        <img
+          src="./images/Logo.png"
+          alt=""
+          width="500"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        />
+      </div>
+
+      <section class="mainLoginSection">
+        <section class="loginBox" data-aos="zoom-in" data-aos-duration="1500">
+          <h1>Login Your Account</h1>
+          <form action="" class="formContainer">
+            <label for="email">
+              <p>Email:</p>
+              <input type="email" id="email" />
+            </label>
+            <label for="password">
+              <p>Password:</p>
+              <input type="password" id="password" />
+            </label>
+            <div class="loginBtnDiv">
+              <button>Login</button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </section>
+  </body>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</html>
