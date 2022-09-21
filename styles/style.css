@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Syncopate", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* *********Login Page********* */
@@ -108,7 +108,7 @@
   justify-content: center;
   min-height: 100vh;
   /* background: linear-gradient(to right, rgba(1, 255, 158, 0.726), rgba(8, 8, 175, 0.788)); */
-  background-color: #b3d3d3c9;
+  background-color: #015e8b;
   /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/loginPageImg3.jpg"); */
   /* background-image: url("../images/loginPageImg3.jpg"); */
   background-position: center center;
@@ -120,7 +120,7 @@
   align-self: stretch;
   /* border: 1px solid #707070; */
   /* box-shadow: -3px -3px 10px rgb(0, 0, 0, 0.7), 3px 3px 10px rgb(0, 0, 0, 0.7); */
-  box-shadow: 3px 3px 10px #216464;
+  box-shadow: 3px 3px 10px #3e413c;
   width: 50%;
   margin: 0 auto;
   display: flex;
@@ -148,11 +148,12 @@
 .loginRightSection {
   align-self: stretch;
   width: 50%;
-  background: url("../images/loginPageImg.jpg");
-  background-position: center center;
+  background: url("../images/loginPageImg_2.jpg");
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   /* border-radius: 0px 25px 25px 0px; */
+  position: relative;
 }
 
 .loginLeftSection .logoSection1 {
@@ -178,7 +179,7 @@
   /* color: #6c6c6c; */
   color: #555;
   margin-bottom: 130px;
-  padding: 40px 0;
+  padding: 50px 0 40px;
   /* box-shadow: 0px 3px 10px rgba(175, 175, 175, 0.685); */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
 }
@@ -191,6 +192,8 @@
   color: #37b71d96;
 }
 .formContainer1 {
+  /* margin: auto; */
+  /* margin-top: 180px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,7 +222,7 @@
 
 .formContainer1 > label i {
   font-size: 15px;
-  color: #b3d3d3;
+  color: #5b6d5a93;
   cursor: pointer;
 }
 .formContainer1 > label > input {
@@ -247,14 +250,34 @@
   border: none;
   text-transform: uppercase;
   font-weight: bold;
-  color: #777;
-  background-color: #b3d3d3c9;
-  box-shadow: 0px 0px 5px #b3d3d3c9;
+  color: white;
+  background-color: #015e8b;
+  box-shadow: 0px 0px 5px #015e8b;
   cursor: pointer;
 
 }
 .loginBtnDiv1 > button:hover {
-  color: #555;
   box-shadow: 3px 3px 10px #b3d3d3c9;
 
+}
+
+
+.loginIcon {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  /* background: linear-gradient(rbga(255, 255, 255, 0.5),rbga(255, 255, 255, 0.5)); */
+  /* color: white; */
+}
+
+.wenergyLogoDiv {
+  text-align: center;
+  padding: 60px 0;
+  margin-bottom: 50px;
+}
+
+.loginCopyRightDiv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
