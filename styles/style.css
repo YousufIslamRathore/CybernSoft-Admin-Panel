@@ -5,6 +5,10 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
 /* *********Login Page********* */
 
 .loginWholePage {
@@ -254,13 +258,10 @@
   background-color: #015e8b;
   box-shadow: 0px 0px 5px #015e8b;
   cursor: pointer;
-
 }
 .loginBtnDiv1 > button:hover {
   box-shadow: 3px 3px 10px #b3d3d3c9;
-
 }
-
 
 .loginIcon {
   position: absolute;
@@ -282,8 +283,6 @@
   justify-content: center;
 }
 
-
-
 /* ----/Landing Page/---- */
 
 .landingPageWholePage {
@@ -303,7 +302,7 @@
   width: 30%;
   background-color: white;
 }
-.landingPageListContainer > div   {
+.landingPageListContainer > div {
   box-shadow: -2px -2px 5px black, 2px 2px 5px black;
 
   /* border: 2px solid #999; */
@@ -322,12 +321,11 @@
   color: #555;
 }
 
-
-
 /* ----/ Landing Page 2 /---- */
 
 .landingPageBody {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/loginPageImg3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/loginPageImg3.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -347,7 +345,7 @@
   background-repeat: no-repeat;
   background-size: cover; */
   background: transparent;
-  min-height: 60vh;
+  min-height: 55vh;
   border: 2px solid whitesmoke;
   width: 90%;
   /* margin: 50px auto 30px; */
@@ -383,4 +381,396 @@
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+/* ----- User's Page ----- */
+
+.usersPage {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----- Side Bar ----- */
+.usersPageSideBar {
+  width: 18%;
+  align-self: stretch;
+  background-color: #015e8b;
+  /* background-color: #1F51FF; */
+  padding: 0 10px;
+}
+.usersPageSideBar > h1 {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  margin: 40px auto 30px;
+  word-spacing: 0.375rem;
+}
+.usersPageSideBar > h1 > span {
+  font-size: 40px;
+}
+.sideBarListContainer {
+  margin-top: 50px;
+  /* border-bottom: 1px solid rgba(189, 189, 189, 0.507);
+    border-top: 1px solid rgba(189, 189, 189, 0.507); */
+}
+.sideBarListContainer > div {
+  height: 80px;
+  /* border-bottom: 1px solid rgba(189, 189, 189, 0.507);
+  border-top: 1px solid rgba(189, 189, 189, 0.507); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+.sideBarListContainer > div:hover {
+  background-color: white;
+  color: #015e8b;
+}
+
+/* ----- Users Main Section ----- */
+
+.usersPageMainPanel {
+  width: 82%;
+  align-self: stretch;
+  background-color: white;
+}
+
+.topHeaderSection {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 30px;
+  /* margin-bottom: 20px; */
+}
+
+.adminLoginProfileDiv {
+  width: 320px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  /* color: #1E293B; */
+  border-radius: 15px;
+}
+.adminLoginProfileDiv > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profilePicIconDiv {
+  width: 50px;
+  height: 50px;
+  background-color: #94a3b8;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.profilePicIconDiv > i {
+  color: white !important;
+}
+.adminLoginProfileDiv h3 {
+  color: #015e8b;
+  margin: 0 10px;
+  font-size: 18px;
+  margin-right: auto;
+}
+.adminLoginProfileDiv i {
+  color: #015e8b;
+}
+
+.usersBodySection {
+  padding: 15px;
+  background-color: #f8faff;
+}
+
+.usersBodySection > div {
+  background-color: white;
+}
+
+.usersBodySection > div > h1 {
+  font-size: 42px;
+  color: #555;
+  text-align: center;
+  margin-bottom: 60px;
+  padding-top: 30px;
+}
+
+/* .usersFancyDisplaySection1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.usersFancyDisplaySection1 > div {
+  border: 1px solid #000;
+  width: 40%;
+  padding: 30px;
+  cursor: pointer;
+  transition-duration: 150px;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+.usersFancyDisplaySection1 > div > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.usersFancyDisplaySection1 > div > section > div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  margin-right: 20px;
+}
+.usersFancyDisplaySection1 > div:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 16%)
+}
+.usersFancyDisplaySection1 h2 {
+  text-align: center;
+}
+.usersFancyDisplaySection1 h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #777;
+} */
+
+/* ------- */
+.usersFancyDisplaySection1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+  margin-bottom: 30px;
+}
+.usersFancyDisplaySection1 > div {
+  /* border: 1px solid #000; */
+  width: 40%;
+  padding: 30px;
+  cursor: pointer;
+  transition-duration: 500ms;
+  background-color: #fff;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  /* box-shadow: 0 3px 10px rgb(0 0 0 / 16%); */
+  position: relative;
+}
+.usersFancyDisplaySection1 > div:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
+  transform: translateY(-5px);
+}
+.selectedUserSection {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
+}
+.containerUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 25px;
+  border-width: 3px;
+  border-style: solid;
+}
+.usersFancyDisplaySection1 > div > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.usersFancyDisplaySection1 > div > div {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  margin-right: 20px;
+}
+.usersFancyDisplaySection1 h2 {
+  text-align: center;
+  margin: 0 !important;
+  font-weight: 400 !important;
+}
+.usersFancyDisplaySection1 h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #777;
+  margin: 0 !important;
+  font-weight: bold !important;
+}
+
+.usersMainListingSection {
+  margin: 0 10px;
+  border-radius: 20px;
+  padding: 20px 30px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
+}
+
+.usersSearchSection h2 {
+  color: #555;
+  margin: 10px 10px 20px;
+}
+
+.usersListSection > table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.usersListSection thead {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  border-radius: 15px;
+  background-color: #333;
+}
+.usersListSection tr {
+  border-radius: 10px;
+  cursor: pointer;
+}
+.usersListSection tbody tr:hover {
+  background-color: rgba(13, 116, 233, 0.151);
+}
+.usersListSection thead tr {
+  border-radius: 15px;
+}
+.usersListSection th {
+  color: white;
+  font-size: small;
+  height: 50px;
+  text-align: center;
+}
+.usersListSection td {
+  text-align: center;
+  height: 60px;
+  /* border-bottom: 1px solid rgba(119, 119, 119, 0.267); */
+}
+.usersListSection td div {
+  width: 35%;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-weight: bold;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: small;
+}
+.firstCell {
+  border-radius: 10px 0 0 10px;
+}
+.lastCell {
+  border-radius: 0 10px 10px 0;
+}
+thead .firstCell {
+  border-radius: 15px 0 0 15px;
+}
+thead .lastCell {
+  border-radius: 0 15px 15px 0;
+}
+.suspended {
+  background-color: #ff5f1fb4;
+}
+.active {
+  background-color: #61b95b;
+}
+.requested {
+  background-color: #fcc910;
+}
+.blocked {
+  background-color: #ee405e;
+}
+
+.searchSectionContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 20px;
+}
+
+.searchBarContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0;
+  border: 2px solid rgba(153, 153, 153, 0.603);
+  width: 40%;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.searchBarContainer div {
+  padding: 0 15px;
+  border-right: 1px solid rgba(119, 119, 119, 0.514);
+  color: #777;
+  font-weight: bold;
+}
+
+.searchBarContainer section {
+  padding: 0 15px;
+  flex-grow: 1;
+}
+
+.searchBarContainer input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  /* border-bottom: 1px solid #777; */
+  color: #555;
+}
+
+.userTypeDropDown {
+  padding: 10px;
+  width: 160px;
+  color: #777;
+  border: 2px solid rgba(153, 153, 153, 0.603);
+  outline: none;
+  /* display: inline-block; */
+  box-shadow: 0 3px 10px rgb(0,0,0 / 16%);
+  margin-right: 25px;
+}
+
+.usersSearchSection button {
+  background-color: #186EB1;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  height: 40px;
+  width: 150px;
+  border: none;
+  border-radius: 8px;
+}
+.usersSearchSection button.importData {
+  background-color: black;
+}
+
+
+
+
+/* /---- MODAL CSS ----/ */
+
+.forBorderRadius {
+  border-radius: 15px !important;
+  border: none !important;
+}
+
+.wholeModal {
+  display: flex;
+  min-height: 60vh;
+  padding: 0 !important;
 }
