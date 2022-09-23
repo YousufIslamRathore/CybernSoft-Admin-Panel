@@ -501,6 +501,7 @@ tbody tr:nth-child(even) {
   text-align: center;
   margin-bottom: 60px;
   padding-top: 30px;
+  font-weight: bold;
 }
 
 /* .usersFancyDisplaySection1 {
@@ -624,7 +625,8 @@ tbody tr:nth-child(even) {
 
 .usersSearchSection h2 {
   color: #555;
-  margin: 10px 10px 20px;
+  margin: 10px 10px 40px;
+  font-weight: bold;
 }
 
 .usersListSection > table {
@@ -639,10 +641,12 @@ tbody tr:nth-child(even) {
 .usersListSection tr {
   border-radius: 10px;
   cursor: pointer;
+  transition-duration: 200ms;
 }
 .usersListSection tbody tr:hover {
   background-color: rgba(13, 116, 233, 0.151);
 }
+
 .usersListSection thead tr {
   border-radius: 15px;
 }
@@ -693,13 +697,20 @@ thead .lastCell {
 .blocked {
   background-color: #ee405e;
 }
+.ownerCell {
+  color: #186eb1;
+}
+.tenantCell {
+  color: #e14eca;
+}
 
 .searchSectionContainer {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 90%;
-  margin: 0 auto 20px;
+  width: 100%;
+  margin: 0 auto 40px;
+  padding: 0 20px;
 }
 
 .searchBarContainer {
@@ -736,17 +747,18 @@ thead .lastCell {
 
 .userTypeDropDown {
   padding: 10px;
-  width: 160px;
+  width: 170px;
   color: #777;
   border: 2px solid rgba(153, 153, 153, 0.603);
   outline: none;
   /* display: inline-block; */
-  box-shadow: 0 3px 10px rgb(0,0,0 / 16%);
+  box-shadow: 0 3px 10px rgb(0, 0, 0 / 16%);
   margin-right: 25px;
+  cursor: pointer;
 }
 
 .usersSearchSection button {
-  background-color: #186EB1;
+  background-color: #186eb1;
   color: white;
   font-weight: bold;
   font-size: 14px;
@@ -759,9 +771,6 @@ thead .lastCell {
   background-color: black;
 }
 
-
-
-
 /* /---- MODAL CSS ----/ */
 
 .forBorderRadius {
@@ -771,6 +780,109 @@ thead .lastCell {
 
 .wholeModal {
   display: flex;
-  min-height: 60vh;
-  padding: 0 !important;
+  flex-direction: column;
+  min-height: 90vh;
+  /* padding: 0 !important; */
+  justify-content: space-between;
+  align-items: center;
+}
+.wholeModal .headingSection h1 {
+  color: #555;
+  margin-top: 20px;
+  font-weight: bold !important;
+  font-size: 32px !important;
+}
+.userDetailSection {
+  width: 100%;
+}
+.userDetailSection > section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userDetailSection > section > div {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 50%;
+}
+.userDetailSection > section > div > p {
+  margin-bottom: 0 !important;
+  font-size: 16px;
+  min-width: 150px;
+  color: #555;
+  font-weight: bold;
+}
+.userDetailSection > section > div > input {
+  border: none;
+  color: #555;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+.userDetailSection > section > button {
+  width: 150px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #186eb1;
+  color: white;
+  transition-duration: 300ms;
+}
+.userDetailSection > section > button:hover {
+  color: white;
+}
+.actionsSection {
+  width: 100%;
+  padding: 0 30px;
+}
+.actionsSection > h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.actionsSection > section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+.actionsSection p {
+  font-size: 18px;
+  margin-bottom: 0 !important;
+  width: 300px;
+}
+.wholeModal .buttonSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.wholeModal .buttonSection > button {
+  width: 130px;
+  padding: 12px !important;
+  background-color: #555;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+.wholeModal .buttonSection > button:active {
+  box-shadow: 0px 3px 10px rgb(0, 0, 0 / 50%) !important;
+  transform: translateY(-2px);
+  background-color: #61b95b;
+}
+.actionsSection button {
+  width: 120px;
+  padding: 6px;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 40%);
+  margin-right: 20px;
+}
+
+.ownerChangeBtn {
+  background-color: #186eb1;
+}
+.tenantChangeBtn {
+  background-color: #e14eca;
 }

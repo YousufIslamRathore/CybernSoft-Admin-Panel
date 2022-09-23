@@ -195,13 +195,17 @@
                   </div>
                   <div>
                     <select name="userType" id="" class="userTypeDropDown">
-                      <option value="Select" disabled selected>Select</option>
+                      <option value="Select" disabled selected>
+                        Select User Type
+                      </option>
                       <option value="All">All</option>
                       <option value="Owner">Owner</option>
                       <option value="Tenant">Tenant</option>
                     </select>
                     <select name="activeStatus" id="" class="userTypeDropDown">
-                      <option value="Select" disabled selected>Select</option>
+                      <option value="Select" disabled selected>
+                        Select Status
+                      </option>
                       <option value="Requested">Requested</option>
                       <option value="Active">Active</option>
                       <option value="Suspended">Suspended</option>
@@ -231,81 +235,81 @@
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td class="ownerCell">Owner</td>
                       <td class="lastCell">
                         <div class="suspended">Suspended</div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td class="ownerCell">Owner</td>
                       <td class="lastCell"><div class="active">Active</div></td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td class="tenantCell">Tenant</td>
                       <td class="lastCell">
                         <div class="blocked">Blocked</div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td class="tenantCell">Tenant</td>
                       <td class="lastCell"><div class="active">Active</div></td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td class="ownerCell">Owner</td>
                       <td class="lastCell">
                         <div class="suspended">Suspended</div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td class="ownerCell">Owner</td>
                       <td class="lastCell">
                         <div class="requested">Requested</div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td class="tenantCell">Tenant</td>
                       <td class="lastCell"><div class="active">Active</div></td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td class="tenantCell">Tenant</td>
                       <td class="lastCell">
                         <div class="suspended">Suspended</div>
                       </td>
                     </tr>
-                    <tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
                       <td>42201-2729672-7</td>
                       <td>03082028980</td>
-                      <td>Owner</td>
+                      <td  class="ownerCell">Owner</td>
                       <td class="lastCell">
                         <div class="requested">Requested</div>
                       </td>
@@ -324,7 +328,94 @@
     <section class="modal fade" id="userDetails">
       <div class="modal-dialog modal-xl">
         <div class="modal-content forBorderRadius">
-          <section class="modal-body wholeModal"></section>
+          <section class="modal-body wholeModal">
+            <section class="headingSection">
+              <h1>User Details</h1>
+            </section>
+            <section class="userDetailSection">
+              <section>
+                <div>
+                  <p>Full Name :</p>
+                  <input type="text" value="Yousuf Islam" disabled />
+                </div>
+                <div>
+                  <p>Password :</p>
+                  <input type="password" value="yousuf123" disabled />
+                  <div>
+                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px;"></i>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Unit No.</p>
+                  <input type="text" value="A-01" disabled />
+                </div>
+                <div>
+                  <p>Contact :</p>
+                  <input type="number" value="03082028980" disabled />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>User Type :</p>
+                  <input type="text" value="Owner" disabled />
+                </div>
+                <div>
+                  <p>Status :</p>
+                  <input type="text" value="Active" style="color: #61b95b;" disabled />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>User's CNIC :</p>
+                  <input type="text" value="42201-2729672-7" disabled />
+                </div>
+                <div>
+                  <p>Owner's CNIC :</p>
+                  <input type="text" value="SELF" disabled />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Created At :</p>
+                  <input type="text" value="09/19/2022" disabled />
+                </div>
+                <div>
+                  <p>Last Updated At :</p>
+                  <input type="text" value="09/23/2022" disabled />
+                </div>
+              </section>
+              <section>
+                <button class="btn" onclick="editBtnToggler(this)">EDIT DETAILS</button>
+              </section>
+            </section>
+
+            <div class="actionsSection">
+              <h2>Actions :</h2>
+
+              <section>
+                <p>Change Active Status :</p>
+                <div>
+                  <button class="active">Active</button>
+                  <button class="suspended">Suspended</button>
+                  <button class="blocked">Blocked</button>
+                </div>
+              </section>
+
+              <section>
+                <p>Change User Type :</p>
+                <div>
+                  <button class="ownerChangeBtn">Owner</button>
+                  <button class="tenantChangeBtn">Tenant</button>
+                </div>
+              </section>
+            </div>
+
+            <section class="buttonSection">
+              <button class="btn UpdateBtn">Update</button>
+            </section>
+          </section>
         </div>
       </div>
     </section>

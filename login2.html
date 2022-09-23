@@ -37,7 +37,7 @@
               <!-- <h1>ADMIN</h1> -->
 
               <div class="wenergyLogoDiv">
-                <img src="./images/Logo2.png" alt="" width="250px">
+                <img src="./images/Logo2.png" alt="" width="250px" />
               </div>
 
               <form action="" class="formContainer1">
@@ -49,10 +49,7 @@
                   <!-- <p>PASSWORD:</p> -->
                   <input type="password" id="password" placeholder="Password" />
                   <div>
-                    <i
-                      class="fa-solid fa-eye"
-                      onclick="showPassword(this)"
-                    ></i>
+                    <i class="fa-solid fa-eye" onclick="showPassword(this)"></i>
                   </div>
                 </label>
                 <div class="loginBtnDiv1">
@@ -69,27 +66,15 @@
 
         <!-- Image Section -->
         <section class="loginRightSection">
-
-          <img src="./images/Icon.png" alt="" class="loginIcon" width="50px">
-
+          <img src="./images/Icon.png" alt="" class="loginIcon" width="50px" />
         </section>
       </main>
     </section>
   </body>
-
+  <script src="./scripts/app.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-  <script>
-    function showPassword(element) {
-      if (element.parentElement.previousElementSibling.type == "password") {
-        element.parentElement.previousElementSibling.type = "text";
-        element.className = "fa-solid fa-eye-slash";
-      } else {
-        element.parentElement.previousElementSibling.type = "password";
-        element.className = "fa-solid fa-eye";
-      }
-    }
-  </script>
+  ]
 </html>
