@@ -330,19 +330,19 @@
         <div class="modal-content forBorderRadius">
           <section class="modal-body wholeModal">
             <section class="headingSection">
-              <h1>User Details</h1>
+              <h1>User Details <img src="./images/users/detailing.png" alt="" width="30px" id="userDetailsImg"></h1>
             </section>
             <section class="userDetailSection">
               <section>
                 <div>
                   <p>Full Name :</p>
-                  <input type="text" value="Yousuf Islam" disabled />
+                  <input type="text" value="Yousuf Islam" class="editableFields" disabled />
                 </div>
                 <div>
                   <p>Password :</p>
-                  <input type="password" value="yousuf123" disabled />
+                  <input type="password" value="yousuf123" class="editableFields" disabled />
                   <div>
-                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px;"></i>
+                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px;" ></i>
                   </div>
                 </div>
               </section>
@@ -353,27 +353,27 @@
                 </div>
                 <div>
                   <p>Contact :</p>
-                  <input type="number" value="03082028980" disabled />
+                  <input type="number" value="03082028980" class="editableFields" disabled />
                 </div>
               </section>
               <section>
                 <div>
                   <p>User Type :</p>
-                  <input type="text" value="Owner" disabled />
+                  <input type="text" value="Owner" style="color: #186eb1;" id="userTypeInputField" disabled />
                 </div>
                 <div>
                   <p>Status :</p>
-                  <input type="text" value="Active" style="color: #61b95b;" disabled />
+                  <input type="text" value="Active" style="color: #61b95b;" id="statusInputField" disabled />
                 </div>
               </section>
               <section>
                 <div>
-                  <p>User's CNIC :</p>
-                  <input type="text" value="42201-2729672-7" disabled />
-                </div>
-                <div>
                   <p>Owner's CNIC :</p>
-                  <input type="text" value="SELF" disabled />
+                  <input type="text" value="42201-2729672-7" class="editableFields" disabled />
+                </div>
+                <div class="visibilityHidden" id="tenantDetail">
+                  <p>Tenant's CNIC :</p>
+                  <input type="text" value="" class="editableFields" disabled />
                 </div>
               </section>
               <section>
@@ -386,8 +386,8 @@
                   <input type="text" value="09/23/2022" disabled />
                 </div>
               </section>
-              <section>
-                <button class="btn" onclick="editBtnToggler(this)">EDIT DETAILS</button>
+              <section class="buttonSection2">
+                <button class="btn" onclick="editBtnToggler(this)"><i class="fa-solid fa-pen-to-square"></i> EDIT DETAILS</button>
               </section>
             </section>
 
@@ -397,23 +397,23 @@
               <section>
                 <p>Change Active Status :</p>
                 <div>
-                  <button class="active">Active</button>
-                  <button class="suspended">Suspended</button>
-                  <button class="blocked">Blocked</button>
+                  <button class="active" onclick="changeActiveStatus(this)">Active</button>
+                  <button class="changingBgBtn" onclick="changeActiveStatus(this)">Suspended</button>
+                  <button class="changingBgBtn" onclick="changeActiveStatus(this)">Blocked</button>
                 </div>
               </section>
 
               <section>
                 <p>Change User Type :</p>
-                <div>
-                  <button class="ownerChangeBtn">Owner</button>
-                  <button class="tenantChangeBtn">Tenant</button>
+                <div class="userTypeBtnDiv">
+                  <button class="ownerChangeBtn" onclick="changeUserType(this); ownerToTenantEffects(0)">Owner</button>
+                  <button class="changingBgBtn" onclick="changeUserType(this); ownerToTenantEffects(1)">Tenant</button>
                 </div>
               </section>
             </div>
 
             <section class="buttonSection">
-              <button class="btn UpdateBtn">Update</button>
+              <button class="btn UpdateBtn" onclick="updateTenantDetails()">Update</button>
             </section>
           </section>
         </div>
