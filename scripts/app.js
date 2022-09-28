@@ -2,22 +2,22 @@ let ownerCount = document.getElementById("ownerCount");
 let ownerCounter = 0;
 let tenantCounter = 0;
 setInterval(() => {
-  if(ownerCounter == 65) {
+  if (ownerCounter == 65) {
     clearInterval();
   } else {
-    ownerCounter += 1
-    ownerCount.innerHTML =  ownerCounter + "%"
+    ownerCounter += 1;
+    ownerCount.innerHTML = ownerCounter + "%";
   }
-}, 30)
+}, 30);
 
 setInterval(() => {
-  if(tenantCounter == 35) {
+  if (tenantCounter == 35) {
     clearInterval();
   } else {
-    tenantCounter += 1
-    tenantCount.innerHTML = tenantCounter + "%"
+    tenantCounter += 1;
+    tenantCount.innerHTML = tenantCounter + "%";
   }
-}, 30)
+}, 30);
 
 function showPassword(element) {
   if (element.parentElement.previousElementSibling.type == "password") {
@@ -41,20 +41,46 @@ function selectedUserSection(e) {
 }
 
 function selectedUserTypeSection(e) {
-  var ownerAndTenant = document.getElementById("ownerAndTenant").children;
+  // var ownerAndTenant = document.getElementById("ownerAndTenant").children;
+  var ownerH1 = document.getElementById("ownerH1");
+  var ownerCount = document.getElementById("ownerCount")
+  var tenantH1 = document.getElementById("tenantH1");
+  var tenantCount = document.getElementById("tenantCount");
   // for (let i = 0; i <= 2; i++) {
-    if (e == 0) {
-      ownerAndTenant[0].setAttribute("class", "ownerMainSection selectedUserSection");
-    } else {
-      ownerAndTenant[0].setAttribute("class", "ownerMainSection");
-    }
+  if (e == 0) {
+    ownerH1.style.color = "#186eb1"
+    // ownerH1.style.fontWeight = "bold"
+    ownerCount.style.color = "#186eb1"
+  } else {
+    ownerH1.style.color = "#777"
+    // ownerH1.style.fontWeight = "normal"
+    ownerCount.style.color = "#777"
+  }
 
-    if (e == 1) {
-      ownerAndTenant[1].setAttribute("class", "tenantMainSection selectedUserSection");
-    } else {
-      ownerAndTenant[1].setAttribute("class", "tenantMainSection")
-    }
+  if (e == 1) {
+    // ownerAndTenant[1].setAttribute(
+    //   "class",
+    //   "tenantMainSection selectedUserSection"
+    // );
+    tenantH1.style.color = "#e14eca"
+    // tenantH1.style.fontWeight = "bold"
+    tenantCount.style.color = "#e14eca"
+  } else {
+    // ownerAndTenant[1].setAttribute("class", "tenantMainSection");
+    tenantH1.style.color = "#777"  
+    // tenantH1.style.fontWeight = "normal"
+    tenantCount.style.color = "#777"  
+  }
   // }
+}
+
+function usersListMainHeading() {
+  document.getElementById("ownerH1").style.color = "#186eb1";
+  // document.getElementById("ownerH1").style.fontWeight = "normal";
+  document.getElementById("ownerCount").style.color = "#777";
+  document.getElementById("tenantH1").style.color = "#e14eca";
+  // document.getElementById("tenantH1").style.fontWeight = "normal";
+  document.getElementById("tenantCount").style.color = "#777";
 }
 
 function changeActiveStatus(btn) {
