@@ -1,3 +1,24 @@
+let ownerCount = document.getElementById("ownerCount");
+let ownerCounter = 0;
+let tenantCounter = 0;
+setInterval(() => {
+  if(ownerCounter == 65) {
+    clearInterval();
+  } else {
+    ownerCounter += 1
+    ownerCount.innerHTML =  ownerCounter + "%"
+  }
+}, 30)
+
+setInterval(() => {
+  if(tenantCounter == 35) {
+    clearInterval();
+  } else {
+    tenantCounter += 1
+    tenantCount.innerHTML = tenantCounter + "%"
+  }
+}, 30)
+
 function showPassword(element) {
   if (element.parentElement.previousElementSibling.type == "password") {
     element.parentElement.previousElementSibling.type = "text";
@@ -17,6 +38,23 @@ function selectedUserSection(e) {
       userSelection[i].setAttribute("class", "SelectedUserSelection");
     }
   }
+}
+
+function selectedUserTypeSection(e) {
+  var ownerAndTenant = document.getElementById("ownerAndTenant").children;
+  // for (let i = 0; i <= 2; i++) {
+    if (e == 0) {
+      ownerAndTenant[0].setAttribute("class", "ownerMainSection selectedUserSection");
+    } else {
+      ownerAndTenant[0].setAttribute("class", "ownerMainSection");
+    }
+
+    if (e == 1) {
+      ownerAndTenant[1].setAttribute("class", "tenantMainSection selectedUserSection");
+    } else {
+      ownerAndTenant[1].setAttribute("class", "tenantMainSection")
+    }
+  // }
 }
 
 function changeActiveStatus(btn) {
@@ -62,48 +100,49 @@ function ownerToTenantEffects(key) {
   var tenantDetail = document.getElementById("tenantDetail");
   if (key == 0) {
     tenantDetail.className = "visibilityHidden";
-    tenantDetail.lastElementChild.value = ""
+    tenantDetail.lastElementChild.value = "";
   } else {
     tenantDetail.className = "visibilityVisible";
   }
 }
 
 function editBtnToggler(btn) {
-  var editIcon = '<i class="fa-solid fa-pen-to-square"></i>'
-  var saveIcon = '<i class="fa-solid fa-floppy-disk"></i>'
-  var editableFields = document.getElementsByClassName("editableFields")
-  var userDetailsImg = document.getElementById("userDetailsImg")
+  var editIcon = '<i class="fa-solid fa-pen-to-square"></i>';
+  var saveIcon = '<i class="fa-solid fa-floppy-disk"></i>';
+  var editableFields = document.getElementsByClassName("editableFields");
+  var userDetailsImg = document.getElementById("userDetailsImg");
   if (btn.innerHTML == `${editIcon} EDIT DETAILS`) {
     btn.innerHTML = `${saveIcon} SAVE CHANGES`;
     btn.style.backgroundColor = "#61b95b";
 
-    for(let i = 0; i < editableFields.length; i++) {
-      editableFields[i].disabled = false
-      editableFields[i].style.borderBottom = "1px solid #888"
+    for (let i = 0; i < editableFields.length; i++) {
+      editableFields[i].disabled = false;
+      editableFields[i].style.borderBottom = "1px solid #888";
     }
 
-    userDetailsImg.src = "./images/users/editing.png"
+    userDetailsImg.src = "./images/users/editing.png";
   } else {
     btn.innerHTML = `${editIcon} EDIT DETAILS`;
     btn.style.backgroundColor = "#186eb1";
 
-    for(let i = 0; i < editableFields.length; i++) {
-      editableFields[i].disabled = true
-      editableFields[i].style.borderBottom = "none"
+    for (let i = 0; i < editableFields.length; i++) {
+      editableFields[i].disabled = true;
+      editableFields[i].style.borderBottom = "none";
     }
 
-    userDetailsImg.src = "./images/users/detailing.png"
+    userDetailsImg.src = "./images/users/detailing.png";
   }
 }
 
 function updateTenantDetails() {
   var tenantDetail = document.getElementById("tenantDetail");
-  tenantDetail.lastElementChild.style.color = "#555"
+  tenantDetail.lastElementChild.style.color = "#555";
   if (
-    (tenantDetail.lastElementChild.value == "" || tenantDetail.lastElementChild.value == "Please Add CNIC here!") &&
+    (tenantDetail.lastElementChild.value == "" ||
+      tenantDetail.lastElementChild.value == "Please Add CNIC here!") &&
     tenantDetail.className == "visibilityVisible"
   ) {
     tenantDetail.lastElementChild.value = "Please Add CNIC here!";
-    tenantDetail.lastElementChild.style.color = "#ee405e"
+    tenantDetail.lastElementChild.style.color = "#ee405e";
   }
 }

@@ -574,7 +574,7 @@ tbody tr:nth-child(even) {
   transform: translateY(-5px);
 }
 .selectedUserSection {
-  box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 50%) !important;
 }
 .containerUnderline {
   position: absolute;
@@ -688,10 +688,13 @@ thead .lastCell {
 }
 .suspended {
   background-color: #ff5f1fb4;
+  /* background-color: rgba( 155, 39, 176,251); */
+
   transition-duration: 300ms;
 }
 .active {
   background-color: #61b95b;
+  /* background-color: rgba(238, 62, 49,151); */
   transition-duration: 300ms;
 }
 .requested {
@@ -724,9 +727,10 @@ thead .lastCell {
   align-items: center;
   padding: 8px 0;
   border: 2px solid rgba(153, 153, 153, 0.603);
-  width: 40%;
+  width: 63%;
   cursor: pointer;
   margin-right: 30px;
+  border-radius: 8px;
 }
 
 .searchBarContainer div {
@@ -763,18 +767,18 @@ thead .lastCell {
 }
 
 .usersSearchSection button {
-  background-color: #186eb1;
+  background-color: #555;
   color: white;
   font-weight: bold;
   font-size: 14px;
-  height: 40px;
-  width: 150px;
+  height: 41px;
+  width: 180px;
   border: none;
   border-radius: 8px;
 }
-.usersSearchSection button.importData {
+/* .usersSearchSection button.importData {
   background-color: black;
-}
+} */
 
 /* /---- MODAL CSS ----/ */
 
@@ -804,7 +808,7 @@ thead .lastCell {
 }
 .wholeModal .headingSection img {
   margin-left: 10px;
-} 
+}
 .userDetailSection {
   width: 100%;
 }
@@ -936,8 +940,6 @@ button > i {
   margin-right: 10px;
 }
 
-
-
 /* Pie Chart Section */
 
 .pieChartSection {
@@ -952,23 +954,109 @@ button > i {
   margin: 20px 0 !important;
 }
 
+/* Owner Tenant Section */
 
-
-/* Doughnut Chart Section */
-
-.ownerTenantMainSection {
+.ownerTenantMainContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  /* padding: 30px 0; */
+  margin-bottom: 50px;
 }
-.ownerTenantMainSection div {
+.ownerTenantMainContainer > div {
   width: 40%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px 30px;
+  /* position: relative; */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
+  transition-duration: 300ms;
+}
+.ownerTenantMainContainer > div:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+  transform: translateY(-5px);
+}
+.userTypeHeadingDiv {
+  flex-grow: 1;
+  text-align: center;
+}
+.ownerTenantMainContainer > div h1 {
+  color: #777;
+  font-weight: bold;
+  font-size: 28px;
 }
 .ownerTenantMainSection .doughnutChartSection {
-  width: 20%;
+  background-color: #e3edf7;
+  padding: 30px;
+}
+
+/* /---- Progressive Bar ----/ */
+
+.skill {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  transform: rotateZ(-90deg);
+}
+.outer {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+#ownerCount,
+#tenantCount {
+  font-weight: bold;
+  color: #555;
+  transform: rotateZ(90deg);
+}
+.ownerMainSection circle {
+  fill: none;
+  /* stroke: url(#GradientColor); */
+  stroke: #186eb1;
+  stroke-width: 20px;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  animation: ownerAnim 2s linear forwards;
+}
+.tenantMainSection circle {
+  fill: none;
+  /* stroke: url(#GradientColor); */
+  stroke: #e14eca;
+  stroke-width: 20px;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  animation: tenantAnim 2s linear forwards;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes ownerAnim {
+  100% {
+    stroke-dashoffset: 154;
+  }
+}
+@keyframes tenantAnim {
+  100% {
+    stroke-dashoffset: 286;
+  }
 }
