@@ -72,23 +72,39 @@
           <div>
             <h1>Tankers</h1>
 
-            <section class="usersFancyDisplaySection1 tankersFancyDisplaySection1" id="userSelection">
+            <section
+              class="usersFancyDisplaySection1 tankersFancyDisplaySection1"
+              id="userSelection"
+            >
               <div class="selectedUserSection" onclick="selectedUserSection(0)">
                 <div style="background-color: #186eb1">
                   <i class="fa-solid fa-users"></i>
                 </div>
                 <section>
                   <h1>746</h1>
-                  <h2 style="color: #186eb1">All Tankers</h2>
+                  <h2 style="color: #186eb1">All Deliveries</h2>
                 </section>
                 <main
                   class="containerUnderline"
                   style="border-color: #186eb1; background-color: #186eb1"
                 ></main>
               </div>
+              <div onclick="selectedUserSection(2)">
+                <div style="background-color: #fcc910">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <section>
+                  <h1>6</h1>
+                  <h2 style="color: #fcc910">Pending Active Requests</h2>
+                </section>
+                <main
+                  class="containerUnderline"
+                  style="border-color: #fcc910; background-color: #fcc910"
+                ></main>
+              </div>
               <div onclick="selectedUserSection(1)">
                 <div style="background-color: #61b95b">
-                  <i class="fa-solid fa-check"></i>
+                  <i class="fa-solid fa-exclamation"></i>
                 </div>
                 <section>
                   <h1>740</h1>
@@ -99,41 +115,33 @@
                   style="border-color: #61b95b; background-color: #61b95b"
                 ></main>
               </div>
-              <div onclick="selectedUserSection(2)">
-                <div style="background-color: #fcc910">
-                  <i class="fa-solid fa-exclamation"></i>
-                </div>
-                <section>
-                  <h1>6</h1>
-                  <h2 style="color: #fcc910">Pending</h2>
-                </section>
-                <main
-                  class="containerUnderline"
-                  style="border-color: #fcc910; background-color: #fcc910"
-                ></main>
-              </div>
             </section>
 
             <section class="usersMainListingSection">
               <section class="usersSearchSection">
                 <section class="userSearchSectionFirstSection">
-                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">All Users</h2>
+                  <h2
+                    id="usersListMainHeading"
+                    onclick="usersListMainHeading()"
+                  >
+                    All Deliveries
+                  </h2>
                   <main class="ownerTenantMainContainer" id="ownerAndTenant">
                     <div
-                      class="ownerMainSection"
+                      class="ownerMainSection tankersMainSectionForDoughnut"
                       onclick="selectedUserTypeSection(0)"
                     >
-                      <div class="skill">
-                        <div class="outer">
-                          <div class="inner">
+                      <div class="skill skill2">
+                        <div class="outer outer2">
+                          <div class="inner inner2">
                             <div id="ownerCount">65%</div>
                           </div>
                         </div>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           version="1.1"
-                          width="120px"
-                          height="120px"
+                          width="90px"
+                          height="90px"
                         >
                           <defs>
                             <linearGradient id="GradientColor">
@@ -142,15 +150,15 @@
                             </linearGradient>
                           </defs>
                           <circle
-                            cx="60"
-                            cy="60"
-                            r="50"
+                            cx="45"
+                            cy="45"
+                            r="40"
                             stroke-linecap="round"
                           />
                         </svg>
                       </div>
-                      <div class="userTypeHeadingDiv">
-                        <h1 id="ownerH1">Owners</h1>
+                      <div class="userTypeHeadingDiv tankerTypeHeadingDiv">
+                        <h1 id="ownerH1">Double Tankers</h1>
                       </div>
                       <!-- <main
                       class="containerUnderline"
@@ -159,20 +167,20 @@
                     </div>
 
                     <div
-                      class="tenantMainSection"
+                      class="tenantMainSection tankersMainSectionForDoughnut"
                       onclick="selectedUserTypeSection(1)"
                     >
-                      <div class="skill">
-                        <div class="outer">
-                          <div class="inner">
+                      <div class="skill skill2">
+                        <div class="outer outer2">
+                          <div class="inner inner2">
                             <div id="tenantCount">35%</div>
                           </div>
                         </div>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           version="1.1"
-                          width="120px"
-                          height="120px"
+                          width="90px"
+                          height="90px"
                         >
                           <defs>
                             <linearGradient id="GradientColor">
@@ -181,15 +189,15 @@
                             </linearGradient>
                           </defs>
                           <circle
-                            cx="60"
-                            cy="60"
-                            r="50"
+                            cx="45"
+                            cy="45"
+                            r="40"
                             stroke-linecap="round"
                           />
                         </svg>
                       </div>
-                      <div class="userTypeHeadingDiv">
-                        <h1 id="tenantH1">Tenants</h1>
+                      <div class="userTypeHeadingDiv tankerTypeHeadingDiv">
+                        <h1 id="tenantH1">Single Tankers</h1>
                       </div>
                       <!-- <main
                       class="containerUnderline"
@@ -197,10 +205,21 @@
                     ></main> -->
                     </div>
                   </main>
+
+                  <div class="haltServiceDiv">
+                    <button>
+                      <i class="fa-solid fa-stopwatch"></i>
+                      <div>
+                        HALT
+                        <br />
+                        SERVICE
+                      </div>
+                    </button>
+                  </div>
                 </section>
                 <section class="searchSectionContainer">
                   <div class="searchBarContainer">
-                    <div>Search Tanker</div>
+                    <div>Search User</div>
                     <section><input type="search" /></section>
                   </div>
                   <!-- <div>
@@ -218,107 +237,139 @@
                 </section>
               </section>
 
-              <section class="usersListSection">
+              <section class="usersListSection tankersListSection">
                 <table>
                   <thead>
                     <tr>
-                      <th class="firstCell">Unit no.</th>
-                      <th>Full Name</th>
-                      <th>CNIC</th>
-                      <th>Contact</th>
-                      <th>User Type</th>
-                      <th class="lastCell" s>Active Status</th>
+                      <th class="firstCell">ID</th>
+                      <th>User Name</th>
+                      <!-- <th>CNIC</th> -->
+                      <th>Tanker Type</th>
+                      <th>To</th>
+                      <th class="lastCell">Created At</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="ownerCell">Owner</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-01</td>
                       <td class="lastCell">
-                        <div class="suspended">Suspended</div>
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
                       </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="ownerCell">Owner</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-02</td>
                       <td class="lastCell">
-                        <div class="active">Active</div>
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
                       </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="tenantCell">Tenant</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-03</td>
                       <td class="lastCell">
-                        <div class="blocked">Blocked</div>
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
                       </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="tenantCell">Tenant</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-04</td>
                       <td class="lastCell">
-                        <div class="active">Active</div>
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
                       </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="ownerCell">Owner</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-05</td>
                       <td class="lastCell">
-                        <div class="suspended">Suspended</div>
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
                       </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="ownerCell">Owner</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-06</td>
                       <td class="lastCell">
-                        <div class="requested">Requested</div>
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
                       </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="tenantCell">Tenant</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-06</td>
                       <td class="lastCell">
-                        <div class="active">Active</div>
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
                       </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="tenantCell">Tenant</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-07</td>
                       <td class="lastCell">
-                        <div class="suspended">Suspended</div>
+                        2022-09-29
+                        <br />
+                        <span class="timeSpan"> 11:11 AM </span>
                       </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">A-01</td>
                       <td>Yousuf Islam</td>
-                      <td>42201-2729672-7</td>
-                      <td>03082028980</td>
-                      <td class="ownerCell">Owner</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-08</td>
                       <td class="lastCell">
-                        <div class="requested">Requested</div>
+                        2022-09-29
+                        <br />
+                        <span class="timeSpan"> 11:11 AM </span>
                       </td>
                     </tr>
                   </tbody>
@@ -492,15 +543,21 @@
               <section>
                 <p>Change Active Status :</p>
                 <div>
-                  <button class="active" onclick="changeActiveStatus(this)">Active</button>
+                  <button class="active" onclick="changeActiveStatus(this)">
+                    Active
+                  </button>
                   <button
                     class="changingBgBtn"
                     onclick="changeActiveStatus(this)"
-                  >Suspended</button>
+                  >
+                    Suspended
+                  </button>
                   <button
                     class="changingBgBtn"
                     onclick="changeActiveStatus(this)"
-                  >Blocked</button>
+                  >
+                    Blocked
+                  </button>
                 </div>
               </section>
 
@@ -510,11 +567,15 @@
                   <button
                     class="ownerChangeBtn"
                     onclick="changeUserType(this); ownerToTenantEffects(0)"
-                  >Owner</button>
+                  >
+                    Owner
+                  </button>
                   <button
                     class="changingBgBtn"
                     onclick="changeUserType(this); ownerToTenantEffects(1)"
-                  >Tenant</button>
+                  >
+                    Tenant
+                  </button>
                 </div>
               </section>
             </div>
