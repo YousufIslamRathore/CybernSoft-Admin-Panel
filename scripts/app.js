@@ -34,8 +34,10 @@ function selectedUserSection(e) {
   for (let i = 0; i <= 4; i++) {
     if (e == i) {
       userSelection[i].setAttribute("class", "selectedUserSection");
+      // userSelection[i].lastElementChild.style.display = "none"
     } else {
       userSelection[i].setAttribute("class", "SelectedUserSelection");
+      // userSelection[i].lastElementChild.style.display = "block"
     }
   }
 }

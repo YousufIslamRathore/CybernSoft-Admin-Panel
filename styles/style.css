@@ -441,6 +441,9 @@ tbody tr:nth-child(even) {
   background-color: #015e8b;
   /* background-color: #1F51FF; */
   padding: 0 10px;
+  box-shadow: 3px 0px 10px rgb(0 0 0 / 50%);
+  z-index: 20;
+  border-right: 2px solid #015e8b;
 }
 .usersPageSideBar > h1 {
   color: white;
@@ -529,11 +532,12 @@ tbody tr:nth-child(even) {
 
 .usersBodySection {
   padding: 10px 15px;
-  background-color: #f8faff;
+  background-color: rgba(238, 238, 238, 0.582);
+  /* background-color: #f8faff;  */
 }
 
 .usersBodySection > div {
-  background-color: white;
+  background-color: rgba(238, 238, 238, 0.582);
 }
 
 .usersBodySection > div > h1 {
@@ -592,23 +596,39 @@ tbody tr:nth-child(even) {
 /* ------- */
 .usersFancyDisplaySection1 {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  background-color: white;
-  margin-bottom: 30px;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  /* background-color: white; */
+  /* margin-bottom: 20px; */
+  padding: 30px 0;
 }
 .usersFancyDisplaySection1 > div {
   /* border: 1px solid #000; */
-  width: 40%;
-  padding: 30px;
+  width: 22%;
+  height: 150px;
+  padding: 15px;
   cursor: pointer;
   transition-duration: 500ms;
   background-color: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   display: flex;
-  justify-content: space-between;
-  /* box-shadow: 0 3px 10px rgb(0 0 0 / 16%); */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
   position: relative;
+  color: white !important;
+}
+#All-Users-Selector {
+  background-color: #186eb1;
+}
+#Active-Users-Selector {
+  background-color: #61b95b;
+}
+#Requested-Users-Selector {
+  background-color: #fcc910;
+}
+#Blocked-Users-Selector {
+  background-color: #ee405e;
 }
 .usersFancyDisplaySection1 > div:hover {
   box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
@@ -616,6 +636,8 @@ tbody tr:nth-child(even) {
 }
 .selectedUserSection {
   box-shadow: 0 3px 10px rgb(0 0 0 / 50%) !important;
+  /* background-color: #186eb1 !important;
+  color: white !important; */
 }
 .containerUnderline {
   position: absolute;
@@ -632,11 +654,13 @@ tbody tr:nth-child(even) {
   justify-content: center;
   align-items: center;
   width: 50%;
+  /* flex-grow: 1; */
 }
 .usersFancyDisplaySection1 > div > div {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -648,12 +672,13 @@ tbody tr:nth-child(even) {
   text-align: center;
   margin: 0 !important;
   font-weight: 400 !important;
-  font-size: 26px;
+  font-size: 18px;
+  font-weight: bold !important;
 }
 .usersFancyDisplaySection1 h1 {
   font-size: 40px;
   text-align: center;
-  color: #777;
+  /* color: #777; */
   margin: 0 !important;
   font-weight: bold !important;
 }
@@ -663,6 +688,7 @@ tbody tr:nth-child(even) {
   border-radius: 20px;
   padding: 20px 30px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
+  background-color: white;
 }
 
 .usersSearchSection h2 {
@@ -670,7 +696,7 @@ tbody tr:nth-child(even) {
   margin: 10px;
   font-weight: bold;
   width: 20%;
-  font-size: 38px;
+  font-size: 30px;
   transition-duration: 300ms;
   cursor: pointer;
 }
@@ -775,7 +801,8 @@ thead .lastCell {
   align-items: center;
   padding: 8px 0;
   border: 2px solid rgba(153, 153, 153, 0.603);
-  width: 63%;
+  /* width: 63%; */
+  flex-grow: 1;
   cursor: pointer;
   margin-right: 30px;
   border-radius: 8px;
@@ -1009,7 +1036,7 @@ button > i {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 10px; */
 }
 
 .ownerTenantMainContainer {
@@ -1021,12 +1048,12 @@ button > i {
   /* margin-bottom: 50px; */
 }
 .ownerTenantMainContainer > div {
-  width: 25%;
+  width: 20%;
   display: flex;
   flex-direction: column  ;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
+  padding: 10px 30px 20px;
   /* position: relative; */
   /* box-shadow: 0 3px 10px rgb(0 0 0 / 16%); */
   transition-duration: 300ms;
@@ -1043,7 +1070,7 @@ button > i {
 .ownerTenantMainContainer > div h1 {
   color: #777;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 18px;
 }
 .ownerTenantMainSection .doughnutChartSection {
   background-color: #e3edf7;
@@ -1067,23 +1094,23 @@ button > i {
 /* /---- Progressive Bar ----/ */
 
 .skill {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   position: relative;
   transform: rotateZ(-90deg);
 }
 .outer {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   /* border: 1px solid black; */
-  padding: 20px;
+  padding: 10px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
     -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 .inner {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1103,18 +1130,18 @@ button > i {
   fill: none;
   /* stroke: url(#GradientColor); */
   stroke: #186eb1;
-  stroke-width: 20px;
-  stroke-dasharray: 320;
-  stroke-dashoffset: 320;
+  stroke-width: 10px;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
   animation: ownerAnim 2s linear forwards;
 }
 .tenantMainSection circle {
   fill: none;
   /* stroke: url(#GradientColor); */
   stroke: #e14eca;
-  stroke-width: 20px;
-  stroke-dasharray: 320;
-  stroke-dashoffset: 320;
+  stroke-width: 10px;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
   animation: tenantAnim 2s linear forwards;
 }
 svg {
@@ -1124,12 +1151,12 @@ svg {
 }
 @keyframes ownerAnim {
   100% {
-    stroke-dashoffset: 115;
+    stroke-dashoffset: 87;
   }
 }
 @keyframes tenantAnim {
   100% {
-    stroke-dashoffset: 220;
+    stroke-dashoffset: 162;
   }
 }
 
