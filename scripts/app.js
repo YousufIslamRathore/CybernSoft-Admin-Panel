@@ -77,9 +77,9 @@ function selectedUserTypeSection(e) {
     //   "class",
     //   "tenantMainSection selectedUserSection"
     // );
-    tenantH1.style.color = "#e14eca";
+    tenantH1.style.color = "#e5032dbd";
     // tenantH1.style.fontWeight = "bold"
-    tenantCount.style.color = "#e14eca";
+    tenantCount.style.color = "#e5032dbd";
   } else {
     // ownerAndTenant[1].setAttribute("class", "tenantMainSection");
     tenantH1.style.color = "#777";

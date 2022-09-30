@@ -266,8 +266,87 @@
               </div>
             </section>
 
-            <section>
-              <div></div>
+            <section class="presentationChartSection">
+              <main>
+                <div>
+                  <canvas id="lineChart"></canvas>
+                </div>
+              </main>
+
+              <section>
+                <section>
+                  <div
+                    class="ownerMainSection"
+                    onclick="selectedUserTypeSection(0)"
+                  >
+                    <div class="skill">
+                      <div class="outer">
+                        <div class="inner">
+                          <div id="ownerCount">65%</div>
+                        </div>
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        width="120px"
+                        height="120px"
+                      >
+                        <defs>
+                          <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                          </linearGradient>
+                        </defs>
+                        <circle
+                          cx="60"
+                          cy="60"
+                          r="50"
+                          stroke-linecap="square"
+                        />
+                      </svg>
+                    </div>
+                    <div class="userTypeHeadingDiv">
+                      <h1 id="ownerH1">Owners</h1>
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <div
+                    class="tenantMainSection"
+                    onclick="selectedUserTypeSection(1)"
+                  >
+                    <div class="skill">
+                      <div class="outer">
+                        <div class="inner">
+                          <div id="tenantCount">35%</div>
+                        </div>
+                      </div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        width="120px"
+                        height="120px"
+                      >
+                        <defs>
+                          <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                          </linearGradient>
+                        </defs>
+                        <circle
+                          cx="60"
+                          cy="60"
+                          r="50"
+                          stroke-linecap="square"
+                        />
+                      </svg>
+                    </div>
+                    <div class="userTypeHeadingDiv">
+                      <h1 id="tenantH1">Tenants</h1>
+                    </div>
+                  </div>
+                </section>
+              </section>
             </section>
 
             <section class="usersMainListingSection">
@@ -279,7 +358,7 @@
                   >
                     All Users
                   </h2>
-                  <main class="ownerTenantMainContainer" id="ownerAndTenant">
+                  <!-- <main class="ownerTenantMainContainer" id="ownerAndTenant">
                     <div
                       class="ownerMainSection"
                       onclick="selectedUserTypeSection(0)"
@@ -306,17 +385,13 @@
                             cx="45"
                             cy="45"
                             r="40"
-                            stroke-linecap="round"
+                            stroke-linecap="butt"
                           />
                         </svg>
                       </div>
                       <div class="userTypeHeadingDiv">
                         <h1 id="ownerH1">Owners</h1>
                       </div>
-                      <!-- <main
-                      class="containerUnderline"
-                      style="border-color: #186eb1; background-color: #186eb1"
-                    ></main> -->
                     </div>
 
                     <div
@@ -352,12 +427,8 @@
                       <div class="userTypeHeadingDiv">
                         <h1 id="tenantH1">Tenants</h1>
                       </div>
-                      <!-- <main
-                      class="containerUnderline"
-                      style="border-color: #e14eca; background-color: #e14eca"
-                    ></main> -->
                     </div>
-                  </main>
+                  </main> -->
                 </section>
                 <section class="searchSectionContainer">
                   <div class="searchBarContainer">
@@ -703,57 +774,51 @@
 
   <script src="./scripts/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="./scripts/pieChart.js"></script>
+  <!-- <script src="./scripts/pieChart.js"></script> -->
 
   <!-- <script src="./scripts/doughnutChart.js"></script> -->
-  <!-- <script>
-  /// Setup Block
-  const data = {
-    labels: ['Delivered Gallons', 'On-Align', 'Failed Gallons'],
-    datasets: [{
-      label: 'Gallons Delivered',
-      data: [300, 50, 100],
-      backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
+  <script>
+    /// Setup Block
+    const labels = ["January", "February", "March", "April", "May", "June"];
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: "My First dataset",
+          backgroundColor: "rgb(24, 110, 190)",
+          borderColor: "rgb(24, 110, 190)",
+          data: [0, 10, 5, 2, 20, 30, 45],
+          showLine: true,
+        },
       ],
-      // borderColor: [
-      //   'rgba(255, 99, 132, 1)',
-      //   'rgba(54, 162, 235, 1)',
-      //   'rgba(255, 206, 86, 1)',
-      //   'rgba(75, 192, 192, 1)',
-      //   'rgba(153, 102, 255, 1)',
-      //   'rgba(255, 159, 64, 1)'
-      // ],
-      // borderWidth: 1
-      hoverOffset: 4
-    }]
-  };
+    };
 
-  ///  Options Block
-  const options = {
-    // plugins: {
-    //   legend: {
-    //     display: false
-    //   }
-    // }
-  };
+    ///  Options Block
+    const options = {
+      scales: {
+        x: {
+          grid: {
+            display: false,
+          },
+        },
+        y: {
+          grid: {
+            display: false,
+          },
+        },
+      },
+    };
 
-  /// Config Block
-  const config = {
-    type: 'pie',
-    data,
-    options,
-  };
+    /// Config Block
+    const config = {
+      type: "line",
+      data,
+      options,
+    };
 
-  /// Render Block
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  )
-</script> -->
-
+    /// Render Block
+    const lineChart = new Chart(document.getElementById("lineChart"), config);
+  </script>
   <!-- <script>
   const data = {
     labels: [

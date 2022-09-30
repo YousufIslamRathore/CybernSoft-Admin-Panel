@@ -700,7 +700,7 @@ tbody tr:nth-child(even) {
 
 .usersMainListingSection {
   margin: 0 10px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   padding: 20px 30px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
   background-color: white;
@@ -798,7 +798,7 @@ thead .lastCell {
   color: #186eb1;
 }
 .tenantCell {
-  color: #e14eca;
+  color: #e5032dbd;
 }
 
 .searchSectionContainer {
@@ -1104,28 +1104,28 @@ button > i {
   color: #186eb1 ;
 }
 #tenantH1, #tenantCount {
-  color: #e14eca ;
+  color: #e5032dbd ;
 }
 /* /---- Progressive Bar ----/ */
 
 .skill {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   position: relative;
   transform: rotateZ(-90deg);
 }
 .outer {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   /* border: 1px solid black; */
-  padding: 10px;
+  padding: 20px;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
     -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 .inner {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1145,16 +1145,16 @@ button > i {
   fill: none;
   /* stroke: url(#GradientColor); */
   stroke: #186eb1;
-  stroke-width: 10px;
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
+  stroke-width: 20px;
+  stroke-dasharray: 470;
+  stroke-dashoffset: 470;
   animation: ownerAnim 2s linear forwards;
 }
 .tenantMainSection circle {
   fill: none;
   /* stroke: url(#GradientColor); */
-  stroke: #e14eca;
-  stroke-width: 10px;
+  stroke: #e5032dbd;
+  stroke-width: 20px;
   stroke-dasharray: 250;
   stroke-dashoffset: 250;
   animation: tenantAnim 2s linear forwards;
@@ -1164,17 +1164,29 @@ svg {
   top: 0;
   left: 0;
 }
-@keyframes ownerAnim {
+/* @keyframes ownerAnim {
   100% {
     stroke-dashoffset: 87;
   }
-}
-@keyframes tenantAnim {
+} */
+
+@keyframes ownerAnim {
   100% {
-    stroke-dashoffset: 162;
+    stroke-dashoffset: 250;
   }
 }
 
+/* @keyframes tenantAnim {
+  100% {
+    stroke-dashoffset: 162;
+  }
+} */
+
+@keyframes tenantAnim {
+  100% {
+    stroke-dashoffset: 100;
+  }
+}
 
 
 
@@ -1246,4 +1258,61 @@ svg {
 
 .tankersMainSectionForDoughnut circle {
   stroke-width: 10px;
+}
+
+
+
+
+
+
+/* Presentation Chart Section */
+
+.presentationChartSection {
+  margin: 20px 10px 40px;
+  display: flex;
+}
+
+.presentationChartSection > main {
+  /* height: 500px;  */
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
+  background-color: white;
+  width: 70%;
+  padding: 30px 0;
+}
+
+.presentationChartSection > main > div {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.presentationChartSection > section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.presentationChartSection > section > section {
+  background-color: white;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
+  width: 80%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+
+}
+
+.presentationChartSection > section > section > div {}
+
+.presentationChartSection > section > section h1 {
+  color: #777;
+  font-weight: bold;
+  font-size: 18px;
+}
+#lineChart {
+  height: 400px !important;
+  width: 100%;
 }
