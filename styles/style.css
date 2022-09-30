@@ -436,7 +436,7 @@ tbody tr:nth-child(even) {
 
 /* ----- Side Bar ----- */
 .usersPageSideBar {
-  width: 18%;
+  width: 15%;
   align-self: stretch;
   background-color: #015e8b;
   /* background-color: #1F51FF; */
@@ -488,10 +488,16 @@ tbody tr:nth-child(even) {
   margin-left: 20px;
   margin-right: 20px;
 }
+.selectedSideBarCirclePointer {
+  font-size: 8px;
+  visibility: hidden;
+}
+
+
 /* ----- Users Main Section ----- */
 
 .usersPageMainPanel {
-  width: 82%;
+  width: 85%;
   align-self: stretch;
   background-color: white;
 }

@@ -19,6 +19,17 @@ setInterval(() => {
   }
 }, 30);
 
+function pageSelector(index) {
+  var pageSelectors = document.getElementsByClassName("pageSelectors");
+  for (let i = 0; i < pagesSelectorContainer.length; i++) {
+    if (index != i) {
+      pageSelectors[i].firstElementChild.style.visibility = "hidden";
+    } else {
+      pageSelectors[i].firstElementChild.style.visibility = "visible";
+    }
+  }
+}
+
 function showPassword(element) {
   if (element.parentElement.previousElementSibling.type == "password") {
     element.parentElement.previousElementSibling.type = "text";
@@ -45,18 +56,18 @@ function selectedUserSection(e) {
 function selectedUserTypeSection(e) {
   // var ownerAndTenant = document.getElementById("ownerAndTenant").children;
   var ownerH1 = document.getElementById("ownerH1");
-  var ownerCount = document.getElementById("ownerCount")
+  var ownerCount = document.getElementById("ownerCount");
   var tenantH1 = document.getElementById("tenantH1");
   var tenantCount = document.getElementById("tenantCount");
   // for (let i = 0; i <= 2; i++) {
   if (e == 0) {
-    ownerH1.style.color = "#186eb1"
+    ownerH1.style.color = "#186eb1";
     // ownerH1.style.fontWeight = "bold"
-    ownerCount.style.color = "#186eb1"
+    ownerCount.style.color = "#186eb1";
   } else {
-    ownerH1.style.color = "#777"
+    ownerH1.style.color = "#777";
     // ownerH1.style.fontWeight = "normal"
-    ownerCount.style.color = "#777"
+    ownerCount.style.color = "#777";
   }
 
   if (e == 1) {
@@ -64,14 +75,14 @@ function selectedUserTypeSection(e) {
     //   "class",
     //   "tenantMainSection selectedUserSection"
     // );
-    tenantH1.style.color = "#e14eca"
+    tenantH1.style.color = "#e14eca";
     // tenantH1.style.fontWeight = "bold"
-    tenantCount.style.color = "#e14eca"
+    tenantCount.style.color = "#e14eca";
   } else {
     // ownerAndTenant[1].setAttribute("class", "tenantMainSection");
-    tenantH1.style.color = "#777"  
+    tenantH1.style.color = "#777";
     // tenantH1.style.fontWeight = "normal"
-    tenantCount.style.color = "#777"  
+    tenantCount.style.color = "#777";
   }
   // }
 }
