@@ -610,7 +610,7 @@ tbody tr:nth-child(even) {
   cursor: pointer;
   transition-duration: 500ms;
   background-color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
