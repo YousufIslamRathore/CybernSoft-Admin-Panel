@@ -24,8 +24,10 @@ function pageSelector(index) {
   for (let i = 0; i < pageSelectors.length; i++) {
     if (index != i) {
       pageSelectors[i].firstElementChild.style.visibility = "hidden";
+      pageSelectors[i].style.color = "#dddddd"
     } else {
       pageSelectors[i].firstElementChild.style.visibility = "visible";
+      pageSelectors[i].style.color = "white"
     }
   }
 }
