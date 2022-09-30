@@ -485,6 +485,7 @@ tbody tr:nth-child(even) {
 }
 .sideBarListContainer > div > section {
   width: 25px;
+  margin-left: 20px;
   margin-right: 20px;
 }
 /* ----- Users Main Section ----- */
