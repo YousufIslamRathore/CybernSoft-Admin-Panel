@@ -21,7 +21,7 @@ setInterval(() => {
 
 function pageSelector(index) {
   var pageSelectors = document.getElementsByClassName("pageSelectors");
-  for (let i = 0; i < pagesSelectorContainer.length; i++) {
+  for (let i = 0; i < pageSelectors.length; i++) {
     if (index != i) {
       pageSelectors[i].firstElementChild.style.visibility = "hidden";
     } else {
