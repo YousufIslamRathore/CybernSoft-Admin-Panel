@@ -605,7 +605,7 @@ tbody tr:nth-child(even) {
 .usersFancyDisplaySection1 > div {
   /* border: 1px solid #000; */
   width: 22%;
-  /* height: 150px; */
+  height: 125px;
   padding: 15px 25px 15px 35px;
   cursor: pointer;
   transition-duration: 500ms;
