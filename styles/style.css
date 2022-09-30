@@ -461,7 +461,7 @@ tbody tr:nth-child(even) {
     border-top: 1px solid rgba(189, 189, 189, 0.507); */
 }
 .sideBarListContainer > div {
-  height: 80px;
+  height: 100px;
   /* border-bottom: 1px solid rgba(189, 189, 189, 0.507);
   border-top: 1px solid rgba(189, 189, 189, 0.507); */
   display: flex;
@@ -471,13 +471,20 @@ tbody tr:nth-child(even) {
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition-duration: 200ms;
+  transition-duration: 300ms;
+  border: 1px solid #000;
+  margin-bottom: 10px;
 }
 .sideBarListContainer > div:hover {
   background-color: white;
   color: #015e8b;
 }
-
+.sideBarListContainer > div p {
+  margin-bottom: 0;
+}
+.sideBarListContainer > div > section {
+  margin-right: 15px;
+}
 /* ----- Users Main Section ----- */
 
 .usersPageMainPanel {
