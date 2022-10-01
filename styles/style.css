@@ -5,6 +5,10 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
@@ -430,12 +434,13 @@ tbody tr:nth-child(even) {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
 /* ----- Side Bar ----- */
 .usersPageSideBar {
+  min-height: 100vh;
   width: 15%;
   align-self: stretch;
   background-color: #015e8b;
@@ -444,6 +449,7 @@ tbody tr:nth-child(even) {
   box-shadow: 3px 0px 10px rgb(0 0 0 / 50%);
   z-index: 20;
   border-right: 2px solid #015e8b;
+  position: fixed;
 }
 .usersPageSideBar > h1 {
   color: white;
@@ -500,6 +506,7 @@ tbody tr:nth-child(even) {
   width: 85%;
   align-self: stretch;
   background-color: white;
+  margin-left: 15%;
 }
 
 .topHeaderSection {
@@ -699,7 +706,7 @@ tbody tr:nth-child(even) {
 }
 
 .usersMainListingSection {
-  margin: 0 10px;
+  margin: 0 10px 5px;
   /* border-radius: 20px; */
   padding: 20px 30px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
@@ -725,20 +732,26 @@ tbody tr:nth-child(even) {
 }
 .usersListSection thead {
   box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
-  border-radius: 15px;
+  /* border-radius: 15px !important; */
   background-color: #333;
 }
 .usersListSection tr {
+  display: table;
+  width: 100%;
   border-radius: 10px;
   cursor: pointer;
   transition-duration: 200ms;
+  table-layout: fixed;
+}
+.usersListSection tbody {
+  display: block;
+  height: 480px !important;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 .usersListSection tbody tr:hover {
   background-color: rgba(13, 116, 233, 0.151);
-}
-
-.usersListSection thead tr {
-  border-radius: 15px;
 }
 .usersListSection th {
   color: white;
@@ -764,16 +777,16 @@ tbody tr:nth-child(even) {
   font-size: small;
 }
 .firstCell {
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px !important;
 }
 .lastCell {
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 10px 10px 0 !important;
 }
 thead .firstCell {
-  border-radius: 15px 0 0 15px;
+  border-radius: 15px 0 0 15px !important;
 }
 thead .lastCell {
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 15px 15px 0 !important;
 }
 .suspended {
   background-color: #ff5f1fb4;
@@ -806,7 +819,7 @@ thead .lastCell {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 0 auto 40px;
+  margin: 0 auto 20px;
   padding: 0 20px;
 }
 
@@ -1109,14 +1122,14 @@ button > i {
 /* /---- Progressive Bar ----/ */
 
 .skill {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   position: relative;
   transform: rotateZ(-90deg);
 }
 .outer {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   /* border: 1px solid black; */
   padding: 20px;
@@ -1124,8 +1137,8 @@ button > i {
     -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 .inner {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1146,8 +1159,8 @@ button > i {
   /* stroke: url(#GradientColor); */
   stroke: #186eb1;
   stroke-width: 20px;
-  stroke-dasharray: 470;
-  stroke-dashoffset: 470;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
   animation: ownerAnim 2s linear forwards;
 }
 .tenantMainSection circle {
@@ -1172,7 +1185,7 @@ svg {
 
 @keyframes ownerAnim {
   100% {
-    stroke-dashoffset: 250;
+    stroke-dashoffset: 85;
   }
 }
 
@@ -1270,6 +1283,8 @@ svg {
 .presentationChartSection {
   margin: 20px 10px 40px;
   display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .presentationChartSection > main {
@@ -1289,23 +1304,23 @@ svg {
   width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+  /* padding-right: 10px; */
 }
 
 .presentationChartSection > section > section {
   background-color: white;
   box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
-  width: 80%;
+  width: 90%;
   height: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center ;
-
+  align-items: center;
 }
 
-.presentationChartSection > section > section > div {}
+/* .presentationChartSection > section > section > div {} */
 
 .presentationChartSection > section > section h1 {
   color: #777;
@@ -1313,6 +1328,27 @@ svg {
   font-size: 18px;
 }
 #lineChart {
-  height: 400px !important;
+  height: 300px !important;
   width: 100%;
+}
+
+
+
+
+/* .... Scroll Bar .... */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(211, 209, 209);
+  border-radius: 10px;
+}
+
+.usersListSection ::-webkit-scrollbar {
+  width: 5px;
 }
