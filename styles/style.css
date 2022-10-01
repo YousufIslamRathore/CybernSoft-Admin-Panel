@@ -1159,8 +1159,8 @@ button > i {
   /* stroke: url(#GradientColor); */
   stroke: #186eb1;
   stroke-width: 20px;
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
+  stroke-dasharray: 290;
+  stroke-dashoffset: 290;
   animation: ownerAnim 2s linear forwards;
 }
 .tenantMainSection circle {
@@ -1168,8 +1168,8 @@ button > i {
   /* stroke: url(#GradientColor); */
   stroke: #e5032dbd;
   stroke-width: 20px;
-  stroke-dasharray: 250;
-  stroke-dashoffset: 250;
+  stroke-dasharray: 290;
+  stroke-dashoffset: 290;
   animation: tenantAnim 2s linear forwards;
 }
 svg {
@@ -1185,7 +1185,7 @@ svg {
 
 @keyframes ownerAnim {
   100% {
-    stroke-dashoffset: 85;
+    stroke-dashoffset: 110;
   }
 }
 
@@ -1197,7 +1197,7 @@ svg {
 
 @keyframes tenantAnim {
   100% {
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 205;
   }
 }
 
