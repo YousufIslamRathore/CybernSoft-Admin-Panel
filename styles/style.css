@@ -329,7 +329,8 @@ tbody tr:nth-child(even) {
 .landingPageBody {
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/loginPageImg3.png"); */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/loginPageImg3.png"); 
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../images/loginPageImg3.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -372,7 +373,8 @@ tbody tr:nth-child(even) {
   align-items: center;
   position: relative;
 }
-.landingPageTopSection > section, .landingPageBottomSection .siders {
+.landingPageTopSection > section,
+.landingPageBottomSection .siders {
   width: 5.5%;
   background-color: whitesmoke;
   align-self: stretch;
@@ -498,7 +500,6 @@ tbody tr:nth-child(even) {
   font-size: 8px;
   visibility: hidden;
 }
-
 
 /* ----- Users Main Section ----- */
 
@@ -827,12 +828,12 @@ thead .lastCell {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 8px 0;
+  padding: 7px 0;
   border: 2px solid rgba(153, 153, 153, 0.603);
   /* width: 63%; */
   flex-grow: 1;
   cursor: pointer;
-  margin-right: 30px;
+  margin-right: 10px;
   border-radius: 8px;
 }
 
@@ -865,17 +866,21 @@ thead .lastCell {
   outline: none;
   /* display: inline-block; */
   box-shadow: 0 3px 10px rgb(0, 0, 0 / 16%);
-  margin-right: 25px;
+  margin-right: 10px;
   cursor: pointer;
+  border-radius: 8px;
 }
-
+.dateSearchField {
+  padding: 7px 10px;
+  border-radius: 8px;
+}
 .usersSearchSection button {
   background-color: #555;
   color: white;
   font-weight: bold;
   font-size: 14px;
   height: 41px;
-  width: 180px;
+  width: 150px;
   border: none;
   border-radius: 8px;
 }
@@ -903,7 +908,7 @@ thead .lastCell {
 }
 .wholeModal .headingSection h1 {
   color: #555;
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bold !important;
   font-size: 32px !important;
   display: flex;
@@ -957,6 +962,7 @@ thead .lastCell {
   padding: 0 30px;
 }
 .actionsSection > h2 {
+  font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -984,14 +990,15 @@ thead .lastCell {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 0 90px 20px 0;
+  margin: 20px 90px 10px 0;
 }
 .wholeModal .buttonSection2 {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding: 0 45px 10px 0;
+  /* padding: 0 45px 10px 0; */
+  margin: 20px 0;
 }
 .wholeModal .buttonSection > button {
   width: 200px;
@@ -1059,7 +1066,6 @@ button > i {
 
 /* Owner Tenant Section */
 
-
 .userSearchSectionFirstSection {
   display: flex;
   justify-content: space-between;
@@ -1078,7 +1084,7 @@ button > i {
 .ownerTenantMainContainer > div {
   width: 20%;
   display: flex;
-  flex-direction: column  ;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px 20px;
@@ -1113,11 +1119,13 @@ button > i {
   margin-top: 10px;
   margin-bottom: 0;
 }
-#ownerH1, #ownerCount {
-  color: #186eb1 ;
+#ownerH1,
+#ownerCount {
+  color: #186eb1;
 }
-#tenantH1, #tenantCount {
-  color: #e5032dbd ;
+#tenantH1,
+#tenantCount {
+  color: #e5032dbd;
 }
 /* /---- Progressive Bar ----/ */
 
@@ -1201,27 +1209,75 @@ svg {
   }
 }
 
-
-
-
 /* /---- Tankers ----/ */
-
 
 .tankersFancyDisplaySection1 {
   flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .tankersFancyDisplaySection1 > div {
-  width: 30%;
+  height: auto;
+  padding: 20px;
+  /* background-color: #525f7f; */
+  background: linear-gradient(
+    to right,
+    #283e51,
+    #4b79a1
+  ); 
+  width: 24%;
 }
 
 .tankersFancyDisplaySection1 > div > section {
-  flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: flex-start;
 }
-
+.tankersFancyDisplaySection1 h1,
+.tankersFancyDisplaySection1 h2 {
+  font-weight: normal !important;
+}
+.tankersFancyDisplaySection1 h1 {
+  font-size: 24px !important;
+}
+.tankersFancyDisplaySection1 h2 {
+  font-size: 20px !important;
+  margin-bottom: 20px !important;
+}
+.tankersFancyDisplaySection2 h1,
+.tankersFancyDisplaySection2 h2 {
+  font-weight: bold !important;
+}
+.tankersFancyDisplaySection2 h1 {
+  font-size: 40px !important;
+}
+.tankersFancyDisplaySection2 h2 {
+  margin-bottom: 0 !important;
+  font-size: 14px !important;
+}
+.tankersFancyDisplaySection2 > div {
+  width: 32%;
+  /* height: 120px; */
+  padding: 15px 25px 15px 35px;
+}
+.tankersFancyDisplaySection2 > div > section {
+  align-items: center;
+}
+.tankersFancyDisplaySection3 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 30px;
+}
+.tankersFancyDisplaySection3 > div {
+  /* align-self: stretch; */
+  width: 100%;
+  margin-bottom: 0;
+}
 .haltServiceDiv button {
   background-color: #ee405e;
   /* border: 3px solid #ee405e; */
@@ -1238,7 +1294,8 @@ svg {
   font-size: 16px !important  ;
 }
 
-.skill2, .outer2 {
+.skill2,
+.outer2 {
   width: 90px;
   height: 90px;
 }
@@ -1273,11 +1330,25 @@ svg {
   stroke-width: 10px;
 }
 
-
-
-
-
-
+/* #Today-Orders-Selector,  */
+#Completed-Orders-Selector {
+  /* background: #61b95b !important; */
+  background: #61b95bc5 !important;
+  /* background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); FF3.6+ */
+}
+/* #Weekly-Orders-Selector  {
+  background-color: #186eb1;
+} */
+/* #Monthly-Orders-Selector,  */
+#Pending-Orders-Selector {
+  /* background: #fcc910 !important; */
+  background: #fcc910c5 !important;
+}
+/* #Yearly-Orders-Selector, */
+#Failed-Orders-Selector {
+  /* background: #ee405e !important; */
+  background: #ee405ec5 !important;
+}
 /* Presentation Chart Section */
 
 .presentationChartSection {
@@ -1300,7 +1371,7 @@ svg {
   margin: 0 auto;
 }
 
-.presentationChartSection > section {
+.presentationChartSection > div {
   width: 30%;
   display: flex;
   flex-direction: column;
@@ -1331,9 +1402,11 @@ svg {
   height: 300px !important;
   width: 100%;
 }
-
-
-
+#pieChart {
+  height: 300px !important;
+  width: 300px !important;
+  margin: 0 auto;
+}
 
 /* .... Scroll Bar .... */
 
