@@ -1425,3 +1425,58 @@ svg {
 .usersListSection ::-webkit-scrollbar {
   width: 5px;
 }
+
+
+
+.haltSection {
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
+  width: 97%;
+  background-color: white;
+  margin: 20px auto;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100px;
+}
+/* .haltSection > section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.haltSection > section h3 {
+  margin-bottom: 0;
+  color: #186eb1;
+
+}
+.haltSection > section h4 {
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+.haltSection > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.haltSection p {
+  margin-bottom: 0;
+  font-size: 24px;
+  color: #ee405e;
+  font-weight: bold;
+}
+.haltSection > div i {
+  font-size: 48px;
+  color: #ee405e;
+  margin-left: 10px;
+  cursor: pointer;
+} */
+
+.tabSection {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabsection {
+  border-bottom: 1px solid #999;
+}

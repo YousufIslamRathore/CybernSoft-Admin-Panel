@@ -187,3 +187,11 @@ function updateTenantDetails() {
     tenantDetail.lastElementChild.style.color = "#ee405e";
   }
 }
+
+
+
+
+function haltServiceToggler(icon) {
+  // if(icon.className == )
+  icon.className == "fa-solid fa-toggle-off" ? icon.className = "fa-solid fa-toggle-on" : icon.className = "fa-solid fa-toggle-off"
+}
