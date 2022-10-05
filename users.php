@@ -193,42 +193,86 @@
                 ></main>
               </div>
             </section> -->
-
+            <!-- all users -->
           <section class="usersFancyDisplaySection1" id="userSelection">
             <div class="selectedUserSection" onclick="selectedUserSection(0)" id="All-Users-Selector">
               <div style="background-color: white; color: #186eb1">
                 <i class="fa-solid fa-users"></i>
               </div>
-              <section>
-                <h1>746</h1>
-                <h2>All Users</h2>
+              <?php
+                include 'connection.php';
+              $query="SELECT * from users";
+              $res=mysqli_query($con,$query);
+              $count = mysqli_num_rows($res);
+              $users="All user";
+                  ?>
+                  
+              <section  onclick="window.location.href = 'users.php?users=<?php echo $users ?>'">
+                
+               
+                <h1 name="alluser"><?php echo $count?></h1>
+                <h2 name="alluser_hed">All Users</h2>
+              
+
               </section>
+              
+            
               <!-- <main
                   class="containerUnderline"
                   style="border-color: #186eb1; background-color: #186eb1"
                 ></main> -->
             </div>
+            <!-- ALl Active users -->
             <div onclick="selectedUserSection(1)" id="Active-Users-Selector">
               <div style="background-color: white; color: #61b95b">
                 <i class="fa-solid fa-check"></i>
               </div>
-              <section>
-                <h1>740</h1>
-                <h2>Active Users</h2>
+              <?php
+                include 'connection.php';
+              $query="SELECT * from users where is_active = 1 and is_block = 0";
+              $res=mysqli_query($con,$query);
+              $count = mysqli_num_rows($res);
+              $users="Active user";
+                  ?>
+                <form action="users.php" method="GET">
+
+              <section onclick="window.location.href = 'users.php?users=<?php echo $users ?>'">
+                
+                <h1 name="alluser"><?php echo $count?></h1>
+                <h2 name="alluser_hed">Active Users</h2>
               </section>
+              </form>
+            
               <!-- <main
                   class="containerUnderline"
                   style="border-color: #61b95b; background-color: #61b95b"
                 ></main> -->
             </div>
+
+
+            <!-- Request users -->
+
             <div onclick="selectedUserSection(2)" id="Requested-Users-Selector">
               <div style="background-color: white; color: #fcc910">
                 <i class="fa-solid fa-exclamation"></i>
               </div>
-              <section>
-                <h1>6</h1>
-                <h2>Requested Users</h2>
+              <?php
+                include 'connection.php';
+              $query="SELECT * from users where is_active = 0 and is_block = 0";
+              $res=mysqli_query($con,$query);
+              $count = mysqli_num_rows($res);
+              $users="Request user";
+                  ?>
+                   <form action="users.php" method="GET">
+              <section onclick="window.location.href = 'users.php?users=<?php echo $users ?>'">
+
+               
+                <h1 name="alluser"><?php echo $count?></h1>
+                <h2 name="alluser_hed">Request Users</h2>
               </section>
+              </form>
+
+             
               <!-- <main
                   class="containerUnderline"
                   style="border-color: #fcc910; background-color: #fcc910"
@@ -238,10 +282,26 @@
               <div style="background-color: white; color: #ee405e">
                 <i class="fa-solid fa-ban"></i>
               </div>
-              <section>
-                <h1>1</h1>
-                <h2>Block Users</h2>
+
+
+              <!-- all block users -->
+              <?php
+                include 'connection.php';
+              $query="SELECT * from users where  is_block = 1";
+              $res=mysqli_query($con,$query);
+              $count = mysqli_num_rows($res);
+              $users="Block user";
+                  ?>
+                <form action="users.php" method="GET">
+
+              <section onclick="window.location.href = 'users.php?users=<?php echo $users ?>'">
+               
+                <h1 name="alluser"><?php echo $count?></h1>
+                <h2 name="alluser_hed">Block Users</h2>
               </section>
+              </form>
+
+              
               <!-- <main
                   class="containerUnderline"
                   style="border-color: #ee405e; background-color: #ee405e"
@@ -430,17 +490,252 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <?php
+                  // all users
+                  if(isset($_GET['users']) && $_GET['users'] == 'All user'){
+                    $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id  ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
                   <tr data-toggle="modal" data-target="#userDetails">
-                    <td class="firstCell">A-01</td>
-                    <td>Yousuf Islam</td>
-                    <td>42201-2729672-7</td>
-                    <td>03082028980</td>
-                    <td class="ownerCell">Owner</td>
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
                     <td class="lastCell">
-                      <div class="suspended">Suspended</div>
+                      <?php
+                      if($row['is_active']==1 && $row['is_block']==0  ){
+                        ?>
+                        <div class="active">Active</div>
+                        <?php
+                      }
+                      else if($row['is_active']==0 && $row['is_block']==0){
+                        ?>
+                        <div class="requested">Request</div>
+                        <?php
+                      }
+                      else {
+                         ?>
+                        <div class="blocked">Blocked</div>
+                        <?php
+                      }
+                      ?>
+                      
                     </td>
                   </tr>
+                  <?php
+                   }
+                  }
+                    // Active users 
+                 else if(isset($_GET['users']) && $_GET['users'] == 'Active user'){
+                    $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id where is_block= 0 and is_active = 1 ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
                   <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                      <?php
+                      if($row['is_active']==1 && $row['is_block']==0  ){
+                        ?>
+                        <div class="active">Active</div>
+                        <?php
+                      }
+                   
+                      else {
+                         ?>
+                        <div class="blocked">Blocked</div>
+                        <?php
+                      }
+                      ?>
+                      
+                    </td>
+                  </tr>
+                  <?php
+                   }
+                  }
+
+
+                  // request uses
+                   else if(isset($_GET['users']) && $_GET['users'] == 'Request user'){
+                    $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id where is_block= 0 and is_active = 0 ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                        <div class="requested">Request</div>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                   }
+                  }
+
+                  // block users
+                    else if(isset($_GET['users']) && $_GET['users'] == 'Block user'){
+                    $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id where is_block= 1  ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                        <div class="blocked">Blocked</div>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                   }
+                  }
+                  else{
+                    $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id  ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                      <?php
+                      if($row['is_active']==1 && $row['is_block']==0  ){
+                        ?>
+                        <div class="active">Active</div>
+                        <?php
+                      }
+                      else if($row['is_active']==0 && $row['is_block']==0){
+                        ?>
+                        <div class="requested">Request</div>
+                        <?php
+                      }
+                      else {
+                         ?>
+                        <div class="blocked">Blocked</div>
+                        <?php
+                      }
+                      ?>
+                      
+                    </td>
+                  </tr>
+                  <?php
+                   }
+                  }
+
+                  
+                  ?>
+
+
+                 <!--  <tr data-toggle="modal" data-target="#userDetails">
                     <td class="firstCell">A-01</td>
                     <td>Yousuf Islam</td>
                     <td>42201-2729672-7</td>
@@ -609,7 +904,7 @@
                     <td class="lastCell">
                       <div class="requested">Requested</div>
                     </td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
             </section>
