@@ -643,16 +643,20 @@ tbody tr:nth-child(even) {
   color: white !important;
 }
 #All-Users-Selector {
-  background-color: #186eb1;
+  /* background-color: #186eb1; */
+  background-color: #186fb180;
 }
 #Active-Users-Selector {
-  background-color: #61b95b;
+  /* background-color: #61b95b; */
+  background-color: #61b95b80;
 }
 #Requested-Users-Selector {
-  background-color: #fcc910;
+  /* background-color: #fcc910; */
+  background-color: #fcc91080;
 }
 #Blocked-Users-Selector {
-  background-color: #ee405e;
+  /* background-color: #ee405e; */
+  background-color: #ee405e80;
 }
 .usersFancyDisplaySection1 > div:hover {
   box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
