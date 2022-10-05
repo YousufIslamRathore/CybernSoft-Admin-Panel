@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body onload="loadImage()">
   <section class="usersPage">
     <!-- Side Bar -->
     <section class="usersPageSideBar">
@@ -319,7 +319,9 @@
             <section>
               <section>
                 <div class="ownerMainSection" onclick="selectedUserTypeSection(0)">
-                  <div class="skill">
+                  <!-- /// Circle Div /// -->
+                  <?php $owner="owner";?>
+                  <div class="skill" onclick="window.location.href = 'users.php?users=<?php echo $_GET['users'] ?>&owner=<?php echo $owner?>'">
                     <div class="outer">
                       <div class="inner">
                         <div id="ownerCount">65%</div>
@@ -335,6 +337,8 @@
                       <circle cx="55" cy="55" r="45" stroke-linecap="round" />
                     </svg>
                   </div>
+
+                  <!-- /// Name Below Circle /// -->
                   <div class="userTypeHeadingDiv">
                     <h1 id="ownerH1">Owners</h1>
                   </div>
@@ -342,7 +346,8 @@
               </section>
               <section>
                 <div class="tenantMainSection" onclick="selectedUserTypeSection(1)">
-                  <div class="skill">
+                  <?php $tenant="tenant";?>
+                  <div class="skill" onclick="window.location.href = 'users.php?users=<?php echo $_GET['users']?>&owner=<?php echo $tenant?>'">
                     <div class="outer">
                       <div class="inner">
                         <div id="tenantCount">35%</div>
@@ -369,9 +374,107 @@
           <section class="usersMainListingSection">
             <section class="usersSearchSection">
               <section class="userSearchSectionFirstSection">
-                <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                 <?php
+                 if( isset($_GET['users']) && $_GET['users'] == 'All user' && !isset($_GET['owner'])){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
                   All Users
                 </h2>
+                  <?php
+                 }
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Active user' && !isset($_GET['owner'])){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Active Users
+                </h2>
+                  <?php
+                 }
+                 else if(isset($_GET['users']) && $_GET['users'] == 'Request user' && !isset($_GET['owner'])){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Requested Users
+                </h2>
+                  <?php
+                 }
+                   else if(isset($_GET['users']) && $_GET['users'] == 'Block user' && !isset($_GET['owner'])){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Blocked Users
+                </h2>
+                  <?php
+                 }
+                 if(isset($_GET['owner'])){
+
+                   if(isset($_GET['users']) && $_GET['users'] == 'All user' && $_GET['owner'] == 'owner' ){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  All Users - Owner
+                </h2>
+                  <?php
+                 }
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Active user'  && $_GET['owner'] == 'owner' ){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Active Users - Owner
+                </h2>
+                  <?php
+                 }
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Block user'  && $_GET['owner'] == 'owner' ){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Blocked Users - Owner
+                </h2>
+                  <?php
+                 }
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Request user' && $_GET['owner'] == 'owner' ){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Requested Users - Owner
+                </h2>
+                  <?php
+                 }
+                 else if(isset($_GET['users']) && $_GET['users'] == 'All user'  && $_GET['owner'] == 'tenant' ){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  All Users - Tenant
+                </h2>
+                  <?php
+                 }
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Active user'  && $_GET['owner'] == 'tenant' ){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Active Users - Tenant
+                </h2>
+                  <?php
+                 }
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Request user'  && $_GET['owner'] == 'tenant' ){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Requested Users - Tenant
+                </h2>
+                  <?php
+                 }
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Block user' && $_GET['owner'] == 'tenant' ){
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  Blocked Users - Tenant
+                </h2>
+                  <?php
+                 }
+                 }
+                
+                 
+                  
+                   else if(!isset($_GET['users']) && !isset($_GET['owner']) ) {
+                  ?>
+                  <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                  All Users
+                </h2>
+                  <?php
+                 }
+                 ?>
+
+                
                 <!-- <main class="ownerTenantMainContainer" id="ownerAndTenant">
                     <div
                       class="ownerMainSection"
@@ -491,8 +594,8 @@
                 </thead>
                 <tbody>
                   <?php
-                  // all users
-                  if(isset($_GET['users']) && $_GET['users'] == 'All user'){
+                  // all users and owner not set in url
+                  if(isset($_GET['users']) && $_GET['users'] == 'All user' && !isset($_GET['owner'])){
                     $query="SELECT 
                     users.id as user_id,
                      users.full_name as users_fullname,
@@ -544,8 +647,8 @@
                   <?php
                    }
                   }
-                    // Active users 
-                 else if(isset($_GET['users']) && $_GET['users'] == 'Active user'){
+                    // Active users  and owner not set in url
+                 else if(isset($_GET['users']) && $_GET['users'] == 'Active user' && !isset($_GET['owner'])){
                     $query="SELECT 
                     users.id as user_id,
                      users.full_name as users_fullname,
@@ -565,6 +668,7 @@
   SUBSTR(`address_address` FROM 1 FOR 1), 
   LPAD(lower(`address_address`), 10,0) ASC ";
                     $res=mysqli_query($con,$query);
+
                     while($row=mysqli_fetch_assoc($res)){
                   ?>
                   <tr data-toggle="modal" data-target="#userDetails">
@@ -595,8 +699,8 @@
                   }
 
 
-                  // request uses
-                   else if(isset($_GET['users']) && $_GET['users'] == 'Request user'){
+                  // request uses and owner not set in url
+                   else if(isset($_GET['users']) && $_GET['users'] == 'Request user' && !isset($_GET['owner'])){
                     $query="SELECT 
                     users.id as user_id,
                      users.full_name as users_fullname,
@@ -637,8 +741,8 @@
                    }
                   }
 
-                  // block users
-                    else if(isset($_GET['users']) && $_GET['users'] == 'Block user'){
+                  // block users and owner not set in url
+                    else if(isset($_GET['users']) && $_GET['users'] == 'Block user' && !isset($_GET['owner'])){
                     $query="SELECT 
                     users.id as user_id,
                      users.full_name as users_fullname,
@@ -677,8 +781,375 @@
                   </tr>
                   <?php
                    }
+}
+                                // checking set owner condition in url 
+
+                   if(isset($_GET['owner']))
+                   {
+                          // set all owners either active or block
+                   if(isset($_GET['users']) && $_GET['users'] == 'All user' && $_GET['owner'] == 'owner' ){
+                  $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id where user_type ='owner'  ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                         <?php
+                      if($row['is_active']==1 && $row['is_block']==0  ){
+                        ?>
+                        <div class="active">Active</div>
+                        <?php
+                      }
+                      else if($row['is_active']==0 && $row['is_block']==0){
+                        ?>
+                        <div class="requested">Request</div>
+                        <?php
+                      }
+                      else {
+                         ?>
+                        <div class="blocked">Blocked</div>
+                        <?php
+                      }
+                      ?>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                 }}
+                                // set user all active owner
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Active user'  && $_GET['owner'] == 'owner' ){
+                   $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id where is_active= 1 and user_type = 'owner'  ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                        <div class="active">Active</div>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                 }}
+                          // set user owner block
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Block user'  && $_GET['owner'] == 'owner' ){
+                 $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id where is_block= 1 and user_type ='owner' ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                        <div class="blocked">Blocked</div>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                 }}
+                                // set user owner request
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Request user' && $_GET['owner'] == 'owner' ){
+                  $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id where is_block = 0 and is_active = 0 and user_type ='owner' ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                        <div class="requested">Requested</div>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                 }}
+                            // set user all tenant either block or active
+                 else if(isset($_GET['users']) && $_GET['users'] == 'All user'  && $_GET['owner'] == 'tenant' ){
+                  $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id  where user_type ='tenant' ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                   
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                       <?php
+                      if($row['is_active']==1 && $row['is_block']==0  ){
+                        ?>
+                        <div class="active">Active</div>
+                        <?php
+                      }
+                      else if($row['is_active']==0 && $row['is_block']==0){
+                        ?>
+                        <div class="requested">Request</div>
+                        <?php
+                      }
+                      else {
+                         ?>
+                        <div class="blocked">Blocked</div>
+                        <?php
+                      }
+                      ?>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                 }}
+                                      // set user active tenant
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Active user'  && $_GET['owner'] == 'tenant' ){
+                  $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id  where user_type ='tenant' and is_active=1 ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                        <div class="active">Active</div>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                 }}
+
+                                        // set user requested tenant
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Request user'  && $_GET['owner'] == 'tenant' ){
+                  $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id  where user_type ='tenant' and is_active=0 and is_block=0 ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                        <div class="requested">Requested</div>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                 }}
+                            // set user and blocked tenant
+                  else if(isset($_GET['users']) && $_GET['users'] == 'Block user' && $_GET['owner'] == 'tenant' ){
+                  $query="SELECT 
+                    users.id as user_id,
+                     users.full_name as users_fullname,
+                     users.user_type as user_type, 
+                     users.owner_cnic as user_cnic,
+                      users.tenant_cnic as user_tenetcnic,
+                       users.unit_no as unit_no,
+                       users.contact as contact,
+                        users.address as user_address,
+                         users.is_active as is_active,
+                          users.is_block as is_block, 
+                          users.password as password,
+                          address.id as address_id,
+                          address.address as address_address
+
+                     from users join address on users.address = address.id  where user_type ='tenant' and is_block=1 ORDER BY  
+  SUBSTR(`address_address` FROM 1 FOR 1), 
+  LPAD(lower(`address_address`), 10,0) ASC ";
+                    $res=mysqli_query($con,$query);
+                    while($row=mysqli_fetch_assoc($res)){
+                  ?>
+                  <tr data-toggle="modal" data-target="#userDetails">
+                    <td class="firstCell"><?php echo $row['address_address']?></td>
+                    <td><?php echo $row['users_fullname']?></td>
+                    <td><?php echo $row['user_cnic']?></td>
+                    <td><?php echo $row['contact']?></td>
+                    <td class="ownerCell"><?php echo $row['user_type']?></td>
+                    <td class="lastCell">
+                    
+                        <div class="blocked">Blocked</div>
+                       
+                        
+                       
+                      
+                    </td>
+                  </tr>
+                  <?php
+                 }
+                 }
+               
                   }
-                  else{
+
+
+
+                  else if(!isset($_GET['users']) && !isset($_GET['owner'])){
                     $query="SELECT 
                     users.id as user_id,
                      users.full_name as users_fullname,
@@ -698,6 +1169,7 @@
   SUBSTR(`address_address` FROM 1 FOR 1), 
   LPAD(lower(`address_address`), 10,0) ASC";
                     $res=mysqli_query($con,$query);
+                   
                     while($row=mysqli_fetch_assoc($res)){
                   ?>
                   <tr data-toggle="modal" data-target="#userDetails">
@@ -733,6 +1205,21 @@
 
                   
                   ?>
+                
+<script >
+  function loadImage(){
+    // console.log(window.location.href)
+    let pageUrl = window.location.href
+    let matchingUrl = pageUrl.slice(-10)
+    // console.log(matchingUrl)
+    if(matchingUrl == "/users.php") {
+      window.location.assign("users.php?users='All user'")
+    } else {
+      return false
+    }
+  }
+// loadImage();
+</script>
 
 
                  <!--  <tr data-toggle="modal" data-target="#userDetails">
