@@ -191,7 +191,42 @@ function updateTenantDetails() {
 
 
 
-function haltServiceToggler(icon) {
-  // if(icon.className == )
-  icon.className == "fa-solid fa-toggle-off" ? icon.className = "fa-solid fa-toggle-on" : icon.className = "fa-solid fa-toggle-off"
+// function haltServiceToggler(icon) {
+//   icon.className == "fa-solid fa-toggle-off" ? icon.className = "fa-solid fa-toggle-on" : icon.className = "fa-solid fa-toggle-off"
+// }
+
+function ordersTabSectionToggler(tab) {
+
+  var tabSectionBody = document.getElementById("tabSectionBody");
+  tabSectionBody.className = "tabSectionDisplayBody"
+
+  if(tab.innerHTML == "Quota") {
+    tab.style.background = "white"
+    tab.style.color = "#555"
+    tab.style.borderRadius = "20px 20px 0 0"
+    tab.parentElement.style.paddingLeft = "5px"
+    tab.parentElement.style.background = "#283e51"
+    tab.parentElement.style.borderTop = "5px solid #283e51"
+
+    tab.parentElement.nextElementSibling.style.background = "#283e51"
+    tab.parentElement.nextElementSibling.style.borderRadius = "0 20px 0 20px"
+    tab.parentElement.nextElementSibling.style.borderTop = "5px solid #283e51"
+
+    tab.parentElement.nextElementSibling.firstElementChild.style.background = "transparent"
+    tab.parentElement.nextElementSibling.firstElementChild.style.color = "white"
+  } else if (tab.innerHTML == "Halt") {
+    tab.style.background = "white"
+    tab.style.color = "#555"
+    tab.style.borderRadius = "20px 20px 0 0"
+    tab.parentElement.style.paddingRight = "5px"
+    tab.parentElement.style.background = "#4b79a1"
+    tab.parentElement.style.borderTop = "5px solid #4b79a1"
+    
+    tab.parentElement.previousElementSibling.style.background = "#4b79a1"
+    tab.parentElement.previousElementSibling.style.borderRadius = "20px 0 20px 0"
+    tab.parentElement.previousElementSibling.style.borderTop = "5px solid #4b79a1"
+
+    tab.parentElement.previousElementSibling.firstElementChild.style.background = "transparent"
+    tab.parentElement.previousElementSibling.firstElementChild.style.color = "white"
+  }
 }

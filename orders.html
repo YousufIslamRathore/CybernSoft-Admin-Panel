@@ -1,71 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orders </title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <title>Orders</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <section class="usersPage">
-        <!-- Side Bar -->
-        <section class="usersPageSideBar">
-            <h1>
-                <img src="./images/Logo2.png" alt="" width="80%" />
-            </h1>
+      <!-- Side Bar -->
+      <section class="usersPageSideBar">
+        <h1>
+          <img src="./images/Logo2.png" alt="" width="80%" />
+        </h1>
 
-            <section class="sideBarListContainer">
-                <div class="pageSelectors" onclick="pageSelector(0)">
-                    <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
-                    <section>
-                        <i class="fa-solid fa-users"></i>
-                    </section>
-                    <p>Users</p>
-                </div>
-                <div class="pageSelectors" onclick="pageSelector(1)">
-                    <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
-                    <section>
-                        <i class="fa-solid fa-truck-fast"></i>
-                    </section>
-                    <p>Tankers</p>
-                </div>
-                <div class="pageSelectors" onclick="pageSelector(2)">
-                    <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
-                    <section>
-                        <i class="fa-solid fa-coins"></i>
-                    </section>
-                    <p>Maintenance</p>
-                </div>
-                <div class="pageSelectors" onclick="pageSelector(3)">
-                    <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
-                    <section>
-                        <i class="fa-solid fa-chart-simple"></i>
-                    </section>
-                    <p>Logs</p>
-                </div>
-                <div class="pageSelectors" onclick="pageSelector(4)">
-                    <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
-                    <section>
-                        <i class="fa-solid fa-chart-pie"></i>
-                    </section>
-                    <p>Summary</p>
-                </div>
+        <section class="sideBarListContainer">
+          <div class="pageSelectors" onclick="pageSelector(0)">
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <section>
+              <i class="fa-solid fa-users"></i>
             </section>
+            <p>Users</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(1)">
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <section>
+              <i class="fa-solid fa-truck-fast"></i>
+            </section>
+            <p>Tankers</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(2)">
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <section>
+              <i class="fa-solid fa-coins"></i>
+            </section>
+            <p>Maintenance</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(3)">
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <section>
+              <i class="fa-solid fa-chart-simple"></i>
+            </section>
+            <p>Logs</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(4)">
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <section>
+              <i class="fa-solid fa-chart-pie"></i>
+            </section>
+            <p>Summary</p>
+          </div>
         </section>
-        <section class="usersPageMainPanel">
-            <!-- <section class="topHeaderSection">
+      </section>
+      <section class="usersPageMainPanel">
+        <!-- <section class="topHeaderSection">
           <div class="adminLoginProfileDiv">
             <div class="profilePicIconDiv">
               <i class="fa-solid fa-user"></i>
@@ -77,11 +87,11 @@
           </div>
         </section> -->
 
-            <section class="usersBodySection">
-                <div>
-                    <!-- <h1>All Registered Users</h1> -->
+        <section class="usersBodySection">
+          <div>
+            <!-- <h1>All Registered Users</h1> -->
 
-                    <!-- <section class="usersFancyDisplaySection1">
+            <!-- <section class="usersFancyDisplaySection1">
               <div>
                 <h1>746</h1>
                 <h2 style="color: #186eb1">All Users</h2>
@@ -100,7 +110,7 @@
               </div>
             </section> -->
 
-                    <!-- <section class="usersFancyDisplaySection1">
+            <!-- <section class="usersFancyDisplaySection1">
               <div>
                 <section>
                   <div style="background-color: #186eb1">
@@ -139,7 +149,7 @@
               </div>
             </section> -->
 
-                    <!-- <section class="usersFancyDisplaySection1" id="userSelection">
+            <!-- <section class="usersFancyDisplaySection1" id="userSelection">
               <div class="selectedUserSection" onclick="selectedUserSection(0)">
                 <div style="background-color: #186eb1;" >
                   <i class="fa-solid fa-users"></i>
@@ -194,34 +204,44 @@
               </div>
             </section> -->
 
-                    <section class="usersFancyDisplaySection1 tankersFancyDisplaySection1" id="userSelection">
-                        <div class="selectedUserSection" onclick="selectedUserSection(0)" id="Today-Orders-Selector">
-                            <section>
-                                <h2>Today's Orders</h2>
-                                <h1>746</h1>
-                            </section>
-                        </div>
-                        <div onclick="selectedUserSection(1)" id="Weekly-Orders-Selector">
-                            <section>
-                                <h2>Weekly Orders</h2>
-                                <h1>740</h1>
-                            </section>
-                        </div>
-                        <div onclick="selectedUserSection(2)" id="Monthly-Orders-Selector">
-                            <section>
-                                <h2>Monthly Orders</h2>
-                                <h1>6</h1>
-                            </section>
-                        </div>
-                        <div onclick="selectedUserSection(3)" id="Yearly-Orders-Selector">
-                            <section>
-                                <h2>Yearly Orders</h2>
-                                <h1>1</h1>
-                            </section>
-                        </div>
-                    </section>
+            <section
+              class="usersFancyDisplaySection1 tankersFancyDisplaySection1"
+              id="userSelection"
+            >
+              <div
+                class="selectedUserSection"
+                onclick="selectedUserSection(0)"
+                id="Today-Orders-Selector"
+              >
+                <section>
+                  <h2>Today's Orders</h2>
+                  <h1>746</h1>
+                </section>
+              </div>
+              <div onclick="selectedUserSection(1)" id="Weekly-Orders-Selector">
+                <section>
+                  <h2>Weekly Orders</h2>
+                  <h1>740</h1>
+                </section>
+              </div>
+              <div
+                onclick="selectedUserSection(2)"
+                id="Monthly-Orders-Selector"
+              >
+                <section>
+                  <h2>Monthly Orders</h2>
+                  <h1>6</h1>
+                </section>
+              </div>
+              <div onclick="selectedUserSection(3)" id="Yearly-Orders-Selector">
+                <section>
+                  <h2>Yearly Orders</h2>
+                  <h1>1</h1>
+                </section>
+              </div>
+            </section>
 
-                    <!-- <section
+            <!-- <section
                         class="usersFancyDisplaySection1 tankersFancyDisplaySection1 tankersFancyDisplaySection2 tankersFancyDisplaySection3"
                         id="userSelection">
                         <div class="selectedUserSection" onclick="selectedOrderStatusSection(0)"
@@ -254,46 +274,57 @@
                         </div>
                     </section> -->
 
-                    <section class="presentationChartSection">
-                        <main>
-                            <div>
-                                <canvas id="pieChart"></canvas>
-                            </div>
-                        </main>
+            <section class="presentationChartSection">
+              <main>
+                <div>
+                  <canvas id="pieChart"></canvas>
+                </div>
+              </main>
 
-                        <div class="usersFancyDisplaySection1 tankersFancyDisplaySection1 tankersFancyDisplaySection2 tankersFancyDisplaySection3"
-                            id="userSelection">
-                            <div class="selectedUserSection" onclick="selectedOrderStatusSection(0)"
-                                id="Completed-Orders-Selector">
-                                <div style="background-color: white; color: #61b95b">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                                <section>
-                                    <h1>746</h1>
-                                    <h2>Completed Orders</h2>
-                                </section>
-                            </div>
-                            <div onclick="selectedOrderStatusSection(1)" id="Pending-Orders-Selector">
-                                <div style="background-color: white; color: #fcc910">
-                                    <i class="fa-solid fa-clock"></i>
-                                </div>
-                                <section>
-                                    <h1>740</h1>
-                                    <h2>Pending Orders</h2>
-                                </section>
-                            </div>
-                            <div onclick="selectedOrderStatusSections(2)" id="Failed-Orders-Selector">
-                                <div style="background-color: white; color: #ee405e">
-                                    <i class="fa-solid fa-exclamation"></i>
-                                </div>
-                                <section>
-                                    <h1>6</h1>
-                                    <h2>Failed Orders</h2>
-                                </section>
-                            </div>
-                        </div>
+              <div
+                class="usersFancyDisplaySection1 tankersFancyDisplaySection1 tankersFancyDisplaySection2 tankersFancyDisplaySection3"
+                id="userSelection"
+              >
+                <div
+                  class="selectedUserSection"
+                  onclick="selectedOrderStatusSection(0)"
+                  id="Completed-Orders-Selector"
+                >
+                  <div style="background-color: white; color: #61b95b">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <section>
+                    <h1>746</h1>
+                    <h2>Completed Orders</h2>
+                  </section>
+                </div>
+                <div
+                  onclick="selectedOrderStatusSection(1)"
+                  id="Pending-Orders-Selector"
+                >
+                  <div style="background-color: white; color: #fcc910">
+                    <i class="fa-solid fa-clock"></i>
+                  </div>
+                  <section>
+                    <h1>740</h1>
+                    <h2>Pending Orders</h2>
+                  </section>
+                </div>
+                <div
+                  onclick="selectedOrderStatusSections(2)"
+                  id="Failed-Orders-Selector"
+                >
+                  <div style="background-color: white; color: #ee405e">
+                    <i class="fa-solid fa-exclamation"></i>
+                  </div>
+                  <section>
+                    <h1>6</h1>
+                    <h2>Failed Orders</h2>
+                  </section>
+                </div>
+              </div>
 
-                        <!-- <section>
+              <!-- <section>
                             <section>
                                 <div class="ownerMainSection" onclick="selectedUserTypeSection(0)">
                                     <div class="skill">
@@ -343,14 +374,10 @@
                                 </div>
                             </section>
                         </section> -->
-                    </section>
+            </section>
 
-
-
-
-                    
-                    <section class="haltSection">
-                        <!-- <section>
+            <section class="haltSection">
+              <!-- <section>
                             <h3>Total Quota of Per Day Delivery</h3> 
                             <div><h4>120</h4></div>
                         </section>
@@ -359,21 +386,35 @@
                             <i class="fa-solid fa-toggle-off" onclick="haltServiceToggler(this)"></i>
                         </div>  -->
 
-                        <section class="tabSection">
-                            <div>Quota</div>
-                            <div>Halt</div>
-                        </section>
-                    </section>
+              <section class="tabSection">
+                <div id="quotaTabSection">
+                  <section onclick="ordersTabSectionToggler(this)">Quota</section>
+                </div>
+                <div id="haltTabSection">
+                  <section onclick="ordersTabSectionToggler(this)">Halt</section>
+                </div>
+              </section>
 
 
+              <div class="tabSectionHiddenBody" id="tabSectionBody">
+                <section>
+                    <h1>Daily Quota Limit = </h1>
+                    <input type="text" value="120" disabled>
+                    <div><button>EDIT</button></div>
+                </section>
+              </div>
+            </section>
 
-                    <section class="usersMainListingSection">
-                        <section class="usersSearchSection">
-                            <section class="userSearchSectionFirstSection">
-                                <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
-                                    All Orders
-                                </h2>
-                                <!-- <main class="ownerTenantMainContainer" id="ownerAndTenant">
+            <section class="usersMainListingSection">
+              <section class="usersSearchSection">
+                <section class="userSearchSectionFirstSection">
+                  <h2
+                    id="usersListMainHeading"
+                    onclick="usersListMainHeading()"
+                  >
+                    All Orders
+                  </h2>
+                  <!-- <main class="ownerTenantMainContainer" id="ownerAndTenant">
                     <div
                       class="ownerMainSection"
                       onclick="selectedUserTypeSection(0)"
@@ -444,26 +485,29 @@
                       </div>
                     </div>
                   </main> -->
-                            </section>
-                            <section class="searchSectionContainer">
-                                <div class="searchBarContainer">
-                                    <div>Search Order</div>
-                                    <section><input type="search" /></section>
-                                </div>
-                                <div>
-                                    <select name="Date" id="" class="userTypeDropDown">
-                                        <option value="Select" disabled selected>
-                                            Select
-                                        </option>
-                                        <option value="All">All</option>
-                                        <option value="Owner">Owner</option>
-                                        <option value="Tenant">Tenant</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <input type="date" name="date" id="" class="userTypeDropDown dateSearchField">
-                                </div>
-                                <!-- <div>
+                </section>
+                <section class="searchSectionContainer">
+                  <div class="searchBarContainer">
+                    <div>Search Order</div>
+                    <section><input type="search" /></section>
+                  </div>
+                  <div>
+                    <select name="Date" id="" class="userTypeDropDown">
+                      <option value="Select" disabled selected>Select</option>
+                      <option value="All">All</option>
+                      <option value="Owner">Owner</option>
+                      <option value="Tenant">Tenant</option>
+                    </select>
+                  </div>
+                  <div>
+                    <input
+                      type="date"
+                      name="date"
+                      id=""
+                      class="userTypeDropDown dateSearchField"
+                    />
+                  </div>
+                  <!-- <div>
                     <select name="userType" id="" class="userTypeDropDown">
                       <option value="Select" disabled selected>
                         Select User Type
@@ -473,273 +517,273 @@
                       <option value="Tenant">Tenant</option>
                     </select>
                   </div> -->
-                                <div><button style="margin-right: 10px">Search</button></div>
-                                <div><button class="importData">Import Data</button></div>
-                            </section>
-                        </section>
+                  <div><button style="margin-right: 10px">Search</button></div>
+                  <div><button class="importData">Import Data</button></div>
+                </section>
+              </section>
 
-                        <section class="usersListSection tankersListSection">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th class="firstCell">ID</th>
-                                        <th>User Name</th>
-                                        <!-- <th>CNIC</th> -->
-                                        <th>Tanker Type</th>
-                                        <th>To</th>
-                                        <th class="lastCell">Created At</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="doubleTanker">Double Tanker</td>
-                                        <td>A-01</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-02</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="doubleTanker">Double Tanker</td>
-                                        <td>A-03</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-04</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-05</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="doubleTanker">Double Tanker</td>
-                                        <td>A-06</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="doubleTanker">Double Tanker</td>
-                                        <td>A-06</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-07</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-08</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="doubleTanker">Double Tanker</td>
-                                        <td>A-06</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-07</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-08</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="doubleTanker">Double Tanker</td>
-                                        <td>A-06</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-07</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="doubleTanker">Double Tanker</td>
-                                        <td>A-06</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-07</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr data-toggle="modal" data-target="#userDetails">
-                                        <td class="firstCell">A-01</td>
-                                        <td>Yousuf Islam</td>
-                                        <!-- <td>42201-2729672-7</td> -->
-                                        <td class="singleTanker">Single Tanker</td>
-                                        <td>A-08</td>
-                                        <td class="lastCell">
-                                            <span>
-                                                2022-09-29
-                                                <br />
-                                                <span class="timeSpan"> 11:11 AM </span>
-                                            </span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
-                    </section>
+              <section class="usersListSection tankersListSection">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="firstCell">ID</th>
+                      <th>User Name</th>
+                      <!-- <th>CNIC</th> -->
+                      <th>Tanker Type</th>
+                      <th>To</th>
+                      <th class="lastCell">Created At</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-01</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-02</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-03</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-04</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-05</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-06</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-06</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-07</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-08</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-06</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-07</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-08</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-06</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-07</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-06</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-07</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">A-01</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-08</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </section>
 
-                    <!-- <main class="pieChartSection">
+            <!-- <main class="pieChartSection">
               <canvas id="myChart"></canvas>
 
               <h1>Number of Gallons Delievered</h1>
             </main> -->
-                    <!-- <section class="ownerTenantMainSection">
+            <!-- <section class="ownerTenantMainSection">
             <div>
               <section class="doughnutChartSection">
                 <canvas id="myDoughnut"></canvas>
@@ -748,7 +792,7 @@
             </div>
           </section> -->
 
-                    <!-- <section class="ownerTenantMainSection">
+            <!-- <section class="ownerTenantMainSection">
               <div>
                 <section class="doughnutChartSection">
                   <div class="skill">
@@ -775,173 +819,235 @@
                 </section>
               </div>
             </section> -->
-                </div>
-            </section>
+          </div>
         </section>
+      </section>
     </section>
 
     <!-- /--- User Modal ---/ -->
 
     <section class="modal fade" id="userDetails">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content forBorderRadius">
-                <section class="modal-body wholeModal">
-                    <section class="headingSection">
-                        <h1>
-                            User Details
-                            <img src="./images/users/detailing.png" alt="" width="30px" id="userDetailsImg" />
-                        </h1>
-                    </section>
-                    <section class="userDetailSection">
-                        <section>
-                            <div>
-                                <p>Full Name :</p>
-                                <input type="text" value="Yousuf Islam" class="editableFields" disabled />
-                            </div>
-                            <div>
-                                <p>Password :</p>
-                                <input type="password" value="yousuf123" class="editableFields" disabled />
-                                <div>
-                                    <i class="fa-solid fa-eye" onclick="showPassword(this)"
-                                        style="color: #555; margin-left: -30px"></i>
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <div>
-                                <p>Unit No.</p>
-                                <input type="text" value="A-01" disabled />
-                            </div>
-                            <div>
-                                <p>Contact :</p>
-                                <input type="number" value="03082028980" class="editableFields" disabled />
-                            </div>
-                        </section>
-                        <section>
-                            <div>
-                                <p>User Type :</p>
-                                <input type="text" value="Owner" style="color: #186eb1" id="userTypeInputField"
-                                    disabled />
-                            </div>
-                            <div>
-                                <p>Status :</p>
-                                <input type="text" value="Active" style="color: #61b95b" id="statusInputField"
-                                    disabled />
-                            </div>
-                        </section>
-                        <section>
-                            <div>
-                                <p>Owner's CNIC :</p>
-                                <input type="text" value="42201-2729672-7" class="editableFields" disabled />
-                            </div>
-                            <div class="visibilityHidden" id="tenantDetail">
-                                <p>Tenant's CNIC :</p>
-                                <input type="text" value="" class="editableFields" disabled />
-                            </div>
-                        </section>
-                        <section>
-                            <div>
-                                <p>Created At :</p>
-                                <input type="text" value="09/19/2022" disabled />
-                            </div>
-                            <div>
-                                <p>Last Updated At :</p>
-                                <input type="text" value="09/23/2022" disabled />
-                            </div>
-                        </section>
-                        <section class="buttonSection2">
-                            <button class="btn" onclick="editBtnToggler(this)">
-                                <i class="fa-solid fa-pen-to-square"></i> EDIT DETAILS
-                            </button>
-                        </section>
-                    </section>
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content forBorderRadius">
+          <section class="modal-body wholeModal">
+            <section class="headingSection">
+              <h1>
+                User Details
+                <img
+                  src="./images/users/detailing.png"
+                  alt=""
+                  width="30px"
+                  id="userDetailsImg"
+                />
+              </h1>
+            </section>
+            <section class="userDetailSection">
+              <section>
+                <div>
+                  <p>Full Name :</p>
+                  <input
+                    type="text"
+                    value="Yousuf Islam"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Password :</p>
+                  <input
+                    type="password"
+                    value="yousuf123"
+                    class="editableFields"
+                    disabled
+                  />
+                  <div>
+                    <i
+                      class="fa-solid fa-eye"
+                      onclick="showPassword(this)"
+                      style="color: #555; margin-left: -30px"
+                    ></i>
+                  </div>
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Unit No.</p>
+                  <input type="text" value="A-01" disabled />
+                </div>
+                <div>
+                  <p>Contact :</p>
+                  <input
+                    type="number"
+                    value="03082028980"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>User Type :</p>
+                  <input
+                    type="text"
+                    value="Owner"
+                    style="color: #186eb1"
+                    id="userTypeInputField"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Status :</p>
+                  <input
+                    type="text"
+                    value="Active"
+                    style="color: #61b95b"
+                    id="statusInputField"
+                    disabled
+                  />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Owner's CNIC :</p>
+                  <input
+                    type="text"
+                    value="42201-2729672-7"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+                <div class="visibilityHidden" id="tenantDetail">
+                  <p>Tenant's CNIC :</p>
+                  <input type="text" value="" class="editableFields" disabled />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Created At :</p>
+                  <input type="text" value="09/19/2022" disabled />
+                </div>
+                <div>
+                  <p>Last Updated At :</p>
+                  <input type="text" value="09/23/2022" disabled />
+                </div>
+              </section>
+              <section class="buttonSection2">
+                <button class="btn" onclick="editBtnToggler(this)">
+                  <i class="fa-solid fa-pen-to-square"></i> EDIT DETAILS
+                </button>
+              </section>
+            </section>
 
-                    <div class="actionsSection">
-                        <h2>Actions :</h2>
+            <div class="actionsSection">
+              <h2>Actions :</h2>
 
-                        <section>
-                            <p>Change Active Status :</p>
-                            <div>
-                                <button class="active" onclick="changeActiveStatus(this)">Active</button>
-                                <button class="changingBgBtn" onclick="changeActiveStatus(this)">Suspended</button>
-                                <button class="changingBgBtn" onclick="changeActiveStatus(this)">Blocked</button>
-                            </div>
-                        </section>
+              <section>
+                <p>Change Active Status :</p>
+                <div>
+                  <button class="active" onclick="changeActiveStatus(this)">
+                    Active
+                  </button>
+                  <button
+                    class="changingBgBtn"
+                    onclick="changeActiveStatus(this)"
+                  >
+                    Suspended
+                  </button>
+                  <button
+                    class="changingBgBtn"
+                    onclick="changeActiveStatus(this)"
+                  >
+                    Blocked
+                  </button>
+                </div>
+              </section>
 
-                        <section>
-                            <p>Change User Type :</p>
-                            <div class="userTypeBtnDiv">
-                                <button class="ownerChangeBtn" onclick="changeUserType(this); 
-                ownerToTenantEffects(0)">Owner</button>
-                                <button class="changingBgBtn" onclick="changeUserType(this); 
-                ownerToTenantEffects(1)">Tenant</button>
-                            </div>
-                        </section>
-                    </div>
-
-                    <section class="buttonSection">
-                        <button class="btn UpdateBtn" onclick="updateTenantDetails()">
-                            Update
-                        </button>
-                    </section>
-                </section>
+              <section>
+                <p>Change User Type :</p>
+                <div class="userTypeBtnDiv">
+                  <button
+                    class="ownerChangeBtn"
+                    onclick="changeUserType(this); 
+                ownerToTenantEffects(0)"
+                  >
+                    Owner
+                  </button>
+                  <button
+                    class="changingBgBtn"
+                    onclick="changeUserType(this); 
+                ownerToTenantEffects(1)"
+                  >
+                    Tenant
+                  </button>
+                </div>
+              </section>
             </div>
+
+            <section class="buttonSection">
+              <button class="btn UpdateBtn" onclick="updateTenantDetails()">
+                Update
+              </button>
+            </section>
+          </section>
         </div>
+      </div>
     </section>
-</body>
+  </body>
 
-<script src="./scripts/app.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./scripts/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script>
+  <script>
     /// Setup Block
     const data = {
-        labels: [
-            'Double Tankers',
-            'Single Tankers',
-            'Swap Tankers',
-            'Cash Tankers'
-        ],
-        datasets: [{
-            label: 'My First Dataset',
-            data: [200, 70, 100, 120],
-            backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)',
-                'rgb(54, 255, 86)'
-            ],
-            hoverOffset: 4
-        }]
+      labels: [
+        "Double Tankers",
+        "Single Tankers",
+        "Swap Tankers",
+        "Cash Tankers",
+      ],
+      datasets: [
+        {
+          label: "My First Dataset",
+          data: [200, 70, 100, 120],
+          backgroundColor: [
+            "rgb(255, 99, 132)",
+            "rgb(54, 162, 235)",
+            "rgb(255, 205, 86)",
+            "rgb(54, 255, 86)",
+          ],
+          hoverOffset: 4,
+        },
+      ],
     };
 
     ///  Options Block
     const options = {
-        // scales: {
-        //     x: {
-        //         grid: {
-        //             display: false,
-        //         },
-        //     },
-        //     y: {
-        //         grid: {
-        //             display: false,
-        //         },
-        //     },
-        // },
+      // scales: {
+      //     x: {
+      //         grid: {
+      //             display: false,
+      //         },
+      //     },
+      //     y: {
+      //         grid: {
+      //             display: false,
+      //         },
+      //     },
+      // },
     };
 
     /// Config Block
     const config = {
-        type: "pie",
-        data,
-        options,
+      type: "pie",
+      data,
+      options,
     };
 
     /// Render Block
     const pieChart = new Chart(document.getElementById("pieChart"), config);
-</script>
-<!-- <script>
+  </script>
+  <!-- <script>
   const data = {
     labels: [
       'Red',
@@ -973,14 +1079,19 @@
   )
 </script> -->
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
     integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-    crossorigin="anonymous"></script>
-
+    crossorigin="anonymous"
+  ></script>
 </html>
