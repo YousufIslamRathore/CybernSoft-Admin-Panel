@@ -640,7 +640,8 @@ tbody tr:nth-child(even) {
   align-items: center;
   box-shadow: 0 3px 10px rgb(0 0 0 / 16%);
   position: relative;
-  color: white !important;
+  color: white;
+  /* color: #333 !important; */
 }
 #All-Users-Selector {
   /* background-color: #186eb1; */
@@ -750,7 +751,7 @@ tbody tr:nth-child(even) {
 }
 .usersListSection tbody {
   display: block;
-  height: 480px !important;
+  height: 420px !important;
   width: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -783,7 +784,15 @@ tbody tr:nth-child(even) {
 }
 .firstCell {
   border-radius: 10px 0 0 10px !important;
+  /* width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
 }
+/* .firstCell > input {
+  width: 20px;
+  height: 20px;
+} */
 .lastCell {
   border-radius: 0 10px 10px 0 !important;
 }
@@ -959,7 +968,7 @@ thead .lastCell {
   padding: 5px 20px;
 }
 .userDetailSection > section > button {
-  width: 180px;
+  /* width: 180px; */
   font-size: 14px;
   font-weight: bold;
   background-color: #186eb1;
@@ -1017,8 +1026,8 @@ thead .lastCell {
   padding: 10px !important;
   background-color: #555;
   color: white;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
 }
 .wholeModal .buttonSection > button:active {
   box-shadow: 0px 3px 10px rgb(0, 0, 0 / 50%) !important;
@@ -1029,16 +1038,16 @@ thead .lastCell {
   width: 120px;
   padding: 6px;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
   border: none;
-  box-shadow: 0px 3px 10px rgb(0 0 0 / 40%);
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
   margin-right: 20px;
   outline: none;
 }
 .changingBgBtn {
   background-color: transparent;
   color: #333 !important;
-  font-weight: bold;
+  font-weight: 500;
   transition-duration: 300ms;
 }
 .ownerChangeBtn {
@@ -1081,19 +1090,31 @@ button > i {
   height: 60px;
   border: none;
   border-radius: 15px;
-  color: white;
-  box-shadow: 0px 3px 10px rgb(0 0 0 / 50%);
+  color: #555;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
   font-size: 20px;
   font-weight: bold;
 }
 #modalDeliveredBtn {
-  background-color: #61b95b;
+  background-color: #61b95b5d;
 }
 #modalFailedBtn {
-  background-color: #ee405e;
+  background-color: #ee405e5d;
 }
 #modalCanceledBtn {
-  background-color: #fcc910;
+  background-color: #fcc9105d;
+}
+.orderDetailActions > div > button:hover {
+  color: white;
+}
+#modalDeliveredBtn:hover {
+  background-color: #61b95bc5;
+}
+#modalFailedBtn:hover {
+  background-color: #ee405ec5;
+}
+#modalCanceledBtn:hover {
+  background-color: #fcc910c5;
 }
 
 /* Pie Chart Section */
