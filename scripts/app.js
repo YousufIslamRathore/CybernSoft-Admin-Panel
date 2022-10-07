@@ -24,10 +24,10 @@ function pageSelector(index) {
   for (let i = 0; i < pageSelectors.length; i++) {
     if (index != i) {
       pageSelectors[i].firstElementChild.style.visibility = "hidden";
-      pageSelectors[i].style.color = "#dddddd"
+      pageSelectors[i].style.color = "#dddddd";
     } else {
       pageSelectors[i].firstElementChild.style.visibility = "visible";
-      pageSelectors[i].style.color = "white"
+      pageSelectors[i].style.color = "white";
     }
   }
 }
@@ -188,45 +188,71 @@ function updateTenantDetails() {
   }
 }
 
-
-
-
-// function haltServiceToggler(icon) {
-//   icon.className == "fa-solid fa-toggle-off" ? icon.className = "fa-solid fa-toggle-on" : icon.className = "fa-solid fa-toggle-off"
-// }
+function haltServiceToggler(icon) {
+  // icon.className == "fa-solid fa-toggle-off"
+  //   ? (icon.className = "fa-solid fa-toggle-on")
+  //   : (icon.className = "fa-solid fa-toggle-off");
+  icon.className = icon.className == "fa-solid fa-toggle-off" ? "fa-solid fa-toggle-on" : "fa-solid fa-toggle-off";
+  icon.style.color = icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e" 
+}
 
 function ordersTabSectionToggler(tab) {
+  const tabSectionBody = document.getElementById("tabSectionBody");
+  const tabSectionHaltBody = document.getElementById("tabSectionHaltBody");
 
-  var tabSectionBody = document.getElementById("tabSectionBody");
-  tabSectionBody.className = "tabSectionDisplayBody"
+  if (tab.innerHTML == "Quota") {
+    tabSectionBody.className = "tabSectionDisplayBody";
+    tabSectionHaltBody.className = "tabSectionHiddenBody";
 
-  if(tab.innerHTML == "Quota") {
-    tab.style.background = "white"
-    tab.style.color = "#555"
-    tab.style.borderRadius = "20px 20px 0 0"
-    tab.parentElement.style.paddingLeft = "5px"
-    tab.parentElement.style.background = "#283e51"
-    tab.parentElement.style.borderTop = "5px solid #283e51"
+    tab.style.background = "white";
+    tab.style.color = "#555";
+    tab.style.borderRadius = "20px 20px 0 0";
+    tab.parentElement.style.paddingLeft = "5px";
+    tab.parentElement.style.background = "#283e51";
+    tab.parentElement.style.borderTop = "5px solid #283e51";
 
-    tab.parentElement.nextElementSibling.style.background = "#283e51"
-    tab.parentElement.nextElementSibling.style.borderRadius = "0 20px 0 20px"
-    tab.parentElement.nextElementSibling.style.borderTop = "5px solid #283e51"
+    tab.parentElement.nextElementSibling.style.background = "#283e51";
+    tab.parentElement.nextElementSibling.style.borderRadius = "0 20px 0 20px";
+    tab.parentElement.nextElementSibling.style.borderTop = "5px solid #283e51";
 
-    tab.parentElement.nextElementSibling.firstElementChild.style.background = "transparent"
-    tab.parentElement.nextElementSibling.firstElementChild.style.color = "white"
+    tab.parentElement.nextElementSibling.firstElementChild.style.background =
+      "transparent";
+    tab.parentElement.nextElementSibling.firstElementChild.style.color =
+      "white";
   } else if (tab.innerHTML == "Halt") {
-    tab.style.background = "white"
-    tab.style.color = "#555"
-    tab.style.borderRadius = "20px 20px 0 0"
-    tab.parentElement.style.paddingRight = "5px"
-    tab.parentElement.style.background = "#4b79a1"
-    tab.parentElement.style.borderTop = "5px solid #4b79a1"
-    
-    tab.parentElement.previousElementSibling.style.background = "#4b79a1"
-    tab.parentElement.previousElementSibling.style.borderRadius = "20px 0 20px 0"
-    tab.parentElement.previousElementSibling.style.borderTop = "5px solid #4b79a1"
+    tabSectionHaltBody.className = "tabSectionDisplayHaltBody";
+    tabSectionBody.className = "tabSectionHiddenBody";
 
-    tab.parentElement.previousElementSibling.firstElementChild.style.background = "transparent"
-    tab.parentElement.previousElementSibling.firstElementChild.style.color = "white"
+    tab.style.background = "white";
+    tab.style.color = "#555";
+    tab.style.borderRadius = "20px 20px 0 0";
+    tab.parentElement.style.paddingRight = "5px";
+    // tab.parentElement.style.background = "#4b79a1";
+    tab.parentElement.style.background = "#ee405e";
+    tab.parentElement.style.borderTop = "5px solid #ee405e";
+
+    tab.parentElement.previousElementSibling.style.background = "#ee405e";
+    tab.parentElement.previousElementSibling.style.borderRadius =
+      "20px 0 20px 0";
+    tab.parentElement.previousElementSibling.style.borderTop =
+      "5px solid #ee405e";
+
+    tab.parentElement.previousElementSibling.firstElementChild.style.background =
+      "transparent";
+    tab.parentElement.previousElementSibling.firstElementChild.style.color =
+      "white";
+  }
+}
+
+function dailyQuotaEditBtn(editBtn) {
+  const dailyQuotaInput = document.getElementById("dailyQuotaInput");
+  if (editBtn.innerHTML == "EDIT") {
+    editBtn.innerHTML = "SAVE";
+    dailyQuotaInput.disabled = false;
+    dailyQuotaInput.style.borderBottom = "2px solid #186eb1";
+  } else {
+    editBtn.innerHTML = "EDIT";
+    dailyQuotaInput.disabled = true;
+    dailyQuotaInput.style.borderBottom = "none";
   }
 }
