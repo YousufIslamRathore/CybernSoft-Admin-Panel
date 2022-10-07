@@ -845,7 +845,7 @@
             <section class="userDetailSection">
               <section>
                 <div>
-                  <p>Full Name :</p>
+                  <p>Receiver Name :</p>
                   <input
                     type="text"
                     value="Yousuf Islam"
@@ -876,10 +876,6 @@
               </section>
               <section>
                 <div>
-                  <p>Unit No.</p>
-                  <input type="text" value="A-01" disabled />
-                </div>
-                <div>
                   <p>Contact :</p>
                   <input
                     type="number"
@@ -888,14 +884,18 @@
                     disabled
                   />
                 </div>
+                <div>
+                  <p>Swap to : </p>
+                  <input type="text" value="B-01" disabled />
+                </div>
               </section>
               <section>
                 <div>
-                  <p>User Type :</p>
+                  <p>Receiver Type :</p>
                   <input
                     type="text"
-                    value="Owner"
-                    style="color: #186eb1"
+                    value="Tenant"
+                    style="color: #e5032dbd"
                     id="userTypeInputField"
                     disabled
                   />
@@ -921,21 +921,21 @@
                     disabled
                   />
                 </div>
-                <div class="visibilityHidden" id="tenantDetail">
+                <div>
                   <p>Tenant's CNIC :</p>
-                  <input type="text" value="" class="editableFields" disabled />
+                  <input type="text" value="42201-5679456-2" class="editableFields" disabled />
                 </div>
               </section>
-              <!-- <section>
+              <section>
                 <div>
-                  <p>Created At :</p>
-                  <input type="text" value="09/19/2022" disabled />
+                  <p>Remaining <br> Tankers : </p>
+                  <input type="number" value="03" disabled />
                 </div>
                 <div>
-                  <p>Last Updated At :</p>
-                  <input type="text" value="09/23/2022" disabled />
+                  <p>Cash Tankers <br>Total Ordered :</p>
+                  <input type="number" value="02" disabled />
                 </div>
-              </section> -->
+              </section>
               <!-- <section class="buttonSection2">
                 <button class="btn" onclick="editBtnToggler(this)">
                   <i class="fa-solid fa-pen-to-square"></i> EDIT DETAILS
