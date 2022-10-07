@@ -1068,15 +1068,16 @@ button > i {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
+  padding: 0 30px;
 }
 .orderDetailActions > div {
-  width: 40%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .orderDetailActions > div > button {
-  width: 300px;
+  width: 280px;
   height: 60px;
   border: none;
   border-radius: 15px;
@@ -1090,6 +1091,9 @@ button > i {
 }
 #modalFailedBtn {
   background-color: #ee405e;
+}
+#modalCanceledBtn {
+  background-color: #fcc910;
 }
 
 /* Pie Chart Section */
