@@ -908,15 +908,19 @@ thead .lastCell {
   align-items: center;
 }
 .wholeModal .headingSection {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .wholeModal .headingSection h1 {
   color: #555;
   margin-top: 10px;
+  margin-bottom: 0;
   font-weight: bold !important;
   font-size: 32px !important;
   display: flex;
   align-items: center;
+}
+.wholeModal .headingSection2 {
+  
 }
 .wholeModal .headingSection img {
   margin-left: 10px;

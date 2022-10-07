@@ -839,13 +839,7 @@
           <section class="modal-body wholeModal">
             <section class="headingSection">
               <h1>
-                User Details
-                <img
-                  src="./images/users/detailing.png"
-                  alt=""
-                  width="30px"
-                  id="userDetailsImg"
-                />
+                Receiver Details
               </h1>
             </section>
             <section class="userDetailSection">
@@ -859,7 +853,7 @@
                     disabled
                   />
                 </div>
-                <div>
+                <!-- <div>
                   <p>Password :</p>
                   <input
                     type="password"
@@ -874,6 +868,10 @@
                       style="color: #555; margin-left: -30px"
                     ></i>
                   </div>
+                </div> -->
+                <div>
+                  <p>Unit No.</p>
+                  <input type="text" value="A-01" disabled />
                 </div>
               </section>
               <section>
@@ -928,7 +926,7 @@
                   <input type="text" value="" class="editableFields" disabled />
                 </div>
               </section>
-              <section>
+              <!-- <section>
                 <div>
                   <p>Created At :</p>
                   <input type="text" value="09/19/2022" disabled />
@@ -937,15 +935,109 @@
                   <p>Last Updated At :</p>
                   <input type="text" value="09/23/2022" disabled />
                 </div>
-              </section>
-              <section class="buttonSection2">
+              </section> -->
+              <!-- <section class="buttonSection2">
                 <button class="btn" onclick="editBtnToggler(this)">
                   <i class="fa-solid fa-pen-to-square"></i> EDIT DETAILS
                 </button>
-              </section>
+              </section> -->
             </section>
 
-            <div class="actionsSection">
+            <section class="headingSection">
+              <h1>
+                Order Details
+              </h1>
+            </section>
+            <section class="userDetailSection">
+              <section>
+                <div>
+                  <p>Order ID :</p>
+                  <input
+                    type="number"
+                    value="12345"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Delivered to :</p>
+                  <input
+                    type="text"
+                    value="A-01"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Tanker Type : </p>
+                  <input type="text" value="Single Tanker" disabled />
+                </div>
+                <div>
+                  <p> :</p>
+                  <input
+                    type="text"
+                    value=""
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>User Type :</p>
+                  <input
+                    type="text"
+                    value="Owner"
+                    style="color: #186eb1"
+                    id="userTypeInputField"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Status :</p>
+                  <input
+                    type="text"
+                    value="Active"
+                    style="color: #61b95b"
+                    id="statusInputField"
+                    disabled
+                  />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Owner's CNIC :</p>
+                  <input
+                    type="text"
+                    value="42201-2729672-7"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+                <div class="visibilityHidden" id="tenantDetail">
+                  <p>Tenant's CNIC :</p>
+                  <input type="text" value="" class="editableFields" disabled />
+                </div>
+              </section>
+              <!-- <section>
+                <div>
+                  <p>Created At :</p>
+                  <input type="text" value="09/19/2022" disabled />
+                </div>
+                <div>
+                  <p>Last Updated At :</p>
+                  <input type="text" value="09/23/2022" disabled />
+                </div>
+              </section> -->
+            </section>
+
+            <!-- <div class="orderDetailsSection">
+
+            </div> -->
+
+            <!-- <div class="actionsSection">
               <h2>Actions :</h2>
 
               <section>
@@ -988,7 +1080,7 @@
                   </button>
                 </div>
               </section>
-            </div>
+            </div> -->
 
             <section class="buttonSection">
               <button class="btn UpdateBtn" onclick="updateTenantDetails()">
