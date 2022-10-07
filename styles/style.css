@@ -1064,9 +1064,10 @@ button > i {
 .orderDetailActions {
   width: 100%;
   display: flex;
-  align-items: center;
-  margin-bottom: 30px;
   justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .orderDetailActions > div {
   width: 40%;
