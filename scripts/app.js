@@ -192,8 +192,12 @@ function haltServiceToggler(icon) {
   // icon.className == "fa-solid fa-toggle-off"
   //   ? (icon.className = "fa-solid fa-toggle-on")
   //   : (icon.className = "fa-solid fa-toggle-off");
-  icon.className = icon.className == "fa-solid fa-toggle-off" ? "fa-solid fa-toggle-on" : "fa-solid fa-toggle-off";
-  icon.style.color = icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e" 
+  icon.className =
+    icon.className == "fa-solid fa-toggle-off"
+      ? "fa-solid fa-toggle-on"
+      : "fa-solid fa-toggle-off";
+  icon.style.color =
+    icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
 }
 
 function ordersTabSectionToggler(tab) {
@@ -255,4 +259,24 @@ function dailyQuotaEditBtn(editBtn) {
     dailyQuotaInput.disabled = true;
     dailyQuotaInput.style.borderBottom = "none";
   }
+}
+
+///// Multiple Selection Functionality on Orders Page
+
+function multipleSelectionFunction(btn) {
+  btn.innerHTML =
+    btn.innerHTML == "Select Multiple" ? "Start Selecting" : "Select Multiple";
+
+  // Modal Disable
+  const userDetails = document.getElementById("userDetails");
+  userDetails.id = "";
+
+  // Selecting tr
+  const orderTableBody = document.getElementById("orderTableBody");
+  console.log(orderTableBody.children)
+  for(let i = 0; i < orderTableBody.children; i++) {
+    // orderTableBody.children[i] = 
+
+  }
+
 }
