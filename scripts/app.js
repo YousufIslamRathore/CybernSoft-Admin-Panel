@@ -1,23 +1,23 @@
-let ownerCount = document.getElementById("ownerCount");
-let ownerCounter = 0;
-let tenantCounter = 0;
-setInterval(() => {
-  if (ownerCounter == 65) {
-    clearInterval();
-  } else {
-    ownerCounter += 1;
-    ownerCount.innerHTML = ownerCounter + "%";
-  }
-}, 30);
+// let ownerCount = document.getElementById("ownerCount");
+// let ownerCounter = 0;
+// let tenantCounter = 0;
+// setInterval(() => {
+//   if (ownerCounter == 65) {
+//     clearInterval();
+//   } else {
+//     ownerCounter += 1;
+//     ownerCount.innerHTML = ownerCounter + "%";
+//   }
+// }, 30);
 
-setInterval(() => {
-  if (tenantCounter == 35) {
-    clearInterval();
-  } else {
-    tenantCounter += 1;
-    tenantCount.innerHTML = tenantCounter + "%";
-  }
-}, 30);
+// setInterval(() => {
+//   if (tenantCounter == 35) {
+//     clearInterval();
+//   } else {
+//     tenantCounter += 1;
+//     tenantCount.innerHTML = tenantCounter + "%";
+//   }
+// }, 30);
 
 function pageSelector(index) {
   var pageSelectors = document.getElementsByClassName("pageSelectors");
@@ -265,18 +265,50 @@ function dailyQuotaEditBtn(editBtn) {
 
 function multipleSelectionFunction(btn) {
   btn.innerHTML =
-    btn.innerHTML == "Select Multiple" ? "Start Selecting" : "Select Multiple";
+    btn.innerHTML == "Select Multiple" ? "Done Selecting" : "Select Multiple";
 
-  // Modal Disable
-  const userDetails = document.getElementById("userDetails");
-  userDetails.id = "";
+  // Modal Disable Toggler
+  const userDetails =
+    document.getElementById("userDetails") ||
+    document.getElementById("DisableModal");
+  userDetails.id =
+    userDetails.id == "userDetails" ? "DisableModal" : "userDetails";
 
   // Selecting tr
   const orderTableBody = document.getElementById("orderTableBody");
-  console.log(orderTableBody.children)
-  for(let i = 0; i < orderTableBody.children; i++) {
-    // orderTableBody.children[i] = 
-
+  for (let i = 0; i < orderTableBody.children.length; i++) {
+    if (btn.innerHTML == "Done Selecting") {
+      orderTableBody.children[i].setAttribute(
+        "onclick",
+        "selectTrFunction(this)"
+      );
+    } else {
+      orderTableBody.children[i].removeAttribute("onclick");
+    }
   }
+}
+// function selectRows(tr) {
+// const orderTableRows = document.getElementsByClassName("orderTableRows");
+// for(let j = 0; j < orderTableRows.lengt)
+// orderTableRows[i]
 
+// tr.style.backgroundColor = "black"
+// console.log(tr)
+// }
+
+function selectTrFunction(tr) {
+  if (tr.style.color == "white") {
+    for(let j = 0; j < tr.children.length; j++) {
+      tr.children[j].style.backgroundColor = "transparent"
+    }
+    tr.style.color = "black"
+    tr.style.opacity = "1"
+  } else {
+    for (let i = 0; i < tr.children.length; i++) {
+      tr.children[i].style.backgroundColor = "#999";
+    }
+    tr.style.color = "white";
+    tr.style.opacity = "0.5";
+  }
+  // console.log(tr)
 }
