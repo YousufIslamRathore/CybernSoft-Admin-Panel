@@ -264,8 +264,13 @@ function dailyQuotaEditBtn(editBtn) {
 ///// Multiple Selection Functionality on Orders Page
 
 function multipleSelectionFunction(btn) {
-  btn.innerHTML =
-    btn.innerHTML == "Select Multiple" ? "Done Selecting" : "Select Multiple";
+  // btn.innerHTML =
+  //   btn.innerHTML == "<i class='fa-solid fa-bars'></i> Select Multiple" ? "<i class='fa-solid fa-cross'></i> Select Multiple" : "<i class='fa-solid fa-bars'></i> Select Multiple";
+  btn.firstElementChild.className =
+    btn.firstElementChild.className == "fa-solid fa-bars"
+      ? "fa-solid fa-xmark"
+      : "fa-solid fa-bars";
+  btn.className = btn.className == "embeddedBtn" ? "" : "embeddedBtn";
 
   // Modal Disable Toggler
   const userDetails =
@@ -277,11 +282,8 @@ function multipleSelectionFunction(btn) {
   // Selecting tr
   const orderTableBody = document.getElementById("orderTableBody");
   for (let i = 0; i < orderTableBody.children.length; i++) {
-    if (btn.innerHTML == "Done Selecting") {
-      orderTableBody.children[i].setAttribute(
-        "onclick",
-        "selectTrFunction(this)"
-      );
+    if (btn.className == "embeddedBtn") {
+      orderTableBody.children[i].setAttribute("onclick","selectTrFunction(this)");
     } else {
       orderTableBody.children[i].removeAttribute("onclick");
     }
@@ -294,7 +296,7 @@ function selectTrFunction(tr) {
     for (let j = 0; j < tr.children.length; j++) {
       tr.children[j].style.backgroundColor = "transparent";
     }
-    tr.style.color = "black";
+    tr.style.color = "#212529";
     tr.style.opacity = "1";
     tr.className = "";
     loadingData(tr, 0);
@@ -348,21 +350,12 @@ function clearAllModalList() {
   modalTbody.innerHTML = "";
 
   const orderTableBody = document.getElementById("orderTableBody");
-  for(let i = 0; i < orderTableBody.children.length; i++) {
-    // orderTableBody.children[i].backgroundColor = "#f2f2f2";
-    // console.log(i)
-    orderTableBody.children[i].style.color = "black"
-    orderTableBody.children[i].style.opacity = "1"
-    orderTableBody.children[i].className = " "
-    for(let j = 0; j < orderTableBody.children[i].children.length; j++){
-      if(i%2 == 0) {
-        orderTableBody.children[i].children[j].style.backgroundColor = "#f2f2f2"
-  
-      } else if (i%2 != 0) {
-        orderTableBody.children[i].children[j].style.backgroundColor = "white"
-        
-      }
-
+  for (let i = 0; i < orderTableBody.children.length; i++) {
+    orderTableBody.children[i].style.color = "#212529";
+    orderTableBody.children[i].style.opacity = "1";
+    orderTableBody.children[i].className = " ";
+    for (let j = 0; j < orderTableBody.children[i].children.length; j++) {
+      orderTableBody.children[i].children[j].style.backgroundColor = "transparent";
     }
   }
 }
