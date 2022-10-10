@@ -1664,3 +1664,83 @@ svg {
   background-color: #555;
   color: white;
 }
+
+
+
+
+/* //// Multiple Selection Modal //// */
+
+.wholeModal2 {
+  justify-content: flex-start;
+  position: relative;
+}
+.modalOrderTableSection {
+  width: 100%;
+}
+.modalOrderTableSection > table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.modalOrderTableSection thead {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  background-color: #666;
+}
+.modalOrderTableSection tr {
+  display: table;
+  width: 100%;
+  cursor: pointer;
+  table-layout: fixed;
+}
+.modalOrderTableSection tbody {
+  display: block;
+  height: 500px !important;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.modalOrderTableSection th {
+  color: white;
+  font-size: small;
+  height: 50px;
+  text-align: center;
+}
+.modalOrderTableSection td {
+  text-align: center;
+  height: 50px;
+}
+.modalOrderTableSection ::-webkit-scrollbar {
+  width: 2px;
+}
+.multipleOrderActionSection {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.multipleOrderActionSection > div {
+  padding: 0  10px;
+}
+.multipleOrderActionSection button {
+  border-radius: 6px;
+  color: #fff;
+  background-color: #666;
+  font-weight: 500;
+  padding: 5px;
+  width: 120px;
+  border: none;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 20%);
+}
+.multipleOrderActionSection #multipleDeliveredBtn:hover {
+  background-color: #61b95b80;
+  color: black;
+}
+.multipleOrderActionSection #multipleFailedBtn:hover {
+  background-color: #ee405e80;
+  color: black;
+}
+.multipleOrderActionSection #multipleCanceledBtn:hover {
+  background-color: #fcc91080;
+  color: black;
+}

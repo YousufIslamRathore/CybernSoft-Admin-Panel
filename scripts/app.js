@@ -287,22 +287,15 @@ function multipleSelectionFunction(btn) {
     }
   }
 }
-// function selectRows(tr) {
-// const orderTableRows = document.getElementsByClassName("orderTableRows");
-// for(let j = 0; j < orderTableRows.lengt)
-// orderTableRows[i]
 
-// tr.style.backgroundColor = "black"
-// console.log(tr)
-// }
-
+// Row Selecting Toggler
 function selectTrFunction(tr) {
   if (tr.style.color == "white") {
-    for(let j = 0; j < tr.children.length; j++) {
-      tr.children[j].style.backgroundColor = "transparent"
+    for (let j = 0; j < tr.children.length; j++) {
+      tr.children[j].style.backgroundColor = "transparent";
     }
-    tr.style.color = "black"
-    tr.style.opacity = "1"
+    tr.style.color = "black";
+    tr.style.opacity = "1";
   } else {
     for (let i = 0; i < tr.children.length; i++) {
       tr.children[i].style.backgroundColor = "#999";
@@ -310,5 +303,4 @@ function selectTrFunction(tr) {
     tr.style.color = "white";
     tr.style.opacity = "0.5";
   }
-  // console.log(tr)
 }
