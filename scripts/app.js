@@ -296,11 +296,73 @@ function selectTrFunction(tr) {
     }
     tr.style.color = "black";
     tr.style.opacity = "1";
+    tr.className = "";
+    loadingData(tr, 0);
   } else {
     for (let i = 0; i < tr.children.length; i++) {
       tr.children[i].style.backgroundColor = "#999";
     }
     tr.style.color = "white";
     tr.style.opacity = "0.5";
+    tr.className = "selectedTr";
+    loadingData(tr, 1);
+  }
+}
+
+//  Loading Data into Modal
+
+function loadingData(selectedTr, key) {
+  var modalTbody = document.getElementById("modalTbody");
+  var orderIdTdTxt = selectedTr.children[0].innerHTML;
+  var toTdTxt = selectedTr.children[3].innerHTML;
+  var tankerTypeTdTxt = selectedTr.children[2].innerHTML;
+
+  if (key == 1) {
+    var tr = document.createElement("tr");
+
+    var orderIdTd = document.createElement("td");
+    orderIdTd.append(orderIdTdTxt);
+
+    var toTd = document.createElement("td");
+    toTd.append(toTdTxt);
+
+    var tankerTypeTd = document.createElement("td");
+    tankerTypeTd.append(tankerTypeTdTxt);
+
+    tr.append(orderIdTd);
+    tr.append(toTd);
+    tr.append(tankerTypeTd);
+
+    modalTbody.append(tr);
+  } else if (key == 0) {
+    for (let k = 0; k < modalTbody.children.length; k++) {
+      if (modalTbody.children[k].firstElementChild.innerHTML == orderIdTdTxt) {
+        modalTbody.removeChild(modalTbody.children[k]);
+      }
+    }
+  }
+}
+
+function clearAllModalList() {
+  const modalTbody = document.getElementById("modalTbody");
+  modalTbody.innerHTML = "";
+
+  const orderTableBody = document.getElementById("orderTableBody");
+  for(let i = 0; i < orderTableBody.children.length; i++) {
+    // orderTableBody.children[i].backgroundColor = "#f2f2f2";
+    // console.log(i)
+    orderTableBody.children[i].style.color = "black"
+    orderTableBody.children[i].style.opacity = "1"
+    orderTableBody.children[i].className = " "
+    for(let j = 0; j < orderTableBody.children[i].children.length; j++){
+      if(i%2 == 0) {
+        orderTableBody.children[i].children[j].style.backgroundColor = "#f2f2f2"
+  
+      } else if (i%2 != 0) {
+        orderTableBody.children[i].children[j].style.backgroundColor = "white"
+        
+      }
+
+    }
   }
 }

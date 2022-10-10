@@ -1645,7 +1645,7 @@ svg {
 .ordersMutipleSelectionMainDiv {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   border-top: 1px solid rgba(153, 153, 153, 0.525);
   padding-top: 20px;
@@ -1659,7 +1659,9 @@ svg {
   box-shadow: 0px 3px 5px rgb(0 0 0 / 20%);
   cursor: pointer;
   transition-duration: 200ms;
+  margin-right: 10px;
 } 
+
 .ordersMutipleSelectionMainDiv > button:hover {
   background-color: #555;
   color: white;
@@ -1693,7 +1695,7 @@ svg {
 }
 .modalOrderTableSection tbody {
   display: block;
-  height: 450px !important;
+  max-height: 420px !important;
   width: 100%;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -1710,6 +1712,16 @@ svg {
 }
 .modalOrderTableSection ::-webkit-scrollbar {
   width: 2px;
+}
+.wholeModal2 > main {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 14px;
 }
 .multipleOrderActionSection {
   position: absolute;
