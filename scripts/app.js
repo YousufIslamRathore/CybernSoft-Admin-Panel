@@ -1,23 +1,23 @@
-let ownerCount = document.getElementById("ownerCount");
-let ownerCounter = 0;
-let tenantCounter = 0;
-setInterval(() => {
-  if (ownerCounter == 65) {
-    clearInterval();
-  } else {
-    ownerCounter += 1;
-    ownerCount.innerHTML = ownerCounter + "%";
-  }
-}, 30);
+// let ownerCount = document.getElementById("ownerCount");
+// let ownerCounter = 0;
+// let tenantCounter = 0;
+// setInterval(() => {
+//   if (ownerCounter == 65) {
+//     clearInterval();
+//   } else {
+//     ownerCounter += 1;
+//     ownerCount.innerHTML = ownerCounter + "%";
+//   }
+// }, 30);
 
-setInterval(() => {
-  if (tenantCounter == 35) {
-    clearInterval();
-  } else {
-    tenantCounter += 1;
-    tenantCount.innerHTML = tenantCounter + "%";
-  }
-}, 30);
+// setInterval(() => {
+//   if (tenantCounter == 35) {
+//     clearInterval();
+//   } else {
+//     tenantCounter += 1;
+//     tenantCount.innerHTML = tenantCounter + "%";
+//   }
+// }, 30);
 
 function pageSelector(index) {
   var pageSelectors = document.getElementsByClassName("pageSelectors");
@@ -192,8 +192,12 @@ function haltServiceToggler(icon) {
   // icon.className == "fa-solid fa-toggle-off"
   //   ? (icon.className = "fa-solid fa-toggle-on")
   //   : (icon.className = "fa-solid fa-toggle-off");
-  icon.className = icon.className == "fa-solid fa-toggle-off" ? "fa-solid fa-toggle-on" : "fa-solid fa-toggle-off";
-  icon.style.color = icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e" 
+  icon.className =
+    icon.className == "fa-solid fa-toggle-off"
+      ? "fa-solid fa-toggle-on"
+      : "fa-solid fa-toggle-off";
+  icon.style.color =
+    icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
 }
 
 function ordersTabSectionToggler(tab) {
@@ -255,4 +259,56 @@ function dailyQuotaEditBtn(editBtn) {
     dailyQuotaInput.disabled = true;
     dailyQuotaInput.style.borderBottom = "none";
   }
+}
+
+///// Multiple Selection Functionality on Orders Page
+
+function multipleSelectionFunction(btn) {
+  btn.innerHTML =
+    btn.innerHTML == "Select Multiple" ? "Done Selecting" : "Select Multiple";
+
+  // Modal Disable Toggler
+  const userDetails =
+    document.getElementById("userDetails") ||
+    document.getElementById("DisableModal");
+  userDetails.id =
+    userDetails.id == "userDetails" ? "DisableModal" : "userDetails";
+
+  // Selecting tr
+  const orderTableBody = document.getElementById("orderTableBody");
+  for (let i = 0; i < orderTableBody.children.length; i++) {
+    if (btn.innerHTML == "Done Selecting") {
+      orderTableBody.children[i].setAttribute(
+        "onclick",
+        "selectTrFunction(this)"
+      );
+    } else {
+      orderTableBody.children[i].removeAttribute("onclick");
+    }
+  }
+}
+// function selectRows(tr) {
+// const orderTableRows = document.getElementsByClassName("orderTableRows");
+// for(let j = 0; j < orderTableRows.lengt)
+// orderTableRows[i]
+
+// tr.style.backgroundColor = "black"
+// console.log(tr)
+// }
+
+function selectTrFunction(tr) {
+  if (tr.style.color == "white") {
+    for(let j = 0; j < tr.children.length; j++) {
+      tr.children[j].style.backgroundColor = "transparent"
+    }
+    tr.style.color = "black"
+    tr.style.opacity = "1"
+  } else {
+    for (let i = 0; i < tr.children.length; i++) {
+      tr.children[i].style.backgroundColor = "#999";
+    }
+    tr.style.color = "white";
+    tr.style.opacity = "0.5";
+  }
+  // console.log(tr)
 }

@@ -388,14 +388,10 @@
 
               <section class="tabSection">
                 <div id="quotaTabSection">
-                  <section onclick="ordersTabSectionToggler(this)">
-                    Quota
-                  </section>
+                  <section onclick="ordersTabSectionToggler(this)">Quota</section>
                 </div>
                 <div id="haltTabSection">
-                  <section onclick="ordersTabSectionToggler(this)">
-                    Halt
-                  </section>
+                  <section onclick="ordersTabSectionToggler(this)">Halt</section>
                 </div>
               </section>
 
@@ -514,9 +510,10 @@
                   <div>
                     <select name="Date" id="" class="userTypeDropDown">
                       <option value="Select" disabled selected>Select</option>
-                      <option value="All">All</option>
-                      <option value="Owner">Owner</option>
-                      <option value="Tenant">Tenant</option>
+                      <option value="ID">ID</option>
+                      <option value="Name">Name</option>
+                      <option value="TankerType">Tanker Type</option>
+                      <option value="to">To</option>
                     </select>
                   </div>
                   <div>
@@ -527,16 +524,6 @@
                       class="userTypeDropDown dateSearchField"
                     />
                   </div>
-                  <!-- <div>
-                    <select name="userType" id="" class="userTypeDropDown">
-                      <option value="Select" disabled selected>
-                        Select User Type
-                      </option>
-                      <option value="All">All</option>
-                      <option value="Owner">Owner</option>
-                      <option value="Tenant">Tenant</option>
-                    </select>
-                  </div> -->
                   <div><button style="margin-right: 10px">Search</button></div>
                   <div><button class="importData">Import Data</button></div>
                 </section>
@@ -551,11 +538,12 @@
                       <!-- <th>CNIC</th> -->
                       <th>Tanker Type</th>
                       <th>To</th>
+                      <th>Order Status</th>
                       <th class="lastCell">Created At</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                  <tbody id="orderTableBody">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <!-- <td style="width: 40px; position: absolute;">
                       </td> -->
                       <td><input type="checkbox" name="" id=""></td>
@@ -564,6 +552,7 @@
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-01</td>
+                      <td><div class="completed">Completed</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -572,12 +561,13 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-02</td>
+                      <td><div class="pending">Pending</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -586,12 +576,13 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-03</td>
+                      <td><div class="completed">Completed</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -600,12 +591,13 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-04</td>
+                      <td><div class="completed">Completed</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -614,12 +606,13 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-05</td>
+                      <td><div class="failed">Failed</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -628,12 +621,13 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-06</td>
+                      <td><div class="completed">Completed</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -642,12 +636,13 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-06</td>
+                      <td><div class="cancelled">Cancelled</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -656,12 +651,13 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
-                      <td>A-07</td>
+                      <td>A-02</td>
+                      <td><div class="pending">Pending</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -670,12 +666,28 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
+                      <td class="firstCell">12345</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="doubleTanker">Double Tanker</td>
+                      <td>A-03</td>
+                      <td><div class="completed">Completed</div></td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
-                      <td>A-08</td>
+                      <td>A-04</td>
+                      <td><div class="completed">Completed</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -684,12 +696,28 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
+                      <td class="firstCell">12345</td>
+                      <td>Yousuf Islam</td>
+                      <!-- <td>42201-2729672-7</td> -->
+                      <td class="singleTanker">Single Tanker</td>
+                      <td>A-05</td>
+                      <td><div class="failed">Failed</div></td>
+                      <td class="lastCell">
+                        <span>
+                          2022-09-29
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-06</td>
+                      <td><div class="completed">Completed</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -698,96 +726,13 @@
                         </span>
                       </td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">12345</td>
-                      <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
-                      <td class="singleTanker">Single Tanker</td>
-                      <td>A-07</td>
-                      <td class="lastCell">
-                        <span>
-                          2022-09-29
-                          <br />
-                          <span class="timeSpan"> 11:11 AM </span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">12345</td>
-                      <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
-                      <td class="singleTanker">Single Tanker</td>
-                      <td>A-08</td>
-                      <td class="lastCell">
-                        <span>
-                          2022-09-29
-                          <br />
-                          <span class="timeSpan"> 11:11 AM </span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
+                    <tr data-toggle="modal" data-target="#userDetails" class="orderTableRows">
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
                       <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-06</td>
-                      <td class="lastCell">
-                        <span>
-                          2022-09-29
-                          <br />
-                          <span class="timeSpan"> 11:11 AM </span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">12345</td>
-                      <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
-                      <td class="singleTanker">Single Tanker</td>
-                      <td>A-07</td>
-                      <td class="lastCell">
-                        <span>
-                          2022-09-29
-                          <br />
-                          <span class="timeSpan"> 11:11 AM </span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">12345</td>
-                      <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
-                      <td class="doubleTanker">Double Tanker</td>
-                      <td>A-06</td>
-                      <td class="lastCell">
-                        <span>
-                          2022-09-29
-                          <br />
-                          <span class="timeSpan"> 11:11 AM </span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">12345</td>
-                      <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
-                      <td class="singleTanker">Single Tanker</td>
-                      <td>A-07</td>
-                      <td class="lastCell">
-                        <span>
-                          2022-09-29
-                          <br />
-                          <span class="timeSpan"> 11:11 AM </span>
-                        </span>
-                      </td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">12345</td>
-                      <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
-                      <td class="singleTanker">Single Tanker</td>
-                      <td>A-08</td>
+                      <td><div class="cancelled">Cancelled</div></td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -798,7 +743,9 @@
                     </tr>
                   </tbody>
                 </table>
-                <div>
+                <div class="ordersMutipleSelectionMainDiv">
+                  <button onclick="multipleSelectionFunction(this)">Select Multiple</button>
+                  <div style="width: 100px;"></div>
                   <button>Action</button>
                 </div>
               </section>
