@@ -189,15 +189,15 @@ function updateTenantDetails() {
 }
 
 function haltServiceToggler(icon) {
-  // icon.className == "fa-solid fa-toggle-off"
-  //   ? (icon.className = "fa-solid fa-toggle-on")
-  //   : (icon.className = "fa-solid fa-toggle-off");
   icon.className =
     icon.className == "fa-solid fa-toggle-off"
       ? "fa-solid fa-toggle-on"
       : "fa-solid fa-toggle-off";
   icon.style.color =
     icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
+
+    const orderPageMainPanel = document.getElementById("orderPageMainPanel");
+    orderPageMainPanel.style.opacity = icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3"
 }
 
 function ordersTabSectionToggler(tab) {
@@ -272,6 +272,15 @@ function multipleSelectionFunction(btn) {
       : "fa-solid fa-bars";
   btn.className = btn.className == "embeddedBtn" ? "" : "embeddedBtn";
 
+  // Action Button Container Show
+  const multipleSelectedOrderActionBtnDiv = document.getElementById(
+    "multipleSelectedOrderActionBtnDiv"
+  );
+  multipleSelectedOrderActionBtnDiv.className =
+    btn.className == "embeddedBtn"
+      ? "ordersMutipleSelectionMainDiv"
+      : "displayNone";
+
   // Modal Disable Toggler
   const userDetails =
     document.getElementById("userDetails") ||
@@ -283,7 +292,10 @@ function multipleSelectionFunction(btn) {
   const orderTableBody = document.getElementById("orderTableBody");
   for (let i = 0; i < orderTableBody.children.length; i++) {
     if (btn.className == "embeddedBtn") {
-      orderTableBody.children[i].setAttribute("onclick","selectTrFunction(this)");
+      orderTableBody.children[i].setAttribute(
+        "onclick",
+        "selectTrFunction(this)"
+      );
     } else {
       orderTableBody.children[i].removeAttribute("onclick");
     }
@@ -355,7 +367,8 @@ function clearAllModalList() {
     orderTableBody.children[i].style.opacity = "1";
     orderTableBody.children[i].className = " ";
     for (let j = 0; j < orderTableBody.children[i].children.length; j++) {
-      orderTableBody.children[i].children[j].style.backgroundColor = "transparent";
+      orderTableBody.children[i].children[j].style.backgroundColor =
+        "transparent";
     }
   }
 }

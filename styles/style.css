@@ -1642,6 +1642,9 @@ svg {
   color: #555;
   cursor: pointer;
 }
+.displayNone {
+  display: none;
+}
 .ordersMutipleSelectionMainDiv {
   width: 100%;
   display: flex;
