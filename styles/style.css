@@ -1283,8 +1283,8 @@ svg {
 .tankersFancyDisplaySection1 {
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -1417,7 +1417,7 @@ svg {
 /* Presentation Chart Section */
 
 .presentationChartSection {
-  margin: 20px 10px 40px;
+  margin: 20px 0 40px;
   display: flex;
   padding-left: 10px;
   padding-right: 10px;
@@ -1493,7 +1493,7 @@ svg {
 
 .haltSection {
   box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
-  width: 97%;
+  width: 99%;
   background-color: white;
   margin: 40px auto;
   border-radius: 20px;
