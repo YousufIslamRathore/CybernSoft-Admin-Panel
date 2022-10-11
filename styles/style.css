@@ -1775,3 +1775,63 @@ svg {
   background-color: #fcc91080;
   color: black;
 }
+
+
+
+
+/* //// Maintenance Section //// */
+
+.maintenanceFancyDisplaySection1 > div {
+  width: 30%;
+}
+
+.paidMaintenanceReceipt {
+  background-color: #555;
+  color: white;
+  padding: 5px 8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
+}
+
+.maintenanceCardMainContainer {
+  width: 86%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.maintenanceCardMainContainer > div {
+  /* border: 1px solid #000; */
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
+  width: 67%;
+}
+.maintenanceCardMainContainer > section {
+  border: 1px solid #000;
+  width: 28%;
+}
+.maintenanceCardMainContainer > div > section {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+.maintenanceCardMainContainer > div > section > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.maintenanceCardMainContainer h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px auto;
+}
+.maintenanceCardMainContainer p {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin: 5px 0;
+}
