@@ -375,16 +375,27 @@ function clearAllModalList() {
 }
 
 function previousPaymentsToggler(clicker) {
+  let hiddenAfterFunction = document.getElementsByClassName(
+    "hiddenAfterfunction"
+  );
   const icon = clicker.lastElementChild.firstElementChild;
+
   icon.className =
     icon.className == "fa-solid fa-angle-up"
       ? "fa-solid fa-angle-down"
       : "fa-solid fa-angle-up";
 
   if (icon.className == "fa-solid fa-angle-down") {
-    clicker.parentElement.style.height = "400px";
-
+    clicker.parentElement.style.boxShadow = "none"
+    clicker.parentElement.style.height = "73%";
+    for (let i = 0; i < hiddenAfterFunction.length; i++) {
+      hiddenAfterFunction[i].style.display = "none";
+    }
   } else {
-    clicker.parentElement.style.height = "54px"
+    clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)"
+    clicker.parentElement.style.height = "54px";
+    for (let i = 0; i < hiddenAfterFunction.length; i++) {
+      hiddenAfterFunction[i].style.display = "flex";
+    }
   }
 }
