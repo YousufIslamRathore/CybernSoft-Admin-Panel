@@ -1840,6 +1840,8 @@ svg {
 }
 .maintenanceCardMainContainer > section > div {
   width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 5px;
 }
 .maintenanceCardMainContainer > section > div > section {
   width: 80%;
@@ -1847,8 +1849,32 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
+}
+.maintenanceCardMainContainer > section > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 .maintenanceCardMainContainer > section p {
   font-size: 16px;
-  
+  font-weight: bold;
+}
+.maintenanceCardMainContainer > section input {
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  padding: 3px 8px;
+  border: none;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 16%);
+}
+.maintenanceCardMainContainer > section button {
+  background-color: #555;
+  color: white;
+  padding: 5px 8px; 
+  font-size: 12px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
+  width: 100px;
 }
