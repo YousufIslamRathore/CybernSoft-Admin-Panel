@@ -387,7 +387,7 @@ function previousPaymentsToggler(clicker) {
 
   if (icon.className == "fa-solid fa-angle-down") {
     clicker.parentElement.style.boxShadow = "none"
-    clicker.parentElement.style.height = "73%";
+    clicker.parentElement.style.height = "70%";
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
       hiddenAfterFunction[i].style.display = "none";
     }
