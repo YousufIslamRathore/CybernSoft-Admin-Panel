@@ -386,18 +386,24 @@ function previousPaymentsToggler(clicker) {
       : "fa-solid fa-angle-up";
 
   if (icon.className == "fa-solid fa-angle-down") {
-    clicker.parentElement.style.boxShadow = "none"
+    clicker.parentElement.style.boxShadow = "none";
     clicker.parentElement.style.height = "70%";
     clicker.parentElement.style.width = "84%";
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
       hiddenAfterFunction[i].style.display = "none";
     }
   } else {
-    clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)"
+    clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
     clicker.parentElement.style.height = "54px";
-    clicker.parentElement.style.width = "43%"
+    clicker.parentElement.style.width = "43%";
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
       hiddenAfterFunction[i].style.display = "flex";
     }
   }
+}
+
+function modalCheckStatus() {
+  $("#code").on("shown", function () {
+    alert("I want this to appear after the modal has opened!");
+  });
 }

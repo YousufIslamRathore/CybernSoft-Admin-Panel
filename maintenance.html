@@ -227,7 +227,7 @@
               </section>
 
               <section class="usersListSection tankersListSection">
-                <table>
+                <!-- <table>
                   <thead>
                     <tr>
                       <th class="firstCell">Unit No.</th>
@@ -312,10 +312,96 @@
                     </tr>
 
                   </tbody>
+                </table> -->
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="firstCell">Unit No.</th>
+                      <th>User Name</th>
+                      <th>Due Amount</th>
+                      <th>Due Date</th>
+                      <th class="lastCell">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="orderTableBody">
+                    <tr data-toggle="modal" data-target="#userDetails" >
+                      <td class="firstCell">A-101</td>
+                      <td>Yousuf Islam</td>
+                      <td>4000</td>
+                      <td>09/19/2022</td>
+                      <td class="lastCell">
+                        <div class="pending">Unpaid</div>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" >
+                      <td class="firstCell">A-101</td>
+                      <td>Yousuf Islam</td>
+                      <td>4000</td>
+                      <td>09/19/2022</td>
+                      <td class="lastCell">
+                        <div class="pending">Unpaid</div>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" >
+                      <td class="firstCell">A-101</td>
+                      <td>Yousuf Islam</td>
+                      <td>4000</td>
+                      <td>09/19/2022</td>
+                      <td class="lastCell">
+                        <div class="pending">Unpaid</div>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" >
+                      <td class="firstCell">A-101</td>
+                      <td>Yousuf Islam</td>
+                      <td>4000</td>
+                      <td>09/19/2022</td>
+                      <td class="lastCell">
+                        <div class="pending">Unpaid</div>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" >
+                      <td class="firstCell">A-101</td>
+                      <td>Yousuf Islam</td>
+                      <td>4000</td>
+                      <td>09/19/2022</td>
+                      <td class="lastCell">
+                        <div class="pending">Unpaid</div>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" >
+                      <td class="firstCell">A-101</td>
+                      <td>Yousuf Islam</td>
+                      <td>4000</td>
+                      <td>09/19/2022</td>
+                      <td class="lastCell">
+                        <div class="pending">Unpaid</div>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" >
+                      <td class="firstCell">A-101</td>
+                      <td>Yousuf Islam</td>
+                      <td>4000</td>
+                      <td>09/19/2022</td>
+                      <td class="lastCell">
+                        <div class="pending">Unpaid</div>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails" >
+                      <td class="firstCell">A-101</td>
+                      <td>Yousuf Islam</td>
+                      <td>4000</td>
+                      <td>09/19/2022</td>
+                      <td class="lastCell">
+                        <div class="pending">Unpaid</div>
+                      </td>
+                    </tr>
+
+                  </tbody>
                 </table>
-                <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
+                <!-- <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
                   <button data-toggle="modal" data-target="#multipleOrderSelected">Action</button>
-                </div>
+                </div> -->
               </section>
             </section>
           </div>
@@ -325,7 +411,7 @@
 
     <!-- /--- Maintenance Details Modal ---/ -->
 
-    <section class="modal fade" id="userDetails">
+    <!-- <section class="modal fade" id="userDetails">
       <div class="modal-dialog modal-xl">
         <div class="modal-content forBorderRadius">
           <section class="modal-body wholeModal wholeModal3">
@@ -537,7 +623,7 @@
                   </tbody>
                 </table>
               </section>
-            </section>
+            </section> -->
 
             <!-- <section class="maintenanceCardMainContainer">
               <div>
@@ -561,11 +647,239 @@
               </section>
             </section> -->
 
+          <!-- </section>
+        </div>
+      </div>
+    </section> -->
+
+
+    <!-- Unpaid Maintenance  -->
+
+    <section class="modal fade" id="userDetails" onshow="modalCheckStatus()">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content forBorderRadius">
+          <section class="modal-body wholeModal wholeModal3">
+            <section class="headingSection">
+              <h1>User Maintenance Details</h1>
+            </section>
+            <section class="userDetailSection">
+              <section>
+                <div>
+                  <p>Name :</p>
+                  <input
+                    type="text"
+                    value="Yousuf Islam"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Unit No.</p>
+                  <input type="text" value="A-01" disabled />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Contact :</p>
+                  <input
+                    type="number"
+                    value="03082028980"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>CNIC :</p>
+                  <input type="text" value="42201-2729672-7" disabled />
+                </div>
+              </section>
+              <section class="hiddenAfterfunction">
+                <div>
+                  <p>Type :</p>
+                  <input
+                    type="text"
+                    value="Tenant"
+                    style="color: #e14eca"
+                    id="userTypeInputField"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Status :</p>
+                  <input
+                    type="text"
+                    value="Active"
+                    style="color: #61b95b"
+                    id="statusInputField"
+                    disabled
+                  />
+                </div>
+              </section>
+              <section class="hiddenAfterfunction">
+                <div>
+                  <p>Maintenance :</p>
+                  <input
+                    type="text"
+                    value="UNPAID"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Due Amount :</p>
+                  <input
+                    type="text"
+                    value="4000"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+              </section>
+              <section class="hiddenAfterfunction">
+                <div>
+                  <p>Due Date :</p>
+                  <input
+                    type="text"
+                    value="10/11/2022"
+                    class="editableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <button class="paidMaintenanceReceipt">View Receipt</button>
+                </div>
+              </section>
+            </section>
+
+            <!-- <section class="maintenanceFurtherDetails1">
+              <div onclick="addMaintenanceToggler(this)">
+                <h3>Add Maintenance</h3>
+                <div class="angleUpDiv"></div>
+              </div>
+            </section> -->
+
+            <section class="maintenanceFurtherDetails">
+              <div onclick="previousPaymentsToggler(this)">
+                <h3>Previous Payments</h3>
+                <div class="angleUpDiv"><i class="fa-solid fa-angle-up"></i></div>
+              </div>
+              <section class="modalOrderTableSection">
+                <table>
+                  <thead>
+                    <th>Receipt ID</th>
+                    <th>Month</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Method</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td>Oct</td>
+                      <td>12/10/2022</td>
+                      <td>20,000</td>
+                      <td>Cash</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+            </section>
+
           </section>
         </div>
       </div>
     </section>
-
 
     <!-- Multiple Order Modal -->
     <section class="modal fade" id="multipleOrderSelected">
@@ -611,6 +925,12 @@
 
   <script src="./scripts/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- <script>
+    $("#userDetails").on("shown", function () {
+    
+  });
+  </script> -->
 
   <script>
     /// Setup Block
