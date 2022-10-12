@@ -1796,7 +1796,7 @@ svg {
 }
 
 .maintenanceCardMainContainer {
-  width: 86%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -1806,11 +1806,14 @@ svg {
 .maintenanceCardMainContainer > div {
   /* border: 1px solid #000; */
   box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
-  width: 67%;
+  width: 40%;
+  margin: 0 auto;
 }
 .maintenanceCardMainContainer > section {
-  border: 1px solid #000;
-  width: 28%;
+  /* border: 1px solid #000; */
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
+  width: 40%;
+  margin: 0 auto;
 }
 .maintenanceCardMainContainer > div > section {
   width: 100%;
@@ -1830,8 +1833,22 @@ svg {
   font-weight: bold;
   margin: 10px auto;
 }
-.maintenanceCardMainContainer p {
+.maintenanceCardMainContainer div p {
   font-size: 14px;
   margin-bottom: 0;
   margin: 5px 0;
+}
+.maintenanceCardMainContainer > section > div {
+  width: 100%;
+}
+.maintenanceCardMainContainer > section > div > section {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.maintenanceCardMainContainer > section p {
+  font-size: 16px;
+  
 }
