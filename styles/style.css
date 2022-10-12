@@ -1795,7 +1795,7 @@ svg {
   box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
 }
 
-.maintenanceCardMainContainer {
+/* .maintenanceCardMainContainer {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -1804,13 +1804,11 @@ svg {
   margin-bottom: 30px;
 }
 .maintenanceCardMainContainer > div {
-  /* border: 1px solid #000; */
   box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
   width: 40%;
   margin: 0 auto;
 }
 .maintenanceCardMainContainer > section {
-  /* border: 1px solid #000; */
   box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
   width: 40%;
   margin: 0 auto;
@@ -1877,4 +1875,48 @@ svg {
   border-radius: 6px;
   box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
   width: 100px;
+} */
+.wholeModal3 {
+  justify-content: flex-start;
+  position: relative;
+}
+.maintenanceFurtherDetails {
+  width: 90%;
+  margin: 0 auto 20px;
+  /* display: flex; */
+  /* justify-content: ; */
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
+  border-radius: 8px;
+  cursor: pointer;
+  height: 54px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 10px;
+}
+.maintenanceFurtherDetails:hover {
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
+} 
+.maintenanceFurtherDetails h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px auto;
+}
+/* .maintenanceFurtherDetails h3:hover {
+  text-decoration: underline;
+} */
+
+.maintenanceFurtherDetails > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.angleUpDiv {
+  position: absolute;
+  right: 20px;
+  top: 17px;
+}
+.angleUpDiv i {
+  font-size: 22px;
 }

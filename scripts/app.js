@@ -196,8 +196,9 @@ function haltServiceToggler(icon) {
   icon.style.color =
     icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
 
-    const orderPageMainPanel = document.getElementById("orderPageMainPanel");
-    orderPageMainPanel.style.opacity = icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3"
+  const orderPageMainPanel = document.getElementById("orderPageMainPanel");
+  orderPageMainPanel.style.opacity =
+    icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3";
 }
 
 function ordersTabSectionToggler(tab) {
@@ -370,5 +371,20 @@ function clearAllModalList() {
       orderTableBody.children[i].children[j].style.backgroundColor =
         "transparent";
     }
+  }
+}
+
+function previousPaymentsToggler(clicker) {
+  const icon = clicker.lastElementChild.firstElementChild;
+  icon.className =
+    icon.className == "fa-solid fa-angle-up"
+      ? "fa-solid fa-angle-down"
+      : "fa-solid fa-angle-up";
+
+  if (icon.className == "fa-solid fa-angle-down") {
+    clicker.parentElement.style.height = "400px";
+
+  } else {
+    clicker.parentElement.style.height = "54px"
   }
 }
