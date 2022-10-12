@@ -312,6 +312,9 @@
                 <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
                   All Users
                 </h2>
+                <div class="besideHeadingDiv">
+                  <button onclick="multipleSelectionFunction(this)"><i class="fa-solid fa-bars"></i>Select Multiple</button>
+                </div>
                 <!-- <main class="ownerTenantMainContainer" id="ownerAndTenant">
                     <div
                       class="ownerMainSection"
@@ -429,7 +432,7 @@
                     <th class="lastCell" s>Active Status</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="orderTableBody">
                   <tr data-toggle="modal" data-target="#userDetails">
                     <td class="firstCell">A-01</td>
                     <td>Yousuf Islam</td>
@@ -612,6 +615,9 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
+                <button data-toggle="modal" data-target="#multipleOrderSelected">Action</button>
+              </div>
             </section>
           </section>
 
@@ -766,6 +772,47 @@
               UPDATE
             </button>
           </section>
+        </section>
+      </div>
+    </div>
+  </section>
+
+   <!-- Multiple User Modal -->
+
+   <section class="modal fade" id="multipleOrderSelected">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content forBorderRadius">
+        <section class="modal-body wholeModal wholeModal2">
+          <section class="headingSection">
+            <h1>Selected Users</h1>
+          </section>
+
+          <section class="modalOrderTableSection">
+            <table>
+              <thead>
+                <th>Unit No.</th>
+                <th>Name</th>
+                <th>CNIC</th>
+              </thead>
+              <tbody id="modalTbody">
+
+              </tbody>
+            </table>
+          </section>
+          <main><small onclick="clearAllModalList()">Clear All</small></main>
+
+          <!-- <div class="orderDetailActions">
+            <div><button id="modalDeliveredBtn">Delivered</button></div>
+            <div><button id="modalFailedBtn">Failed</button></div>
+            <div><button id="modalCanceledBtn">Canceled</button></div>
+          </div> -->
+
+          <div class="multipleOrderActionSection">
+            <div><button id="multipleDeliveredBtn">Delivered</button></div>
+            <div><button id="multipleFailedBtn">Failed</button></div>
+            <div><button id="multipleCanceledBtn">Canceled</button></div>
+          </div>
+
         </section>
       </div>
     </div>
