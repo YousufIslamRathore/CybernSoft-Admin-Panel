@@ -416,11 +416,11 @@ function addMaintenanceToggler(clicker) {
       : "fa-solid fa-angle-up";
 
   if (icon.className == "fa-solid fa-angle-down") {
-    clicker.parentElement.style.boxShadow = "none";
+    // clicker.parentElement.style.boxShadow = "none";
     clicker.parentElement.style.height = "34%";
     clicker.parentElement.style.width = "84%";
   } else {
-    clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
+    // clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
     clicker.parentElement.style.height = "54px";
     clicker.parentElement.style.width = "43%";
   }
