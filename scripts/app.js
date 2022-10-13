@@ -46,10 +46,10 @@ function selectedUserSection(e) {
   var userSelection = document.getElementById("userSelection").children;
   for (let i = 0; i <= 4; i++) {
     if (e == i) {
-      userSelection[i].setAttribute("class", "selectedUserSection");
+      userSelection[i].className = "selectedUserSection";
       // userSelection[i].lastElementChild.style.display = "none"
     } else {
-      userSelection[i].setAttribute("class", "SelectedUserSelection");
+      userSelection[i].className = " ";
       // userSelection[i].lastElementChild.style.display = "block"
     }
   }
@@ -379,6 +379,9 @@ function previousPaymentsToggler(clicker) {
     "hiddenAfterfunction"
   );
   const icon = clicker.lastElementChild.firstElementChild;
+  const addMaintenanceSection = document.getElementById(
+    "addMaintenanceSection"
+  );
 
   icon.className =
     icon.className == "fa-solid fa-angle-up"
@@ -392,6 +395,7 @@ function previousPaymentsToggler(clicker) {
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
       hiddenAfterFunction[i].style.display = "none";
     }
+    addMaintenanceSection.style.display = "none";
   } else {
     clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
     clicker.parentElement.style.height = "54px";
@@ -399,11 +403,25 @@ function previousPaymentsToggler(clicker) {
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
       hiddenAfterFunction[i].style.display = "flex";
     }
+    addMaintenanceSection.style.display = "block";
   }
 }
 
-function modalCheckStatus() {
-  $("#code").on("shown", function () {
-    alert("I want this to appear after the modal has opened!");
-  });
+function addMaintenanceToggler(clicker) {
+  const icon = clicker.lastElementChild.firstElementChild;
+
+  icon.className =
+    icon.className == "fa-solid fa-angle-up"
+      ? "fa-solid fa-angle-down"
+      : "fa-solid fa-angle-up";
+
+  if (icon.className == "fa-solid fa-angle-down") {
+    clicker.parentElement.style.boxShadow = "none";
+    clicker.parentElement.style.height = "45%";
+    clicker.parentElement.style.width = "84%";
+  } else {
+    clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
+    clicker.parentElement.style.height = "54px";
+    clicker.parentElement.style.width = "43%";
+  }
 }
