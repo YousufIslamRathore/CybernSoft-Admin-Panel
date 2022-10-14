@@ -1884,7 +1884,7 @@ svg {
   /* transition: 1s height, 1s width; */
 }
 .hiddenAfterFunction {
-  transition-delay: 0.5s; 
+  transition: visibility 1s 
 }
 .maintenanceFurtherDetails {
   width: 43%;
