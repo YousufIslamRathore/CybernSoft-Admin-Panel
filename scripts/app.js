@@ -419,6 +419,7 @@ function addMaintenanceToggler(clicker) {
     // clicker.parentElement.style.boxShadow = "none";
     clicker.parentElement.style.height = "37%";
     clicker.parentElement.style.width = "84%";
+    clicker.parentElement.style.position = "static"
   } else {
     // clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
     clicker.parentElement.style.height = "54px";
