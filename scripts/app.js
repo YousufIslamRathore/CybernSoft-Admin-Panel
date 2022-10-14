@@ -425,13 +425,13 @@ function addMaintenanceToggler(clicker) {
   if (icon.className == "fa-solid fa-angle-down") {
     // clicker.parentElement.style.boxShadow = "none";
     clicker.parentElement.style.height = "37%";
-    clicker.parentElement.style.width = "84%";
+    // clicker.parentElement.style.width = "84%";
     wholeModal3.style.minHeight = "90vh"
     wholeModal3.style.transitionDuration = "1000ms"
   } else {
     // clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
     clicker.parentElement.style.height = "54px";
-    clicker.parentElement.style.width = "43%";
+    // clicker.parentElement.style.width = "43%";
     wholeModal3.style.minHeight = "70vh"
     wholeModal3.style.transitionDuration = "1000ms"
   }
