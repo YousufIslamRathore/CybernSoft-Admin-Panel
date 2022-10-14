@@ -397,7 +397,10 @@ function previousPaymentsToggler(clicker) {
     wholeModal3.style.minHeight = "90vh"
     wholeModal3.style.transitionDuration = "1000ms"
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
-      hiddenAfterFunction[i].style.display = "none";
+      // hiddenAfterFunction[i].style.display = "none"
+
+      hiddenAfterFunction[i].style.opacity = "0";
+      hiddenAfterFunction[i].style.transitionDuration = "1000ms"
     }
     addMaintenanceSection.style.display = "none";
     addMaintenanceSection.style.height = "54px"
@@ -409,7 +412,10 @@ function previousPaymentsToggler(clicker) {
     wholeModal3.style.minHeight = "70vh"
     wholeModal3.style.transitionDuration = "1000ms"
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
-      hiddenAfterFunction[i].style.display = "flex";
+      // hiddenAfterFunction[i].style.display = "flex"
+
+      hiddenAfterFunction[i].style.opacity = "1"
+      hiddenAfterFunction[i].style.transitionDuration = "1000ms"
     }
     addMaintenanceSection.style.display = "block";
   }
