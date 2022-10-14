@@ -1899,7 +1899,7 @@ svg {
   transition: 1s height, 1s width;
 }
 .maintenanceFurtherDetails1 {
-  bottom: 90px;
+  bottom: 75px;
 } 
 .maintenanceFurtherDetails:hover {
   box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
