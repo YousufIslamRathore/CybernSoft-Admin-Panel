@@ -1879,7 +1879,7 @@ svg {
 .wholeModal3 {
   justify-content: flex-start;
   position: relative;
-  min-height: 65vh;
+  min-height: 70vh;
 }
 .hiddenAfterFunction {
   transition-delay: 0.5s; 
