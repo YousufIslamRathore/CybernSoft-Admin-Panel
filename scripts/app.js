@@ -400,6 +400,8 @@ function previousPaymentsToggler(clicker) {
       hiddenAfterFunction[i].style.display = "none";
     }
     addMaintenanceSection.style.display = "none";
+    addMaintenanceSection.style.height = "54px"
+    addMaintenanceSection.getElementsByTagName("i")[0].className = "fa-solid fa-angle-up"
   } else {
     clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
     clicker.parentElement.style.height = "54px";
