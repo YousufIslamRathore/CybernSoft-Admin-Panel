@@ -444,3 +444,7 @@ function addMaintenanceToggler(clicker) {
     wholeModal3.style.transitionDuration = "1000ms"
   }
 }
+
+function viewReceiptRedirector() {
+  window.location.assign("./maintenanceReceipt.html")
+}

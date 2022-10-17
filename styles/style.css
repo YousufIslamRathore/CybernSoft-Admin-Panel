@@ -2071,6 +2071,9 @@ svg {
 .maintenanceReceiptTable .secondPart {
   width: 600px;
 }
+.maintenanceReceiptTable2 {
+  margin-bottom: 0;
+}
 .maintenanceReceiptTable2 td {
   background-color: #fcbd02;
 }
