@@ -1966,7 +1966,111 @@ svg {
   min-height: 100vh;
 }
 .receiptMainContainer {
-  max-width: 1000px;
-  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
+  width: 1000px;
+  box-shadow: 0px 0px 10px #ddd;
   padding: 15px;
+  border-radius: 10px;
+}
+.receiptMainContainer > h3 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+.receiptMainContainer > section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.receiptMainContainer > section > div {
+  width: 50%;
+  padding: 8px 6px;
+  margin: 0px 1px;
+  border-left: 1px solid #ddd;
+  align-self: stretch;
+  /* border: ; */
+}
+.receiptMainContainer > section > div > div {
+  text-align: center;
+}
+.receiptMainContainer p {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center
+}
+.receiptMainContainer p > span {
+  color: #00bb07;
+  text-decoration: underline;
+}
+.receiptMainContainer > section > div > section > h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: right;
+}
+.receiptMainContainer > section > div > section > p {
+  font-weight: normal;
+  text-align: right;
+}
+
+.receiptMainContainer > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.receiptMainContainer > div > div {
+  width: 22.35%;
+}
+.receiptMainContainer > div > div > h3 {
+  margin: 16px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.receiptMainContainer .receiptTableBorder {
+  border: 1px solid #ddd;
+  background-color: #FFF7E0;
+  padding: 10px;
+}
+.receiptMainContainer .receiptTableBorder2 {
+  border-left: none;
+  border-right: none;
+}
+.receiptMainContainer > div > section {
+  width: 38.825%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-direction: column;
+}
+.receiptMainContainer > div > section p {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.maintenanceReceiptTable {
+  border-collapse: collapse;
+  width: 100%;
+  display: table;
+  margin-bottom: 30px;
+}
+.maintenanceReceiptTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+  background-color: white;
+  font-weight: bold;
+}
+.maintenanceReceiptTable .firstPart {
+  width: 400px;
+}
+.maintenanceReceiptTable .secondPart {
+  width: 600px;
+}
+.maintenanceReceiptTable2 td {
+  background-color: #fcbd02;
 }
