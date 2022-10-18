@@ -79,97 +79,59 @@
 
         <section class="profilePageContentContainer">
           <div class="profileUserDetails">
-            <h2>User's Details</h2>
+            <h2>Personal Details</h2>
             <section class="userDetailSection profileUserDetailsContent">
               <section>
                 <div>
-                  <p>Name :</p>
-                  <input
-                    type="text"
-                    value="Yousuf Islam"
-                    class="editableFields"
-                    disabled
-                  />
+                  <p>Full Name :</p>
+                  <input type="text" value="Yousuf Islam" class="editableFields" disabled />
                 </div>
+                <div>
+                  <p>Password :</p>
+                  <input type="password" value="yousuf123" class="editableFields" disabled />
+                  <div>
+                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px"></i>
+                  </div>
+                </div>
+              </section>
+              <section>
                 <div>
                   <p>Unit No.</p>
                   <input type="text" value="A-01" disabled />
                 </div>
+                <div>
+                  <p>Contact :</p>
+                  <input type="number" value="03082028980" class="editableFields" disabled />
+                </div>
               </section>
               <section>
                 <div>
-                  <p>Contact :</p>
-                  <input
-                    type="number"
-                    value="03082028980"
-                    class="editableFields"
-                    disabled
-                  />
-                </div>
-                <div>
-                  <p>CNIC :</p>
-                  <input type="text" value="42201-2729672-7" disabled />
-                </div>
-              </section>
-              <section class="hiddenAfterfunction">
-                <div>
-                  <p>Type :</p>
-                  <input
-                    type="text"
-                    value="Tenant"
-                    style="color: #e14eca"
-                    id="userTypeInputField"
-                    disabled
-                  />
+                  <p>User Type :</p>
+                  <input type="text" value="Owner" style="color: #186eb1" id="userTypeInputField" disabled />
                 </div>
                 <div>
                   <p>Status :</p>
-                  <input
-                    type="text"
-                    value="Active"
-                    style="color: #61b95b"
-                    id="statusInputField"
-                    disabled
-                  />
+                  <input type="text" value="Active" style="color: #61b95b" id="statusInputField" disabled />
                 </div>
               </section>
-              <section class="hiddenAfterfunction">
+              <section>
                 <div>
-                  <p>Maintenance :</p>
-                  <input
-                    type="text"
-                    value="UNPAID"
-                    class="editableFields"
-                    disabled
-                  />
+                  <p>Owner's CNIC :</p>
+                  <input type="text" value="42201-2729672-7" class="editableFields" disabled />
                 </div>
-                <div>
-                  <p>Due Amount :</p>
-                  <input
-                    type="text"
-                    value="4000"
-                    class="editableFields"
-                    disabled
-                  />
+                <div class="visibilityHidden" id="tenantDetail">
+                  <p>Tenant's CNIC :</p>
+                  <input type="text" value="" class="editableFields" disabled />
                 </div>
               </section>
-              <section class="hiddenAfterfunction">
+              <section>
                 <div>
-                  <p>Due Date :</p>
-                  <input
-                    type="text"
-                    value="10/11/2022"
-                    class="editableFields"
-                    disabled
-                  />
+                  <p>Created At :</p>
+                  <input type="text" value="09/19/2022" disabled />
                 </div>
                 <div>
-                  <button
-                    class="paidMaintenanceReceipt"
-                    onclick="viewReceiptRedirector()"
-                  >
-                    View Receipt
-                  </button>
+                  <p>Last Updated At :</p>
+                  <input type="text" value="09/23/2022" disabled />
                 </div>
               </section>
             </section>
