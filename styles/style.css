@@ -2098,8 +2098,52 @@ svg {
   text-align: center;
   margin: 0;
   font-weight: bold;
+  color: #555;
 }
 .profileUserDetailsContent {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+
+.profilePageTableSection > table {
+  width: 83%;
+  margin: 0 auto;
+}
+.profilePageTableSection tbody {
+  height: 380px !important;
+}
+.profilePageTableSection td {
+  height: 50px;
+}
+.profilePageTableSection ::-webkit-scrollbar {
+  width: 3px;
+}
+
+.profileUserDetails > div {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 83%;
+  margin: 20px auto 15px;
+}
+.profileUserDetails > div > h3 {
+  font-size: 16px;
+  color: #666;
+  width: 25%;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.profileUserDetails > div > div {
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+  /* margin-right: 10px; */
+  width: 20%;
+}
+.profileUserDetails > div > div > span {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
 }
