@@ -2164,6 +2164,7 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 20px;
 }
 .orderDiffCounterDiv p {
   color: #333;
@@ -2182,6 +2183,8 @@ svg {
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+  box-shadow: 1px 1px 15px #ddd;
+  border: 1px solid #ddd;
 }
 
 

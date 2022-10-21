@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orders</title>
+    <title>Routes</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -89,144 +89,6 @@
 
         <section class="usersBodySection">
           <div>
-            <!-- <section
-              class="usersFancyDisplaySection1 tankersFancyDisplaySection1"
-              id="userSelection"
-            >
-              <div
-                class="selectedUserSection"
-                onclick="selectedUserSection(0)"
-                id="Today-Orders-Selector"
-              >
-                <section>
-                  <h2>Today's Orders</h2>
-                  <h1>746</h1>
-                </section>
-              </div>
-              <div onclick="selectedUserSection(1)" id="Weekly-Orders-Selector">
-                <section>
-                  <h2>Weekly Orders</h2>
-                  <h1>740</h1>
-                </section>
-              </div>
-              <div
-                onclick="selectedUserSection(2)"
-                id="Monthly-Orders-Selector"
-              >
-                <section>
-                  <h2>Monthly Orders</h2>
-                  <h1>6</h1>
-                </section>
-              </div>
-              <div onclick="selectedUserSection(3)" id="Yearly-Orders-Selector">
-                <section>
-                  <h2>Yearly Orders</h2>
-                  <h1>1</h1>
-                </section>
-              </div>
-            </section> -->
-
-            <!-- <section class="presentationChartSection">
-              <main>
-                <div>
-                  <canvas id="pieChart"></canvas>
-                </div>
-              </main>
-
-              <div
-                class="usersFancyDisplaySection1 tankersFancyDisplaySection1 tankersFancyDisplaySection2 tankersFancyDisplaySection3"
-                id="userSelection"
-              >
-                <div
-                  class="selectedUserSection"
-                  onclick="selectedOrderStatusSection(0)"
-                  id="Completed-Orders-Selector"
-                >
-                  <div style="background-color: white; color: #61b95b">
-                    <i class="fa-solid fa-check"></i>
-                  </div>
-                  <section>
-                    <h1>746</h1>
-                    <h2>Completed Orders</h2>
-                  </section>
-                </div>
-                <div
-                  onclick="selectedOrderStatusSection(1)"
-                  id="Pending-Orders-Selector"
-                >
-                  <div style="background-color: white; color: #fcc910">
-                    <i class="fa-solid fa-clock"></i>
-                  </div>
-                  <section>
-                    <h1>740</h1>
-                    <h2>Pending Orders</h2>
-                  </section>
-                </div>
-                <div
-                  onclick="selectedOrderStatusSections(2)"
-                  id="Failed-Orders-Selector"
-                >
-                  <div style="background-color: white; color: #ee405e">
-                    <i class="fa-solid fa-exclamation"></i>
-                  </div>
-                  <section>
-                    <h1>6</h1>
-                    <h2>Failed Orders</h2>
-                  </section>
-                </div>
-                <div
-                  onclick="selectedOrderStatusSections(3)"
-                  id="Cancelled-Orders-Selector"
-                >
-                  <div style="background-color: white; color: #777">
-                    <i class="fa-solid fa-ban"></i>
-                  </div>
-                  <section>
-                    <h1>6</h1>
-                    <h2>Cancelled Orders</h2>
-                  </section>
-                </div>
-              </div>
-
-            </section> -->
-
-            <!-- <section class="haltSection">
-
-              <section class="tabSection">
-                <div id="quotaTabSection">
-                  <section onclick="ordersTabSectionToggler(this)">Quota</section>
-                </div>
-                <div id="haltTabSection">
-                  <section onclick="ordersTabSectionToggler(this)">Halt</section>
-                </div>
-              </section>
-
-              <div class="tabSectionHiddenBody" id="tabSectionBody">
-                <section>
-                  <h1>Daily Quota Limit =</h1>
-                  <input
-                    type="text"
-                    value="120"
-                    disabled
-                    id="dailyQuotaInput"
-                  />
-                  <div>
-                    <button onclick="dailyQuotaEditBtn(this)">EDIT</button>
-                  </div>
-                </section>
-              </div>
-
-              <div class="tabSectionHiddenBody" id="tabSectionHaltBody">
-                <section>
-                  <h1>Halt Service</h1>
-                  <i
-                    class="fa-solid fa-toggle-off"
-                    onclick="haltServiceToggler(this)"
-                  ></i>
-                </section>
-              </div>
-            </section> -->
-
             <section class="usersMainListingSection">
               <section class="usersSearchSection">
                 <section class="userSearchSectionFirstSection">
@@ -242,6 +104,11 @@
                     <div id="map"></div>
                 </section>
 
+                <section>
+                    <div class="besideHeadingDiv" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 10px;">
+                        <button onclick="multipleSelectionFunction(this)"><i class="fa-solid fa-bars"></i>Select Multiple</button>
+                    </div>
+                </section>
 
                 <section class="searchSectionContainer">
                   <div class="searchBarContainer">
@@ -284,24 +151,21 @@
                     <tr>
                       <th class="firstCell">ID</th>
                       <th>User Name</th>
-                      <!-- <th>CNIC</th> -->
                       <th>Tanker Type</th>
                       <th>To</th>
                       <th>Order Status</th>
+                      <th>Order Count</th>
                       <th class="lastCell">Created At</th>
                     </tr>
                   </thead>
                   <tbody id="orderTableBody">
                     <tr data-toggle="modal" data-target="#userDetails" >
-                      <!-- <td style="width: 40px; position: absolute;">
-                      </td> -->
-                      <!-- <td><input type="checkbox" name="" id=""></td> -->
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-01</td>
                       <td><div class="completed">Completed</div></td>
+                      <td>02</td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -313,10 +177,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">67890</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-02</td>
                       <td><div class="pending">Pending</div></td>
+                      <td>02</td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -328,10 +192,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">14529</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-03</td>
                       <td><div class="completed">Completed</div></td>
+                      <td>02</td>   
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -343,10 +207,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">64646</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-04</td>
                       <td><div class="completed">Completed</div></td>
+                      <td>02</td>   
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -358,10 +222,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">24536</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-05</td>
                       <td><div class="failed">Failed</div></td>
+                      <td>02</td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -373,10 +237,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">99754</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-06</td>
                       <td><div class="completed">Completed</div></td>
+                      <td>02</td>   
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -388,10 +252,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">09129</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-06</td>
                       <td><div class="cancelled">Cancelled</div></td>
+                      <td>02</td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -403,10 +267,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">74722</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-02</td>
                       <td><div class="pending">Pending</div></td>
+                      <td>02</td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -418,10 +282,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">11002</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-03</td>
                       <td><div class="completed">Completed</div></td>
+                      <td>02</td>   
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -433,10 +297,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">65656</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-04</td>
                       <td><div class="completed">Completed</div></td>
+                      <td>02</td>   
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -448,10 +312,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">12345</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="singleTanker">Single Tanker</td>
                       <td>A-05</td>
                       <td><div class="failed">Failed</div></td>
+                      <td>02</td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -463,10 +327,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">12112</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-06</td>
                       <td><div class="completed">Completed</div></td>
+                      <td>02</td>   
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -478,10 +342,10 @@
                     <tr data-toggle="modal" data-target="#userDetails" >
                       <td class="firstCell">09090</td>
                       <td>Yousuf Islam</td>
-                      <!-- <td>42201-2729672-7</td> -->
                       <td class="doubleTanker">Double Tanker</td>
                       <td>A-06</td>
                       <td><div class="cancelled">Cancelled</div></td>
+                      <td>02</td>
                       <td class="lastCell">
                         <span>
                           2022-09-29
@@ -584,16 +448,15 @@
                   />
                 </div>
               </section>
-              <section class="ordersPageModalLastSection">
+              <section>
                 <div>
                   <p>
-                    Remaining <br />
-                    Tankers :
+                    Tankers Left :
                   </p>
                   <input type="number" value="02" disabled />
                 </div>
                 <div>
-                  <p>Cash Tankers <br /> Ordered :</p>
+                  <p>Cash Tankers :</p>
                   <input type="number" value="02" disabled />
                 </div>
               </section>
@@ -608,7 +471,7 @@
                   />
                 </div>
                 <div>
-                  <p>Swapped Tankers :</p>
+                  <p>Swap Tankers :</p>
                   <input
                     type="text"
                     value="01"
