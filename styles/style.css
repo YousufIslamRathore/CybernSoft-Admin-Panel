@@ -1441,11 +1441,27 @@ svg {
   background-color: white;
   width: 70%;
   padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .presentationChartSection > main > div {
-  width: 80%;
-  margin: 0 auto;
+  width: 50%;
+  margin: 0;
+}
+.presentationChartSection > main > section {
+  width: 50%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.presentationChartSection > main > section p {
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 .presentationChartSection > div {
