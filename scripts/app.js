@@ -196,9 +196,13 @@ function haltServiceToggler(icon) {
   icon.style.color =
     icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
 
-  const orderPageMainPanel = document.getElementById("orderPageMainPanel");
-  orderPageMainPanel.style.opacity =
-    icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3";
+  // icon.className == "fa-solid fa-toggle-off" ? icon.setAttribute("onclick", "")
+  
+  // const orderPageMainPanel = document.getElementById("orderPageMainPanel");
+  // orderPageMainPanel.style.opacity =
+  //   icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3";
+
+
 }
 
 function ordersTabSectionToggler(tab) {
@@ -447,4 +451,10 @@ function addMaintenanceToggler(clicker) {
 
 function viewReceiptRedirector() {
   window.location.assign("./maintenanceReceipt.html")
+}
+
+
+function othersInputField() {
+  const haltSectionModalOthersInputField = document.getElementById("haltSectionModalOthersInputField");
+  haltSectionModalOthersInputField.style.display = "block"
 }
