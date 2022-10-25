@@ -1484,8 +1484,36 @@ svg {
   align-items: center;
 }
 
-/* .presentationChartSection > section > section > div {} */
+.presentationChartSection > main > section > div {
+  width: 200px;
+  padding: 6px;
+  /* border: 1px solid #ddd; */
+  /* text-align: center; */
+  margin: 10px 0;
+  border-radius: 5px;
+  /* box-shadow: 0px 3px 10px rgb(0 0 0 / 20%) inset; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 
+}
+.pieColorsSection {
+  width: 40px;
+  height: 15px;
+  background-color: black;
+  margin-right: 10px;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 20%) inset;
+  opacity: 0.5;
+}
+#Normal_Tankers {
+  background-color: rgb(255, 99, 132);
+}
+#Cash_Tankers {
+  background-color: rgb(255, 205, 86);
+}
+#Swap_Tankers {
+  background-color: rgb(54, 255, 86);
+}
 .presentationChartSection > section > section h1 {
   color: #777;
   font-weight: bold;

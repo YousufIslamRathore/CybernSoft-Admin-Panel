@@ -112,13 +112,16 @@
                 <canvas id="pieChart"></canvas>
               </div>
               <section>
-                <div>
+                <div class="pieSelectors">
+                  <section onclick="presentationSectionSelector(this)" class="pieColorsSection" id="Normal_Tankers"></section>
                   <p>Normal Tankers</p>
                 </div>
-                <div>
+                <div class="pieSelectors">
+                  <section onclick="presentationSectionSelector(this)" class="pieColorsSection" id="Cash_Tankers"></section>
                   <p>Cash Tankers</p>
                 </div>
-                <div>
+                <div class="pieSelectors">
+                  <section onclick="presentationSectionSelector(this)" class="pieColorsSection" id="Swap_Tankers"></section>
                   <p>Swap Tankers</p>
                 </div>
               </section>
@@ -700,19 +703,17 @@
 <script>
   /// Setup Block
   const data = {
-    labels: [
-      "Double Tankers",
-      "Single Tankers",
-      "Swap Tankers",
-      "Cash Tankers",
-    ],
+    // labels: [
+    //   "Double Tankers",
+    //   "Swap Tankers",
+    //   "Cash Tankers",
+    // ],
     datasets: [
       {
-        label: "My First Dataset",
-        data: [200, 70, 100, 120],
+        label: "DataSet 1",
+        data: [200, 100, 120],
         backgroundColor: [
           "rgb(255, 99, 132)",
-          "rgb(54, 162, 235)",
           "rgb(255, 205, 86)",
           "rgb(54, 255, 86)",
         ],

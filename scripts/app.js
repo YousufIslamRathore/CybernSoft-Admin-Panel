@@ -197,12 +197,10 @@ function haltServiceToggler(icon) {
     icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
 
   // icon.className == "fa-solid fa-toggle-off" ? icon.setAttribute("onclick", "")
-  
+
   // const orderPageMainPanel = document.getElementById("orderPageMainPanel");
   // orderPageMainPanel.style.opacity =
   //   icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3";
-
-
 }
 
 function ordersTabSectionToggler(tab) {
@@ -398,28 +396,29 @@ function previousPaymentsToggler(clicker) {
     clicker.parentElement.style.boxShadow = "none";
     clicker.parentElement.style.height = "70%";
     clicker.parentElement.style.width = "84%";
-    wholeModal3.style.minHeight = "95vh"
-    wholeModal3.style.transitionDuration = "1000ms"
+    wholeModal3.style.minHeight = "95vh";
+    wholeModal3.style.transitionDuration = "1000ms";
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
       // hiddenAfterFunction[i].style.display = "none"
 
       hiddenAfterFunction[i].style.opacity = "0";
-      hiddenAfterFunction[i].style.transitionDuration = "1000ms"
+      hiddenAfterFunction[i].style.transitionDuration = "1000ms";
     }
     addMaintenanceSection.style.display = "none";
-    addMaintenanceSection.style.height = "54px"
-    addMaintenanceSection.getElementsByTagName("i")[0].className = "fa-solid fa-angle-up"
+    addMaintenanceSection.style.height = "54px";
+    addMaintenanceSection.getElementsByTagName("i")[0].className =
+      "fa-solid fa-angle-up";
   } else {
     clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
     clicker.parentElement.style.height = "54px";
     clicker.parentElement.style.width = "43%";
-    wholeModal3.style.minHeight = "70vh"
-    wholeModal3.style.transitionDuration = "1000ms"
+    wholeModal3.style.minHeight = "70vh";
+    wholeModal3.style.transitionDuration = "1000ms";
     for (let i = 0; i < hiddenAfterFunction.length; i++) {
       // hiddenAfterFunction[i].style.display = "flex"
 
-      hiddenAfterFunction[i].style.opacity = "1"
-      hiddenAfterFunction[i].style.transitionDuration = "1000ms"
+      hiddenAfterFunction[i].style.opacity = "1";
+      hiddenAfterFunction[i].style.transitionDuration = "1000ms";
     }
     addMaintenanceSection.style.display = "block";
   }
@@ -438,23 +437,37 @@ function addMaintenanceToggler(clicker) {
     // clicker.parentElement.style.boxShadow = "none";
     clicker.parentElement.style.height = "37%";
     // clicker.parentElement.style.width = "84%";
-    wholeModal3.style.minHeight = "95vh"
-    wholeModal3.style.transitionDuration = "1000ms"
+    wholeModal3.style.minHeight = "95vh";
+    wholeModal3.style.transitionDuration = "1000ms";
   } else {
     // clicker.parentElement.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
     clicker.parentElement.style.height = "54px";
     // clicker.parentElement.style.width = "43%";
-    wholeModal3.style.minHeight = "70vh"
-    wholeModal3.style.transitionDuration = "1000ms"
+    wholeModal3.style.minHeight = "70vh";
+    wholeModal3.style.transitionDuration = "1000ms";
   }
 }
 
 function viewReceiptRedirector() {
-  window.location.assign("./maintenanceReceipt.html")
+  window.location.assign("./maintenanceReceipt.html");
 }
 
-
 function othersInputField() {
-  const haltSectionModalOthersInputField = document.getElementById("haltSectionModalOthersInputField");
-  haltSectionModalOthersInputField.style.display = "block"
+  const haltSectionModalOthersInputField = document.getElementById(
+    "haltSectionModalOthersInputField"
+  );
+  haltSectionModalOthersInputField.style.display = "block";
+}
+
+// box-shadow: 0px 3px 10px rgb(0 0 0 / 20%) inset;
+
+function presentationSectionSelector(element) {
+  let selectors = document.getElementsByClassName("pieColorsSection");
+  
+  for (let i = 0; i < selectors.length; i++) {
+    selectors[i].style.boxShadow = "0px 0px 10px rgb(0 0 0/ 20%) inset";
+    selectors[i].style.opacity = "0.5"
+  }
+  element.style.boxShadow = "0px 0px rgb(0 0 0/ 20%)";
+  element.style.opacity = "1"
 }
