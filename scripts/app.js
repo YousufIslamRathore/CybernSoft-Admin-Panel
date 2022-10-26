@@ -187,24 +187,6 @@ function updateTenantDetails() {
     tenantDetail.lastElementChild.style.color = "#ee405e";
   }
 }
-function haltServiceToggler(icon) {
-  if (icon.className == "fa-solid fa-toggle-off") {
-    icon.setAttribute("data-toggle", "modal");
-  } else {
-    icon.removeAttribute("data-toggle");
-  }
-  icon.className =
-    icon.className == "fa-solid fa-toggle-off"
-      ? "fa-solid fa-toggle-on"
-      : "fa-solid fa-toggle-off";
-  icon.style.color =
-    icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
-  // icon.className == "fa-solid fa-toggle-off" ? icon.setAttribute("onclick", "")
-
-  // const orderPageMainPanel = document.getElementById("orderPageMainPanel");
-  // orderPageMainPanel.style.opacity =
-  //   icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3";
-}
 
 function ordersTabSectionToggler(tab) {
   const tabSectionBody = document.getElementById("tabSectionBody");
@@ -469,7 +451,7 @@ function presentationSectionSelector(element) {
     selectors[i].style.boxShadow = "0px 0px 10px rgb(0 0 0/ 20%) inset";
     selectors[i].style.opacity = "0.5";
     selectors[i].style.background =
-      "linear-gradient(to right, rgb(0 0 0/ 20%), rgb(0 0 0/ 20%))";
+      "linear-gradient(to right, rgb(255 255 255/ 50%), rgb(255 255 255/ 50%))";
     switch (selectors[i].id) {
       case "Normal_Tankers":
         selectors[i].style.backgroundColor = "rgb(255, 99, 132)";
@@ -499,3 +481,74 @@ function presentationSectionSelector(element) {
       element.firstElementChild.style.backgroundColor = "rgb(54, 255, 86)";
   }
 }
+
+function proceedHalt() {
+  const haltIcon = document.getElementById("haltIcon");
+  let haltOptions = document.getElementsByClassName("haltModalOptions");
+  let flag = 0;
+  const othersInputField = document.getElementById(
+    "haltSectionModalOthersInputField"
+  ).value;
+  var haltOptionResult;
+  var result;
+  for (let i = 0; i < haltOptions.length; i++) {
+    if (
+      haltOptions[i].nextElementSibling.innerHTML != "Others" &&
+      haltOptions[i].checked
+    ) {
+      haltOptionResult = haltOptions[i].nextElementSibling.innerHTML;
+      flag = 1;
+    }
+  }
+  if (flag == 0 && othersInputField) {
+    haltOptionResult = othersInputField;
+  }
+  haltOptionResult
+    ? (result = haltOptionResult)
+    : alert("Please Enter Your Reason");
+
+  haltOptionResult
+    ? (haltIcon.className = "fa-solid fa-toggle-on haltToggleOn")
+    : (haltIcon.className = "fa-solid fa-toggle-off haltToggleOff");
+
+}
+
+function haltServiceToggler(icon) {
+  if (icon.className == "fa-solid fa-toggle-off haltToggleOff") {
+      icon.setAttribute("data-toggle", "modal");
+    } else {
+      icon.removeAttribute("data-toggle");
+      icon.className = "fa-solid fa-toggle-off haltToggleOff"
+
+      haltModalClose()
+      // let haltOptions = document.getElementsByClassName("haltModalOptions");
+      // for(let j = 0; j < haltOptions.length; j++) {
+      //   haltOptions[j].checked = false
+      // }
+    }
+}
+
+function haltModalClose() {
+  let haltOptions = document.getElementsByClassName("haltModalOptions");
+  for(let j = 0; j < haltOptions.length; j++) {
+    haltOptions[j].checked = false
+  }
+}
+// function haltServiceToggler(icon) {
+  // if (icon.className == "fa-solid fa-toggle-off") {
+  //   icon.setAttribute("data-toggle", "modal");
+  // } else {
+  //   icon.removeAttribute("data-toggle");
+  // }
+  // icon.className =
+  //   icon.className == "fa-solid fa-toggle-off"
+  //     ? "fa-solid fa-toggle-on"
+  //     : "fa-solid fa-toggle-off";
+  // icon.style.color =
+  //   icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
+  // icon.className == "fa-solid fa-toggle-off" ? icon.setAttribute("onclick", "")
+
+  // const orderPageMainPanel = document.getElementById("orderPageMainPanel");
+  // orderPageMainPanel.style.opacity =
+  //   icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3";
+// }
