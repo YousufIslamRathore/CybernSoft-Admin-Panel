@@ -187,15 +187,18 @@ function updateTenantDetails() {
     tenantDetail.lastElementChild.style.color = "#ee405e";
   }
 }
-
 function haltServiceToggler(icon) {
+  if (icon.className == "fa-solid fa-toggle-off") {
+    icon.setAttribute("data-toggle", "modal");
+  } else {
+    icon.removeAttribute("data-toggle");
+  }
   icon.className =
     icon.className == "fa-solid fa-toggle-off"
       ? "fa-solid fa-toggle-on"
       : "fa-solid fa-toggle-off";
   icon.style.color =
     icon.className == "fa-solid fa-toggle-off" ? "#555" : "#ee405e";
-
   // icon.className == "fa-solid fa-toggle-off" ? icon.setAttribute("onclick", "")
 
   // const orderPageMainPanel = document.getElementById("orderPageMainPanel");
@@ -459,15 +462,40 @@ function othersInputField() {
   haltSectionModalOthersInputField.style.display = "block";
 }
 
-// box-shadow: 0px 3px 10px rgb(0 0 0 / 20%) inset;
-
 function presentationSectionSelector(element) {
   let selectors = document.getElementsByClassName("pieColorsSection");
-  
+
   for (let i = 0; i < selectors.length; i++) {
     selectors[i].style.boxShadow = "0px 0px 10px rgb(0 0 0/ 20%) inset";
-    selectors[i].style.opacity = "0.5"
+    selectors[i].style.opacity = "0.5";
+    selectors[i].style.background =
+      "linear-gradient(to right, rgb(0 0 0/ 20%), rgb(0 0 0/ 20%))";
+    switch (selectors[i].id) {
+      case "Normal_Tankers":
+        selectors[i].style.backgroundColor = "rgb(255, 99, 132)";
+        break;
+
+      case "Cash_Tankers":
+        selectors[i].style.backgroundColor = "rgb(255, 205, 86)";
+        break;
+
+      default:
+        selectors[i].style.backgroundColor = "rgb(54, 255, 86)";
+    }
   }
-  element.style.boxShadow = "0px 0px rgb(0 0 0/ 20%)";
-  element.style.opacity = "1"
+  element.firstElementChild.style.boxShadow = "0px 3px 5px rgb(0 0 0/ 20%)";
+  element.firstElementChild.style.opacity = "1";
+  element.firstElementChild.style.background = "transparent";
+  switch (element.firstElementChild.id) {
+    case "Normal_Tankers":
+      element.firstElementChild.style.backgroundColor = "rgb(255, 99, 132)";
+      break;
+
+    case "Cash_Tankers":
+      element.firstElementChild.style.backgroundColor = "rgb(255, 205, 86)";
+      break;
+
+    default:
+      element.firstElementChild.style.backgroundColor = "rgb(54, 255, 86)";
+  }
 }
