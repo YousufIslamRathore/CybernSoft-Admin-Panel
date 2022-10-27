@@ -2220,6 +2220,7 @@ svg {
 }
 .orderDiffCounterDiv p {
   color: #333;
+  margin-bottom: 10px !important;
 }
 .orderDiffCounterDiv span {
   font-weight: bold;
@@ -2300,4 +2301,19 @@ svg {
 }
 .forDeliveriesToday section {
   width: 100% !important;
+}
+
+
+
+/* Canvas JS Water Mark Remover */
+
+.forWatermark {
+  position: relative;
+}
+.watermarkRemover {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  height: 20px;
+  bottom: 2px;
 }

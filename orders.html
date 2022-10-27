@@ -95,7 +95,7 @@
             >
               <div
                 class="selectedUserSection"
-                onclick="selectedUserSection(0)"
+                onclick="selectedUserSection(0); pieSelectorsReloader()"
                 id="Today-Orders-Selector"
               >
                 <section>
@@ -105,7 +105,7 @@
               </div>
               <div
                 class="selectedUserSection"
-                onclick="selectedUserSection(0)"
+                onclick="selectedUserSection(0); pieSelectorsReloader()"
                 id="Today-Orders-Selector"
               >
                 <section>
@@ -113,14 +113,14 @@
                   <h1>746</h1>
                 </section>
               </div>
-              <div onclick="selectedUserSection(1)" id="Weekly-Orders-Selector">
+              <div onclick="selectedUserSection(1); pieSelectorsReloader()" id="Weekly-Orders-Selector">
                 <section>
                   <h2>Weekly Orders</h2>
                   <h1>740</h1>
                 </section>
               </div>
               <div
-                onclick="selectedUserSection(2)"
+                onclick="selectedUserSection(2); pieSelectorsReloader()"
                 id="Monthly-Orders-Selector"
               >
                 <section>
@@ -128,7 +128,7 @@
                   <h1>6</h1>
                 </section>
               </div>
-              <div onclick="selectedUserSection(3)" id="Yearly-Orders-Selector">
+              <div onclick="selectedUserSection(3); pieSelectorsReloader()" id="Yearly-Orders-Selector">
                 <section>
                   <h2>Yearly Orders</h2>
                   <h1>1</h1>
@@ -138,8 +138,9 @@
 
             <section class="presentationChartSection">
               <main>
-                <div>
+                <div class="forWatermark">
                   <canvas id="pieChart"></canvas>
+                  <div class="watermarkRemover"></div>
                 </div>
                 <section>
                   <div
@@ -315,6 +316,12 @@
                   <p>Pending : <span>03</span></p>
                   <p>Failed : <span>03</span></p>
                   <p>Cancelled : <span>03</span></p>
+                </div>
+                <hr style="margin: 0; margin-bottom: 10px">
+                <div class="orderDiffCounterDiv" style="justify-content: space-around;">
+                  <p>Normal Tankers : <span>03</span></p>
+                  <p>Cash Tankers : <span>03</span></p>
+                  <p>Swap Tankers : <span>03</span></p>
                 </div>
               </section>
 
@@ -820,7 +827,7 @@
             </section>
 
             <section class="haltServiceModalOptionsMainSection">
-              <label for="firstOption">
+              <label for="firstOption" onclick="othersInputFieldToggler(this)">
                 <input
                   type="radio"
                   class="haltModalOptions"
@@ -829,7 +836,7 @@
                 />
                 <p>First Option</p>
               </label>
-              <label for="secondOption">
+              <label for="secondOption" onclick="othersInputFieldToggler(this)">
                 <input
                   type="radio"
                   class="haltModalOptions"
@@ -838,7 +845,7 @@
                 />
                 <p>Second Option</p>
               </label>
-              <label for="thirdOption">
+              <label for="thirdOption" onclick="othersInputFieldToggler(this)">
                 <input
                   type="radio"
                   class="haltModalOptions"
@@ -847,7 +854,7 @@
                 />
                 <p>Third Option</p>
               </label>
-              <label for="forthOption">
+              <label for="forthOption" onclick="othersInputFieldToggler(this)">
                 <input
                   type="radio"
                   class="haltModalOptions"
@@ -856,7 +863,7 @@
                 />
                 <p>Forth Option</p>
               </label>
-              <label for="others" onclick="othersInputField()">
+              <label for="others" onclick="othersInputFieldToggler(this)">
                 <input
                   type="radio"
                   class="haltModalOptions"
