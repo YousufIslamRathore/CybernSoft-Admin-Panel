@@ -59,7 +59,7 @@ function pieSelectorsReloader() {
   let pieSelectors = document.getElementsByClassName("pieSelectors");
 
   for (let i = 0; i < selectors.length; i++) {
-    pieSelectors[i].style.boxShadow = "none"
+    pieSelectors[i].style.boxShadow = "none";
     selectors[i].style.boxShadow = "0px 0px 10px rgb(0 0 0/ 20%) inset";
     selectors[i].style.opacity = "0.5";
     selectors[i].style.background =
@@ -521,6 +521,9 @@ function proceedHalt() {
   const othersInputField = document.getElementById(
     "haltSectionModalOthersInputField"
   ).value;
+  const haltSectionModalOthersInputField = document.getElementById(
+    "haltSectionModalOthersInputField"
+  );
   var haltOptionResult;
   var result;
   for (let i = 0; i < haltOptions.length; i++) {
@@ -542,10 +545,15 @@ function proceedHalt() {
   haltOptionResult
     ? (haltIcon.className = "fa-solid fa-toggle-on haltToggleOn")
     : (haltIcon.className = "fa-solid fa-toggle-off haltToggleOff");
+  
+  if(!haltOptionResult) {
+    haltSectionModalOthersInputField.style.display = "none";
+  }
 }
 
 function haltServiceToggler(icon) {
   if (icon.className == "fa-solid fa-toggle-off haltToggleOff") {
+    haltModalClose();
     icon.setAttribute("data-toggle", "modal");
   } else {
     icon.removeAttribute("data-toggle");
@@ -560,6 +568,11 @@ function haltModalClose() {
   for (let j = 0; j < haltOptions.length; j++) {
     haltOptions[j].checked = false;
   }
+  const haltSectionModalOthersInputField = document.getElementById(
+    "haltSectionModalOthersInputField"
+  );
+  haltSectionModalOthersInputField.style.display = "none";
+  haltSectionModalOthersInputField.value = "";
 }
 
 // function haltServiceToggler(icon) {
