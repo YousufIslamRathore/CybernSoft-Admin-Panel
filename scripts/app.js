@@ -340,6 +340,7 @@ function selectTrFunction(tr) {
 function loadingData(selectedTr, key) {
   var modalTbody = document.getElementById("modalTbody");
   var orderIdTdTxt = selectedTr.children[0].innerHTML;
+  var userUnitNo = selectedTr.children[1].innerHTML;
   var toTdTxt = selectedTr.children[3].innerHTML;
   var tankerTypeTdTxt = selectedTr.children[2].innerHTML;
 
@@ -347,7 +348,11 @@ function loadingData(selectedTr, key) {
     var tr = document.createElement("tr");
 
     var orderIdTd = document.createElement("td");
-    orderIdTd.append(orderIdTdTxt);
+    if (orderIdTdTxt.indexOf("-") == -1) {
+      orderIdTd.append(userUnitNo);
+    } else {
+      orderIdTd.append(orderIdTdTxt);
+    }
 
     var toTd = document.createElement("td");
     toTd.append(toTdTxt);
@@ -545,8 +550,8 @@ function proceedHalt() {
   haltOptionResult
     ? (haltIcon.className = "fa-solid fa-toggle-on haltToggleOn")
     : (haltIcon.className = "fa-solid fa-toggle-off haltToggleOff");
-  
-  if(!haltOptionResult) {
+
+  if (!haltOptionResult) {
     haltSectionModalOthersInputField.style.display = "none";
   }
 }
