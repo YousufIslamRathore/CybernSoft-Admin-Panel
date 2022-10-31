@@ -2317,3 +2317,11 @@ svg {
   height: 20px;
   bottom: 2px;
 }
+
+
+
+/* Admin Board Page */
+
+.adminListSection tbody {
+  height: auto !important;
+}
