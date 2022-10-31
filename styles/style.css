@@ -2325,3 +2325,7 @@ svg {
 .adminListSection tbody {
   height: auto !important;
 }
+
+.wholeAdminModal {
+  min-height: 50vh !important;
+}
