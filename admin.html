@@ -91,20 +91,35 @@
           <div>
             <section class="usersMainListingSection">
               <section class="usersSearchSection">
-                <section class="userSearchSectionFirstSection">
-                  <h2
-                    id="usersListMainHeading"
-                  >
-                    Admin Board
-                  </h2>
-                  <div style="margin-right: 30px"><button class="importData" style="background-color: royalblue;" data-toggle="modal" data-target="#addNewAdmin">Add New</button></div>
+                <section class="userSearchSectionFirstSection" style="margin-bottom: 12px;">
+                  <h2 id="usersListMainHeading">Admin Board</h2>
+                  <div style="margin-right: 30px">
+                    <button
+                      class="importData"
+                      style="background-color: royalblue; width: 170px;"
+                      data-toggle="modal"
+                      data-target="#addNewAdmin"
+                    >
+                      Add New
+                    </button>
+                  </div>
                 </section>
 
-                <section>
-                    <div class="besideHeadingDiv" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 10px;">
-                        <button onclick="multipleSelectionFunction(this)"><i class="fa-solid fa-bars"></i>Select Multiple</button>
-                    </div>
-                </section>
+                <!-- <section>
+                  <div
+                    class="besideHeadingDiv"
+                    style="
+                      display: flex;
+                      justify-content: flex-end;
+                      align-items: center;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <button onclick="multipleSelectionFunction(this)">
+                      <i class="fa-solid fa-bars"></i>Select Multiple
+                    </button>
+                  </div>
+                </section> -->
 
                 <section class="searchSectionContainer">
                   <div class="searchBarContainer">
@@ -138,10 +153,11 @@
                   <p>Failed : <span>03</span></p>
                   <p>Cancelled : <span>03</span></p>
                 </div> -->
-
               </section>
 
-              <section class="usersListSection tankersListSection adminListSection">
+              <section
+                class="usersListSection tankersListSection adminListSection"
+              >
                 <table>
                   <thead>
                     <tr>
@@ -155,56 +171,52 @@
                     </tr>
                   </thead>
                   <tbody id="orderTableBody">
-                    <tr data-toggle="modal" data-target="#userDetails" >
+                    <tr data-toggle="modal" data-target="#userDetails">
                       <td class="firstCell">1</td>
                       <td>Admin</td>
                       <td>admin@gmail.com</td>
                       <td>03082028980</td>
                       <!-- <td><div class="completed">Completed</div></td> -->
                       <!-- <td>02</td> -->
-                      <td class="lastCell">
-                        Admin
-                      </td>
+                      <td class="lastCell">Admin</td>
                     </tr>
-                    <tr data-toggle="modal" data-target="#userDetails" >
-                        <td class="firstCell">2</td>
-                        <td>Hassan</td>
-                        <td>hassan@gmail.com</td>
-                        <td>123455678910</td>
-                        <!-- <td><div class="completed">Completed</div></td> -->
-                        <!-- <td>02</td> -->
-                        <td class="lastCell">
-                          Sub-Admin
-                        </td>
-                      </tr>
-                      <tr data-toggle="modal" data-target="#userDetails" >
-                        <td class="firstCell">3</td>
-                        <td>Khalid</td>
-                        <td>Khalid@wenergy.com.pk</td>
-                        <td>03332830710</td>
-                        <!-- <td><div class="completed">Completed</div></td> -->
-                        <!-- <td>02</td> -->
-                        <td class="lastCell">
-                          Sub-Admin
-                        </td>
-                      </tr>
-                      <tr data-toggle="modal" data-target="#userDetails" >
-                        <td class="firstCell">4</td>
-                        <td>Saud</td>
-                        <td>saud@wenergy.com.pk</td>
-                        <td>03322093221</td>
-                        <!-- <td><div class="completed">Completed</div></td> -->
-                        <!-- <td>02</td> -->
-                        <td class="lastCell">
-                          Sub-Admin
-                        </td>
-                      </tr>
-                    
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">2</td>
+                      <td>Hassan</td>
+                      <td>hassan@gmail.com</td>
+                      <td>123455678910</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">3</td>
+                      <td>Khalid</td>
+                      <td>Khalid@wenergy.com.pk</td>
+                      <td>03332830710</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">4</td>
+                      <td>Saud</td>
+                      <td>saud@wenergy.com.pk</td>
+                      <td>03322093221</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
                   </tbody>
                 </table>
-                <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
-                  <button data-toggle="modal" data-target="#multipleOrderSelected">Action</button>
-                </div>
+                <!-- <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
+                  <button
+                    data-toggle="modal"
+                    data-target="#multipleOrderSelected"
+                  >
+                    Action
+                  </button>
+                </div> -->
               </section>
             </section>
           </div>
@@ -217,7 +229,7 @@
     <section class="modal fade" id="userDetails">
       <div class="modal-dialog modal-xl">
         <div class="modal-content forBorderRadius">
-          <section class="modal-body wholeModal">
+          <section class="modal-body wholeModal adminDetailsModal">
             <section class="headingSection">
               <h1>Details</h1>
             </section>
@@ -228,7 +240,7 @@
                   <input
                     type="text"
                     value="Admin"
-                    class="editableFields"
+                    class="adminEditableFields"
                     disabled
                   />
                 </div>
@@ -241,68 +253,61 @@
                 <div>
                   <p>Contact :</p>
                   <input
-                    type="number"
+                    type="text"
                     value="03082028980"
-                    class="editableFields"
+                    class="adminEditableFields"
                     disabled
                   />
                 </div>
                 <div>
-                  <p>Swapped to :</p>
-                  <input type="text" value="B-01" disabled />
+                  <p>CNIC :</p>
+                  <input type="text" class="adminEditableFields" value="42201-2729672-7" disabled />
                 </div>
               </section>
               <section>
                 <div>
-                  <p>Contact :</p>
+                  <p>Email :</p>
                   <input
-                    type="number"
-                    value="03082028980"
-                    class="editableFields"
+                    type="email"
+                    value="admin@gmail.com"
+                    class="adminEditableFields"
                     disabled
                   />
                 </div>
                 <div>
-                  <p>Swapped to :</p>
-                  <input type="text" value="B-01" disabled />
+                  <p>Type :</p>
+                  <input type="text" value="ADMIN" disabled />
                 </div>
               </section>
               <section>
                 <div>
-                  <p>Contact :</p>
-                  <input
-                    type="number"
-                    value="03082028980"
-                    class="editableFields"
-                    disabled
-                  />
+                  <p>Password :</p>
+                  <input type="password" value="123" class="adminEditableFields" disabled />
+                  <div>
+                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px"></i>
+                  </div>
                 </div>
                 <div>
-                  <p>Swapped to :</p>
-                  <input type="text" value="B-01" disabled />
+                  <button class="adminModalEditBtn" onclick="adminModalEditBtnToggler(this)">EDIT</button>
                 </div>
               </section>
-              
             </section>
-            
-            <div class="orderDetailActions">
-              <div><button id="modalDeliveredBtn">Delivered</button></div>
-              <div><button id="modalFailedBtn">Failed</button></div>
-              <div><button id="modalCanceledBtn">Canceled</button></div>
-            </div>
 
+            <div class="orderDetailActions adminModalActions">
+              <div><button id="">Active</button></div>
+              <div><button id="">Suspend</button></div>
+              <div><button id="">Delete</button></div>
+            </div>
           </section>
         </div>
       </div>
     </section>
 
-
     <!-- Multiple Order Modal -->
-    <section class="modal fade" id="multipleOrderSelected">
+    <!-- <section class="modal fade" id="multipleOrderSelected">
       <div class="modal-dialog modal-lg">
         <div class="modal-content forBorderRadius">
           <section class="modal-body wholeModal wholeModal2">
-
             <section class="headingSection">
               <h1>Selected Orders</h1>
             </section>
@@ -314,9 +319,7 @@
                   <th>To</th>
                   <th>Tanker Type</th>
                 </thead>
-                <tbody id="modalTbody">
-
-                </tbody>
+                <tbody id="modalTbody"></tbody>
               </table>
             </section>
 
@@ -327,50 +330,64 @@
               <div><button id="multipleFailedBtn">Failed</button></div>
               <div><button id="multipleCanceledBtn">Canceled</button></div>
             </div>
-
           </section>
         </div>
       </div>
-    </section>
-
+    </section> -->
 
     <!-- Add New -->
 
     <section class="modal fade" id="addNewAdmin">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content forBorderRadius">
-            <section class="modal-body wholeModal wholeModal2 wholeAdminModal">
-  
-              <section class="headingSection">
-                <h1>Selected Orders</h1>
-              </section>
-  
-              <section class="modalOrderTableSection">
-                <table>
-                  <thead>
-                    <th>Order ID</th>
-                    <th>To</th>
-                    <th>Tanker Type</th>
-                  </thead>
-                  <tbody id="modalTbody">
-  
-                  </tbody>
-                </table>
-              </section>
-  
-              <main><small onclick="clearAllModalList()">Clear All</small></main>
-  
-              <div class="multipleOrderActionSection">
-                <div><button id="multipleDeliveredBtn">Delivered</button></div>
-                <div><button id="multipleFailedBtn">Failed</button></div>
-                <div><button id="multipleCanceledBtn">Canceled</button></div>
-              </div>
-  
+      <div class="modal-dialog modal-md">
+        <div class="modal-content forBorderRadius">
+          <section class="modal-body wholeModal wholeModal2 wholeAdminModal">
+            <section class="headingSection">
+              <h1>Add New</h1>
             </section>
-          </div>
+
+            <section class="adminModalMiddleSection">
+              <form action="">
+                <label>
+                  <p>Name :</p>
+                  <input type="text" />
+                </label>
+                <label>
+                  <p>CNIC :</p>
+                  <input type="text" />
+                </label>
+                <label>
+                  <p>Contact :</p>
+                  <input type="text" />
+                </label>
+                <label>
+                  <p>Email :</p>
+                  <input type="email">
+                </label>
+                <label>
+                  <p>Type :</p>
+                  <select name="adminType" id="">
+                    <option value="#" selected disabled>Select</option>
+                    <option value="admin">Admin</option>
+                    <option value="subAdmin">Sub-Admin</option>
+                  </select>
+                </label>
+                <label>
+                  <p>Password :</p>
+                  <input type="password" value="" />
+                  <div>
+                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px"></i>
+                  </div>
+                </label>
+              </form>
+            </section>
+
+            <div class="multipleOrderActionSection">
+              <div><button id="multipleDeliveredBtn">Add Member</button></div>
+            </div>
+          </section>
         </div>
-      </section>
-  
+      </div>
+    </section>
   </body>
 
   <script src="./scripts/app.js"></script>

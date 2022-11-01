@@ -598,3 +598,20 @@ function haltModalClose() {
 // orderPageMainPanel.style.opacity =
 //   icon.className == "fa-solid fa-toggle-off" ? "1" : "0.3";
 // }
+
+function adminModalEditBtnToggler(btn) {
+  let adminEditableFields = document.getElementsByClassName("adminEditableFields");
+  if(btn.innerHTML == "EDIT") {
+    for(let i = 0; i < adminEditableFields.length; i++) {
+      adminEditableFields[i].disabled = false
+      adminEditableFields[i].style.borderBottom = "2px solid #ddd"
+    }
+    btn.innerHTML = "SAVE"
+  } else {
+    for(let i = 0; i < adminEditableFields.length; i++) {
+      adminEditableFields[i].disabled = true
+      adminEditableFields[i].style.borderBottom = "none"
+    }
+    btn.innerHTML = "EDIT"
+  }
+}

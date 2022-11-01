@@ -2325,7 +2325,62 @@ svg {
 .adminListSection tbody {
   height: auto !important;
 }
-
+.adminDetailsModal {
+  min-height: 60vh !important;
+}
 .wholeAdminModal {
   min-height: 50vh !important;
+}
+.adminModalActions button {
+  width: 180px;
+  height: 50px !important;
+  background-color: #555;
+  color: #ddd !important;
+  font-size: 17px !important;
+}
+.adminModalMiddleSection {
+  width: 90%;
+}
+.adminModalMiddleSection form {
+  width: 100%;
+}
+.adminModalMiddleSection label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.adminModalMiddleSection p {
+  color: #555;
+  margin-bottom: 0 !important;
+  width: 35%;
+  font-weight: bold;
+  
+}
+.adminModalMiddleSection input {
+  width: 65%;
+  padding: 3px 10px;
+  outline: none;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 5px #ddd;
+  color: #555;
+}
+.adminModalMiddleSection select {
+  width: 65%;
+  padding: 3px 10px;
+  outline: none;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 5px #ddd;
+  color: #555;
+}
+.adminModalEditBtn {
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0px 3px 5px #ddd;
+  padding: 2px 12px;
+  border-radius: 4px;
+  font-size: 14px;
 }
