@@ -314,7 +314,7 @@ function multipleSelectionFunction(btn) {
   }
 }
 
-// Row Selecting Toggler
+// Row Selecting Toggler.
 function selectTrFunction(tr) {
   if (tr.style.color == "white") {
     for (let j = 0; j < tr.children.length; j++) {
@@ -340,7 +340,7 @@ function selectTrFunction(tr) {
 function loadingData(selectedTr, key) {
   var modalTbody = document.getElementById("modalTbody");
   var orderIdTdTxt = selectedTr.children[0].innerHTML;
-  var userUnitNo = selectedTr.children[1].innerHTML;
+  // var userUnitNo = selectedTr.children[1].innerHTML;
   var toTdTxt = selectedTr.children[3].innerHTML;
   var tankerTypeTdTxt = selectedTr.children[2].innerHTML;
 
@@ -348,11 +348,7 @@ function loadingData(selectedTr, key) {
     var tr = document.createElement("tr");
 
     var orderIdTd = document.createElement("td");
-    if (orderIdTdTxt.indexOf("-") == -1) {
-      orderIdTd.append(userUnitNo);
-    } else {
-      orderIdTd.append(orderIdTdTxt);
-    }
+    orderIdTd.append(orderIdTdTxt);
 
     var toTd = document.createElement("td");
     toTd.append(toTdTxt);
@@ -373,7 +369,40 @@ function loadingData(selectedTr, key) {
     }
   }
 }
+function loadingDataUser(selectedTr, key) {
+  var modalTbody = document.getElementById("modalTbody");
+  var unitNoTdTxt = selectedTr.children[1].innerHTML;
+  var cnicTdTxt = selectedTr.children[3].innerHTML;
+  var nameTdTxt = selectedTr.children[2].innerHTML;
 
+  if (key == 1) {
+    var tr = document.createElement("tr");
+
+    var unitNoTd = document.createElement("td");
+    unitNoTd.append(unitNoTdTxt);
+
+    var cnicTd = document.createElement("td");
+    cnicTd.append(cnicTdTxt);
+
+    var nameTd = document.createElement("td");
+    nameTd.append(nameTdTxt);
+
+    tr.append(unitNoTd);
+    tr.append(cnicTd);
+    tr.append(nameTd);
+
+    modalTbody.append(tr);
+  } else if (key == 0) {
+    for (let k = 0; k < modalTbody.children.length; k++) {
+      if (
+        modalTbody.children[k].firstElementChild.nextElementSibling.innerHTML ==
+        unitNoTdTxt
+      ) {
+        modalTbody.removeChild(modalTbody.children[k]);
+      }
+    }
+  }
+}
 function clearAllModalList() {
   const modalTbody = document.getElementById("modalTbody");
   modalTbody.innerHTML = "";
@@ -600,18 +629,20 @@ function haltModalClose() {
 // }
 
 function adminModalEditBtnToggler(btn) {
-  let adminEditableFields = document.getElementsByClassName("adminEditableFields");
-  if(btn.innerHTML == "EDIT") {
-    for(let i = 0; i < adminEditableFields.length; i++) {
-      adminEditableFields[i].disabled = false
-      adminEditableFields[i].style.borderBottom = "2px solid #ddd"
+  let adminEditableFields = document.getElementsByClassName(
+    "adminEditableFields"
+  );
+  if (btn.innerHTML == "EDIT") {
+    for (let i = 0; i < adminEditableFields.length; i++) {
+      adminEditableFields[i].disabled = false;
+      adminEditableFields[i].style.borderBottom = "2px solid #ddd";
     }
-    btn.innerHTML = "SAVE"
+    btn.innerHTML = "SAVE";
   } else {
-    for(let i = 0; i < adminEditableFields.length; i++) {
-      adminEditableFields[i].disabled = true
-      adminEditableFields[i].style.borderBottom = "none"
+    for (let i = 0; i < adminEditableFields.length; i++) {
+      adminEditableFields[i].disabled = true;
+      adminEditableFields[i].style.borderBottom = "none";
     }
-    btn.innerHTML = "EDIT"
+    btn.innerHTML = "EDIT";
   }
 }
