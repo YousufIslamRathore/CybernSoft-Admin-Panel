@@ -2387,6 +2387,7 @@ svg {
 
 .adminListingSection {
   border-radius: 25px;
-  min-height: 97vh;
-  height: 97vh;
+}
+.adminListSection tbody {
+  height: 260px !important;
 }
