@@ -1550,9 +1550,11 @@ svg {
   background-color: rgb(211, 209, 209);
   border-radius: 10px;
 }
-
 .usersListSection ::-webkit-scrollbar {
   width: 5px;
+}
+.adminNotificationSection ::-webkit-scrollbar {
+  width: 2px ;
 }
 
 .haltSection {
@@ -2329,7 +2331,7 @@ svg {
   min-height: 60vh !important;
 }
 .wholeAdminModal {
-  min-height: 50vh !important;
+  min-height: auto !important;
 }
 .adminModalActions button {
   width: 180px;
@@ -2340,6 +2342,7 @@ svg {
 }
 .adminModalMiddleSection {
   width: 90%;
+  margin-bottom: 50px;
 }
 .adminModalMiddleSection form {
   width: 100%;
@@ -2406,7 +2409,7 @@ svg {
   padding-right: 30px;
 }
 .adminBoardIconDiv > i {
-  font-size: 20px;
+  font-size: 22px;
 }
 .adminNotificationSection tbody {
   height: 500px !important;
