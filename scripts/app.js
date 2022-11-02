@@ -650,7 +650,7 @@ function adminModalEditBtnToggler(btn) {
 function extendingAdminBoard(angle_up_down) {
   const orderTableBody = document.getElementById("orderTableBody");
   if(angle_up_down.firstElementChild.className == "fa-solid fa-angle-down") {
-    orderTableBody.style.minHeight = "520px"
+    orderTableBody.style.minHeight = "480px"
     angle_up_down.firstElementChild.className = "fa-solid fa-angle-up"
   } else if (angle_up_down.firstElementChild.className == "fa-solid fa-angle-up") {
     orderTableBody.style.minHeight = "260px"
