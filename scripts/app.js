@@ -649,11 +649,15 @@ function adminModalEditBtnToggler(btn) {
 
 function extendingAdminBoard(angle_up_down) {
   const orderTableBody = document.getElementById("orderTableBody");
-  if(angle_up_down.firstElementChild.className == "fa-solid fa-angle-down") {
-    orderTableBody.style.minHeight = "480px"
-    angle_up_down.firstElementChild.className = "fa-solid fa-angle-up"
-  } else if (angle_up_down.firstElementChild.className == "fa-solid fa-angle-up") {
-    orderTableBody.style.minHeight = "260px"
-    angle_up_down.firstElementChild.className = "fa-solid fa-angle-down"
+  if (angle_up_down.firstElementChild.className == "fa-solid fa-angle-down") {
+    orderTableBody.style.transitionDuration = "800ms";
+    orderTableBody.style.minHeight = "480px";
+    angle_up_down.firstElementChild.className = "fa-solid fa-angle-up";
+  } else if (
+    angle_up_down.firstElementChild.className == "fa-solid fa-angle-up"
+  ) {
+    orderTableBody.style.transitionDuration = "800ms";
+    orderTableBody.style.minHeight = "260px";
+    angle_up_down.firstElementChild.className = "fa-solid fa-angle-down";
   }
 }

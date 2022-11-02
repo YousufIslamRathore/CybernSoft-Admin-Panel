@@ -2393,17 +2393,21 @@ svg {
   height: 260px !important;
 }
 .adminBoardIconDiv {
-  width: 25px;
-  height: 25px;
-  background-color: #555;
-  border-radius: 50%;
-  color: white;
+  /* width: 25px;
+  height: 25px; */
+  /* background-color: #555;
+  border-radius: 50%; */
+  color: #888;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   margin: 10px auto -10px;
   cursor: pointer;
+  padding-right: 30px;
 }
 .adminBoardIconDiv > i {
-  font-size: 14px;
+  font-size: 20px;
+}
+.adminNotificationSection tbody {
+  height: 480px !important;
 }
