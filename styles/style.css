@@ -2384,3 +2384,9 @@ svg {
   border-radius: 4px;
   font-size: 14px;
 }
+
+.adminListingSection {
+  border-radius: 25px;
+  min-height: 97vh;
+  height: 97vh;
+}

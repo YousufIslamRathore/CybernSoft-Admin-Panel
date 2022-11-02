@@ -369,40 +369,40 @@ function loadingData(selectedTr, key) {
     }
   }
 }
-function loadingDataUser(selectedTr, key) {
-  var modalTbody = document.getElementById("modalTbody");
-  var unitNoTdTxt = selectedTr.children[1].innerHTML;
-  var cnicTdTxt = selectedTr.children[3].innerHTML;
-  var nameTdTxt = selectedTr.children[2].innerHTML;
+// function loadingDataUser(selectedTr, key) {
+//   var modalTbody = document.getElementById("modalTbody");
+//   var unitNoTdTxt = selectedTr.children[1].innerHTML;
+//   var cnicTdTxt = selectedTr.children[3].innerHTML;
+//   var nameTdTxt = selectedTr.children[2].innerHTML;
 
-  if (key == 1) {
-    var tr = document.createElement("tr");
+//   if (key == 1) {
+//     var tr = document.createElement("tr");
 
-    var unitNoTd = document.createElement("td");
-    unitNoTd.append(unitNoTdTxt);
+//     var unitNoTd = document.createElement("td");
+//     unitNoTd.append(unitNoTdTxt);
 
-    var cnicTd = document.createElement("td");
-    cnicTd.append(cnicTdTxt);
+//     var cnicTd = document.createElement("td");
+//     cnicTd.append(cnicTdTxt);
 
-    var nameTd = document.createElement("td");
-    nameTd.append(nameTdTxt);
+//     var nameTd = document.createElement("td");
+//     nameTd.append(nameTdTxt);
 
-    tr.append(unitNoTd);
-    tr.append(cnicTd);
-    tr.append(nameTd);
+//     tr.append(unitNoTd);
+//     tr.append(cnicTd);
+//     tr.append(nameTd);
 
-    modalTbody.append(tr);
-  } else if (key == 0) {
-    for (let k = 0; k < modalTbody.children.length; k++) {
-      if (
-        modalTbody.children[k].firstElementChild.nextElementSibling.innerHTML ==
-        unitNoTdTxt
-      ) {
-        modalTbody.removeChild(modalTbody.children[k]);
-      }
-    }
-  }
-}
+//     modalTbody.append(tr);
+//   } else if (key == 0) {
+//     for (let k = 0; k < modalTbody.children.length; k++) {
+//       if (
+//         modalTbody.children[k].firstElementChild.nextElementSibling.innerHTML ==
+//         unitNoTdTxt
+//       ) {
+//         modalTbody.removeChild(modalTbody.children[k]);
+//       }
+//     }
+//   }
+// }
 function clearAllModalList() {
   const modalTbody = document.getElementById("modalTbody");
   modalTbody.innerHTML = "";
