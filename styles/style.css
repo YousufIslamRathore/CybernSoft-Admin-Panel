@@ -2391,3 +2391,18 @@ svg {
 .adminListSection tbody {
   height: 260px !important;
 }
+.adminBoardIconDiv {
+  width: 25px;
+  height: 25px;
+  background-color: #555;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto -10px;
+  cursor: pointer;
+}
+.adminBoardIconDiv > i {
+  font-size: 14px;
+}

@@ -646,3 +646,14 @@ function adminModalEditBtnToggler(btn) {
     btn.innerHTML = "EDIT";
   }
 }
+
+function extendingAdminBoard(angle_up_down) {
+  const orderTableBody = document.getElementById("orderTableBody");
+  if(angle_up_down.firstElementChild.className == "fa-solid fa-angle-down") {
+    orderTableBody.style.minHeight = "520px"
+    angle_up_down.firstElementChild.className = "fa-solid fa-angle-up"
+  } else if (angle_up_down.firstElementChild.className == "fa-solid fa-angle-up") {
+    orderTableBody.style.minHeight = "260px"
+    angle_up_down.firstElementChild.className = "fa-solid fa-angle-down"
+  }
+}
