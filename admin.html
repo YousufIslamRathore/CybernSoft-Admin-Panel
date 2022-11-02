@@ -257,6 +257,223 @@
                 </div> -->
               </section>
             </section>
+
+            <section class="usersMainListingSection adminListingSection">
+              <section class="usersSearchSection">
+                <section class="userSearchSectionFirstSection" style="margin-bottom: 12px;">
+                  <h2 id="usersListMainHeading" style="margin: auto; text-align: center;">Admin Board</h2>
+                  
+                </section>
+
+                <!-- <section>
+                  <div
+                    class="besideHeadingDiv"
+                    style="
+                      display: flex;
+                      justify-content: flex-end;
+                      align-items: center;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <button onclick="multipleSelectionFunction(this)">
+                      <i class="fa-solid fa-bars"></i>Select Multiple
+                    </button>
+                  </div>
+                </section> -->
+
+                <section class="searchSectionContainer">
+                  <div class="searchBarContainer">
+                    <div>Search Order</div>
+                    <section><input type="search" /></section>
+                  </div>
+                  <!-- <div>
+                    <select name="Date" id="" class="userTypeDropDown">
+                      <option value="Select" disabled selected>Select</option>
+                      <option value="ID">ID</option>
+                      <option value="Name">Name</option>
+                      <option value="TankerType">Tanker Type</option>
+                      <option value="to">To</option>
+                    </select>
+                  </div> -->
+                  <div>
+                    <input
+                      type="date"
+                      name="date"
+                      id=""
+                      class="userTypeDropDown dateSearchField"
+                    />
+                  </div>
+                  <!-- <div><button style="margin-right: 10px">Search</button></div> -->
+                  <!-- <div><button class="importData">Add New</button></div> -->
+                </section>
+
+                <!-- <div class="orderDiffCounterDiv">
+                  <p>Completed : <span>03</span></p>
+                  <p>Pending : <span>03</span></p>
+                  <p>Failed : <span>03</span></p>
+                  <p>Cancelled : <span>03</span></p>
+                </div> -->
+              </section>
+
+              <section
+                class="usersListSection tankersListSection"
+              >
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="firstCell">ID</th>
+                      <th>Name</th>
+                      <th>Action</th>
+                      <th class="lastCell">Date & Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="orderTableBody">
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>                    
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>                    
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                <!-- <div class="adminBoardIconDiv" onclick="extendingAdminBoard(this)"><i class="fa-solid fa-angle-down"></i></div> -->
+                <!-- <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
+                  <button
+                    data-toggle="modal"
+                    data-target="#multipleOrderSelected"
+                  >
+                    Action
+                  </button>
+                </div> -->
+              </section>
+            </section>
           </div>
         </section>
       </section>
