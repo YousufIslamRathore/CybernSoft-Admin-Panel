@@ -2422,3 +2422,8 @@ svg {
   text-align: center;
   font-size: 35px;
 }
+
+.profilePageContentContainer1 {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
