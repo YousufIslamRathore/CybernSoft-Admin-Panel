@@ -673,3 +673,7 @@ function customMaintenanceAmount(btn) {
     btn.previousElementSibling.style.borderBottom = "none"
   }
 }
+
+function payMaintenanceModal() {
+  alert("Your Payment has just been made !")
+}
