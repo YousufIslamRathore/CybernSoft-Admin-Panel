@@ -661,3 +661,15 @@ function extendingAdminBoard(angle_up_down) {
     angle_up_down.firstElementChild.className = "fa-solid fa-angle-down";
   }
 }
+
+function customMaintenanceAmount(btn) {
+  if(btn.innerHTML == "Custom") {
+    btn.innerHTML = "Save"
+    btn.previousElementSibling.disabled = false
+    btn.previousElementSibling.style.borderBottom = "2px solid #ddd"
+  } else if (btn.innerHTML == "Save") {
+    btn.innerHTML = "Custom"
+    btn.previousElementSibling.disabled = true
+    btn.previousElementSibling.style.borderBottom = "none"
+  }
+}
