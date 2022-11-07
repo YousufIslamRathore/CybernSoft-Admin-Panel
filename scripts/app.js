@@ -698,5 +698,4 @@ function extendResidentialHistory(pressedSection) {
     forResidentialHistory.style.display = "none";
   }
 
-  // forResidentialHistory.style.display = "block"
 }
