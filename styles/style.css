@@ -2438,3 +2438,24 @@ svg {
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
+.adminBoardIconDiv1 {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+  padding: 5px 10px !important;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.adminBoardIconDiv1:hover {
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%) inset;
+}
+.adminBoardIconDiv1 i{
+  margin-left: 10px;
+}
+#forResidentialHistory {
+  display: none;
+}
+#forResidentialHistory h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+} 
