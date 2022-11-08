@@ -2438,15 +2438,33 @@ svg {
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
-.adminBoardIconDiv1 section {
-  display: flex;
-  align-items: center;
-  padding: 2px 10px;
-  border-radius: 6px;
+.adminBoardIconDiv1 {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 10px;
+  padding: 5px 10px !important;
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
-.adminBoardIconDiv1 section:hover {
+.adminBoardIconDiv1:hover {
   box-shadow: 0px 3px 10px rgb(0 0 0 / 16%) inset;
 }
-.adminBoardIconDiv1 i {
+.adminBoardIconDiv1 i{
   margin-left: 10px;
 }
+#forResidentialHistory {
+  display: none;
+  margin-top: 15px;
+}
+#forResidentialHistory h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+} 
+
+
+
+
+
+/* ----- Chat Section CSS ----- */
+
+>>>>>>> fbb0b4e3a7276785fed568c6bf00d847bacc7670

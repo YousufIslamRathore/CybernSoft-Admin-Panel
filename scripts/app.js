@@ -663,21 +663,39 @@ function extendingAdminBoard(angle_up_down) {
 }
 
 function customMaintenanceAmount(btn) {
-  if(btn.innerHTML == "Custom") {
-    btn.innerHTML = "Save"
-    btn.previousElementSibling.disabled = false
-    btn.previousElementSibling.style.borderBottom = "2px solid #ddd"
+  if (btn.innerHTML == "Custom") {
+    btn.innerHTML = "Save";
+    btn.previousElementSibling.disabled = false;
+    btn.previousElementSibling.style.borderBottom = "2px solid #ddd";
   } else if (btn.innerHTML == "Save") {
-    btn.innerHTML = "Custom"
-    btn.previousElementSibling.disabled = true
-    btn.previousElementSibling.style.borderBottom = "none"
+    btn.innerHTML = "Custom";
+    btn.previousElementSibling.disabled = true;
+    btn.previousElementSibling.style.borderBottom = "none";
   }
 }
 
 function payMaintenanceModal() {
-  alert("Your Payment has just been made !")
+  alert("Your Payment has just been made !");
 }
 
-function extendResidentialHistory() {
-  
+function extendResidentialHistory(pressedSection) {
+  const forResidentialHistory = document.getElementById(
+    "forResidentialHistory"
+  );
+  const icon = pressedSection.lastElementChild;
+  // console.log(icon)
+  if (icon.className == "fa-solid fa-angle-down") {
+    icon.className = "fa-solid fa-angle-up";
+    
+    pressedSection.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%) inset";
+    
+    forResidentialHistory.style.display = "block";
+  } else if (icon.className == "fa-solid fa-angle-up") {
+    icon.className = "fa-solid fa-angle-down";
+    
+    pressedSection.style.boxShadow = "none"
+
+    forResidentialHistory.style.display = "none";
+  }
+
 }
