@@ -14,6 +14,7 @@ body {
   margin: 0 auto;
   width: 90% !important;
   background: #444753;
+  /* background: #015e8b; */
   border-radius: 5px;
   padding: 0 !important;
 }
@@ -39,7 +40,7 @@ body {
   font-size: 14px;
 }
 .people-list input::placeholder {
-    color: #ddd;
+  color: #ddd;
 }
 .people-list .fa-search {
   position: absolute;
@@ -50,7 +51,7 @@ body {
 }
 .people-list ul {
   padding: 20px;
-  height: 770px;
+  height: 600px !important;
 }
 .people-list ul li {
   padding-bottom: 20px;
@@ -138,10 +139,14 @@ body {
   margin-left: -10px;
 } */
 .chat .chat-history .my-message {
-  background: #86bb71;
+  /* background: #86bb71; */
+  /* background: #999; */
+  background: #015e8b;
 }
 .chat .chat-history .other-message {
-  background: #94c2ed;
+  /* background: #94c2ed; */
+  background: white;
+  color: #333;
 }
 /* .chat .chat-history .other-message:after {
   border-bottom-color: #94c2ed;
@@ -149,14 +154,18 @@ body {
 } */
 .chat .chat-message {
   padding: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 .chat .chat-message textarea {
   width: 100%;
   border: none;
   padding: 10px 20px;
   font: 14px/22px "Lato", Arial, sans-serif;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  /* margin-bottom: 10px; */
+  /* border-radius: 5px; */
+  border-radius: 20px;
   resize: none;
 }
 .chat .chat-message .fa-file,
@@ -167,19 +176,30 @@ body {
 }
 .chat .chat-message button {
   float: right;
-  color: #94c2ed;
+  /* color: #94c2ed; */
+  /* color: #015e8b; */
+  background: #015e8b !important;
+  border-radius: 20px;
+  padding: 3px 15px;
+  color: white;
   font-size: 16px;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
   font-weight: bold;
-  background: #f2f5f8;
+  /* background: #f2f5f8; */
 }
-.chat .chat-message button:hover {
+/* .chat .chat-message button:hover {
   color: #75b1e8;
+} */
+.sendButtonIconDiv {
+    /* position: absolute; */
+    position: absolute;
+    right: 40px;
 }
 .online,
 .offline,
+.othersMessageIcon,
 .me {
   margin-right: 3px;
   font-size: 10px;
@@ -191,7 +211,12 @@ body {
   color: #e38968;
 }
 .me {
-  color: #94c2ed;
+  color: #015e8b;
+}
+.othersMessageIcon {
+  color: white;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 40%);
+  border-radius: 50%;
 }
 .align-left {
   text-align: left;
