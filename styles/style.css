@@ -2438,3 +2438,15 @@ svg {
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
+.adminBoardIconDiv1 section {
+  display: flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 6px;
+}
+.adminBoardIconDiv1 section:hover {
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 16%) inset;
+}
+.adminBoardIconDiv1 i {
+  margin-left: 10px;
+}

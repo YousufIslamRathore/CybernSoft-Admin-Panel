@@ -677,3 +677,7 @@ function customMaintenanceAmount(btn) {
 function payMaintenanceModal() {
   alert("Your Payment has just been made !")
 }
+
+function extendResidentialHistory() {
+  
+}
