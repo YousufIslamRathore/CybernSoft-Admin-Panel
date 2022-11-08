@@ -10,18 +10,24 @@ body {
   /* padding: 40px 0; */
   color: white;
 }
-.container {
+.chatMainContainer {
   margin: 0 auto;
-  width: 800px;
+  width: 90% !important;
   background: #444753;
   border-radius: 5px;
+  padding: 0 !important;
 }
 .people-list {
-  width: 260px;
+  width: 30%;
   float: left;
+}
+.people-list .list {
+  list-style-type: none;
+  margin-bottom: 0 !important;
 }
 .people-list .search {
   padding: 20px;
+  position: relative;
 }
 .people-list input {
   border-radius: 3px;
@@ -29,12 +35,18 @@ body {
   padding: 14px;
   color: white;
   background: #6a6c75;
-  width: 90%;
+  width: 100% !important;
   font-size: 14px;
 }
+.people-list input::placeholder {
+    color: #ddd;
+}
 .people-list .fa-search {
-  position: relative;
-  left: -25px;
+  position: absolute;
+  right: 30px;
+  top: 40%;
+  /* bottom: 50%; */
+  z-index: 5;
 }
 .people-list ul {
   padding: 20px;
@@ -57,7 +69,7 @@ body {
   color: #92959e;
 }
 .chat {
-  width: 490px;
+  width: 70%;
   float: left;
   background: #f2f5f8;
   border-top-right-radius: 5px;
@@ -96,7 +108,7 @@ body {
   height: 575px;
 }
 .chat .chat-history .message-data {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .chat .chat-history .message-data-time {
   color: #a8aab1;
@@ -107,12 +119,12 @@ body {
   padding: 18px 20px;
   line-height: 26px;
   font-size: 16px;
-  border-radius: 7px;
+  border-radius: 20px;
   margin-bottom: 30px;
   width: 90%;
   position: relative;
 }
-.chat .chat-history .message:after {
+/* .chat .chat-history .message:after {
   bottom: 100%;
   left: 7%;
   border: solid transparent;
@@ -124,17 +136,17 @@ body {
   border-bottom-color: #86bb71;
   border-width: 10px;
   margin-left: -10px;
-}
+} */
 .chat .chat-history .my-message {
   background: #86bb71;
 }
 .chat .chat-history .other-message {
   background: #94c2ed;
 }
-.chat .chat-history .other-message:after {
+/* .chat .chat-history .other-message:after {
   border-bottom-color: #94c2ed;
   left: 93%;
-}
+} */
 .chat .chat-message {
   padding: 30px;
 }
@@ -147,9 +159,9 @@ body {
   border-radius: 5px;
   resize: none;
 }
-.chat .chat-message .fa-file-o,
-.chat .chat-message .fa-file-image-o {
-  font-size: 16px;
+.chat .chat-message .fa-file,
+.chat .chat-message .fa-file-image {
+  font-size: 17px;
   color: gray;
   cursor: pointer;
 }
