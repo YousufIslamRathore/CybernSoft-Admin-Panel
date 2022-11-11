@@ -699,3 +699,7 @@ function extendResidentialHistory(pressedSection) {
   }
 
 }
+
+
+
+

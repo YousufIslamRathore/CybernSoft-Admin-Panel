@@ -34,8 +34,6 @@ tbody tr:nth-child(even) {
 }
 
 .loginBox {
-  /* background-color: blue; */
-  /* background-color: rgb(1, 255, 158); */
   background: linear-gradient(to right, rgb(1, 255, 158), rgb(8, 8, 175));
   width: 30%;
   padding: 30px 15px;
