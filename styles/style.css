@@ -2462,5 +2462,17 @@ svg {
 
 
 
+/* Notification Page */
 
-/* ----- Chat Section CSS ----- */
+.notificationList {
+  height: 75vh;
+}
+.notificationList tbody {
+  height: auto !important;
+}
+.fa-circle-check {
+  color: #00bb07;
+}
+.fa-circle-xmark {
+  color: #ee405e;
+}

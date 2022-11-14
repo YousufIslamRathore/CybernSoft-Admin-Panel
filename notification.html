@@ -89,12 +89,14 @@
 
         <section class="usersBodySection">
           <div>
-
-            <h2 class="adminPanelMainHeading">Admin Panel</h2>
+            <h2 class="adminPanelMainHeading">Notifications</h2>
 
             <section class="usersMainListingSection adminListingSection">
               <section class="usersSearchSection">
-                <section class="userSearchSectionFirstSection" style="margin-bottom: 12px;">
+                <section
+                  class="userSearchSectionFirstSection"
+                  style="margin-bottom: 12px"
+                >
                   <!-- <h2 id="usersListMainHeading">Admin List</h2> -->
                   <!-- <div style="margin-right: 30px">
                     <button
@@ -143,9 +145,10 @@
                   <div>
                     <button
                       class="importData"
-                      style="background-color: royalblue; width: 170px;"
+                      style="background-color: royalblue; width: 170px"
                       data-toggle="modal"
-                      data-target="#addNewAdmin">
+                      data-target="#addNewAdmin"
+                    >
                       Add New
                     </button>
                   </div>
@@ -161,97 +164,112 @@
               </section>
 
               <section
-                class="usersListSection tankersListSection adminListSection"
+                class="usersListSection tankersListSection notificationList"
               >
                 <table>
                   <thead>
                     <tr>
-                      <th class="firstCell">ID</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Contact</th>
-                      <!-- <th>Type</th> -->
-                      <!-- <th>Order Count</th> -->
-                      <th class="lastCell">Type</th>
+                      <th class="firstCell">Name</th>
+                      <th>Address</th>
+                      <th>Action</th>
+                      <th>Date and Time</th>
+                      <th class="lastCell">Received</th>
                     </tr>
                   </thead>
                   <tbody id="orderTableBody">
                     <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">1</td>
-                      <td>Admin</td>
-                      <td>admin@gmail.com</td>
-                      <td>03082028980</td>
-                      <!-- <td><div class="completed">Completed</div></td> -->
-                      <!-- <td>02</td> -->
-                      <td class="lastCell">Admin</td>
+                      <td class="firstCell">Yousuf</td>
+                      <td>A-001</td>
+                      <td>Requested New Tanker !</td>
+                      <td class="lastCell">
+                        <span>
+                          14/11/2022
+                          <br />
+                          <span class="timeSpan"> 11:11 AM , Mon </span>
+                        </span>
+                      </td>
+                      <td class="lastCell">
+                        <i class="fa-solid fa-circle-check"></i>
+                      </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">2</td>
-                      <td>Hassan</td>
-                      <td>hassan@gmail.com</td>
-                      <td>123455678910</td>
-                      <!-- <td><div class="completed">Completed</div></td> -->
-                      <!-- <td>02</td> -->
-                      <td class="lastCell">Sub-Admin</td>
+                      <td class="firstCell">Yousuf</td>
+                      <td>A-001</td>
+                      <td>Requested New Tanker !</td>
+                      <td class="lastCell">
+                        <span>
+                          14/11/2022
+                          <br />
+                          <span class="timeSpan"> 11:11 AM , Mon </span>
+                        </span>
+                      </td>
+                      <td class="lastCell">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                      </td>
                     </tr>
                     <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">3</td>
-                      <td>Khalid</td>
-                      <td>Khalid@wenergy.com.pk</td>
-                      <td>03332830710</td>
-                      <!-- <td><div class="completed">Completed</div></td> -->
-                      <!-- <td>02</td> -->
-                      <td class="lastCell">Sub-Admin</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">4</td>
-                      <td>Saud</td>
-                      <td>saud@wenergy.com.pk</td>
-                      <td>03322093221</td>
-                      <!-- <td><div class="completed">Completed</div></td> -->
-                      <!-- <td>02</td> -->
-                      <td class="lastCell">Sub-Admin</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">2</td>
-                      <td>Hassan</td>
-                      <td>hassan@gmail.com</td>
-                      <td>123455678910</td>
-                      <!-- <td><div class="completed">Completed</div></td> -->
-                      <!-- <td>02</td> -->
-                      <td class="lastCell">Sub-Admin</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">3</td>
-                      <td>Khalid</td>
-                      <td>Khalid@wenergy.com.pk</td>
-                      <td>03332830710</td>
-                      <!-- <td><div class="completed">Completed</div></td> -->
-                      <!-- <td>02</td> -->
-                      <td class="lastCell">Sub-Admin</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">4</td>
-                      <td>Saud</td>
-                      <td>saud@wenergy.com.pk</td>
-                      <td>03322093221</td>
-                      <!-- <td><div class="completed">Completed</div></td> -->
-                      <!-- <td>02</td> -->
-                      <td class="lastCell">Sub-Admin</td>
-                    </tr>
-                    <tr data-toggle="modal" data-target="#userDetails">
-                      <td class="firstCell">2</td>
-                      <td>Hassan</td>
-                      <td>hassan@gmail.com</td>
-                      <td>123455678910</td>
-                      <!-- <td><div class="completed">Completed</div></td> -->
-                      <!-- <td>02</td> -->
-                      <td class="lastCell">Sub-Admin</td>
-                    </tr>
-                    
+                        <td class="firstCell">Yousuf</td>
+                        <td>A-001</td>
+                        <td>Requested New Tanker !</td>
+                        <td class="lastCell">
+                          <span>
+                            14/11/2022
+                            <br />
+                            <span class="timeSpan"> 11:11 AM , Mon </span>
+                          </span>
+                        </td>
+                        <td class="lastCell">
+                          <i class="fa-solid fa-circle-check"></i>
+                        </td>
+                      </tr>
+                      <tr data-toggle="modal" data-target="#userDetails">
+                        <td class="firstCell">Yousuf</td>
+                        <td>A-001</td>
+                        <td>Requested New Tanker !</td>
+                        <td class="lastCell">
+                          <span>
+                            14/11/2022
+                            <br />
+                            <span class="timeSpan"> 11:11 AM , Mon </span>
+                          </span>
+                        </td>
+                        <td class="lastCell">
+                          <i class="fa-solid fa-circle-xmark"></i>
+                        </td>
+                      </tr>
+                      <tr data-toggle="modal" data-target="#userDetails">
+                        <td class="firstCell">Yousuf</td>
+                        <td>A-001</td>
+                        <td>Requested New Tanker !</td>
+                        <td class="lastCell">
+                          <span>
+                            14/11/2022
+                            <br />
+                            <span class="timeSpan"> 11:11 AM , Mon </span>
+                          </span>
+                        </td>
+                        <td class="lastCell">
+                          <i class="fa-solid fa-circle-check"></i>
+                        </td>
+                      </tr>
+                      <tr data-toggle="modal" data-target="#userDetails">
+                        <td class="firstCell">Yousuf</td>
+                        <td>A-001</td>
+                        <td>Requested New Tanker !</td>
+                        <td class="lastCell">
+                          <span>
+                            14/11/2022
+                            <br />
+                            <span class="timeSpan"> 11:11 AM , Mon </span>
+                          </span>
+                        </td>
+                        <td class="lastCell">
+                          <i class="fa-solid fa-circle-xmark"></i>
+                        </td>
+                      </tr>
                   </tbody>
                 </table>
-                <div class="adminBoardIconDiv" onclick="extendingAdminBoard(this)"><i class="fa-solid fa-angle-down"></i></div>
+                <!-- <div class="adminBoardIconDiv" onclick="extendingAdminBoard(this)"><i class="fa-solid fa-angle-down"></i></div>     -->
                 <!-- <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
                   <button
                     data-toggle="modal"
@@ -263,61 +281,21 @@
               </section>
             </section>
 
-            <section class="usersMainListingSection adminListingSection">
+            <!-- <section class="usersMainListingSection adminListingSection">
               <section class="usersSearchSection">
                 <section class="userSearchSectionFirstSection" style="margin-bottom: 12px;">
                   <h2 id="usersListMainHeading" style="margin: auto; text-align: center;">Admin Logs</h2>
                   
                 </section>
 
-                <!-- <section>
-                  <div
-                    class="besideHeadingDiv"
-                    style="
-                      display: flex;
-                      justify-content: flex-end;
-                      align-items: center;
-                      margin-bottom: 10px;
-                    "
-                  >
-                    <button onclick="multipleSelectionFunction(this)">
-                      <i class="fa-solid fa-bars"></i>Select Multiple
-                    </button>
-                  </div>
-                </section> -->
-
                 <section class="searchSectionContainer">
                   <div class="searchBarContainer">
                     <div>Search</div>
                     <section><input type="search" /></section>
                   </div>
-                  <!-- <div>
-                    <select name="Date" id="" class="userTypeDropDown">
-                      <option value="Select" disabled selected>Select</option>
-                      <option value="ID">ID</option>
-                      <option value="Name">Name</option>
-                      <option value="TankerType">Tanker Type</option>
-                      <option value="to">To</option>
-                    </select>
-                  </div> -->
-                  <!-- <div>
-                    <input
-                      type="date"
-                      name="date"
-                      id=""
-                      class="userTypeDropDown dateSearchField"
-                    />
-                  </div> -->
                   <div><button style="margin-right: 10px">Search</button></div>
-                  <!-- <div><button class="importData">Add New</button></div> -->
                 </section>
 
-                <!-- <div class="orderDiffCounterDiv">
-                  <p>Completed : <span>03</span></p>
-                  <p>Pending : <span>03</span></p>
-                  <p>Failed : <span>03</span></p>
-                  <p>Cancelled : <span>03</span></p>
-                </div> -->
               </section>
 
               <section
@@ -432,17 +410,8 @@
                     
                   </tbody>
                 </table>
-                <!-- <div class="adminBoardIconDiv" onclick="extendingAdminBoard(this)"><i class="fa-solid fa-angle-down"></i></div> -->
-                <!-- <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
-                  <button
-                    data-toggle="modal"
-                    data-target="#multipleOrderSelected"
-                  >
-                    Action
-                  </button>
-                </div> -->
               </section>
-            </section>
+            </section> -->
           </div>
         </section>
       </section>
@@ -485,7 +454,12 @@
                 </div>
                 <div>
                   <p>CNIC :</p>
-                  <input type="text" class="adminEditableFields" value="42201-2729672-7" disabled />
+                  <input
+                    type="text"
+                    class="adminEditableFields"
+                    value="42201-2729672-7"
+                    disabled
+                  />
                 </div>
               </section>
               <section>
@@ -506,13 +480,27 @@
               <section>
                 <div>
                   <p>Password :</p>
-                  <input type="password" value="123" class="adminEditableFields" disabled />
+                  <input
+                    type="password"
+                    value="123"
+                    class="adminEditableFields"
+                    disabled
+                  />
                   <div>
-                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px"></i>
+                    <i
+                      class="fa-solid fa-eye"
+                      onclick="showPassword(this)"
+                      style="color: #555; margin-left: -30px"
+                    ></i>
                   </div>
                 </div>
                 <div>
-                  <button class="adminModalEditBtn" onclick="adminModalEditBtnToggler(this)">EDIT</button>
+                  <button
+                    class="adminModalEditBtn"
+                    onclick="adminModalEditBtnToggler(this)"
+                  >
+                    EDIT
+                  </button>
                 </div>
               </section>
             </section>
@@ -585,7 +573,7 @@
                 </label>
                 <label>
                   <p>Email :</p>
-                  <input type="email">
+                  <input type="email" />
                 </label>
                 <label>
                   <p>Type :</p>
@@ -599,7 +587,11 @@
                   <p>Password :</p>
                   <input type="password" value="" />
                   <div>
-                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px"></i>
+                    <i
+                      class="fa-solid fa-eye"
+                      onclick="showPassword(this)"
+                      style="color: #555; margin-left: -30px"
+                    ></i>
                   </div>
                 </label>
               </form>
