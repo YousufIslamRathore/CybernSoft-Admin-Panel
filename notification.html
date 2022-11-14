@@ -509,31 +509,23 @@
 
     <!-- Send Notification -->
 
-    <section class="modal fade" id="addNewAdmin">
-      <div class="modal-dialog modal-md">
+    <section class="modal fade" id="sendNotification">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content forBorderRadius">
           <section class="modal-body wholeModal wholeModal2 wholeAdminModal">
             <section class="headingSection">
-              <h1>Add New</h1>
+              <h1>Send Notification</h1>
             </section>
 
             <section class="adminModalMiddleSection">
               <form action="">
                 <label>
-                  <p>Name :</p>
-                  <input type="text" />
+                  <p>Notification to All :</p>
+                  <input type="checkbox" name="notification" id="">
                 </label>
                 <label>
                   <p>CNIC :</p>
                   <input type="text" />
-                </label>
-                <label>
-                  <p>Contact :</p>
-                  <input type="text" />
-                </label>
-                <label>
-                  <p>Email :</p>
-                  <input type="email" />
                 </label>
                 <label>
                   <p>Type :</p>
@@ -542,17 +534,6 @@
                     <option value="admin">Admin</option>
                     <option value="subAdmin">Sub-Admin</option>
                   </select>
-                </label>
-                <label>
-                  <p>Password :</p>
-                  <input type="password" value="" />
-                  <div>
-                    <i
-                      class="fa-solid fa-eye"
-                      onclick="showPassword(this)"
-                      style="color: #555; margin-left: -30px"
-                    ></i>
-                  </div>
                 </label>
               </form>
             </section>
