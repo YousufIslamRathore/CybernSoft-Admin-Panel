@@ -2468,7 +2468,7 @@ svg {
   height: 75vh;
 }
 .notificationList tbody {
-  height: auto !important;
+  height: 65vh !important;
 }
 .fa-circle-check {
   color: #00bb07;
