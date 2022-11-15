@@ -699,3 +699,12 @@ function extendResidentialHistory(pressedSection) {
   }
 
 }
+
+function selectingHouseToggler(selectedDiv) {
+  // selectedDiv.style.backgroundColor = (selectedDiv.style.backgroundColor == "#FAF9F6") ? "rgba(13, 116, 233, 0.151)" : "#FAF9F6";
+  if(selectedDiv.style.backgroundColor == "#FAF9F6") {
+    selectedDiv.style.backgroundColor = "rgba(13, 116, 233, 0.151)";
+  } else {
+    selectedDiv.style.backgroundColor = "#FAF9F6"
+  }
+ }
