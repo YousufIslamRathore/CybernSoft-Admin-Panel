@@ -2476,3 +2476,26 @@ svg {
 .fa-circle-xmark {
   color: #ee405e;
 }
+
+.sendNotificationMiddleSection {
+  width: 90%;
+}
+.houseListing {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  height: 70vh;
+}
+.houseListing > div {
+  padding: 8px;
+  border: 1px solid #ddd;
+  width: 10%;
+  text-align: center;
+}
+.proceedNotificationBtn {
+  position: static;
+}
