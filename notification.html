@@ -405,7 +405,8 @@
                   </select>
                 </label>
               </form> -->
-              <section class="houseListing">
+              <main><h2>Click to Select:</h2> <div>Select All <i class="fa-regular fa-square" style="color: #888;" onclick="selectAllUnits(this)"></i></div> </main>
+              <section class="houseListing" id="houseContainerSection">
                 <div class="unclickedDiv" onclick="selectingHouseToggler(this)">A-1</div>
                 <div class="unclickedDiv" onclick="selectingHouseToggler(this)">A-1</div>
                 <div class="unclickedDiv" onclick="selectingHouseToggler(this)">A-1</div>
@@ -634,12 +635,40 @@
             </section>
 
             <div class="multipleOrderActionSection proceedNotificationBtn">
-              <div><button style="width: auto">Proceed Notification</button></div>
+              <div><button style="width: auto" data-dismiss="modal" data-toggle="modal" data-target="#afterNotificationModal" onclick="loadNotificationData()">Proceed Notification</button></div>
             </div>
           </section>
         </div>
       </div>
     </section>
+
+    <section class="modal fade" id="afterNotificationModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content forBorderRadius">
+          <section class="modal-body wholeModal wholeModal2 wholeAdminModal">
+            <section class="headingSection">
+              <h1>Send Notification</h1>
+            </section>
+
+            <section class="sendNotificationMiddleSection">
+              <main class="notificationModalAfterHeading"><h2>Selected Units: </h2> </main>
+              <section class="houseListing selectedHouseListing">
+                <p style="text-align: center; width: 100%; font-weight: bold; color: #555;">You didn't Selected any House</p>
+              </section>
+
+              <main class="notificationModalAfterHeading"><h2>Write Message: </h2> </main>
+              <textarea name="" id="" rows="6 " style="width: 100%;"></textarea>
+              
+            </section>
+
+            <div class="multipleOrderActionSection proceedNotificationBtn">
+              <div><button style="width: auto">Send Notification</button></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
   </body>
 
   <script src="./scripts/app.js"></script>

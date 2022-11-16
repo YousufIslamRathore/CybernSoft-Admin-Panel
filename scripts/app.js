@@ -710,3 +710,41 @@ function selectingHouseToggler(selectedDiv) {
     selectedDiv.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
   }
 }
+
+function selectAllUnits(icon) {
+  let allUnits = document.getElementById("houseContainerSection").children;
+  if (icon.className == "fa-regular fa-square") {
+    icon.className = "fa-solid fa-square-check";
+    icon.style.color = "#015e8b";
+    for (let i = 0; i < allUnits.length; i++) {
+      allUnits[i].style.background = "rgba(13, 116, 233, 0.151)";
+      allUnits[i].style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%) inset";
+      allUnits[i].className = "clickedDiv";
+    }
+  } else {
+    icon.className = "fa-regular fa-square";
+    icon.style.color = "#666";
+    for (let i = 0; i < allUnits.length; i++) {
+      allUnits[i].style.background = "#FAF9F6";
+      allUnits[i].style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
+      allUnits[i].className = "unclickedDiv";
+    }
+  }
+}
+
+function loadNotificationData() {
+  let selectedHouseListing = document.getElementsByClassName(
+    "selectedHouseListing"
+  )[0];
+  let clickedDiv = document.getElementsByClassName("clickedDiv");
+  // console.log(clickedDiv[0])
+  if (clickedDiv.length != 0) {
+    selectedHouseListing.innerHTML = "";
+    selectedHouseListing.style.boxShadow = "none"
+    for (let i = 0; i < clickedDiv.length; i++) {
+      var houseTitleBtn = document.createElement("button");
+      houseTitleBtn.append(clickedDiv[i].innerHTML);
+      selectedHouseListing.append(houseTitleBtn);
+    }
+  }
+}

@@ -1560,6 +1560,9 @@ svg {
 .sendNotificationMiddleSection ::-webkit-scrollbar-track {
   margin: 20px 0;
 }
+.notificationModalAfterHeading ::-webkit-scrollbar {
+  width: 10px !important;
+}
 
 .haltSection {
   box-shadow: 0px 3px 10px rgb(0 0 0 / 16%);
@@ -2486,6 +2489,29 @@ svg {
 .sendNotificationMiddleSection {
   width: 90%;
 }
+.sendNotificationMiddleSection > main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 0 15px;
+}
+.sendNotificationMiddleSection > main > h2 {
+  color: #666;
+  font-weight: bold;
+  font-size: 18px;
+}
+.sendNotificationMiddleSection > main > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+.sendNotificationMiddleSection > main > div > i {
+  margin: 0 0 0 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
 .houseListing {
   width: 100%;
   display: flex;
@@ -2523,9 +2549,35 @@ svg {
   cursor: pointer;
   transition-duration: 200ms;
 }
-/* .houseListing > div:hover {
-  background: rgba(13, 116, 233, 0.151);
-} */
 .proceedNotificationBtn {
   position: static;
+}
+.notificationModalAfterHeading > h2 {
+  color: #888;
+}
+.selectedHouseListing {
+  height: 25vh;
+  box-shadow: 0px 3px 10px #ddd;
+  justify-content: flex-start;
+}
+.sendNotificationMiddleSection textarea {
+  border: none;
+  box-shadow: 0px 3px 10px #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  outline: none;
+  padding: 10px 15px;
+  color: #444;
+}
+.selectedHouseListing > button {
+  font-size: 14px;
+  background-color: #015e8b;
+  color: white;
+  border: none;
+  box-shadow: 0px 3px 7px rgb(0 0 0 / 20%);
+  width: 9.5%;
+  padding: 4px 0;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  margin-right: 15px;
 }
