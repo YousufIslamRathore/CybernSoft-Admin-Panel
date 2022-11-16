@@ -1557,9 +1557,8 @@ svg {
 .sendNotificationMiddleSection ::-webkit-scrollbar {
   width: 6px;
 }
-.sendNotificationMiddleSection ::-webkit-scrollbar-thumb {
-  background-color: white;
-  
+.sendNotificationMiddleSection ::-webkit-scrollbar-track {
+  margin: 20px 0;
 }
 
 .haltSection {
@@ -2502,7 +2501,7 @@ svg {
   /* box-shadow: 0px 3px 10px #ddd inset; */
   border-radius: 6px;
   padding: 10px 0;
-  background-color: white;
+  background: white;
   /* background-color: rgb(227, 227, 227); */
 }
 .houseListing > div {
@@ -2514,10 +2513,11 @@ svg {
   /* margin-bottom: 4px; */
   /* margin: 0 3px 6px; */
   margin: 10px 5px;
-  box-shadow: 0px 3px 5px #ddd;
+  /* box-shadow: 0px 3px 5px #ddd; */
+  box-shadow: 0px 3px 5px rgb(0 0 0 / 16%);
   /* background-color: white; */
   /* background-color: rgb(248, 248, 248); */
-  background-color: #FAF9F6;
+  background: #FAF9F6;
   color: #015e8b;
   font-weight: 600;
   cursor: pointer;

@@ -700,11 +700,28 @@ function extendResidentialHistory(pressedSection) {
 
 }
 
-function selectingHouseToggler(selectedDiv) {
-  // selectedDiv.style.backgroundColor = (selectedDiv.style.backgroundColor == "#FAF9F6") ? "rgba(13, 116, 233, 0.151)" : "#FAF9F6";
-  if(selectedDiv.style.backgroundColor == "#FAF9F6") {
-    selectedDiv.style.backgroundColor = "rgba(13, 116, 233, 0.151)";
-  } else {
-    selectedDiv.style.backgroundColor = "#FAF9F6"
-  }
- }
+function selectingHouseToggler(selectedDiv, one) {
+  // if(selectedDiv.style.color == "#015e8b") {
+  //   selectedDiv.style.background = "rgba(13, 116, 233, 0.151)";
+  //   console.log("if")
+  // } else {
+  //   selectedDiv.style.background = "#FAF9F6"
+  //   console.log("else")
+  // }
+  // if(selectedDiv.style.color == "#015e8b") {
+  //   selectedDiv.style.color = "white"
+  // }
+  // console.log(selectedDiv.style.color)
+  // if(selectedDiv.style.background == "#FAF9F6") {
+  //   selectedDiv.style.background = "rgba(13, 116, 233, 0.151)"
+  // } else if(selectedDiv.style.background == "rgba(13, 116, 233, 0.151)") {
+  //   selectedDiv.style.background = "#FAF9F6"
+  // }
+  // let counter;
+  // counter += one;
+  // if(counter % 2 != 0) {
+  //   selectedDiv.style.background = "rgba(13, 116, 233, 0.151)"
+  // } else if (counter % 2 == 0) {
+  //   selectedDiv.style.background = "#FAF9F6"
+  // }
+}
