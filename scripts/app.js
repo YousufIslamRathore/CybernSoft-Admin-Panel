@@ -700,7 +700,7 @@ function extendResidentialHistory(pressedSection) {
 
 }
 
-function selectingHouseToggler(selectedDiv, one) {
+function selectingHouseToggler(selectedDiv) {
   // if(selectedDiv.style.color == "#015e8b") {
   //   selectedDiv.style.background = "rgba(13, 116, 233, 0.151)";
   //   console.log("if")
@@ -724,4 +724,15 @@ function selectingHouseToggler(selectedDiv, one) {
   // } else if (counter % 2 == 0) {
   //   selectedDiv.style.background = "#FAF9F6"
   // }
+  console.log(selectedDiv.className) 
+
+  if(selectedDiv.className == "unclickedDiv") {
+    selectedDiv.style.background = "rgba(13, 116, 233, 0.151)"
+    selectedDiv.className = "clickedDiv"
+    selectedDiv.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%) inset"
+  } else if (selectedDiv.className == "clickedDiv") {
+    selectedDiv.style.background = "#FAF9F6"
+    selectedDiv.className = "unclickedDiv"
+    selectedDiv.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)"
+  }
 }
