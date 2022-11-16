@@ -686,53 +686,27 @@ function extendResidentialHistory(pressedSection) {
   // console.log(icon)
   if (icon.className == "fa-solid fa-angle-down") {
     icon.className = "fa-solid fa-angle-up";
-    
+
     pressedSection.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%) inset";
-    
+
     forResidentialHistory.style.display = "block";
   } else if (icon.className == "fa-solid fa-angle-up") {
     icon.className = "fa-solid fa-angle-down";
-    
-    pressedSection.style.boxShadow = "none"
+
+    pressedSection.style.boxShadow = "none";
 
     forResidentialHistory.style.display = "none";
   }
-
 }
 
 function selectingHouseToggler(selectedDiv) {
-  // if(selectedDiv.style.color == "#015e8b") {
-  //   selectedDiv.style.background = "rgba(13, 116, 233, 0.151)";
-  //   console.log("if")
-  // } else {
-  //   selectedDiv.style.background = "#FAF9F6"
-  //   console.log("else")
-  // }
-  // if(selectedDiv.style.color == "#015e8b") {
-  //   selectedDiv.style.color = "white"
-  // }
-  // console.log(selectedDiv.style.color)
-  // if(selectedDiv.style.background == "#FAF9F6") {
-  //   selectedDiv.style.background = "rgba(13, 116, 233, 0.151)"
-  // } else if(selectedDiv.style.background == "rgba(13, 116, 233, 0.151)") {
-  //   selectedDiv.style.background = "#FAF9F6"
-  // }
-  // let counter;
-  // counter += one;
-  // if(counter % 2 != 0) {
-  //   selectedDiv.style.background = "rgba(13, 116, 233, 0.151)"
-  // } else if (counter % 2 == 0) {
-  //   selectedDiv.style.background = "#FAF9F6"
-  // }
-  console.log(selectedDiv.className) 
-
-  if(selectedDiv.className == "unclickedDiv") {
-    selectedDiv.style.background = "rgba(13, 116, 233, 0.151)"
-    selectedDiv.className = "clickedDiv"
-    selectedDiv.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%) inset"
+  if (selectedDiv.className == "unclickedDiv") {
+    selectedDiv.style.background = "rgba(13, 116, 233, 0.151)";
+    selectedDiv.className = "clickedDiv";
+    selectedDiv.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%) inset";
   } else if (selectedDiv.className == "clickedDiv") {
-    selectedDiv.style.background = "#FAF9F6"
-    selectedDiv.className = "unclickedDiv"
-    selectedDiv.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)"
+    selectedDiv.style.background = "#FAF9F6";
+    selectedDiv.className = "unclickedDiv";
+    selectedDiv.style.boxShadow = "0px 3px 10px rgb(0 0 0 / 16%)";
   }
 }
