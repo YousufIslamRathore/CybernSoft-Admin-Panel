@@ -2556,7 +2556,7 @@ svg {
   color: #888;
 }
 .selectedHouseListing {
-  height: 25vh;
+  height: 40vh;
   box-shadow: 0px 3px 10px #ddd;
   justify-content: flex-start;
 }
@@ -2580,4 +2580,37 @@ svg {
   margin-bottom: 20px;
   border-radius: 7px;
   margin-right: 15px;
+}
+.selectedHouseListing > p {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  color: #555;
+} 
+.afterProceedNotificationModal {
+  position: relative;
+}
+.afterProceedNotificationModal > .backButton {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: #555;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.afterProceedNotificationModal > .backButton > p {
+  cursor: pointer;
+}
+.houseListing > h4 {
+  width: 100%;
+  margin-left: 15px;
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #666;
 }

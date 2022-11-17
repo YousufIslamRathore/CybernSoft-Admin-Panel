@@ -737,6 +737,7 @@ function loadNotificationData() {
     "selectedHouseListing"
   )[0];
   let clickedDiv = document.getElementsByClassName("clickedDiv");
+  const noSelectedHouseParaTxt = "You didn't Selected any House"
   // console.log(clickedDiv[0])
   if (clickedDiv.length != 0) {
     selectedHouseListing.innerHTML = "";
@@ -746,5 +747,20 @@ function loadNotificationData() {
       houseTitleBtn.append(clickedDiv[i].innerHTML);
       selectedHouseListing.append(houseTitleBtn);
     }
+  } else {
+    selectedHouseListing.style.boxShadow = "0px 3px 10px #ddd"
+    selectedHouseListing.innerHTML = ""
+    var p = document.createElement("p");
+    p.append(noSelectedHouseParaTxt);
+    selectedHouseListing.append(p)
   }
 }
+
+// function divideBlockWise() {
+// //  A - B - R - R1 - R2 - RG
+//   var blocks = ["A" , "B", "R", "R1", "R2"];
+//   let allUnits = document.querySelectorAll('#houseContainerSection div')
+//   // for (let i = 0; i < blocks.length; i++) {
+// console.log(allUnits)    
+//   // }
+// }
