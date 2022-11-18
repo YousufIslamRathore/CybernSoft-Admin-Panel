@@ -756,16 +756,7 @@ function loadNotificationData() {
   }
 }
 
-// function divideBlockWise() {
-// //  A - B - R - R1 - R2 - RG
-//   var blocks = ["A" , "B", "R", "R1", "R2"];
-//   let allUnits = document.querySelectorAll('#houseContainerSection div')
-//   // for (let i = 0; i < blocks.length; i++) {
-// console.log(allUnits)    
-//   // }
-// }
-
 function shakeBtn(btn) {
   btn.className = "animate__animated animate__shakeX"
-  // removeShakeBtn(btn)
 }
+
