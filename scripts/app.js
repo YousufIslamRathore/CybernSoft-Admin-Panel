@@ -764,3 +764,8 @@ function loadNotificationData() {
 // console.log(allUnits)    
 //   // }
 // }
+
+function shakeBtn(btn) {
+  btn.className = "animate__animated animate__shakeX"
+  // removeShakeBtn(btn)
+}
