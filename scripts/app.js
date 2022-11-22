@@ -759,4 +759,3 @@ function loadNotificationData() {
 function shakeBtn(btn) {
   btn.className = "animate__animated animate__shakeX"
 }
-
