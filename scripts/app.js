@@ -759,3 +759,8 @@ function loadNotificationData() {
 function shakeBtn(btn) {
   btn.className = "animate__animated animate__shakeX"
 }
+
+function consoleLog() {
+  var cl = console.log.bind(document);
+  cl("Hey! Is this console ?")
+}
