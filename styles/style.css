@@ -447,15 +447,15 @@ tbody tr:nth-child(even) {
   width: 15%;
   align-self: stretch;
   /* background-color: #015e8b; */
-  /* background-color: #252324; */
+      /* background-color: #252324; */
   /* background-color: #1F51FF; */
   padding: 0 10px;
-  box-shadow: 3px 0px 10px rgb(0 0 0 / 50%);
+  /* box-shadow: 3px 0px 10px rgb(0 0 0 / 50%); */
   z-index: 20;
   /* border-right: 2px solid #015e8b; */
-  /* border-right: 2px solid #252324; */
+      /* border-right: 2px solid #252324; */
   position: fixed;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .usersPageSideBar > h1 {
   color: white;
@@ -466,7 +466,7 @@ tbody tr:nth-child(even) {
   position: sticky;
   top: 0;
   /* background-color: #015e8b; */
-  /* background-color: #252324; */
+      /* background-color: #252324; */
   padding: 20px 0;
 }
 .usersPageSideBar > h1 > span {
@@ -474,21 +474,28 @@ tbody tr:nth-child(even) {
 }
 .sideBarListContainer {
   margin-top: 10px;
-  background-color: #252324;
-  border-right: 2px solid #252324;
+  /* background-color: #252324; */
+  /* background-color: #0D5BE1; */
+  background-color: #262525;
+  border-right: 2px solid #262525;
+  border-radius: 10px;
+  padding: 20px 0;
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 40%),  -0px -3px 10px rgb(0 0 0 / 40%);
+  height: 83vh;
+  overflow-y: scroll;
 
   /* border-bottom: 1px solid rgba(189, 189, 189, 0.507);
     border-top: 1px solid rgba(189, 189, 189, 0.507); */
 }
 .sideBarListContainer > div {
-  height: 70px;
+  height: 55px;
   /* border-bottom: 1px solid rgba(189, 189, 189, 0.507);
   border-top: 1px solid rgba(189, 189, 189, 0.507); */
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: #dddddd;
-  font-size: 18px;
+  color: rgb(197, 194, 194);
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition-duration: 300ms;
@@ -509,9 +516,15 @@ tbody tr:nth-child(even) {
   margin-right: 15px;
 }
 .selectedSideBarCirclePointer {
-  font-size: 8px;
+  font-size: 5px !important;
   visibility: hidden;
 }
+.forShadowImage {
+  width: 150px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
 /* ----- Users Main Section ----- */
 
 .usersPageMainPanel {
@@ -1515,11 +1528,11 @@ svg {
   background-color: rgb(211, 209, 209);
   border-radius: 10px;
 }
-.usersPageSideBar::-webkit-scrollbar {
+.sideBarListContainer::-webkit-scrollbar {
   width: 3px;
 }
-.usersPageSideBar::-webkit-scrollbar-track {
-  margin-top: 120px;
+.sideBarListContainer::-webkit-scrollbar-track {
+  margin: 10px;
 }
 .usersListSection::-webkit-scrollbar {
   width: 5px;
