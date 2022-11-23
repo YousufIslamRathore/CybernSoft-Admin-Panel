@@ -442,20 +442,25 @@ tbody tr:nth-child(even) {
 
 /* ----- Side Bar ----- */
 .usersPageSideBar {
-  min-height: 100vh;
-  max-height: 100vh;
+  min-height: 95vh;
+  max-height: 95vh;
   width: 15%;
   align-self: stretch;
   /* background-color: #015e8b; */
       /* background-color: #252324; */
   /* background-color: #1F51FF; */
-  padding: 0 10px;
-  /* box-shadow: 3px 0px 10px rgb(0 0 0 / 50%); */
+  /* background-color: rgba(238, 238, 238, 0.582); */
+  background-color: #262525;
+  /* backdrop-filter: blur(80%); */
+  /* padding: 0 10px; */
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 40%),  -0px -3px 10px rgb(0 0 0 / 40%);
   z-index: 20;
   /* border-right: 2px solid #015e8b; */
       /* border-right: 2px solid #252324; */
   position: fixed;
   /* overflow-y: scroll; */
+  margin: 2.5vh 10px 2.5vh 7px;
+  border-radius: 10px;
 }
 .usersPageSideBar > h1 {
   color: white;
@@ -467,21 +472,22 @@ tbody tr:nth-child(even) {
   top: 0;
   /* background-color: #015e8b; */
       /* background-color: #252324; */
-  padding: 20px 0;
+  /* padding: 20px 0; */
+  padding-top: 10px;
 }
 .usersPageSideBar > h1 > span {
   font-size: 40px;
 }
 .sideBarListContainer {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   /* background-color: #252324; */
   /* background-color: #0D5BE1; */
   background-color: #262525;
-  border-right: 2px solid #262525;
+  /* border-right: 2px solid #262525; */
   border-radius: 10px;
   padding: 20px 0;
-  box-shadow: 0px 3px 10px rgb(0 0 0 / 40%),  -0px -3px 10px rgb(0 0 0 / 40%);
-  height: 83vh;
+  /* box-shadow: 0px 3px 10px rgb(0 0 0 / 40%),  -0px -3px 10px rgb(0 0 0 / 40%); */
+  /* height: 83vh; */
   overflow-y: scroll;
 
   /* border-bottom: 1px solid rgba(189, 189, 189, 0.507);
@@ -520,9 +526,9 @@ tbody tr:nth-child(even) {
   visibility: hidden;
 }
 .forShadowImage {
-  width: 150px;
-  -webkit-filter: drop-shadow(5px 5px 5px #222);
-  filter: drop-shadow(5px 5px 5px #222);
+  /* width: 150px; */
+  -webkit-filter: drop-shadow(2px 2px 2px rgb(255 255 255));
+  filter: drop-shadow(2px 2px 2px rgb(255 255 255));
 }
 
 /* ----- Users Main Section ----- */
@@ -2034,6 +2040,7 @@ svg {
 /* User Profile Page  */
 .userProfilePageMainPage {
   padding: 15px;
+  background-color: rgba(238, 238, 238, 0.582);
 }
 .userProfilePageMainPage > h1 {
   margin: 25px 0;
