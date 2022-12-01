@@ -25,13 +25,13 @@ function pageSelector(index) {
     if (index != i) {
       pageSelectors[i].firstElementChild.style.visibility = "hidden";
       pageSelectors[i].style.color = "rgb(197, 194, 194)";
-      pageSelectors[i].firstElementChild.style.marginRight = "0"
-      pageSelectors[i].firstElementChild.style.marginLeft = "0"
+      pageSelectors[i].firstElementChild.style.marginRight = "0";
+      pageSelectors[i].firstElementChild.style.marginLeft = "0";
     } else {
       pageSelectors[i].firstElementChild.style.visibility = "visible";
       pageSelectors[i].style.color = "white";
-      pageSelectors[i].firstElementChild.style.marginRight = "-10px"
-      pageSelectors[i].firstElementChild.style.marginLeft = "5px"
+      pageSelectors[i].firstElementChild.style.marginRight = "-10px";
+      pageSelectors[i].firstElementChild.style.marginLeft = "5px";
     }
   }
 }
@@ -741,25 +741,68 @@ function loadNotificationData() {
     "selectedHouseListing"
   )[0];
   let clickedDiv = document.getElementsByClassName("clickedDiv");
-  const noSelectedHouseParaTxt = "You didn't Selected any House"
+  const noSelectedHouseParaTxt = "You didn't Selected any House";
   // console.log(clickedDiv[0])
   if (clickedDiv.length != 0) {
     selectedHouseListing.innerHTML = "";
-    selectedHouseListing.style.boxShadow = "none"
+    selectedHouseListing.style.boxShadow = "none";
     for (let i = 0; i < clickedDiv.length; i++) {
       var houseTitleBtn = document.createElement("button");
       houseTitleBtn.append(clickedDiv[i].innerHTML);
       selectedHouseListing.append(houseTitleBtn);
     }
   } else {
-    selectedHouseListing.style.boxShadow = "0px 3px 10px #ddd"
-    selectedHouseListing.innerHTML = ""
+    selectedHouseListing.style.boxShadow = "0px 3px 10px #ddd";
+    selectedHouseListing.innerHTML = "";
     var p = document.createElement("p");
     p.append(noSelectedHouseParaTxt);
-    selectedHouseListing.append(p)
+    selectedHouseListing.append(p);
   }
 }
 
 function shakeBtn(btn) {
-  btn.className = "animate__animated animate__shakeX"
+  btn.className = "animate__animated animate__shakeX";
+}
+
+// function addAdmin() {
+// let checkBox = document.
+// }
+
+function addAdminPageSelection(element) {
+  if (
+    element.previousElementSibling.className ==
+    "fa-solid fa-circle-check checkDisplayNone"
+  ) {
+    element.previousElementSibling.className =
+      "fa-solid fa-circle-check checkDisplayVisible";
+    // element.style.borderBottom = "1px dashed #999";
+    element.previousElementSibling.previousElementSibling.checked = true
+  } else {
+    element.previousElementSibling.className =
+      "fa-solid fa-circle-check checkDisplayNone";
+    // element.style.borderBottom = "none";
+    element.previousElementSibling.previousElementSibling.checked = false
+  }
+  // console.log(element.previousElementSibling.checked)
+}
+
+function exchangeFields(element) {
+  const selectElement = document.getElementById("add_type");
+  if (element.firstElementChild.className == "fa-solid fa-plus") {
+    element.firstElementChild.className = "fa-solid fa-check"
+    element.previousElementSibling.style.display = "inline-block"
+    element.previousElementSibling.previousElementSibling.style.display = "none"
+  } else {
+    element.firstElementChild.className = "fa-solid fa-plus"
+    element.previousElementSibling.style.display = "none"
+    element.previousElementSibling.previousElementSibling.style.display = "inline-block"
+    if(element.previousElementSibling.value != "") {
+      var option = document.createElement('option');
+      option.setAttribute('value', "")
+      option.innerHTML = element.previousElementSibling.value
+      selectElement.append(option)
+      // console.log(selectElement)
+      element.previousElementSibling.value = ""
+    }
+  }
 }

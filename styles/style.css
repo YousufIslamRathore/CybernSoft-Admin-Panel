@@ -447,16 +447,16 @@ tbody tr:nth-child(even) {
   width: 15%;
   align-self: stretch;
   /* background-color: #015e8b; */
-      /* background-color: #252324; */
+  /* background-color: #252324; */
   /* background-color: #1F51FF; */
   /* background-color: rgba(238, 238, 238, 0.582); */
   background-color: #262525;
   /* backdrop-filter: blur(80%); */
   /* padding: 0 10px; */
-  box-shadow: 0px 3px 10px rgb(0 0 0 / 40%),  -0px -3px 10px rgb(0 0 0 / 40%);
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 40%), -0px -3px 10px rgb(0 0 0 / 40%);
   z-index: 20;
   /* border-right: 2px solid #015e8b; */
-      /* border-right: 2px solid #252324; */
+  /* border-right: 2px solid #252324; */
   position: fixed;
   /* overflow-y: scroll; */
   margin: 2.5vh 10px 2.5vh 7px;
@@ -471,7 +471,7 @@ tbody tr:nth-child(even) {
   position: sticky;
   top: 0;
   /* background-color: #015e8b; */
-      /* background-color: #252324; */
+  /* background-color: #252324; */
   /* padding: 20px 0; */
   padding-top: 10px;
 }
@@ -602,7 +602,6 @@ tbody tr:nth-child(even) {
   padding-top: 30px;
   font-weight: bold;
 }
-
 
 .usersFancyDisplaySection1 {
   display: flex;
@@ -1417,7 +1416,6 @@ svg {
   background: #777;
 }
 
-
 /* Presentation Chart Section */
 
 .presentationChartSection {
@@ -1489,7 +1487,7 @@ svg {
   align-items: center;
 }
 .presentationChartSection > main > section > div:hover {
-  box-shadow: 0px 3px 10px rgb(0 0 0 / 10%) inset;  
+  box-shadow: 0px 3px 10px rgb(0 0 0 / 10%) inset;
 }
 .pieColorsSection {
   width: 40px;
@@ -1498,7 +1496,11 @@ svg {
   margin-right: 10px;
   box-shadow: 0px 3px 10px rgb(0 0 0 / 20%) inset;
   opacity: 0.5;
-  background: linear-gradient(to right, rgb(255 255 255/ 50%), rgb(255 255 255/ 50%));
+  background: linear-gradient(
+    to right,
+    rgb(255 255 255/ 50%),
+    rgb(255 255 255/ 50%)
+  );
 }
 #Normal_Tankers {
   background-color: rgb(255, 99, 132);
@@ -1547,7 +1549,7 @@ svg {
   width: 5px;
 }
 .adminNotificationSection::-webkit-scrollbar {
-  width: 2px ;
+  width: 2px;
 }
 .sendNotificationMiddleSection::-webkit-scrollbar {
   width: 6px;
@@ -2076,7 +2078,6 @@ svg {
   margin-bottom: 30px;
 }
 
-
 .profilePageTableSection > table {
   width: 83%;
   margin: 0 auto;
@@ -2119,8 +2120,6 @@ svg {
   font-size: 16px;
 }
 
-
-
 /* //// New Edition to Orders Page //// */
 .orderDiffCounterDiv {
   display: flex;
@@ -2149,9 +2148,6 @@ svg {
   box-shadow: 1px 1px 15px #ddd;
   border: 1px solid #ddd;
 }
-
-
-
 
 /* ---- Halt Modal ---- */
 
@@ -2197,23 +2193,16 @@ svg {
   border-bottom: 1px solid #ddd;
   padding: 0 10px 5px;
   outline: none;
-  
 }
-
-
-
 
 /* For the Deliveries Today Section */
 
 .forDeliveriesToday > div {
   width: 19%;
-  
 }
 .forDeliveriesToday section {
   width: 100% !important;
 }
-
-
 
 /* Canvas JS Water Mark Remover */
 
@@ -2227,8 +2216,6 @@ svg {
   height: 20px;
   bottom: 2px;
 }
-
-
 
 /* Admin Board Page */
 
@@ -2267,23 +2254,136 @@ svg {
   margin-bottom: 0 !important;
   width: 35%;
   font-weight: bold;
-  
 }
 .adminModalMiddleSection input {
   width: 65%;
-  padding: 3px 10px;
+  padding: 4px 10px;
   outline: none;
-  border: 1px solid #ddd;
-  box-shadow: 0px 2px 5px #ddd;
+  border: 2px solid rgba(153, 153, 153, 0.603);
+  /* box-shadow: 0px 2px 5px #ddd; */
   color: #555;
+  border-radius: 8px;
 }
 .adminModalMiddleSection select {
-  width: 65%;
-  padding: 3px 10px;
+  /* width: 65%; */
+  flex-grow: 1;
+  padding: 5px 10px;
   outline: none;
-  border: 1px solid #ddd;
-  box-shadow: 0px 2px 5px #ddd;
+  border: 2px solid rgba(153, 153, 153, 0.603);
+  /* box-shadow: 0px 2px 5px #ddd; */
   color: #555;
+  border-radius: 8px;
+}
+.addNewAdminModal {
+  min-height: 80vh !important;
+  justify-content: center;
+}
+.addNewAdminModal > .headingSection {
+  margin-bottom: 30px;
+}
+.addNewAdminLabels {
+  width: 85% !important;
+  margin: 0 auto;
+}
+.addNewAdminLabels2 {
+  width: 85% !important;
+  /* margin: 0 auto; */
+}
+.authCheckBoxContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items:  flex-start;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.authCheckBoxContainer > h4 {
+  color: #555;
+  width: 35%;
+  font-size: 16px;
+  font-weight: bold;
+  /* text-decoration: underline; */
+  margin-bottom: 10px !important;
+  margin-left: auto;
+}
+.authCheckBoxContainer > section {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0 4px;
+  /* border: 2px solid rgba(153, 153, 153, 0.603); */
+  border-radius: 8px;
+  /* background-color: rgba(0, 0, 0, 0.05); */
+}
+.authCheckboxes {
+  width: 45% !important;
+  /* margin: 0 auto; */
+  justify-content: flex-start !important;
+  /* display: grid;
+  grid-template-columns: 2em auto;
+  gap: 0.5em; */
+  margin-bottom: 20px !important;
+  cursor: pointer;
+  align-items: flex-end;
+}
+.authCheckboxes > input {
+  display: none;
+  width: auto !important;
+  /* margin-right: 10px;
+  cursor: pointer; */
+}
+.authCheckboxes > i {
+  margin-right: 8px;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  /* box-shadow: 0px 3px 10px #ddd; */
+}
+.authCheckboxes > p {
+  margin-bottom: 0 !important;
+  color: #999;
+  width: auto;
+  /* font-size: 18px; */
+  text-align: left;
+  font-weight: normal;
+}
+.checkDisplayNone {
+  visibility: hidden;
+}
+.checkDisplayVisible {
+  visibility: visible;
+}
+.adminModalButtonSection {
+  width: 75% !important;
+}
+.adminModalButtonSection > div {
+  width: 100%;
+}
+.adminModalButtonSection button {
+  width: 100%;
+  padding: 8px;
+}
+.forThatAddIcon > input {
+  width: auto !important;
+  flex-grow: 1;
+}
+.forThatAddIcon > div {
+  border-radius: 50% ;
+  background-color: #555;
+  color: white;
+  /* padding: 3px 5px; */
+  cursor: pointer;
+  border: none;
+  /* font-size: 14px; */
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-weight: bold; */
+  background-color: royalblue;
+  vertical-align: middle;
 }
 .adminModalEditBtn {
   background-color: royalblue;
@@ -2346,7 +2446,7 @@ svg {
 .adminBoardIconDiv1:hover {
   box-shadow: 0px 3px 10px rgb(0 0 0 / 16%) inset;
 }
-.adminBoardIconDiv1 i{
+.adminBoardIconDiv1 i {
   margin-left: 10px;
 }
 #forResidentialHistory {
@@ -2356,10 +2456,7 @@ svg {
 #forResidentialHistory h2 {
   font-size: 20px;
   margin-bottom: 10px;
-} 
-
-
-
+}
 
 /* Notification Page */
 
@@ -2433,7 +2530,7 @@ svg {
   box-shadow: 0px 3px 5px rgb(0 0 0 / 16%);
   /* background-color: white; */
   /* background-color: rgb(248, 248, 248); */
-  background: #FAF9F6;
+  background: #faf9f6;
   color: #015e8b;
   font-weight: 600;
   cursor: pointer;
@@ -2476,7 +2573,7 @@ svg {
   width: 100%;
   font-weight: bold;
   color: #555;
-} 
+}
 .afterProceedNotificationModal {
   position: relative;
 }

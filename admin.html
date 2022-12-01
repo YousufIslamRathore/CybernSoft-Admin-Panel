@@ -562,51 +562,68 @@
     <!-- Add New -->
 
     <section class="modal fade" id="addNewAdmin">
-      <div class="modal-dialog modal-md">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content forBorderRadius">
-          <section class="modal-body wholeModal wholeModal2 wholeAdminModal">
+          <section class="modal-body wholeModal wholeModal2 wholeAdminModal addNewAdminModal">
             <section class="headingSection">
               <h1>Add New</h1>
             </section>
 
             <section class="adminModalMiddleSection">
               <form action="">
-                <label>
+                <label class="addNewAdminLabels">
                   <p>Name :</p>
                   <input type="text" />
                 </label>
-                <label>
+                <label class="addNewAdminLabels">
                   <p>CNIC :</p>
                   <input type="text" />
                 </label>
-                <label>
+                <label class="addNewAdminLabels">
                   <p>Contact :</p>
                   <input type="text" />
                 </label>
-                <label>
+                <label class="addNewAdminLabels">
                   <p>Email :</p>
                   <input type="email">
                 </label>
-                <label>
+                <label class="addNewAdminLabels forThatAddIcon">
                   <p>Type :</p>
-                  <select name="adminType" id="">
+                  <select name="adminType" id="add_type">
                     <option value="#" selected disabled>Select</option>
                     <option value="admin">Admin</option>
                     <option value="subAdmin">Sub-Admin</option>
                   </select>
+                  <input type="text" style="display: none;">
+                  <div onclick="exchangeFields(this)"><i class="fa-solid fa-plus"></i></div>
                 </label>
-                <label>
+                <label class="addNewAdminLabels">
                   <p>Password :</p>
                   <input type="password" value="" />
                   <div>
                     <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px"></i>
                   </div>
                 </label>
+                <div class="authCheckBoxContainer addNewAdminLabels addNewAdminLabels2">
+                  <h4>Select Roles:</h4>
+                  <section>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="usersPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Users</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="ordersPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Orders</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="maintenancePageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Maintenance</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="routesPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Routes</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="userLogsPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">User Logs</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="AdminAuthPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Admin Auth</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="summaryPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Summary</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="notificationPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Notification</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="chatPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Chat</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="unregisteredUsersPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Unregistered Users</p></label>
+                </section>
+                </div>
               </form>
             </section>
 
-            <div class="multipleOrderActionSection">
-              <div><button id="multipleDeliveredBtn">Add Member</button></div>
+            <div class="multipleOrderActionSection adminModalButtonSection">
+              <div><button id="" onclick="addAdmin()">Add Member</button></div>
             </div>
           </section>
         </div>
