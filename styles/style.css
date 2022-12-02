@@ -1888,20 +1888,27 @@ svg {
 /* .wholeModal3 tbody {
   ;
 } */
-
+.modalAddMaintenanceFormSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .modalAddMaintenanceFormSection > div {
   display: flex;
   margin: auto;
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
-  width: 80%;
+  width: 45%;
 }
 .modalAddMaintenanceFormSection p {
   margin-bottom: 0;
   font-weight: bold;
   color: #555;
   width: 130px;
+  font-size: 14px;
 }
 .modalAddMaintenanceFormSection input {
   border: none;
@@ -1920,7 +1927,21 @@ svg {
   border-radius: 5px;
   color: white;
 }
-
+.addAmountMaintenanceModal {
+  position: absolute;
+  right: 30px;
+  font-size: 10px;
+  border: none;
+  background-color: royalblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 3px; */
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
 /* Maintenance Reciept Page */
 
 .receiptWholePage {

@@ -842,23 +842,33 @@
                     disabled
                   />
                 </div>
-                <div style="position: relative;">
-                  <p>Amount :</p>
+                <div>
+                  <p>Total Due :</p>
                   <input
                     type="text"
                     style="outline: none;"
+                    value="20000"
+                    disabled
+                    id="totalDueId"
+                  />
+                  <!-- <button class="customMaintenanceEditBtn" onclick="customMaintenanceAmount(this)">Custom</button> -->
+                </div>
+                <div>
+                  <p>Months :</p>
+                  <input
+                    type="text"
+                    value="4"
+                    disabled
+                  />
+                </div>
+                <div style="position: relative;">
+                  <p>Paying Amount :</p>
+                  <input 
+                    type="text" 
                     value="5000"
                     disabled
                   />
-                  <button class="customMaintenanceEditBtn" onclick="customMaintenanceAmount(this)">Custom</button>
-                </div>
-                <div>
-                  <p>Date :</p>
-                  <input
-                    type="text"
-                    value="14/Oct/2022"
-                    disabled
-                  />
+                  <div class="addAmountMaintenanceModal" onclick="addAmountMaintenance(this)"><i class="fa-solid fa-plus"></i></div>
                 </div>
                 <div>
                   <button class="paidMaintenanceReceipt" onclick="payMaintenanceModal()">Pay Maintenance</button>
