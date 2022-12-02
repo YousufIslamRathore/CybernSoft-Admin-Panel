@@ -453,6 +453,7 @@ function previousPaymentsToggler(clicker) {
     }
     addMaintenanceSection.style.display = "none";
     addMaintenanceSection.style.height = "54px";
+    addMaintenanceSection.style.width = "43%";
     addMaintenanceSection.getElementsByTagName("i")[0].className =
       "fa-solid fa-angle-up";
   } else {
@@ -776,12 +777,12 @@ function addAdminPageSelection(element) {
     element.previousElementSibling.className =
       "fa-solid fa-circle-check checkDisplayVisible";
     // element.style.borderBottom = "1px dashed #999";
-    element.previousElementSibling.previousElementSibling.checked = true
+    element.previousElementSibling.previousElementSibling.checked = true;
   } else {
     element.previousElementSibling.className =
       "fa-solid fa-circle-check checkDisplayNone";
     // element.style.borderBottom = "none";
-    element.previousElementSibling.previousElementSibling.checked = false
+    element.previousElementSibling.previousElementSibling.checked = false;
   }
   // console.log(element.previousElementSibling.checked)
 }
@@ -789,28 +790,35 @@ function addAdminPageSelection(element) {
 function exchangeFields(element) {
   const selectElement = document.getElementById("add_type");
   if (element.firstElementChild.className == "fa-solid fa-plus") {
-    element.firstElementChild.className = "fa-solid fa-check"
-    element.previousElementSibling.style.display = "inline-block"
-    element.previousElementSibling.previousElementSibling.style.display = "none"
+    element.firstElementChild.className = "fa-solid fa-check";
+    element.previousElementSibling.style.display = "inline-block";
+    element.previousElementSibling.previousElementSibling.style.display =
+      "none";
   } else {
-    element.firstElementChild.className = "fa-solid fa-plus"
-    element.previousElementSibling.style.display = "none"
-    element.previousElementSibling.previousElementSibling.style.display = "inline-block"
-    if(element.previousElementSibling.value != "") {
-      var option = document.createElement('option');
-      option.setAttribute('value', "")
-      option.innerHTML = element.previousElementSibling.value
-      selectElement.append(option)
+    element.firstElementChild.className = "fa-solid fa-plus";
+    element.previousElementSibling.style.display = "none";
+    element.previousElementSibling.previousElementSibling.style.display =
+      "inline-block";
+    if (element.previousElementSibling.value != "") {
+      var option = document.createElement("option");
+      option.setAttribute("value", "");
+      option.innerHTML = element.previousElementSibling.value;
+      selectElement.append(option);
       // console.log(selectElement)
-      element.previousElementSibling.value = ""
+      element.previousElementSibling.value = "";
     }
   }
 }
 
 function addAmountMaintenance(element) {
   var totalDueId = document.getElementById("totalDueId");
-  // if(element.previousElementSibling.value <= totalDueId.value) {
-    element.previousElementSibling.value = +element.previousElementSibling.value + 5000;
-    // console.log("yes")
-  // } 
+  var dueMonths = document.getElementById("dueMonths").value;
+  var dueMonthsArray = dueMonths.split(", ");
+  var initialAmount = +totalDueId.value / +dueMonthsArray.length;
+  var payingMonths = document.getElementById("payingMonths");
+  if (+element.previousElementSibling.value < +totalDueId.value) {
+    element.previousElementSibling.value =
+      +element.previousElementSibling.value + +initialAmount;
+    payingMonths.value = "0" + (+payingMonths.value + 1);
+  }
 }

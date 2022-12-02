@@ -843,22 +843,38 @@
                   />
                 </div>
                 <div>
-                  <p>Total Due :</p>
+                  <p>Last Paid Month : </p>
+                  <input 
+                    type="text" 
+                    value="August"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Due Month(s) :</p>
                   <input
                     type="text"
-                    style="outline: none;"
+                    value="Sept, Oct, Nov, Dec"
+                    disabled
+                    id="dueMonths"
+                  />
+                </div>
+                <div>
+                  <p>Due Amount :</p>
+                  <input
+                    type="text"
                     value="20000"
                     disabled
                     id="totalDueId"
                   />
-                  <!-- <button class="customMaintenanceEditBtn" onclick="customMaintenanceAmount(this)">Custom</button> -->
                 </div>
                 <div>
-                  <p>Months :</p>
-                  <input
+                  <p>Paying Month(s) :</p>
+                  <input 
                     type="text"
-                    value="4"
+                    value="01" 
                     disabled
+                    id="payingMonths"
                   />
                 </div>
                 <div style="position: relative;">
@@ -869,6 +885,14 @@
                     disabled
                   />
                   <div class="addAmountMaintenanceModal" onclick="addAmountMaintenance(this)"><i class="fa-solid fa-plus"></i></div>
+                </div>
+                <div>
+                  <p>Date :</p>
+                  <input 
+                    type="text" 
+                    value="02/Dec/2022"
+                    disabled
+                  />
                 </div>
                 <div>
                   <button class="paidMaintenanceReceipt" onclick="payMaintenanceModal()">Pay Maintenance</button>
