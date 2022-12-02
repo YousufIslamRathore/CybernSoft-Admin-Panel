@@ -33,44 +33,93 @@
       <!-- Side Bar -->
       <section class="usersPageSideBar">
         <h1>
-          <img src="./images/Logo2.png" alt="" width="80%" />
+          <img src="./images/Logo2_.png" alt="" width="80%"  />
         </h1>
-
+  
         <section class="sideBarListContainer">
+  
           <div class="pageSelectors" onclick="pageSelector(0)">
-            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <?php $visible = ""; if($page == "newuser")$visible = "visible"?>
+  
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
             <section>
               <i class="fa-solid fa-users"></i>
             </section>
-            <p>Users</p>
+            <p onclick="newUser()">Users</p>
           </div>
           <div class="pageSelectors" onclick="pageSelector(1)">
-            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <?php $visible = ""; if($page == "orders")$visible = "visible"?>
+  
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
             <section>
               <i class="fa-solid fa-truck-fast"></i>
             </section>
-            <p>Tankers</p>
+            <p onclick="orders()">Tankers</p>
           </div>
           <div class="pageSelectors" onclick="pageSelector(2)">
-            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <?php $visible = ""; if($page == "maintenance")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?> "></i>
             <section>
               <i class="fa-solid fa-coins"></i>
             </section>
-            <p>Maintenance</p>
+            <p onclick="maintenance()">Maintenance</p>
           </div>
           <div class="pageSelectors" onclick="pageSelector(3)">
-            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <?php $visible = ""; if($page == "routes")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-coins"></i>
+            </section>
+            <p onclick="routes()">Routes</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(4)">
+            <?php $visible = ""; if($page == "user_logs")$visible = "visible"?>
+  
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
             <section>
               <i class="fa-solid fa-chart-simple"></i>
             </section>
-            <p>Logs</p>
+            <p onclick="user_logs()">User Logs</p>
           </div>
-          <div class="pageSelectors" onclick="pageSelector(4)">
+          <div class="pageSelectors" onclick="pageSelector(5)">
+            <?php $visible = ""; if($page == "admin")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-user-cog"></i>
+              <!-- <i class="fas fa-user-crown"></i> -->
+            </section>
+            <p onclick="admin()">Admin Auth</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(6)">
             <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
             <section>
               <i class="fa-solid fa-chart-pie"></i>
             </section>
             <p>Summary</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(7)">
+            <?php $visible = ""; if($page == "notification")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-bullhorn"></i>
+            </section>
+            <p onclick="notification()">Notification</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(8)">
+            <?php $visible = ""; if($page == "inboxPage")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="far fa-comments"></i>
+            </section>
+            <p onclick="inboxPage()">Chat</p>
+          </div>
+  
+          <div class="pageSelectors" onclick="pageSelector(9)">
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <section>
+              <i class="fa-solid fa-chart-pie"></i>
+            </section>
+            <p onclick="logout()">Logout</p>
           </div>
         </section>
       </section>
