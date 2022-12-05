@@ -1,16 +1,83 @@
+// var options = {
+//     chart: {
+//       type: 'line'
+//     },
+//     series: [{
+//       name: 'sales',
+//       data: [30,40,35,50,49,60,70,91,125]
+//     }],
+//     xaxis: {
+//       categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+//     }
+//   }
+
+//   var chart = new ApexCharts(document.querySelector("#apexChart"), options);
+
+//   chart.render();
+
 var options = {
-    chart: {
-      type: 'line'
+  series: [
+    {
+      name: "Owners",
+      data: [44, 55, 57, 56, 61, 58],
+      color: "#186eb1",
     },
-    series: [{
-      name: 'sales',
-      data: [30,40,35,50,49,60,70,91,125]
-    }],
-    xaxis: {
-      categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-    }
-  }
-  
-  var chart = new ApexCharts(document.querySelector("#chart"), options);
-  
-  chart.render();
+    {
+      name: "Tenants",
+      data: [76, 85, 101, 98, 87, 105],
+      color: "#e5032dbd",
+    },
+    {
+      name: "Unregisters",
+      data: [35, 41, 36, 26, 45, 48],
+      color: "#888",
+    },
+  ],
+  chart: {
+    type: "bar",
+    height: 350,
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: "55%",
+      endingShape: "rounded",
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ["transparent"],
+  },
+  xaxis: {
+    categories: [
+      "Block A",
+      "Block B",
+      "Block R",
+      "Block R1",
+      "Block R2",
+      "Block RG",
+    ],
+  },
+  yaxis: {
+    title: {
+      text: "No. of Houses",
+    },
+  },
+  fill: {
+    opacity: 1,
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return val + " Houses";
+      },
+    },
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#apexChart"), options);
+chart.render();

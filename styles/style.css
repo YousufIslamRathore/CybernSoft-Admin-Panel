@@ -1437,8 +1437,8 @@ svg {
 }
 
 .presentationChartSection > main > div {
-  width: 50%;
-  margin: 0;
+  width: 95%;
+  margin: 0 auto;
 }
 .presentationChartSection > main > section {
   width: 50%;
@@ -2622,3 +2622,10 @@ svg {
   font-weight: bold;
   color: #666;
 }
+
+
+
+/* //// Apex Charts //// */
+/* .apexChartStylingClass {
+  width: 100% !important;
+} */
