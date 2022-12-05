@@ -1,8 +1,11 @@
+ownerCountArray = [44, 55, 57, 56, 61, 58]
+
+
 var options = {
   series: [
     {
       name: "Owners",
-      data: [44, 55, 57, 56, 61, 58],
+      data: ownerCountArray,
       color: "#186eb1",
     },
     {
