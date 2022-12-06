@@ -4,7 +4,10 @@
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
-
+@font-face {
+  font-family: "Boowie";
+  src: url("../font/BOOWIE.ttf");
+}
 body {
   scroll-behavior: smooth;
 }
@@ -114,7 +117,8 @@ tbody tr:nth-child(even) {
   justify-content: center;
   min-height: 100vh;
   /* background: linear-gradient(to right, rgba(1, 255, 158, 0.726), rgba(8, 8, 175, 0.788)); */
-  background-color: #015e8b;
+  /* background-color: #015e8b; */
+  background-color: #045337;
   /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/loginPageImg3.jpg"); */
   /* background-image: url("../images/loginPageImg3.jpg"); */
   background-position: center center;
@@ -259,8 +263,10 @@ tbody tr:nth-child(even) {
   text-transform: uppercase;
   font-weight: bold;
   color: white;
-  background-color: #015e8b;
-  box-shadow: 0px 0px 5px #015e8b;
+  /* background-color: #015e8b;
+  box-shadow: 0px 0px 5px #015e8b; */
+  background-color: #045337;
+  box-shadow: 0px 0px 5px #045337;
   cursor: pointer;
 }
 .loginBtnDiv1 > button:hover {
@@ -280,7 +286,9 @@ tbody tr:nth-child(even) {
   padding: 60px 0;
   margin-bottom: 50px;
 }
-
+.wenergyLogoDiv > h2 {
+  font-family: "Boowie", sans-serif !important;
+}
 .loginCopyRightDiv {
   margin-top: 40px;
   display: flex;

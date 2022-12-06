@@ -40,12 +40,12 @@ var options = {
   },
   xaxis: {
     categories: [
-      "Block A",
-      "Block B",
-      "Block R",
-      "Block R1",
-      "Block R2",
-      "Block RG",
+      "A",
+      "B",
+      "R",
+      "R1",
+      "R2",
+      "RG",
     ],
   },
   yaxis: {
