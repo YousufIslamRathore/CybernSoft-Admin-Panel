@@ -105,8 +105,15 @@
           </section>
           <p onclick="inboxPage()">Chat</p>
         </div>
-
         <div class="pageSelectors" onclick="pageSelector(9)">
+          <?php $visible = ""; if($page == "inboxPage")$visible = "visible"?>
+          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+          <section>
+            <i class="far fa-comments"></i>
+          </section>
+          <p onclick="inboxPage()">Utilities & Bills</p>
+        </div>
+        <div class="pageSelectors" onclick="pageSelector(10)">
           <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
           <section>
             <i class="fa-solid fa-chart-pie"></i>
@@ -301,7 +308,7 @@
           <section class="presentationChartSection">
             <main>
               <div class="apexChartStylingClass">
-                <h2>All Users (Block-Wise)</h2>
+                <h2>All Residents (Block-Wise)</h2>
                 <div id="apexChart"></div>
                 <!-- <canvas id="lineChart"></canvas> -->
               </div>
