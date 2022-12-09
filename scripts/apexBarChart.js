@@ -1,5 +1,4 @@
-ownerCountArray = [44, 55, 57, 56, 61, 58]
-
+var ownerCountArray = [44, 55, 57, 56, 61, 58]
 
 var options = {
   series: [
@@ -47,11 +46,23 @@ var options = {
       "R2",
       "RG",
     ],
+    labels: {
+      style: {
+        fontSize: '14px',
+        fontWeight: 600,
+      }
+    }
   },
   yaxis: {
     title: {
       text: "No. of Houses",
     },
+    labels: {
+      style: {
+        fontSize: '13px',
+        fontWeight: 600,
+      }
+    }
   },
   fill: {
     opacity: 1,

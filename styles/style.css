@@ -2656,3 +2656,7 @@ svg {
 /* .apexChartStylingClass {
   width: 100% !important;
 } */
+.apexChartStylingClass > h2 {
+  font-size: 18px;
+  text-align: center;
+}
