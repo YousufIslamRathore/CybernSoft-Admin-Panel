@@ -2,353 +2,309 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Users</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./styles/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <section class="usersPage">
-    <!-- Side Bar -->
-    <section class="usersPageSideBar">
-      <h1>
-        <img src="./images/ZSZ - White.png" alt="" width="28%"  />
-        <span><span class="zeeshan">ZEESHAN</span><br /><span class="saleem">SALEEM</span><br /><span class="zaki">ZAKI</span></span>
-      </h1>
+    <section class="usersPage">
+        <!-- Side Bar -->
+        <section class="usersPageSideBar">
+            <h1>
+                <img src="./images/ZSZ - White.png" alt="" width="28%" />
+                <span><span class="zeeshan">ZEESHAN</span><br /><span class="saleem">SALEEM</span><br /><span
+                        class="zaki">ZAKI</span></span>
+            </h1>
 
-      <section class="sideBarListContainer">
+            <section class="sideBarListContainer">
 
-        <div class="pageSelectors" onclick="pageSelector(0)">
-          <?php $visible = ""; if($page == "newuser")$visible = "visible"?>
+                <div class="pageSelectors" onclick="pageSelector(0)">
+                    <?php $visible = ""; if($page == "newuser")$visible = "visible"?>
 
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
-          <section>
-            <i class="fa-solid fa-users"></i>
-          </section>
-          <p onclick="newUser()">Users</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(1)">
-          <?php $visible = ""; if($page == "orders")$visible = "visible"?>
-
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
-          <section>
-            <i class="fa-solid fa-truck-fast"></i>
-          </section>
-          <p onclick="orders()">Tankers</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(2)">
-          <?php $visible = ""; if($page == "maintenance")$visible = "visible"?>
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?> "></i>
-          <section>
-            <i class="fa-solid fa-coins"></i>
-          </section>
-          <p onclick="maintenance()">Maintenance</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(3)">
-          <?php $visible = ""; if($page == "routes")$visible = "visible"?>
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
-          <section>
-            <i class="fa-solid fa-coins"></i>
-          </section>
-          <p onclick="routes()">Routes</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(4)">
-          <?php $visible = ""; if($page == "user_logs")$visible = "visible"?>
-
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
-          <section>
-            <i class="fa-solid fa-chart-simple"></i>
-          </section>
-          <p onclick="user_logs()">User Logs</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(5)">
-          <?php $visible = ""; if($page == "admin")$visible = "visible"?>
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
-          <section>
-            <i class="fa-solid fa-user-cog"></i>
-            <!-- <i class="fas fa-user-crown"></i> -->
-          </section>
-          <p onclick="admin()">Admin Auth</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(6)">
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
-          <section>
-            <i class="fa-solid fa-chart-pie"></i>
-          </section>
-          <p>Summary</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(7)">
-          <?php $visible = ""; if($page == "notification")$visible = "visible"?>
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
-          <section>
-            <i class="fa-solid fa-bullhorn"></i>
-          </section>
-          <p onclick="notification()">Notification</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(8)">
-          <?php $visible = ""; if($page == "inboxPage")$visible = "visible"?>
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
-          <section>
-            <i class="far fa-comments"></i>
-          </section>
-          <p onclick="inboxPage()">Chat</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(9)">
-          <?php $visible = ""; if($page == "inboxPage")$visible = "visible"?>
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
-          <section>
-            <i class="far fa-comments"></i>
-          </section>
-          <p onclick="inboxPage()">Utilities & Bills</p>
-        </div>
-        <div class="pageSelectors" onclick="pageSelector(10)">
-          <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
-          <section>
-            <i class="fa-solid fa-chart-pie"></i>
-          </section>
-          <p onclick="logout()">Logout</p>
-        </div>
-      </section>
-    </section>
-    <section class="usersPageMainPanel">
-
-      <section class="usersBodySection">
-        <div>
-          <section class="usersFancyDisplaySection1" id="userSelection">
-            <div class="selectedUserSection" onclick="selectedUserSection(0)" id="All-Users-Selector">
-              <div style="background-color: white; color: #186eb1">
-                <i class="fa-solid fa-users"></i>
-              </div>
-              <section>
-                <h1>746</h1>
-                <h2>All Users</h2>
-              </section>
-            </div>
-            <div onclick="selectedUserSection(1)" id="Active-Users-Selector">
-              <div style="background-color: white; color: #61b95b">
-                <i class="fa-solid fa-check"></i>
-              </div>
-              <section>
-                <h1>740</h1>
-                <h2>Active Users</h2>
-              </section>
-            </div>
-            <div onclick="selectedUserSection(2)" id="Requested-Users-Selector">
-              <div style="background-color: white; color: #fcc910">
-                <i class="fa-solid fa-exclamation"></i>
-              </div>
-              <section>
-                <h1>6</h1>
-                <h2>Requested Users</h2>
-              </section>
-            </div>
-            <div onclick="selectedUserSection(3)" id="Blocked-Users-Selector">
-              <div style="background-color: white; color: #ee405e">
-                <i class="fa-solid fa-ban"></i>
-              </div>
-              <section>
-                <h1>1</h1>
-                <h2>Block Users</h2>
-              </section>
-            </div>
-            <div onclick="selectedUserSection(4)" id="Unregistered-Users-Selector">
-              <div style="background-color: white; color: #888">
-                <i class="fa-solid fa-question"></i>
-              </div>
-              <section>
-                <h1>1</h1>
-                <h2>Unregistered</h2>
-              </section>
-            </div>
-          </section>
-
-          <section class="presentationChartSection">
-            <main>
-              <div class="apexChartStylingClass">
-                <h2>All Residents (Block-Wise)</h2>
-                <div id="apexChart"></div>
-              </div>
-            </main>
-
-            <section style="width: 30%;">
-              <section  style="margin: 0 5px 40px auto !important;">
-                <div class="ownerMainSection" onclick="selectedUserTypeSection(0)">
-                  <div class="skill">
-                    <div class="outer">
-                      <div class="inner">
-                        <div id="ownerCount">65%</div>
-                      </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="110px" height="110px">
-                      <defs>
-                        <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#e91e63" />
-                          <stop offset="100%" stop-color="#673ab7" />
-                        </linearGradient>
-                      </defs>
-                      <circle cx="55" cy="55" r="45" stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <div class="userTypeHeadingDiv">
-                    <h1 id="ownerH1">Owners</h1>
-                  </div>
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+                    <section>
+                        <i class="fa-solid fa-users"></i>
+                    </section>
+                    <p onclick="newUser()">Users</p>
                 </div>
-              </section>
-              <section style="margin: 0 5px 40px auto !important;">
-                <div class="tenantMainSection" onclick="selectedUserTypeSection(1)">
-                  <div class="skill">
-                    <div class="outer">
-                      <div class="inner">
-                        <div id="tenantCount">35%</div>
-                      </div>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="110px" height="110px">
-                      <defs>
-                        <linearGradient id="GradientColor">
-                          <stop offset="0%" stop-color="#e91e63" />
-                          <stop offset="100%" stop-color="#673ab7" />
-                        </linearGradient>
-                      </defs>
-                      <circle cx="55" cy="55" r="45" stroke-linecap="round" />
-                    </svg>
-                  </div>
-                  <div class="userTypeHeadingDiv">
-                    <h1 id="tenantH1">Tenants</h1>
-                  </div>
+                <div class="pageSelectors" onclick="pageSelector(1)">
+                    <?php $visible = ""; if($page == "orders")$visible = "visible"?>
+
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+                    <section>
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </section>
+                    <p onclick="orders()">Tankers</p>
                 </div>
-              </section>
+                <div class="pageSelectors" onclick="pageSelector(2)">
+                    <?php $visible = ""; if($page == "maintenance")$visible = "visible"?>
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?> "></i>
+                    <section>
+                        <i class="fa-solid fa-coins"></i>
+                    </section>
+                    <p onclick="maintenance()">Maintenance</p>
+                </div>
+                <div class="pageSelectors" onclick="pageSelector(3)">
+                    <?php $visible = ""; if($page == "routes")$visible = "visible"?>
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+                    <section>
+                        <i class="fa-solid fa-coins"></i>
+                    </section>
+                    <p onclick="routes()">Routes</p>
+                </div>
+                <div class="pageSelectors" onclick="pageSelector(4)">
+                    <?php $visible = ""; if($page == "user_logs")$visible = "visible"?>
+
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+                    <section>
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </section>
+                    <p onclick="user_logs()">User Logs</p>
+                </div>
+                <div class="pageSelectors" onclick="pageSelector(5)">
+                    <?php $visible = ""; if($page == "admin")$visible = "visible"?>
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+                    <section>
+                        <i class="fa-solid fa-user-cog"></i>
+                    </section>
+                    <p onclick="admin()">Admin Auth</p>
+                </div>
+                <div class="pageSelectors" onclick="pageSelector(6)">
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+                    <section>
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </section>
+                    <p>Summary</p>
+                </div>
+                <div class="pageSelectors" onclick="pageSelector(7)">
+                    <?php $visible = ""; if($page == "notification")$visible = "visible"?>
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+                    <section>
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </section>
+                    <p onclick="notification()">Notification</p>
+                </div>
+                <div class="pageSelectors" onclick="pageSelector(8)">
+                    <?php $visible = ""; if($page == "inboxPage")$visible = "visible"?>
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+                    <section>
+                        <i class="far fa-comments"></i>
+                    </section>
+                    <p onclick="inboxPage()">Chat</p>
+                </div>
+                <div class="pageSelectors" onclick="pageSelector(9)">
+                    <?php $visible = ""; if($page == "inboxPage")$visible = "visible"?>
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+                    <section>
+                        <i class="far fa-comments"></i>
+                    </section>
+                    <p onclick="inboxPage()">Utilities & Bills</p>
+                </div>
+                <div class="pageSelectors" onclick="pageSelector(10)">
+                    <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+                    <section>
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </section>
+                    <p onclick="logout()">Logout</p>
+                </div>
             </section>
-          </section>
+        </section>
+        <section class="usersPageMainPanel">
 
-          <section class="usersMainListingSection">
-            <section class="usersSearchSection">
-              <section class="userSearchSectionFirstSection">
-                <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
-                  All Users
-                </h2>
-                <div class="besideHeadingDiv">
-                  <button onclick="multipleSelectionFunction(this)"><i class="fa-solid fa-bars"></i>Select Multiple</button>
-                </div>
-              </section>
-              <section class="searchSectionContainer">
-                <div class="searchBarContainer">
-                  <div>Search User</div>
-                  <section><input type="search" /></section>
-                </div>
+            <section class="usersBodySection">
                 <div>
-                  <select name="userType" id="" class="userTypeDropDown">
-                    <option value="Select" disabled selected>
-                      Select
-                    </option>
-                    <option value="All">All</option>
-                    <option value="Owner">Owner</option>
-                    <option value="Tenant">Tenant</option>
-                  </select>
-                </div>
-                <div>
-                  <input type="date" name="date" id="" class="userTypeDropDown dateSearchField"> 
-                </div>
-                <div><button style="margin-right: 10px">Search</button></div>
-                <div><button class="importData">Import Data</button></div>
-              </section>
-            </section>
+                    <section class="usersFancyDisplaySection1" id="userSelection">
+                        <div class="selectedUserSection" onclick="selectedUserSection(0)" id="All-Bills-Selector">
+                            <div style="background-color: white; color: #186eb1">
+                                <i class="fa-solid fa-money-bills"></i>
+                            </div>
+                            <section>
+                                <h1>746</h1>
+                                <h2>All Bills</h2>
+                            </section>
+                        </div>
+                        <div onclick="selectedUserSection(1)" id="Paid-Bills-Selector">
+                            <div style="background-color: white; color: #61b95b">
+                                <i class="fa-solid fa-check-double"></i>
+                            </div>
+                            <section>
+                                <h1>530</h1>
+                                <h2>Paid Bills</h2>
+                            </section>
+                        </div>
+                        <div onclick="selectedUserSection(2)" id="Unpaid-Bills-Selector">
+                            <div style="background-color: white; color: #fcc910">
+                                <i class="fa-solid fa-exclamation"></i>
+                            </div>
+                            <section>
+                                <h1>300</h1>
+                                <h2>Unpaid Bills</h2>
+                            </section>
+                        </div>
+                    </section>
 
-            <section class="usersListSection">
-              <table>
-                <thead>
-                  <tr>
-                    <th class="firstCell">Unit no.</th>
-                    <th>Full Name</th>
-                    <th>CNIC</th>
-                    <th>Contact</th>
-                    <th>User Type</th>
-                    <th class="lastCell">Active Status</th>
-                  </tr>
-                </thead>
-                <tbody id="orderTableBody">
-                  <tr data-toggle="modal" data-target="#userDetails">
-                    <td class="firstCell">A-01</td>
-                    <td>Yousuf Islam</td>
-                    <td>42201-2729672-7</td>
-                    <td>03082028980</td>
-                    <td class="ownerCell">Owner</td>
-                    <td class="lastCell">
-                      <div class="suspended">Suspended</div>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#userDetails">
-                    <td class="firstCell">A-01</td>
-                    <td>Yousuf Islam</td>
-                    <td>42201-2729672-7</td>
-                    <td>03082028980</td>
-                    <td class="ownerCell">Owner</td>
-                    <td class="lastCell">
-                      <div class="active">Active</div>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#userDetails">
-                    <td class="firstCell">A-01</td>
-                    <td>Yousuf Islam</td>
-                    <td>42201-2729672-7</td>
-                    <td>03082028980</td>
-                    <td class="tenantCell">Tenant</td>
-                    <td class="lastCell">
-                      <div class="blocked">Blocked</div>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#userDetails">
-                    <td class="firstCell">A-01</td>
-                    <td>Yousuf Islam</td>
-                    <td>42201-2729672-7</td>
-                    <td>03082028980</td>
-                    <td class="tenantCell">Tenant</td>
-                    <td class="lastCell">
-                      <div class="active">Active</div>
-                    </td>
-                  </tr>
-                  <tr data-toggle="modal" data-target="#userDetails">
-                    <td class="firstCell">A-01</td>
-                    <td>Yousuf Islam</td>
-                    <td>42201-2729672-7</td>
-                    <td>03082028980</td>
-                    <td class="ownerCell">Owner</td>
-                    <td class="lastCell">
-                      <div class="suspended">Suspended</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
-                <button data-toggle="modal" data-target="#multipleOrderSelected">Action</button>
-              </div>
+                    <!-- <section class="presentationChartSection">
+                        <main>
+                            <div class="apexChartStylingClass">
+                                <h2>All Residents (Block-Wise)</h2>
+                                <div id="apexChart"></div>
+                            </div>
+                        </main>
+
+                        <section style="width: 30%;">
+                            <section style="margin: 0 5px 40px auto !important;">
+                                <div class="ownerMainSection" onclick="selectedUserTypeSection(0)">
+                                    <div class="skill">
+                                        <div class="outer">
+                                            <div class="inner">
+                                                <div id="ownerCount">65%</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="110px"
+                                            height="110px">
+                                            <defs>
+                                                <linearGradient id="GradientColor">
+                                                    <stop offset="0%" stop-color="#e91e63" />
+                                                    <stop offset="100%" stop-color="#673ab7" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="55" cy="55" r="45" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="userTypeHeadingDiv">
+                                        <h1 id="ownerH1">Owners</h1>
+                                    </div>
+                                </div>
+                            </section>
+                            <section style="margin: 0 5px 40px auto !important;">
+                                <div class="tenantMainSection" onclick="selectedUserTypeSection(1)">
+                                    <div class="skill">
+                                        <div class="outer">
+                                            <div class="inner">
+                                                <div id="tenantCount">35%</div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="110px"
+                                            height="110px">
+                                            <defs>
+                                                <linearGradient id="GradientColor">
+                                                    <stop offset="0%" stop-color="#e91e63" />
+                                                    <stop offset="100%" stop-color="#673ab7" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle cx="55" cy="55" r="45" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                    <div class="userTypeHeadingDiv">
+                                        <h1 id="tenantH1">Tenants</h1>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                    </section> -->
+
+                    <section class="usersMainListingSection">
+                        <section class="usersSearchSection">
+                            <section class="userSearchSectionFirstSection">
+                                <h2 id="usersListMainHeading" onclick="usersListMainHeading()">
+                                    All Bills
+                                </h2>
+                                <div class="besideHeadingDiv">
+                                    <button onclick="multipleSelectionFunction(this)"><i
+                                            class="fa-solid fa-bars"></i>Select Multiple</button>
+                                </div>
+                            </section>
+                            <section class="searchSectionContainer">
+                                <div class="searchBarContainer">
+                                    <div>Search</div>
+                                    <section><input type="search" /></section>
+                                </div>
+                                <div>
+                                    <select name="userType" id="" class="userTypeDropDown">
+                                        <option value="Select" disabled selected>
+                                            Select Month
+                                        </option>
+                                        <option value="January">January</option>
+                                        <option value="February">February</option>
+                                        <option value="March">March</option>
+                                        <option value="April">April</option>
+                                        <option value="May">May</option>
+                                        <option value="June">June</option>
+                                        <option value="July">July</option>
+                                        <option value="August">August</option>
+                                        <option value="September">September</option>
+                                        <option value="October">October</option>
+                                        <option value="November">November</option>
+                                        <option value="December">December</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <input type="date" name="date" id="" class="userTypeDropDown dateSearchField">
+                                </div>
+                                <!-- <div><button style="margin-right: 10px">Search</button></div> -->
+                                <div><button class="importData">Import Data</button></div>
+                            </section>
+                        </section>
+
+                        <section class="usersListSection">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="firstCell">Unit no.</th>
+                                        <th>Status</th>
+                                        <th>Payment</th>
+                                        <th class="lastCell">Due Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orderTableBody" class="gasBillTablebody">
+                                    <tr data-toggle="modal" data-target="#userDetails">
+                                        <td class="firstCell">A-01</td>
+                                        <td>
+                                            <div class="suspended">Suspended</div>
+                                        </td>
+                                        <td>4,500</td>
+                                        <td class="lastCell">
+                                            09-Dec-2022
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
+                                <button data-toggle="modal" data-target="#multipleOrderSelected">Action</button>
+                            </div>
+                        </section>
+                    </section>
+                </div>
             </section>
-          </section>
-        </div>
-      </section>
+        </section>
     </section>
-  </section>
 
 </body>
 
 <script src="./scripts/app.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-  integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"></script>
 
 </html>

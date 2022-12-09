@@ -655,15 +655,15 @@ tbody tr:nth-child(even) {
   color: white;
   /* color: #333 !important; */
 }
-#All-Users-Selector {
+#All-Users-Selector, #All-Bills-Selector {
   /* background-color: #186eb1; */
   background-color: #186fb180;
 }
-#Active-Users-Selector {
+#Active-Users-Selector, #Paid-Bills-Selector {
   /* background-color: #61b95b; */
   background-color: #61b95b80;
 }
-#Requested-Users-Selector {
+#Requested-Users-Selector, #Unpaid-Bills-Selector {
   /* background-color: #fcc910; */
   background-color: #fcc91080;
 }
@@ -1586,6 +1586,9 @@ svg {
 }
 .notificationModalAfterHeading::-webkit-scrollbar {
   width: 10px !important;
+}
+.gasBillTablebody::-webkit-scrollbar {
+  width: 5px;
 }
 
 .haltSection {
