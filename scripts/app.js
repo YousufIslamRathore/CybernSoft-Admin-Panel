@@ -822,3 +822,14 @@ function addAmountMaintenance(element) {
     payingMonths.value = "0" + (+payingMonths.value + 1);
   }
 }
+
+function paymentMethod(input) {
+  const billCashPayment = document.getElementById("billCashPayment");
+  const billChequePayment = document.getElementById("billChequePayment");
+  const chequeNoId = document.getElementById("chequeNoId");
+  if(billChequePayment.checked == true) {
+    chequeNoId.style.display = "flex"
+  } else {
+    chequeNoId.style.display = "none"
+  }
+}

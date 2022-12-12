@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="usersPage">
+      <!-- Side Bar -->
+      <section class="usersPageSideBar">
+        <h1>
+          <img src="./images/Logo2_.png" alt="" width="80%"  />
+        </h1>
+  
+        <section class="sideBarListContainer">
+  
+          <div class="pageSelectors" onclick="pageSelector(0)">
+            <?php $visible = ""; if($page == "newuser")$visible = "visible"?>
+  
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-users"></i>
+            </section>
+            <p onclick="newUser()">Users</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(1)">
+            <?php $visible = ""; if($page == "orders")$visible = "visible"?>
+  
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-truck-fast"></i>
+            </section>
+            <p onclick="orders()">Tankers</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(2)">
+            <?php $visible = ""; if($page == "maintenance")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?> "></i>
+            <section>
+              <i class="fa-solid fa-coins"></i>
+            </section>
+            <p onclick="maintenance()">Maintenance</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(3)">
+            <?php $visible = ""; if($page == "routes")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-coins"></i>
+            </section>
+            <p onclick="routes()">Routes</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(4)">
+            <?php $visible = ""; if($page == "user_logs")$visible = "visible"?>
+  
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-chart-simple"></i>
+            </section>
+            <p onclick="user_logs()">User Logs</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(5)">
+            <?php $visible = ""; if($page == "admin")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-user-cog"></i>
+              <!-- <i class="fas fa-user-crown"></i> -->
+            </section>
+            <p onclick="admin()">Admin Auth</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(6)">
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <section>
+              <i class="fa-solid fa-chart-pie"></i>
+            </section>
+            <p>Summary</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(7)">
+            <?php $visible = ""; if($page == "notification")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="fa-solid fa-bullhorn"></i>
+            </section>
+            <p onclick="notification()">Notification</p>
+          </div>
+          <div class="pageSelectors" onclick="pageSelector(8)">
+            <?php $visible = ""; if($page == "inboxPage")$visible = "visible"?>
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
+            <section>
+              <i class="far fa-comments"></i>
+            </section>
+            <p onclick="inboxPage()">Chat</p>
+          </div>
+  
+          <div class="pageSelectors" onclick="pageSelector(9)">
+            <i class="fa-solid fa-circle selectedSideBarCirclePointer"></i>
+            <section>
+              <i class="fa-solid fa-chart-pie"></i>
+            </section>
+            <p onclick="logout()">Logout</p>
+          </div>
+        </section>
+      </section>
+      <section class="usersPageMainPanel" id="orderPageMainPanel">
+        <!-- <section class="topHeaderSection">
+          <div class="adminLoginProfileDiv">
+            <div class="profilePicIconDiv">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h3>Yousuf Islam Rathore</h3>
+            <div>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </section> -->
+
+        <section class="usersBodySection">
+          <div>
+
+            <h2 class="adminPanelMainHeading">Admin Panel</h2>
+
+            <section class="usersMainListingSection adminListingSection">
+              <section class="usersSearchSection">
+                <section class="userSearchSectionFirstSection" style="margin-bottom: 12px;">
+                  <!-- <h2 id="usersListMainHeading">Admin List</h2> -->
+                  <!-- <div style="margin-right: 30px">
+                    <button
+                      class="importData"
+                      style="background-color: royalblue; width: 170px;"
+                      data-toggle="modal"
+                      data-target="#addNewAdmin"
+                    >
+                      Add New
+                    </button>
+                  </div> -->
+                </section>
+
+                <!-- <section>
+                  <div
+                    class="besideHeadingDiv"
+                    style="
+                      display: flex;
+                      justify-content: flex-end;
+                      align-items: center;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <button onclick="multipleSelectionFunction(this)">
+                      <i class="fa-solid fa-bars"></i>Select Multiple
+                    </button>
+                  </div>
+                </section> -->
+
+                <section class="searchSectionContainer">
+                  <div class="searchBarContainer">
+                    <div>Search</div>
+                    <section><input type="search" /></section>
+                  </div>
+                  <!-- <div>
+                    <select name="Date" id="" class="userTypeDropDown">
+                      <option value="Select" disabled selected>Select</option>
+                      <option value="ID">ID</option>
+                      <option value="Name">Name</option>
+                      <option value="TankerType">Tanker Type</option>
+                      <option value="to">To</option>
+                    </select>
+                  </div> -->
+                  <div><button style="margin-right: 10px">Search</button></div>
+
+                  <div>
+                    <button
+                      class="importData"
+                      style="background-color: royalblue; width: 170px;"
+                      data-toggle="modal"
+                      data-target="#addNewAdmin">
+                      Add New
+                    </button>
+                  </div>
+                  <!-- <div><button class="importData">Add New</button></div> -->
+                </section>
+
+                <!-- <div class="orderDiffCounterDiv">
+                  <p>Completed : <span>03</span></p>
+                  <p>Pending : <span>03</span></p>
+                  <p>Failed : <span>03</span></p>
+                  <p>Cancelled : <span>03</span></p>
+                </div> -->
+              </section>
+
+              <section
+                class="usersListSection tankersListSection adminListSection"
+              >
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="firstCell">ID</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Contact</th>
+                      <!-- <th>Type</th> -->
+                      <!-- <th>Order Count</th> -->
+                      <th class="lastCell">Type</th>
+                    </tr>
+                  </thead>
+                  <tbody id="orderTableBody">
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>admin@gmail.com</td>
+                      <td>03082028980</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">2</td>
+                      <td>Hassan</td>
+                      <td>hassan@gmail.com</td>
+                      <td>123455678910</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">3</td>
+                      <td>Khalid</td>
+                      <td>Khalid@wenergy.com.pk</td>
+                      <td>03332830710</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">4</td>
+                      <td>Saud</td>
+                      <td>saud@wenergy.com.pk</td>
+                      <td>03322093221</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">2</td>
+                      <td>Hassan</td>
+                      <td>hassan@gmail.com</td>
+                      <td>123455678910</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">3</td>
+                      <td>Khalid</td>
+                      <td>Khalid@wenergy.com.pk</td>
+                      <td>03332830710</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">4</td>
+                      <td>Saud</td>
+                      <td>saud@wenergy.com.pk</td>
+                      <td>03322093221</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#userDetails">
+                      <td class="firstCell">2</td>
+                      <td>Hassan</td>
+                      <td>hassan@gmail.com</td>
+                      <td>123455678910</td>
+                      <!-- <td><div class="completed">Completed</div></td> -->
+                      <!-- <td>02</td> -->
+                      <td class="lastCell">Sub-Admin</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                <div class="adminBoardIconDiv" onclick="extendingAdminBoard(this)"><i class="fa-solid fa-angle-down"></i></div>
+                <!-- <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
+                  <button
+                    data-toggle="modal"
+                    data-target="#multipleOrderSelected"
+                  >
+                    Action
+                  </button>
+                </div> -->
+              </section>
+            </section>
+
+            <section class="usersMainListingSection adminListingSection">
+              <section class="usersSearchSection">
+                <section class="userSearchSectionFirstSection" style="margin-bottom: 12px;">
+                  <h2 id="usersListMainHeading" style="margin: auto; text-align: center;">Admin Logs</h2>
+                  
+                </section>
+
+                <!-- <section>
+                  <div
+                    class="besideHeadingDiv"
+                    style="
+                      display: flex;
+                      justify-content: flex-end;
+                      align-items: center;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    <button onclick="multipleSelectionFunction(this)">
+                      <i class="fa-solid fa-bars"></i>Select Multiple
+                    </button>
+                  </div>
+                </section> -->
+
+                <section class="searchSectionContainer">
+                  <div class="searchBarContainer">
+                    <div>Search</div>
+                    <section><input type="search" /></section>
+                  </div>
+                  <!-- <div>
+                    <select name="Date" id="" class="userTypeDropDown">
+                      <option value="Select" disabled selected>Select</option>
+                      <option value="ID">ID</option>
+                      <option value="Name">Name</option>
+                      <option value="TankerType">Tanker Type</option>
+                      <option value="to">To</option>
+                    </select>
+                  </div> -->
+                  <!-- <div>
+                    <input
+                      type="date"
+                      name="date"
+                      id=""
+                      class="userTypeDropDown dateSearchField"
+                    />
+                  </div> -->
+                  <div><button style="margin-right: 10px">Search</button></div>
+                  <!-- <div><button class="importData">Add New</button></div> -->
+                </section>
+
+                <!-- <div class="orderDiffCounterDiv">
+                  <p>Completed : <span>03</span></p>
+                  <p>Pending : <span>03</span></p>
+                  <p>Failed : <span>03</span></p>
+                  <p>Cancelled : <span>03</span></p>
+                </div> -->
+              </section>
+
+              <section
+                class="usersListSection tankersListSection adminNotificationSection"
+              >
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="firstCell">ID</th>
+                      <th>Name</th>
+                      <th>Action</th>
+                      <th class="lastCell">Date & Time</th>
+                    </tr>
+                  </thead>
+                  <tbody id="orderTableBody">
+                    <tr>
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>                    
+                    <tr>
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>                    
+                    <tr>
+                      <td class="firstCell">1</td>
+                      <td>Admin</td>
+                      <td>Requested New Tanker!</td>
+                      <td class="lastCell">
+                        <span>
+                          2022-10-02
+                          <br />
+                          <span class="timeSpan"> 11:11 AM </span>
+                        </span>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                <!-- <div class="adminBoardIconDiv" onclick="extendingAdminBoard(this)"><i class="fa-solid fa-angle-down"></i></div> -->
+                <!-- <div class="displayNone" id="multipleSelectedOrderActionBtnDiv">
+                  <button
+                    data-toggle="modal"
+                    data-target="#multipleOrderSelected"
+                  >
+                    Action
+                  </button>
+                </div> -->
+              </section>
+            </section>
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <!-- /--- Order Details Modal ---/ -->
+
+    <section class="modal fade" id="userDetails">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content forBorderRadius">
+          <section class="modal-body wholeModal adminDetailsModal">
+            <section class="headingSection">
+              <h1>Details</h1>
+            </section>
+            <section class="userDetailSection">
+              <section>
+                <div>
+                  <p>Full Name :</p>
+                  <input
+                    type="text"
+                    value="Admin"
+                    class="adminEditableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>ID</p>
+                  <input type="text" value="1" disabled />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Contact :</p>
+                  <input
+                    type="text"
+                    value="03082028980"
+                    class="adminEditableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>CNIC :</p>
+                  <input type="text" class="adminEditableFields" value="42201-2729672-7" disabled />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Email :</p>
+                  <input
+                    type="email"
+                    value="admin@gmail.com"
+                    class="adminEditableFields"
+                    disabled
+                  />
+                </div>
+                <div>
+                  <p>Type :</p>
+                  <input type="text" value="ADMIN" disabled />
+                </div>
+              </section>
+              <section>
+                <div>
+                  <p>Password :</p>
+                  <input type="password" value="123" class="adminEditableFields" disabled />
+                  <div>
+                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px"></i>
+                  </div>
+                </div>
+                <div>
+                  <button class="adminModalEditBtn" onclick="adminModalEditBtnToggler(this)">EDIT</button>
+                </div>
+              </section>
+            </section>
+
+            <div class="orderDetailActions adminModalActions">
+              <div><button id="">Active</button></div>
+              <div><button id="">Suspend</button></div>
+              <div><button id="">Delete</button></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Multiple Order Modal -->
+    <!-- <section class="modal fade" id="multipleOrderSelected">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content forBorderRadius">
+          <section class="modal-body wholeModal wholeModal2">
+            <section class="headingSection">
+              <h1>Selected Orders</h1>
+            </section>
+
+            <section class="modalOrderTableSection">
+              <table>
+                <thead>
+                  <th>Order ID</th>
+                  <th>To</th>
+                  <th>Tanker Type</th>
+                </thead>
+                <tbody id="modalTbody"></tbody>
+              </table>
+            </section>
+
+            <main><small onclick="clearAllModalList()">Clear All</small></main>
+
+            <div class="multipleOrderActionSection">
+              <div><button id="multipleDeliveredBtn">Delivered</button></div>
+              <div><button id="multipleFailedBtn">Failed</button></div>
+              <div><button id="multipleCanceledBtn">Canceled</button></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Add New -->
+
+    <section class="modal fade" id="addNewAdmin">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content forBorderRadius">
+          <section class="modal-body wholeModal wholeModal2 wholeAdminModal addNewAdminModal">
+            <section class="headingSection">
+              <h1>Add New</h1>
+            </section>
+
+            <section class="adminModalMiddleSection">
+              <form action="">
+                <label class="addNewAdminLabels">
+                  <p>Name :</p>
+                  <input type="text" />
+                </label>
+                <label class="addNewAdminLabels">
+                  <p>CNIC :</p>
+                  <input type="text" />
+                </label>
+                <label class="addNewAdminLabels">
+                  <p>Contact :</p>
+                  <input type="text" />
+                </label>
+                <label class="addNewAdminLabels">
+                  <p>Email :</p>
+                  <input type="email">
+                </label>
+                <label class="addNewAdminLabels forThatAddIcon">
+                  <p>Type :</p>
+                  <select name="adminType" id="add_type">
+                    <option value="#" selected disabled>Select</option>
+                    <option value="admin">Admin</option>
+                    <option value="subAdmin">Sub-Admin</option>
+                  </select>
+                  <input type="text" style="display: none;">
+                  <div onclick="exchangeFields(this)"><i class="fa-solid fa-plus"></i></div>
+                </label>
+                <label class="addNewAdminLabels">
+                  <p>Password :</p>
+                  <input type="password" value="" />
+                  <div>
+                    <i class="fa-solid fa-eye" onclick="showPassword(this)" style="color: #555; margin-left: -30px"></i>
+                  </div>
+                </label>
+                <div class="authCheckBoxContainer addNewAdminLabels addNewAdminLabels2">
+                  <h4>Select Roles:</h4>
+                  <section>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="usersPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Users</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="ordersPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Orders</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="maintenancePageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Maintenance</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="routesPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Routes</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="userLogsPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">User Logs</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="AdminAuthPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Admin Auth</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="summaryPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Summary</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="notificationPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Notification</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="chatPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Chat</p></label>
+                    <label class="authCheckboxes" for=""><input type="checkbox" class="forFunctionAddAdmin" name="" id="unregisteredUsersPageId"><i class="fa-solid fa-circle-check checkDisplayNone"></i><p onclick="addAdminPageSelection(this)">Unregistered Users</p></label>
+                </section>
+                </div>
+              </form>
+            </section>
+
+            <div class="multipleOrderActionSection adminModalButtonSection">
+              <div><button id="" onclick="addAdmin()">Add Member</button></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <script src="./scripts/app.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"
+  ></script>
+</html>

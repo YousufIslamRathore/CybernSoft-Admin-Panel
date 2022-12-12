@@ -325,21 +325,21 @@
                             <section>
                                 <p>Payment Method :</p>
                                 <div>
-                                    <input type="radio" id="billCashPayment" name="paymentMethod">
+                                    <input type="radio" id="billCashPayment" name="paymentMethod" onchange="paymentMethod(this)">
                                     <label for="billCashPayment">Cash Payment</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="billChequePayment" name="paymentMethod">
+                                    <input type="radio" id="billChequePayment" name="paymentMethod" onchange="paymentMethod(this)">
                                     <label for="billChequePayment">Cheque Payment</label>
                                 </div>
                             </section>
-                            <div>
-                                <p>Date :</p>
-                                <input type="text" value="02/Dec/2022" disabled />
+                            <div style="display: none" id="chequeNoId">
+                                <p>Cheque Number :</p>
+                                <input type="text" value="" style="outline: none; border: 2px solid #ddd; border-radius: 4px;"/>
                             </div>
                             <div>
                                 <button class="paidMaintenanceReceipt" onclick="payMaintenanceModal()">Pay
-                                    Maintenance</button>
+                                    Bill</button>
                             </div>
                         </section>
                     </section>
