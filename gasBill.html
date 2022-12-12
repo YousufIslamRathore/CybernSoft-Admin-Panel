@@ -156,66 +156,6 @@
                         </div>
                     </section>
 
-                    <!-- <section class="presentationChartSection">
-                        <main>
-                            <div class="apexChartStylingClass">
-                                <h2>All Residents (Block-Wise)</h2>
-                                <div id="apexChart"></div>
-                            </div>
-                        </main>
-
-                        <section style="width: 30%;">
-                            <section style="margin: 0 5px 40px auto !important;">
-                                <div class="ownerMainSection" onclick="selectedUserTypeSection(0)">
-                                    <div class="skill">
-                                        <div class="outer">
-                                            <div class="inner">
-                                                <div id="ownerCount">65%</div>
-                                            </div>
-                                        </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="110px"
-                                            height="110px">
-                                            <defs>
-                                                <linearGradient id="GradientColor">
-                                                    <stop offset="0%" stop-color="#e91e63" />
-                                                    <stop offset="100%" stop-color="#673ab7" />
-                                                </linearGradient>
-                                            </defs>
-                                            <circle cx="55" cy="55" r="45" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                    <div class="userTypeHeadingDiv">
-                                        <h1 id="ownerH1">Owners</h1>
-                                    </div>
-                                </div>
-                            </section>
-                            <section style="margin: 0 5px 40px auto !important;">
-                                <div class="tenantMainSection" onclick="selectedUserTypeSection(1)">
-                                    <div class="skill">
-                                        <div class="outer">
-                                            <div class="inner">
-                                                <div id="tenantCount">35%</div>
-                                            </div>
-                                        </div>
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="110px"
-                                            height="110px">
-                                            <defs>
-                                                <linearGradient id="GradientColor">
-                                                    <stop offset="0%" stop-color="#e91e63" />
-                                                    <stop offset="100%" stop-color="#673ab7" />
-                                                </linearGradient>
-                                            </defs>
-                                            <circle cx="55" cy="55" r="45" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                    <div class="userTypeHeadingDiv">
-                                        <h1 id="tenantH1">Tenants</h1>
-                                    </div>
-                                </div>
-                            </section>
-                        </section>
-                    </section> -->
-
                     <section class="usersMainListingSection">
                         <section class="usersSearchSection">
                             <section class="userSearchSectionFirstSection">
@@ -259,6 +199,8 @@
                             </section>
                         </section>
 
+
+
                         <section class="usersListSection">
                             <table>
                                 <thead>
@@ -270,10 +212,10 @@
                                     </tr>
                                 </thead>
                                 <tbody id="orderTableBody" class="gasBillTablebody">
-                                    <tr data-toggle="modal" data-target="#userDetails">
+                                    <tr data-toggle="modal" data-target="#billDetails">
                                         <td class="firstCell">A-01</td>
                                         <td>
-                                            <div class="suspended">Suspended</div>
+                                            <div class="requested">Unpaid</div>
                                         </td>
                                         <td>4,500</td>
                                         <td class="lastCell">
@@ -291,6 +233,141 @@
                 </div>
             </section>
         </section>
+    </section>
+
+
+    <section class="modal fade" id="billDetails">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content forBorderRadius">
+                <section class="modal-body wholeModal wholeModal3">
+                    <section class="headingSection">
+                        <h1>User Maintenance Details</h1>
+                    </section>
+                    <section class="userDetailSection detail_modal_paid">
+                        <section>
+                            <div>
+                                <p>Name :</p>
+                                <input type="text" value="Yousuf Islam" class="editableFields" disabled />
+                            </div>
+                            <div>
+                                <p>Unit No.</p>
+                                <input type="text" value="A-01" disabled />
+                            </div>
+                        </section>
+                        <section>
+                            <div>
+                                <p>Contact :</p>
+                                <input type="number" value="03082028980" class="editableFields" disabled />
+                            </div>
+                            <div>
+                                <p>Previous Month :</p>
+                                <input type="text" value="200 Units" disabled />
+                            </div>
+                        </section>
+                        <section class="hiddenAfterfunction">
+                            <div>
+                                <p>Current Month :</p>
+                                <input type="text" value="500 Units" class="editableFields" disabled />
+                            </div>
+                            <div>
+                                <p>Consumed Units :</p>
+                                <input type="text" value="100 Units" class="editableFields" disabled />
+                            </div>
+                        </section>
+                        <section class="hiddenAfterfunction">
+                            <div>
+                                <p>Bill Amount :</p>
+                                <input type="text" value="9300" class="editableFields" disabled />
+                            </div>
+                            <div>
+                                <p>Due Date :</p>
+                                <input type="text" value="10/09/2022" class="editableFields" disabled />
+                            </div>
+
+                        </section>
+                        <section class="hiddenAfterfunction">
+                            <div style="align-self: start">
+                                <p>Meter Number :</p>
+                                <input type="text" value="a-1234" class="editableFields" disabled />
+                            </div>
+                            <div style="align-items: flex-start">
+                                <p>Reading Picture :</p>
+                                <img src="./images/billPic.jpg" width="45%" height="120px" />
+                            </div>
+
+                        </section>
+                    </section>
+
+
+                    <section class="maintenanceFurtherDetails maintenanceFurtherDetails1 billPaySection"
+                        id="addMaintenanceSection">
+                        <div onclick="addMaintenanceToggler(this)">
+                            <h3>Pay Bill</h3>
+                            <div class="angleUpDiv"><i class="fa-solid fa-angle-up"></i></div>
+                        </div>
+                        <section class="modalAddMaintenanceFormSection modalBillFormSection">
+                            <div>
+                                <p>Bill Amount :</p>
+                                <input type="text" value="9300" disabled />
+                            </div>
+                            <div>
+                                <p>Last Paid Date : </p>
+                                <input type="text" value="09/Nov/2022" disabled />
+                            </div>
+                            <div>
+                                <p>Due Date :</p>
+                                <input type="text" value="15/Dec/2022" disabled />
+                            </div>
+                            <div>
+                                <p>Current Date :</p>
+                                <input type="text" value="12/Dec/2022" disabled />
+                            </div>
+                            <section>
+                                <p>Payment Method :</p>
+                                <div>
+                                    <input type="radio" id="billCashPayment" name="paymentMethod">
+                                    <label for="billCashPayment">Cash Payment</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="billChequePayment" name="paymentMethod">
+                                    <label for="billChequePayment">Cheque Payment</label>
+                                </div>
+                            </section>
+                            <div>
+                                <p>Date :</p>
+                                <input type="text" value="02/Dec/2022" disabled />
+                            </div>
+                            <div>
+                                <button class="paidMaintenanceReceipt" onclick="payMaintenanceModal()">Pay
+                                    Maintenance</button>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="maintenanceFurtherDetails">
+                        <div onclick="previousPaymentsToggler(this)">
+                            <h3>Previous Bills</h3>
+                            <div class="angleUpDiv"><i class="fa-solid fa-angle-up"></i></div>
+                        </div>
+                        <section class="modalOrderTableSection">
+                            <table>
+                                <thead>
+                                    <th>Receipt ID</th>
+                                    <th>Month</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Method</th>
+                                </thead>
+                                <tbody class="paid_previous_payments">
+
+                                </tbody>
+                            </table>
+                        </section>
+                    </section>
+
+                </section>
+            </div>
+        </div>
     </section>
 
 </body>

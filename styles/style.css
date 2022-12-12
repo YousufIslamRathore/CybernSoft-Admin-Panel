@@ -2663,3 +2663,25 @@ svg {
   font-size: 18px;
   text-align: center;
 }
+.billPaySection label {
+  margin-bottom: 0;
+}
+.modalBillFormSection > section {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.modalBillFormSection > section > p {
+  width: 30%;
+}
+.modalBillFormSection > section > div {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-grow: 1;
+}
+.modalBillFormSection > section input {
+  margin-right: 15px;
+}
