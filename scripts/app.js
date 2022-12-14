@@ -827,9 +827,26 @@ function paymentMethod(input) {
   const billCashPayment = document.getElementById("billCashPayment");
   const billChequePayment = document.getElementById("billChequePayment");
   const chequeNoId = document.getElementById("chequeNoId");
-  if(billChequePayment.checked == true) {
-    chequeNoId.style.display = "flex"
+  if (billChequePayment.checked == true) {
+    chequeNoId.style.display = "flex";
   } else {
-    chequeNoId.style.display = "none"
+    chequeNoId.style.display = "none";
+  }
+}
+
+function deletingDriver(i) {
+  var permission = prompt(
+    "Are you sure you want to remove this Driver\nType 'Yes'"
+  );
+  if (permission.toLowerCase() == "yes") {
+    i.parentElement.parentElement.remove();
+  }
+}
+
+function holdingDriver(i) {
+  if (i.className == "fa-solid fa-thumbs-up") {
+    i.className = "fa-solid fa-hand";
+  } else if (i.className == "fa-solid fa-hand") {
+    i.className = "fa-solid fa-thumbs-up";
   }
 }

@@ -2697,12 +2697,20 @@ svg {
 .driverDetailsModal {
   min-height: auto !important;
 }
-
-
+.driverListSection tr {
+  cursor: unset;
+}
+.lastCell i {
+  font-size: 18px;
+  cursor: pointer;
+}
 .fa-trash-can {
   color: #ee405e;
 }
-.fa-hand {
+.fa-hand, .fa-thumbs-up {
   color: #333;
   margin-left: 30px;
+}
+.fa-thumbs-up {
+  color: #61b95b;
 }
