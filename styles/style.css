@@ -337,8 +337,9 @@ tbody tr:nth-child(even) {
 .landingPageBody {
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/loginPageImg3.png"); */
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../images/loginPageImg3.png");
+  /* background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../images/loginPageImg3.png"); */
+  background: #252324;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -388,7 +389,7 @@ tbody tr:nth-child(even) {
   align-self: stretch;
 }
 .landingPageTopSection > div {
-  color: whitesmoke;
+  color: #333;
   font-size: 40px;
   flex-grow: 1;
   text-align: center;
@@ -415,10 +416,14 @@ tbody tr:nth-child(even) {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: whitesmoke;
+  color: #333;
   /* position: relative; */
+  transition-duration: 200ms !important;
 }
-
+.landingPageBottomSection > div:hover {
+  color: #ddd !important;
+  box-shadow: 0 3px 10px #000 !important;
+}
 .landingPageBottomSection > section {
   width: 3.5%;
   background-color: whitesmoke;
