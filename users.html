@@ -24,8 +24,9 @@
     <!-- Side Bar -->
     <section class="usersPageSideBar">
       <h1>
-        <img src="./images/ZSZ - White.png" alt="" width="28%"  />
-        <span><span class="zeeshan">ZEESHAN</span><br /><span class="saleem">SALEEM</span><br /><span class="zaki">ZAKI</span></span>
+        <img src="./images/ZSZ - White.png" alt="" width="28%" />
+        <span><span class="zeeshan">ZEESHAN</span><br /><span class="saleem">SALEEM</span><br /><span
+            class="zaki">ZAKI</span></span>
       </h1>
 
       <section class="sideBarListContainer">
@@ -121,125 +122,14 @@
           <p onclick="logout()">Logout</p>
         </div>
       </section>
+      <main class="forSuperAdminContainer">
+        Change Society
+      </main>
     </section>
     <section class="usersPageMainPanel">
 
       <section class="usersBodySection">
         <div>
-          <!-- <h1>All Registered Users</h1> -->
-
-          <!-- <section class="usersFancyDisplaySection1">
-              <div>
-                <h1>746</h1>
-                <h2 style="color: #186eb1">All Users</h2>
-              </div>
-              <div>
-                <h1>740</h1>
-                <h2 style="color: #61b95b">Active Users</h2>
-              </div>
-              <div>
-                <h1>6</h1>
-                <h2 style="color: #fcc910">Requested Users</h2>
-              </div>
-              <div>
-                <h1>1</h1>
-                <h2 style="color: #ee405e">Block Users</h2>
-              </div>
-            </section> -->
-
-          <!-- <section class="usersFancyDisplaySection1">
-              <div>
-                <section>
-                  <div style="background-color: #186eb1">
-                    <i class="fa-solid fa-users"></i>
-                  </div>
-                  <h1>746</h1>
-                </section>
-                <h2 style="color: #186eb1">All Users</h2>
-              </div>
-              <div>
-                <section>
-                  <div style="background-color: #61b95b">
-                    <i class="fa-solid fa-check"></i>
-                  </div>
-                  <h1>740</h1>
-                </section>
-                <h2 style="color: #61b95b">Active Users</h2>
-              </div>
-              <div>
-                <section>
-                  <div style="background-color: #fcc910">
-                    <i class="fa-solid fa-exclamation"></i>
-                  </div>
-                  <h1>6</h1>
-                </section>
-                <h2 style="color: #fcc910">Requested Users</h2>
-              </div>
-              <div>
-                <section>
-                  <div style="background-color: #ee405e">
-                    <i class="fa-solid fa-ban"></i>
-                  </div>
-                  <h1>1</h1>
-                </section>
-                <h2 style="color: #ee405e">Block Users</h2>
-              </div>
-            </section> -->
-
-          <!-- <section class="usersFancyDisplaySection1" id="userSelection">
-              <div class="selectedUserSection" onclick="selectedUserSection(0)">
-                <div style="background-color: #186eb1;" >
-                  <i class="fa-solid fa-users"></i>
-                </div>
-                <section>
-                  <h1>746</h1>
-                  <h2>All Users</h2>
-                </section>
-                <main
-                  class="containerUnderline"
-                  style="border-color: #186eb1; background-color: #186eb1"
-                ></main>
-              </div>
-              <div onclick="selectedUserSection(1)">
-                <div style="background-color: #61b95b">
-                  <i class="fa-solid fa-check"></i>
-                </div>
-                <section>
-                  <h1>740</h1>
-                  <h2 style="color: #61b95b">Active Users</h2>
-                </section>
-                <main
-                  class="containerUnderline"
-                  style="border-color: #61b95b; background-color: #61b95b"
-                ></main>
-              </div>
-              <div onclick="selectedUserSection(2)">
-                <div style="background-color: #fcc910">
-                  <i class="fa-solid fa-exclamation"></i>
-                </div>
-                <section>
-                  <h1>6</h1>
-                  <h2 style="color: #fcc910">Requested Users</h2>
-                </section>
-                <main
-                  class="containerUnderline"
-                  style="border-color: #fcc910; background-color: #fcc910"
-                ></main>
-              </div>
-              <div onclick="selectedUserSection(3)">
-                <div style="background-color: #ee405e">
-                  <i class="fa-solid fa-ban"></i>
-                </div>
-                <section>
-                  <h1>1</h1>
-                  <h2 style="color: #ee405e">Block Users</h2>
-                </section>
-                <main
-                  class="containerUnderline"
-                  style="border-color: #ee405e; background-color: #ee405e"
-                ></main>
-              </div>
-            </section> -->
 
           <section class="usersFancyDisplaySection1" id="userSelection">
             <div class="selectedUserSection" onclick="selectedUserSection(0)" id="All-Users-Selector">
@@ -310,12 +200,11 @@
               <div class="apexChartStylingClass">
                 <h2>All Residents (Block-Wise)</h2>
                 <div id="apexChart"></div>
-                <!-- <canvas id="lineChart"></canvas> -->
               </div>
             </main>
 
             <section style="width: 30%;">
-              <section  style="margin: 0 5px 40px auto !important;">
+              <section style="margin: 0 5px 40px auto !important;">
                 <div class="ownerMainSection" onclick="selectedUserTypeSection(0)">
                   <div class="skill">
                     <div class="outer">
@@ -371,7 +260,8 @@
                   All Users
                 </h2>
                 <div class="besideHeadingDiv">
-                  <button onclick="multipleSelectionFunction(this)"><i class="fa-solid fa-bars"></i>Select Multiple</button>
+                  <button onclick="multipleSelectionFunction(this)"><i class="fa-solid fa-bars"></i>Select
+                    Multiple</button>
                 </div>
                 <!-- <main class="ownerTenantMainContainer" id="ownerAndTenant">
                     <div
@@ -461,7 +351,7 @@
                   </select>
                 </div>
                 <div>
-                  <input type="date" name="date" id="" class="userTypeDropDown dateSearchField"> 
+                  <input type="date" name="date" id="" class="userTypeDropDown dateSearchField">
                 </div>
                 <!-- <div>
                     <select name="userType" id="" class="userTypeDropDown">
@@ -738,8 +628,12 @@
             </h1> -->
             <h1>
               User Details
-              <img src="./images/users/detailing.png" alt="" width="28px" id="userDetailsImg" /> 
-              <a style="text-decoration:none" href="./userProfilePage.html" ><div style="position:absolute;right:10%;top:4%;font-size:13px;border-radius:7px;box-shadow:0px 3px 10px #ddd;padding:8px;cursor:pointer">Unit History</div></a>
+              <img src="./images/users/detailing.png" alt="" width="28px" id="userDetailsImg" />
+              <a style="text-decoration:none" href="./userProfilePage.html">
+                <div
+                  style="position:absolute;right:10%;top:4%;font-size:13px;border-radius:7px;box-shadow:0px 3px 10px #ddd;padding:8px;cursor:pointer">
+                  Unit History</div>
+              </a>
             </h1>
 
           </section>
@@ -798,7 +692,8 @@
               </div>
             </section>
             <section class="buttonSection2">
-              <button class="btn" onclick="editBtnToggler(this)"><i class="fa-solid fa-pen-to-square"></i> EDIT DETAILS</button>
+              <button class="btn" onclick="editBtnToggler(this)"><i class="fa-solid fa-pen-to-square"></i> EDIT
+                DETAILS</button>
             </section>
           </section>
 
@@ -809,21 +704,17 @@
               <p>Change Active Status :</p>
               <div>
                 <button class="active" onclick="changeActiveStatus(this)">Active</button>
-                <button class="changingBgBtn" 
-                onclick="changeActiveStatus(this)">Suspended</button>
-                <button class="changingBgBtn" 
-                onclick="changeActiveStatus(this)">Blocked</button>
+                <button class="changingBgBtn" onclick="changeActiveStatus(this)">Suspended</button>
+                <button class="changingBgBtn" onclick="changeActiveStatus(this)">Blocked</button>
               </div>
             </section>
 
             <section>
               <p>Change User Type :</p>
               <div class="userTypeBtnDiv">
-                <button class="ownerChangeBtn" 
-                onclick="changeUserType(this); 
+                <button class="ownerChangeBtn" onclick="changeUserType(this); 
                 ownerToTenantEffects(0)">Owner</button>
-                <button class="changingBgBtn" 
-                onclick="changeUserType(this); 
+                <button class="changingBgBtn" onclick="changeUserType(this); 
                 ownerToTenantEffects(1)">Tenant</button>
               </div>
             </section>
@@ -839,9 +730,9 @@
     </div>
   </section>
 
-   <!-- Multiple User Modal -->
+  <!-- Multiple User Modal -->
 
-   <section class="modal fade" id="multipleOrderSelected">
+  <section class="modal fade" id="multipleOrderSelected">
     <div class="modal-dialog modal-lg">
       <div class="modal-content forBorderRadius">
         <section class="modal-body wholeModal wholeModal2">
