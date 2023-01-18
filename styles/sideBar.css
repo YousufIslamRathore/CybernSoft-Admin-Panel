@@ -1,0 +1,71 @@
+.mainSideBar {
+  background-color: aliceblue;
+}
+.mainSideBar .sideBarListContainer {
+    background-color: aliceblue;
+}
+.mainSideBar > h1 > span {
+    color: #333;
+    font-size: bold;
+}
+.mainSideBar .pageSelectors p, .mainSideBar .pageSelectors i {
+    color: #333 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.09rem;
+}
+.mainSideBar .pageSelectors p {
+    font-weight: 500;
+}
+ul {
+    /* background-color: whitesmoke; */
+    /* margin-left: 20px; */
+}
+li {
+    border-left: 2px solid #ddd;
+    padding-top: 10px;
+}
+ul li div {
+    margin-left: 10px;
+}
+ul li section {
+    width: 15px;
+    border-bottom: 2px solid #ddd;
+}
+li:last-child::after {
+    content: "";
+    height: 50%;
+    position: absolute;
+    right: 0;
+    top: -1px;
+    
+}
+
+ul {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  margin-bottom: 0;
+}
+li {
+  /* text-align: center; */
+  /* width: fit-content; */
+  width: 100%;
+  margin: 0 28px;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid white; */
+  /* margin: 0 auto 5px; */
+  
+}
+ul li i {
+  font-size: 12px;
+}
+ul li p {
+  margin-left: 10px;
+  text-transform: capitalize !important;
+  letter-spacing: 0.04rem !important;
+  color: #666 !important;
+}
