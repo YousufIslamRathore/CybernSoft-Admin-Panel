@@ -127,14 +127,14 @@
 
     <section class="usersPageSideBar mainSideBar" style="left: 50%;">
       <h1>
-        <img src="./images/ZSZ - White.png" alt="" width="28%" />
+        <img src="./images/ZSZ.png" alt="" width="25%" />
         <span><span class="zeeshan">ZEESHAN</span><br /><span class="saleem">SALEEM</span><br /><span
             class="zaki">ZAKI</span></span>
       </h1>
 
       <section class="sideBarListContainer">
 
-        <div class="pageSelectors" style="flex-wrap: wrap" onclick="pageSelector(0); slideDown(this)">
+        <div class="pageSelectors" style="flex-wrap: wrap" onclick="pageSelector(0)">
           <?php $visible = ""; if($page == "newuser")$visible = "visible"?>
 
           <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
@@ -142,11 +142,26 @@
             <i class="fa-solid fa-users"></i>
           </section>
           <p onclick="newUser()">Users</p>
-          <div style="margin-left: auto"><i class="fa-solid fa-chevron-right" id="slideOpenDirector"></i></div>
-          <ul style="width: 100%; display: none;">
-            <li><section></section><div><i class="fa-solid fa-user"></i></div> <p>Sub Category 1</p></li>
-            <li><section></section><div><i class="fa-solid fa-user"></i></div> <p>Sub Category 2</p></li>
-            <li><section></section><div><i class="fa-solid fa-user"></i></div> <p>Sub Category 3</p></li>
+          <div
+            style="margin-left: auto; margin-right: 5px; box-shadow: 0px 3px 3px #ddd, 0px -3px 3px #ddd; background-color: white; border-radius: 50%; width: 20px; height: 20px; flex-shrink: 0; display: flex; justify-content: center; align-items: center;"
+            onclick="slideDown(this)"><i class="fa-solid fa-plus" id="slideOpenDirector"></i></div>
+          <ul style="display: none;">
+            <li data-aos="fade-zoom-in">
+              <section></section>
+              <div><i class=" fa-solid fa-user"></i>
+              </div>
+              <p>Sub Category 1</p>
+            </li>
+            <li data-aos="fade-zoom-in">
+              <section></section>
+              <div><i class="fa-solid fa-user"></i></div>
+              <p>Sub Category 2</p>
+            </li>
+            <li data-aos="fade-zoom-in">
+              <section></section>
+              <div><i class=" fa-solid fa-user"></i></div>
+              <p>Sub Category 3</p>
+            </li>
           </ul>
         </div>
         <div class="pageSelectors" onclick="pageSelector(1)">
@@ -238,6 +253,10 @@
 
 <script src="./scripts/app.js"></script>
 <script src="./scripts/sideBar.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

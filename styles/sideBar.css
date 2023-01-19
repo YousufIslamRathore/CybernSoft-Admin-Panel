@@ -16,12 +16,12 @@
 .mainSideBar .pageSelectors p {
     font-weight: 500;
 }
-ul {
-    /* background-color: whitesmoke; */
-    /* margin-left: 20px; */
-}
+/* ul {
+    background-color: whitesmoke;
+    margin-left: 20px;
+} */
 li {
-    border-left: 2px solid #ddd;
+    border-left: 2px solid #999;
     padding-top: 10px;
 }
 ul li div {
@@ -29,15 +29,7 @@ ul li div {
 }
 ul li section {
     width: 15px;
-    border-bottom: 2px solid #ddd;
-}
-li:last-child::after {
-    content: "";
-    height: 50%;
-    position: absolute;
-    right: 0;
-    top: -1px;
-    
+    border-bottom: 1px solid #999;
 }
 
 ul {
@@ -45,9 +37,10 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   list-style: none;
   margin-bottom: 0;
+  transition-duration: 500ms;
 }
 li {
   /* text-align: center; */
@@ -58,14 +51,24 @@ li {
   align-items: center;
   /* border: 1px solid white; */
   /* margin: 0 auto 5px; */
-  
+  transition-duration: 500ms;
 }
 ul li i {
   font-size: 12px;
+  transition: ease 1s ease-in-out;
 }
 ul li p {
   margin-left: 10px;
   text-transform: capitalize !important;
   letter-spacing: 0.04rem !important;
   color: #666 !important;
+}
+
+
+.fa-plus {
+  transform: rotate(180deg);
+}
+
+.fa-minus {
+  transform: rotate(-180deg)
 }
