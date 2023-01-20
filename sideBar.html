@@ -164,14 +164,35 @@
             </li>
           </ul>
         </div>
-        <div class="pageSelectors" onclick="pageSelector(1)">
-          <?php $visible = ""; if($page == "orders")$visible = "visible"?>
+        <div class="pageSelectors" style="flex-wrap: wrap" onclick="pageSelector(0)">
+          <?php $visible = ""; if($page == "newuser")$visible = "visible"?>
 
           <i class="fa-solid fa-circle selectedSideBarCirclePointer <?php echo $visible?>"></i>
           <section>
-            <i class="fa-solid fa-truck-fast"></i>
+            <i class="fa-solid fa-users"></i>
           </section>
-          <p onclick="orders()">Tankers</p>
+          <p onclick="newUser()">Users</p>
+          <div
+            style="margin-left: auto; margin-right: 5px; box-shadow: 0px 3px 3px #ddd, 0px -3px 3px #ddd; background-color: white; border-radius: 50%; width: 20px; height: 20px; flex-shrink: 0; display: flex; justify-content: center; align-items: center;"
+            onclick="slideDown(this)"><i class="fa-solid fa-plus" id="slideOpenDirector"></i></div>
+          <ul style="display: none;">
+            <li data-aos="fade-zoom-in">
+              <section></section>
+              <div><i class=" fa-solid fa-user"></i>
+              </div>
+              <p>Sub Category 1</p>
+            </li>
+            <li data-aos="fade-zoom-in">
+              <section></section>
+              <div><i class="fa-solid fa-user"></i></div>
+              <p>Sub Category 2</p>
+            </li>
+            <li data-aos="fade-zoom-in">
+              <section></section>
+              <div><i class=" fa-solid fa-user"></i></div>
+              <p>Sub Category 3</p>
+            </li>
+          </ul>
         </div>
         <div class="pageSelectors" onclick="pageSelector(2)">
           <?php $visible = ""; if($page == "maintenance")$visible = "visible"?>
