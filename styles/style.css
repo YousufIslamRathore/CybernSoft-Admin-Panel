@@ -2722,3 +2722,16 @@ svg {
 .fa-thumbs-up {
   color: #61b95b;
 }
+
+.maintenancePricingMainSection {
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.maintenancePricingMainSection table {
+  border: 1px solid black;
+
+}
