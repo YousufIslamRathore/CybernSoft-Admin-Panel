@@ -2733,5 +2733,24 @@ svg {
 }
 .maintenancePricingMainSection table {
   border: 1px solid black;
-
+  width: 50%;
+  border-collapse: collapse;
+}
+.maintenancePricingMainSection thead {
+  background-color: #333;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  color: white;
+}
+.maintenancePricingMainSection tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.maintenancePricingMainSection thead td {
+  font-size: 22px;
+}
+.maintenancePricingMainSection td {
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 0;
 }
