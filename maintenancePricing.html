@@ -129,11 +129,11 @@
                     <table>
                         <thead>
                             <tr>
-                                <td>Block</td>
-                                <td>Per Unit Price</td>
+                                <th style="border-radius: 10px 0 0 0">Blocks</th>
+                                <th style="border-radius: 0 10px 0 0">Per Unit Price</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody style="border-radius: 0 0 10px 10px;" id="maintenancePricingTableBody">
                             <tr>
                                 <td>Block A</td>
                                 <td>Rs. 3350/=</td>
@@ -154,9 +154,9 @@
                                 <td>Block R2</td>
                                 <td>Rs. 3350/=</td>
                             </tr>
-                            <tr>
-                                <td>Block RG</td>
-                                <td>Rs. 3350/=</td>
+                            <tr style="border-radius: 0 0 10px 10px">
+                                <td style="border-radius: 0 0 10px 0;">Block RG</td>
+                                <td style="border-radius: 0 0 0 10px;">Rs. 3350/=</td>
                             </tr>
                         </tbody>
                     </table>
@@ -165,145 +165,27 @@
         </section>
     </section>
 
-
-    <section class="modal fade" id="billDetails">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content forBorderRadius">
-                <section class="modal-body wholeModal wholeModal3">
-                    <section class="headingSection">
-                        <h1>User Maintenance Details</h1>
-                    </section>
-                    <section class="userDetailSection detail_modal_paid">
-                        <section>
-                            <div>
-                                <p>Name :</p>
-                                <input type="text" value="Yousuf Islam" class="editableFields" disabled />
-                            </div>
-                            <div>
-                                <p>Unit No.</p>
-                                <input type="text" value="A-01" disabled />
-                            </div>
-                        </section>
-                        <section>
-                            <div>
-                                <p>Contact :</p>
-                                <input type="number" value="03082028980" class="editableFields" disabled />
-                            </div>
-                            <div>
-                                <p>Previous Month :</p>
-                                <input type="text" value="200 Units" disabled />
-                            </div>
-                        </section>
-                        <section class="hiddenAfterfunction">
-                            <div>
-                                <p>Current Month :</p>
-                                <input type="text" value="500 Units" class="editableFields" disabled />
-                            </div>
-                            <div>
-                                <p>Consumed Units :</p>
-                                <input type="text" value="100 Units" class="editableFields" disabled />
-                            </div>
-                        </section>
-                        <section class="hiddenAfterfunction">
-                            <div>
-                                <p>Bill Amount :</p>
-                                <input type="text" value="9300" class="editableFields" disabled />
-                            </div>
-                            <div>
-                                <p>Due Date :</p>
-                                <input type="text" value="10/09/2022" class="editableFields" disabled />
-                            </div>
-
-                        </section>
-                        <section class="hiddenAfterfunction">
-                            <div style="align-self: start">
-                                <p>Meter Number :</p>
-                                <input type="text" value="a-1234" class="editableFields" disabled />
-                            </div>
-                            <div style="align-items: flex-start">
-                                <p>Reading Picture :</p>
-                                <img src="./images/billPic.jpg" width="45%" height="120px" />
-                            </div>
-
-                        </section>
-                    </section>
-
-
-                    <section class="maintenanceFurtherDetails maintenanceFurtherDetails1 billPaySection"
-                        id="addMaintenanceSection">
-                        <div onclick="addMaintenanceToggler(this)">
-                            <h3>Pay Bill</h3>
-                            <div class="angleUpDiv"><i class="fa-solid fa-angle-up"></i></div>
-                        </div>
-                        <section class="modalAddMaintenanceFormSection modalBillFormSection">
-                            <div>
-                                <p>Bill Amount :</p>
-                                <input type="text" value="9300" disabled />
-                            </div>
-                            <div>
-                                <p>Last Paid Date : </p>
-                                <input type="text" value="09/Nov/2022" disabled />
-                            </div>
-                            <div>
-                                <p>Due Date :</p>
-                                <input type="text" value="15/Dec/2022" disabled />
-                            </div>
-                            <div>
-                                <p>Current Date :</p>
-                                <input type="text" value="12/Dec/2022" disabled />
-                            </div>
-                            <section>
-                                <p>Payment Method :</p>
-                                <div>
-                                    <input type="radio" id="billCashPayment" name="paymentMethod" onchange="paymentMethod(this)">
-                                    <label for="billCashPayment">Cash Payment</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="billChequePayment" name="paymentMethod" onchange="paymentMethod(this)">
-                                    <label for="billChequePayment">Cheque Payment</label>
-                                </div>
-                            </section>
-                            <div style="display: none" id="chequeNoId">
-                                <p>Cheque Number :</p>
-                                <input type="text" value="" style="outline: none; border: 2px solid #ddd; border-radius: 4px;"/>
-                            </div>
-                            <div>
-                                <button class="paidMaintenanceReceipt" onclick="payMaintenanceModal()">Pay
-                                    Bill</button>
-                            </div>
-                        </section>
-                    </section>
-
-                    <section class="maintenanceFurtherDetails">
-                        <div onclick="previousPaymentsToggler(this)">
-                            <h3>Previous Bills</h3>
-                            <div class="angleUpDiv"><i class="fa-solid fa-angle-up"></i></div>
-                        </div>
-                        <section class="modalOrderTableSection">
-                            <table>
-                                <thead>
-                                    <th>Receipt ID</th>
-                                    <th>Month</th>
-                                    <th>Date</th>
-                                    <th>Amount</th>
-                                    <th>Method</th>
-                                </thead>
-                                <tbody class="paid_previous_payments">
-
-                                </tbody>
-                            </table>
-                        </section>
-                    </section>
-
-                </section>
-            </div>
-        </div>
-    </section>
-
 </body>
 
-<script src="./scripts/app.js"></script>
+<script>
+    const tbody = document.getElementById('maintenancePricingTableBody');
+    // let priceArr = [3560, 3300, 3000, 3670, 3400, 3500]
+    let blockPrice = [
+        {block: 'A' ,price: 3500},
+        {block: 'B' ,price: 3300},
+        {block: 'R' ,price: 3000},
+        {block: 'R1' ,price: 3670},
+        {block: 'R2' ,price: 3400},
+        {block: 'RG' ,price: 3500}
+    ]
+    for(let i = 0 ; i < tbody.children.length ; i++) {
+        // tbody.children[i].lastElementChild.innerHTML = `Rs. ${priceArr[i]}/=`
+        tbody.children[i].firstElementChild.innerHTML = `Block ${blockPrice[i].block}`
+        tbody.children[i].lastElementChild.innerHTML = `Rs. ${blockPrice[i].price}/=`
+    }
+</script>
 
+<script src="./scripts/app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>

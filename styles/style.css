@@ -2732,25 +2732,28 @@ svg {
   min-height: 100vh;
 }
 .maintenancePricingMainSection table {
-  border: 1px solid black;
+  border-radius: 10px;
   width: 50%;
   border-collapse: collapse;
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 30%), -3px -3px 10px rgb(0 0 0 / 30%);
 }
 .maintenancePricingMainSection thead {
   background-color: #333;
   box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
   color: white;
 }
-.maintenancePricingMainSection tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+.maintenancePricingMainSection thead tr {
+  border-radius: 10px 10px 0 0;
 }
-.maintenancePricingMainSection thead td {
+.maintenancePricingMainSection thead th {
+  width: 50%;
+  text-align: center;
+  padding: 10px 0;
   font-size: 22px;
 }
 .maintenancePricingMainSection td {
   text-align: center;
   font-weight: bold;
-  padding: 8px 0;
+  padding: 10px 0;
+  width: 50%;
 }
