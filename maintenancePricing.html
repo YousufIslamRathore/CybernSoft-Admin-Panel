@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users</title>
+    <title>Prices</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/style.css" />
@@ -17,6 +17,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+
+    <style>
+        .maintenancePriceTr > td:last-child > div{
+            display: flex;
+            justify-content: center;
+
+        }
+        .maintenancePriceTr > td:last-child > div > div:last-child{
+            margin: 0 10px !important;
+        }
+        .maintenancePriceTr > td i {
+            color: #186EB1;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -199,13 +214,37 @@
     const tableGenerator = () => {
         for(let trNo = 0; trNo < blockPrice.length ; trNo++) {
             let tr = document.createElement('tr');
+            tr.className = 'maintenancePriceTr'
+
             let blockTd = document.createElement('td');
             let blockTdText = document.createTextNode(`Block ${blockPrice[trNo].block}`);
-            blockTd.appendChild(blockTdText);
+            
             let priceTd = document.createElement('td');
+            // priceTd.setAttribute('onclick', `editMaintenancePrice(this, ${trNo})`);
+            
+            let lastTdMainInnerContainer = document.createElement('div');
+            
+            let priceTdTextContainer = document.createElement('div')
+            
             let priceTdText = document.createTextNode(`Rs. ${blockPrice[trNo].price}/=`)
-            priceTd.appendChild(priceTdText)
-            priceTd.setAttribute('onclick', `editMaintenancePrice(this, ${trNo})`);
+            
+            let editIconContainer = document.createElement('div');
+            editIconContainer.setAttribute('onclick', `editMaintenancePrice(this, ${trNo})`);
+            
+            let editIcon = document.createElement('i');
+            editIcon.className = 'fa-solid fa-pen-to-square';
+            
+            
+            blockTd.appendChild(blockTdText);
+
+            editIconContainer.appendChild(editIcon)
+            priceTdTextContainer.appendChild(priceTdText);     
+            
+            lastTdMainInnerContainer.appendChild(priceTdTextContainer);
+            lastTdMainInnerContainer.appendChild(editIconContainer);
+            
+            priceTd.appendChild(lastTdMainInnerContainer);
+
             tr.appendChild(blockTd);
             tr.appendChild(priceTd);
             tbody.appendChild(tr);
