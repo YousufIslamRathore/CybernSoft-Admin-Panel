@@ -649,8 +649,8 @@ tbody tr:nth-child(even) {
 .usersFancyDisplaySection1 > div {
   /* border: 1px solid #000; */
   width: 19%;
-  height: 125px;
-  padding: 15px 25px 15px 35px;
+  height: 120px;
+  padding: 10px 25px 10px 35px;
   cursor: pointer;
   transition-duration: 500ms;
   background-color: #fff;
@@ -665,22 +665,25 @@ tbody tr:nth-child(even) {
 }
 #All-Users-Selector, #All-Bills-Selector {
   /* background-color: #186eb1; */
-  background-color: #186fb180;
+  /* background-color: #186fb180; */
 }
 #Active-Users-Selector, #Paid-Bills-Selector {
   /* background-color: #61b95b; */
-  background-color: #61b95b80;
+  /* background-color: #61b95b80; */
 }
 #Requested-Users-Selector, #Unpaid-Bills-Selector {
   /* background-color: #fcc910; */
-  background-color: #fcc91080;
+  /* background-color: #fcc91080; */
 }
 #Blocked-Users-Selector {
   /* background-color: #ee405e; */
-  background-color: #ee405e80;
+  /* background-color: #ee405e80; */
 }
 #Unregistered-Users-Selector {
-  background-color: #888;
+  /* background-color: #888; */
+}
+#All-Users-Selector, #Active-Users-Selector, #Requested-Users-Selector, #Blocked-Users-Selector, #Unregistered-Users-Selector {
+  background-color: #fff;
 }
 .usersFancyDisplaySection1 > div:hover {
   box-shadow: 0 3px 10px rgb(0 0 0 / 50%);
